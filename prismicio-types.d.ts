@@ -215,18 +215,7 @@ interface AiMlDocumentData {
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  meta_description: prismic.KeyTextField;
-
-  /**
-   * Meta Image field in *AI/ML*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ai_ml.meta_image
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  meta_image: prismic.ImageField<never> /**
+  meta_description: prismic.KeyTextField /**
    * Data Science field in *AI/ML*
    *
    * - **Field Type**: Text
@@ -546,18 +535,7 @@ interface HomeDocumentData {
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  meta_description: prismic.KeyTextField;
-
-  /**
-   * Meta Image field in *Home*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: home.meta_image
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  meta_image: prismic.ImageField<never> /**
+  meta_description: prismic.KeyTextField /**
    * Questions field in *Home*
    *
    * - **Field Type**: Group

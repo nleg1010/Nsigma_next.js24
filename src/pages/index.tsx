@@ -1,5 +1,5 @@
 import { FC } from "react";
-import Head from "next/head";
+import { DefaultSeo } from "next-seo";
 import { createClient } from "@/prismicio";
 import type { GetStaticPropsContext } from "next";
 
@@ -17,13 +17,13 @@ const Home: FC<any> = ({ page }) => {
     case_studies,
     about_content,
     why_cards,
+    meta_title,
+    meta_description,
   } = page.data;
 
   return (
     <>
-      <Head>
-        <title>Nsigma | Data Driven Intelligence</title>
-      </Head>
+      <DefaultSeo title={meta_title} description={meta_description} />
       <div className="bg-[#000200]">
         <Banner data={questions} />
         <Expertise data={expertise} />
