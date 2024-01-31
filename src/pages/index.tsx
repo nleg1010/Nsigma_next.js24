@@ -9,8 +9,16 @@ import Expertise from "@/components/expertise";
 import AboutUs from "@/components/about-us/AboutUs";
 import Banner from "@/components/banner";
 
-const Home: FC<any> = ({ page, caseStudies, aboutUs }) => {
-  const { questions, expertise, engagement } = page.data;
+const Home: FC<any> = ({ page }) => {
+  const {
+    questions,
+    expertise,
+    engagement,
+    case_studies,
+    about_content,
+    why_cards,
+  } = page.data;
+
   return (
     <>
       <Head>
@@ -20,8 +28,13 @@ const Home: FC<any> = ({ page, caseStudies, aboutUs }) => {
         <Banner data={questions} />
         <Expertise data={expertise} />
         <EngagementStrategies data={engagement} />
-        <CaseStudies data={caseStudies} />
-        <AboutUs about={aboutUs.data} />
+        <CaseStudies data={case_studies} />
+        <AboutUs
+          about={{
+            content: about_content,
+            whyCards: why_cards,
+          }}
+        />
       </div>
     </>
   );
@@ -31,12 +44,9 @@ export default Home;
 
 export async function getStaticProps({ previewData }: GetStaticPropsContext) {
   const client = createClient({ previewData });
-
   const page = await client.getSingle("home");
-  const aboutUs = await client.getSingle("about_us");
-  const caseStudies = await client.getAllByType("case_studies");
 
   return {
-    props: { page, caseStudies, aboutUs },
+    props: { page },
   };
 }

@@ -146,6 +146,90 @@
           }
         }
       }
+    },
+    "Case Studies": {
+      "case_studies": {
+        "type": "Group",
+        "config": {
+          "label": "Case Studies",
+          "repeat": true,
+          "fields": {
+            "title": {
+              "type": "Text",
+              "config": {
+                "label": "Title",
+                "placeholder": ""
+              }
+            },
+            "slug": {
+              "type": "Text",
+              "config": {
+                "label": "Slug",
+                "placeholder": ""
+              }
+            },
+            "info": {
+              "type": "Text",
+              "config": {
+                "label": "Info",
+                "placeholder": ""
+              }
+            },
+            "image": {
+              "type": "Image",
+              "config": {
+                "label": "Image",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "content": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Content",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            }
+          }
+        }
+      }
+    },
+    "About Us": {
+      "about_content": {
+        "type": "StructuredText",
+        "config": {
+          "label": "About Content",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "why_cards": {
+        "type": "Group",
+        "config": {
+          "label": "Why Cards",
+          "repeat": true,
+          "fields": {
+            "icon": {
+              "type": "Image",
+              "config": {
+                "label": "Icon",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "content": {
+              "type": "Text",
+              "config": {
+                "label": "Content",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

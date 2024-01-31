@@ -4,98 +4,6 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-/**
- * Item in *About Us → Why Us Cards*
- */
-export interface AboutUsDocumentDataWhyCardsItem {
-  /**
-   * Icon field in *About Us → Why Us Cards*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: about_us.why_cards[].icon
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  icon: prismic.ImageField<never>;
-
-  /**
-   * Content field in *About Us → Why Us Cards*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: about_us.why_cards[].content
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  content: prismic.KeyTextField;
-}
-
-type AboutUsDocumentDataSlicesSlice = never;
-
-/**
- * Content for About Us documents
- */
-interface AboutUsDocumentData {
-  /**
-   * Title field in *About Us*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: about_us.title
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  title: prismic.KeyTextField;
-
-  /**
-   * Content field in *About Us*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: about_us.content
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  content: prismic.RichTextField;
-
-  /**
-   * Why Us Cards field in *About Us*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: about_us.why_cards[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  why_cards: prismic.GroupField<Simplify<AboutUsDocumentDataWhyCardsItem>>;
-
-  /**
-   * Slice Zone field in *About Us*
-   *
-   * - **Field Type**: Slice Zone
-   * - **Placeholder**: *None*
-   * - **API ID Path**: about_us.slices[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#slices
-   */
-  slices: prismic.SliceZone<AboutUsDocumentDataSlicesSlice>;
-}
-
-/**
- * About Us document from Prismic
- *
- * - **API ID**: `about_us`
- * - **Repeatable**: `false`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type AboutUsDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithoutUID<
-    Simplify<AboutUsDocumentData>,
-    "about_us",
-    Lang
-  >;
-
 type AiMlDocumentDataSlicesSlice = never;
 
 /**
@@ -407,115 +315,6 @@ interface AiMlDocumentData {
 export type AiMlDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<Simplify<AiMlDocumentData>, "ai_ml", Lang>;
 
-type CaseStudiesDocumentDataSlicesSlice = never;
-
-/**
- * Content for Case Studies documents
- */
-interface CaseStudiesDocumentData {
-  /**
-   * Slice Zone field in *Case Studies*
-   *
-   * - **Field Type**: Slice Zone
-   * - **Placeholder**: *None*
-   * - **API ID Path**: case_studies.slices[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#slices
-   */
-  slices: prismic.SliceZone<CaseStudiesDocumentDataSlicesSlice>;
-
-  /**
-   * Title field in *Case Studies*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: case_studies.title
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  title: prismic.KeyTextField;
-
-  /**
-   * Info field in *Case Studies*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: case_studies.info
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  info: prismic.KeyTextField;
-
-  /**
-   * Image field in *Case Studies*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: case_studies.image
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  image: prismic.ImageField<never>;
-
-  /**
-   * Content field in *Case Studies*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: case_studies.content
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  content: prismic.RichTextField /**
-   * Meta Description field in *Case Studies*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A brief summary of the page
-   * - **API ID Path**: case_studies.meta_description
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */;
-  meta_description: prismic.KeyTextField;
-
-  /**
-   * Meta Image field in *Case Studies*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: case_studies.meta_image
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  meta_image: prismic.ImageField<never>;
-
-  /**
-   * Meta Title field in *Case Studies*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: case_studies.meta_title
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  meta_title: prismic.KeyTextField;
-}
-
-/**
- * Case Studies document from Prismic
- *
- * - **API ID**: `case_studies`
- * - **Repeatable**: `true`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type CaseStudiesDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithUID<
-    Simplify<CaseStudiesDocumentData>,
-    "case_studies",
-    Lang
-  >;
-
 type HomeDocumentDataSlicesSlice = never;
 
 /**
@@ -624,6 +423,86 @@ export interface HomeDocumentDataEngagementItem {
 }
 
 /**
+ * Item in *Home → Case Studies*
+ */
+export interface HomeDocumentDataCaseStudiesItem {
+  /**
+   * Title field in *Home → Case Studies*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.case_studies[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Slug field in *Home → Case Studies*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.case_studies[].slug
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  slug: prismic.KeyTextField;
+
+  /**
+   * Info field in *Home → Case Studies*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.case_studies[].info
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  info: prismic.KeyTextField;
+
+  /**
+   * Image field in *Home → Case Studies*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.case_studies[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Content field in *Home → Case Studies*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.case_studies[].content
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  content: prismic.RichTextField;
+}
+
+/**
+ * Item in *Home → Why Cards*
+ */
+export interface HomeDocumentDataWhyCardsItem {
+  /**
+   * Icon field in *Home → Why Cards*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.why_cards[].icon
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  icon: prismic.ImageField<never>;
+
+  /**
+   * Content field in *Home → Why Cards*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.why_cards[].content
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  content: prismic.KeyTextField;
+}
+
+/**
  * Content for Home documents
  */
 interface HomeDocumentData {
@@ -705,7 +584,38 @@ interface HomeDocumentData {
    * - **Tab**: Engagement
    * - **Documentation**: https://prismic.io/docs/field#group
    */;
-  engagement: prismic.GroupField<Simplify<HomeDocumentDataEngagementItem>>;
+  engagement: prismic.GroupField<Simplify<HomeDocumentDataEngagementItem>> /**
+   * Case Studies field in *Home*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.case_studies[]
+   * - **Tab**: Case Studies
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */;
+  case_studies: prismic.GroupField<
+    Simplify<HomeDocumentDataCaseStudiesItem>
+  > /**
+   * About Content field in *Home*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.about_content
+   * - **Tab**: About Us
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */;
+  about_content: prismic.RichTextField;
+
+  /**
+   * Why Cards field in *Home*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.why_cards[]
+   * - **Tab**: About Us
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  why_cards: prismic.GroupField<Simplify<HomeDocumentDataWhyCardsItem>>;
 }
 
 /**
@@ -720,11 +630,7 @@ interface HomeDocumentData {
 export type HomeDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<Simplify<HomeDocumentData>, "home", Lang>;
 
-export type AllDocumentTypes =
-  | AboutUsDocument
-  | AiMlDocument
-  | CaseStudiesDocument
-  | HomeDocument;
+export type AllDocumentTypes = AiMlDocument | HomeDocument;
 
 declare module "@prismicio/client" {
   interface CreateClient {
@@ -736,10 +642,6 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
-      AboutUsDocument,
-      AboutUsDocumentData,
-      AboutUsDocumentDataWhyCardsItem,
-      AboutUsDocumentDataSlicesSlice,
       AiMlDocument,
       AiMlDocumentData,
       AiMlDocumentDataSlicesSlice,
@@ -748,15 +650,14 @@ declare module "@prismicio/client" {
       AiMlDocumentDataBenefitsItem,
       AiMlDocumentDataExamplesItem,
       AiMlDocumentDataWhyUsListItem,
-      CaseStudiesDocument,
-      CaseStudiesDocumentData,
-      CaseStudiesDocumentDataSlicesSlice,
       HomeDocument,
       HomeDocumentData,
       HomeDocumentDataSlicesSlice,
       HomeDocumentDataQuestionsItem,
       HomeDocumentDataExpertiseItem,
       HomeDocumentDataEngagementItem,
+      HomeDocumentDataCaseStudiesItem,
+      HomeDocumentDataWhyCardsItem,
       AllDocumentTypes,
     };
   }

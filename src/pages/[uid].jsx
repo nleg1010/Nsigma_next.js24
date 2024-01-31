@@ -3,7 +3,7 @@ import { PrismicRichText } from "@prismicio/react";
 import PageBanner from "@/components/page-banner/pageBanner";
 
 const CaseStudiesSlug = ({ page }) => {
-  const { title, image, content } = page.data;
+  const { title, image, content } = page;
   return (
     <div className="bg-[#000200]">
       <PageBanner title={title} />
@@ -29,7 +29,17 @@ export default CaseStudiesSlug;
 
 export async function getStaticProps({ params, previewData }) {
   const client = createClient({ previewData });
-  const page = await client.getByUID("case_studies", params.uid);
+
+  const home = await client.getSingle("home");
+  const caseStudies = home.data.case_studies;
+
+  const page = caseStudies.find((caseStudy) => caseStudy.slug === params.uid);
+
+  if (!page) {
+    return {
+      notFound: true,
+    };
+  }
 
   return {
     props: {
@@ -37,16 +47,16 @@ export async function getStaticProps({ params, previewData }) {
     },
   };
 }
-
 export async function getStaticPaths() {
   const client = createClient();
 
-  const pages = await client.getAllByType("case_studies");
+  const home = await client.getSingle("home");
+  const caseStudies = home.data.case_studies;
 
   return {
-    paths: pages.map((page) => {
+    paths: caseStudies.map((caseStudy) => {
       return {
-        params: { uid: page.uid },
+        params: { uid: caseStudy.slug },
       };
     }),
     fallback: false,

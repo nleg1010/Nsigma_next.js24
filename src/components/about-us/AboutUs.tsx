@@ -12,7 +12,7 @@ const AboutUs = ({ about }: any) => {
       <div className="container mx-auto px-3 text-lightGray text-center md:text-lg pb-20">
         <PrismicRichText field={about.content} />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:grid-cols-3 mt-10">
-          {about?.why_cards?.map((item: any, idx: number) => (
+          {about?.whyCards?.map((item: any, idx: number) => (
             <div key={idx} className="flex justify-start items-start gap-4">
               <img src={item.icon.url} width={40} height={40} alt={`icon`} />
               <p className="text-left">{item.content}</p>
