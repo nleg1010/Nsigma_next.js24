@@ -1,16 +1,6 @@
-import { Content } from "@prismicio/client";
-import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
+import { PrismicRichText } from "@prismicio/react";
 
-/**
- * Props for `TextWithImage`.
- */
-export type TextWithImageProps =
-  SliceComponentProps<Content.TextWithImageSlice>;
-
-/**
- * Component for "TextWithImage" Slices.
- */
-const TextWithImage = ({ slice }: TextWithImageProps): JSX.Element => {
+const TextWithImage = ({ slice }) => {
   const { title, image } = slice.primary;
 
   return (

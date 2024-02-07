@@ -1,22 +1,12 @@
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
-import { Content } from "@prismicio/client";
-import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
+import { PrismicRichText } from "@prismicio/react";
 
-/**
- * Props for `TitleWithSteps`.
- */
-export type TitleWithStepsProps =
-  SliceComponentProps<Content.TitleWithStepsSlice>;
-
-/**
- * Component for "TitleWithSteps" Slices.
- */
-const TitleWithSteps = ({ slice }: TitleWithStepsProps): JSX.Element => {
+const TitleWithSteps = ({ slice }) => {
   const { title } = slice.primary;
   const [activeTab, setActiveTab] = useState(0);
 
-  const handleTabClick = (index: number) => {
+  const handleTabClick = (index) => {
     setActiveTab(index);
   };
   return (

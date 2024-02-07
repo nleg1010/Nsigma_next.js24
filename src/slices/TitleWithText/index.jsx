@@ -1,16 +1,6 @@
-import { Content } from "@prismicio/client";
-import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
+import { PrismicRichText } from "@prismicio/react";
 
-/**
- * Props for `TitleWithText`.
- */
-export type TitleWithTextProps =
-  SliceComponentProps<Content.TitleWithTextSlice>;
-
-/**
- * Component for "TitleWithText" Slices.
- */
-const TitleWithText = ({ slice }: TitleWithTextProps): JSX.Element => {
+const TitleWithText = ({ slice }) => {
   const { title, text } = slice.primary;
 
   return (

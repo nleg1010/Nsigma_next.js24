@@ -1,17 +1,7 @@
-import { Content } from "@prismicio/client";
-import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
+import { PrismicRichText } from "@prismicio/react";
 import CustomLink from "@/components/CustomLink";
 
-/**
- * Props for `TitleWithButton`.
- */
-export type TitleWithButtonProps =
-  SliceComponentProps<Content.TitleWithButtonSlice>;
-
-/**
- * Component for "TitleWithButton" Slices.
- */
-const TitleWithButton = ({ slice }: TitleWithButtonProps): JSX.Element => {
+const TitleWithButton = ({ slice }) => {
   const { title, video, button } = slice.primary;
 
   return (

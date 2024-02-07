@@ -1,19 +1,7 @@
+import { PrismicRichText } from "@prismicio/react";
 import EmblaCarousel from "@/components/ai-ml/ExamplesSection/ExamplesCarousel";
-import { Content } from "@prismicio/client";
-import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 
-/**
- * Props for `TitleWithCardCarousel`.
- */
-export type TitleWithCardCarouselProps =
-  SliceComponentProps<Content.TitleWithCardCarouselSlice>;
-
-/**
- * Component for "TitleWithCardCarousel" Slices.
- */
-const TitleWithCardCarousel = ({
-  slice,
-}: TitleWithCardCarouselProps): JSX.Element => {
+const TitleWithCardCarousel = ({ slice }) => {
   const { title } = slice.primary;
 
   return (

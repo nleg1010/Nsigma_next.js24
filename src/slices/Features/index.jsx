@@ -1,19 +1,7 @@
-import { Content } from "@prismicio/client";
-import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
+import { PrismicRichText } from "@prismicio/react";
 import { twMerge } from "tailwind-merge";
 
-/**
- * Props for `TitleWithAnalytics`.
- */
-export type TitleWithAnalyticsProps =
-  SliceComponentProps<Content.TitleWithAnalyticsSlice>;
-
-/**
- * Component for "TitleWithAnalytics" Slices.
- */
-const TitleWithAnalytics = ({
-  slice,
-}: TitleWithAnalyticsProps): JSX.Element => {
+const TitleWithAnalytics = ({ slice }) => {
   const { title } = slice.primary;
 
   switch (slice.variation) {

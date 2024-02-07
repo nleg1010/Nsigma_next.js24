@@ -1,20 +1,8 @@
 import Link from "next/link";
-import { Content } from "@prismicio/client";
-import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
+import { PrismicRichText } from "@prismicio/react";
 import { twMerge } from "tailwind-merge";
 
-/**
- * Props for `TitleWithExpertise`.
- */
-export type TitleWithExpertiseProps =
-  SliceComponentProps<Content.TitleWithExpertiseSlice>;
-
-/**
- * Component for "TitleWithExpertise" Slices.
- */
-const TitleWithExpertise = ({
-  slice,
-}: TitleWithExpertiseProps): JSX.Element => {
+const TitleWithExpertise = ({ slice }) => {
   const { title } = slice.primary;
   return (
     <section className="py-16 relative" id="expertise">
@@ -23,7 +11,7 @@ const TitleWithExpertise = ({
           <PrismicRichText field={title} />
         </div>
         <div className="bg-Gray rounded-[20px] mt-10 grid md:grid-cols-2 xl:grid-cols-3 grid-cols-1 overflow-hidden">
-          {slice.items?.map((item, idx: number) => {
+          {slice.items?.map((item, idx) => {
             return (
               <Link
                 href={`${item?.url ?? "#"}`}

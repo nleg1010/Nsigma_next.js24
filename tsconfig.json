@@ -17,6 +17,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/case/[uid].jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/case/[uid].jsx", "src/slices/Features/index.jsx", "src/slices/Expertise/index.jsx", "src/slices/Carousel/index.jsx", "src/slices/CallToAction/index.jsx", "src/slices/Hero/index.jsx", "src/slices/Cards/index.jsx", "src/slices/TitleWithText/index.jsx", "src/slices/TextWithImage/index.jsx", "src/slices/Steps/index.jsx"],
   "exclude": ["node_modules"]
 }

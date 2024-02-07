@@ -1,17 +1,7 @@
 import EngagementCard from "@/components/engagement-strategies/EngagementCard";
-import { Content } from "@prismicio/client";
-import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
+import { PrismicRichText } from "@prismicio/react";
 
-/**
- * Props for `TitleWithCards`.
- */
-export type TitleWithCardsProps =
-  SliceComponentProps<Content.TitleWithCardsSlice>;
-
-/**
- * Component for "TitleWithCards" Slices.
- */
-const TitleWithCards = ({ slice }: TitleWithCardsProps): JSX.Element => {
+const TitleWithCards = ({ slice }) => {
   const { title } = slice.primary;
   return (
     <section
@@ -23,7 +13,7 @@ const TitleWithCards = ({ slice }: TitleWithCardsProps): JSX.Element => {
           <PrismicRichText field={title} />
         </div>
         <div className="bg-[#1E2029] rounded-[20px] px-2 sm:px-6 relative 2xl:px-32 py-6 xl:py-16 z-10 flex flex-col lg:flex-row items-center justify-center gap-8 2xl:gap-12">
-          {slice.items?.map((item: any, i: number) => (
+          {slice.items?.map((item, i) => (
             <EngagementCard
               key={i}
               image={item.image}

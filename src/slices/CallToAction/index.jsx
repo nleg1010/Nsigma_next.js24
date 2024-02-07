@@ -1,16 +1,10 @@
-import CustomLink from "@/components/CustomLink";
-import { Content } from "@prismicio/client";
-import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
-
-/**
- * Props for `Cta`.
- */
-export type CtaProps = SliceComponentProps<Content.CtaSlice>;
+import Link from "next/link";
+import { PrismicRichText } from "@prismicio/react";
 
 /**
  * Component for "Cta" Slices.
  */
-const Cta = ({ slice }: CtaProps): JSX.Element => {
+const Cta = ({ slice }) => {
   const { heading, text, button } = slice.primary;
 
   return (
@@ -20,9 +14,13 @@ const Cta = ({ slice }: CtaProps): JSX.Element => {
           <PrismicRichText field={heading} />
         </div>
         <div className="max-w-lg">{text}</div>
-        <CustomLink href={button.url} className="p-2 font-normal">
+
+        <Link
+          href={button?.url}
+          className="text-white bg-custm_pink min-w-[165px] text-center rounded-xl hover:scale-105 transition-transform duration-200 p-2 font-normal"
+        >
           Schedule a call
-        </CustomLink>
+        </Link>
       </div>
     </section>
   );
