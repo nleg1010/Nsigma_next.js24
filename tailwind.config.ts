@@ -39,6 +39,9 @@ const config: Config = {
         customNeutral: "#242727",
         customGreen: "#82E868",
       },
+      fontFamily: {
+        sans: ["var(--font-sans)"],
+      },
     },
   },
   plugins: [CustomStyle],
