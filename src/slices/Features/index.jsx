@@ -57,16 +57,14 @@ const TitleWithAnalytics = ({ slice }) => {
               <PrismicRichText field={title} />
             </div>
             <div
-              className="grid grid-cols-1 sm:grid-cols-2 gap-5 mx-auto w-full"
-              style={{ maxWidth: "1024px" }}
+              className="flex flex-wrap justify-center gap-5 mx-auto w-full"
+              style={{ maxWidth: "768px" }}
             >
               {slice.items.map(({ title, icon, description }, i) => (
                 <div
                   key={i}
-                  className={twMerge(
-                    "w-full flex flex-col justify-between odd:bg-customNeutral even:bg-Gray p-4 h-full md:h-[170px] relative group",
-                    i === 0 && "md:even:bg-customNeutral"
-                  )}
+                  className="flex flex-col justify-between odd:bg-customNeutral even:bg-Gray p-4 relative group"
+                  style={{ height: "300px", width: "300px" }}
                 >
                   <div className="text-lg md:text-2xl">{title}</div>
                   <div className="md:absolute group-hover:opacity-100 md:opacity-0 md:w-full md:h-full md:bg-black md:p-4 transition-opacity text-white md:top-0 md:left-0">
