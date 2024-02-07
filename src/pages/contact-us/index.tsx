@@ -74,7 +74,7 @@ const ContactUs = () => {
             className="h-[200px] bg-gray-200 mt-6 p-3 w-full outline-none ring-0 text-lg"
             placeholder="Describe your idea*"
           />
-          {emailSend && <p className="mt-1">Email Sended!</p>}
+          {emailSend && <p className="mt-1">Email Sent!</p>}
           <div className="flex justify-center mt-8">
             <button
               type="submit"
