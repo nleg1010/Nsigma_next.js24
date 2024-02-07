@@ -7,6 +7,13 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
+        <script
+          type="text/javascript"
+          id="hs-script-loader"
+          async
+          defer
+          src="//js.hs-scripts.com/44973111.js"
+        ></script>
       </body>
     </Html>
   );
