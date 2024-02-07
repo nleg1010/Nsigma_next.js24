@@ -56,7 +56,10 @@ const TitleWithAnalytics = ({ slice }) => {
             <div className="text-3xl md:text-5xl font-bold title">
               <PrismicRichText field={title} />
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2">
+            <div
+              className="grid grid-cols-1 sm:grid-cols-2 gap-5 mx-auto w-full"
+              style={{ maxWidth: "1024px" }}
+            >
               {slice.items.map(({ title, icon, description }, i) => (
                 <div
                   key={i}
