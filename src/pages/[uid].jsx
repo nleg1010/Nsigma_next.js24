@@ -5,9 +5,13 @@ import { createClient } from "../prismicio";
 import { components } from "../slices";
 
 const Page = ({ page }) => {
+  const { meta_title, meta_description } = page.data;
   return (
     <>
-      <DefaultSeo title={"meta_title"} description={"meta_description"} />
+      <DefaultSeo
+        title={meta_title || "NSigma"}
+        description={meta_description || ""}
+      />
 
       <div className="bg-[#000200]">
         <SliceZone slices={page.data.slices} components={components} />
