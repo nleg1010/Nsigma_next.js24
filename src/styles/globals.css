@@ -4,43 +4,43 @@
 
 /* fonts  */
 /* @font-face {
-    font-family: rota;
-    src: url('../../public/fonts/Rota-Black.otf');
-    font-weight: 900;
+  font-family: rota;
+  src: url("../../public/fonts/Rota-Black.otf");
+  font-weight: 900;
 }
 @font-face {
-    font-family: rota;
-    src: url('../../public/fonts/Rota-Bold.otf');
-    font-weight: 700;
+  font-family: rota;
+  src: url("../../public/fonts/Rota-Bold.otf");
+  font-weight: 700;
 }
 @font-face {
-    font-family: rota;
-    src: url('../../public/fonts/Rota-ExtraBold.otf');
-    font-weight: 800;
+  font-family: rota;
+  src: url("../../public/fonts/Rota-ExtraBold.otf");
+  font-weight: 800;
 }
 @font-face {
-    font-family: rota;
-    src: url('../../public/fonts/Rota-Italic.otf');
+  font-family: rota;
+  src: url("../../public/fonts/Rota-Italic.otf");
 }
 @font-face {
-    font-family: rota;
-    src: url('../../public/fonts/Rota-Light.otf');
-    font-weight: 300;
+  font-family: rota;
+  src: url("../../public/fonts/Rota-Light.otf");
+  font-weight: 300;
 }
 @font-face {
-    font-family: rota;
-    src: url('../../public/fonts/Rota-Medium.otf');
-    font-weight: 400;
+  font-family: rota;
+  src: url("../../public/fonts/Rota-Medium.otf");
+  font-weight: 400;
 }
 @font-face {
-    font-family: rota;
-    src: url('../../public/fonts/Rota-Regular.otf');
-    font-weight: 500;
+  font-family: rota;
+  src: url("../../public/fonts/Rota-Regular.otf");
+  font-weight: 500;
 }
 @font-face {
-    font-family: rota;
-    src: url('../../public/fonts/Rota-SemiBold.otf');
-    font-weight: 600;
+  font-family: rota;
+  src: url("../../public/fonts/Rota-SemiBold.otf");
+  font-weight: 600;
 } */
 
 @font-face {
@@ -108,6 +108,15 @@ html {
   background: -webkit-linear-gradient(45deg, #eb9204, #83e868, #83e868);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.title strong {
+  background: -webkit-linear-gradient(45deg, #eb9204, #83e868, #83e868);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.richtext > {
+  @apply mb-2;
 }
 
 .line-border::after {

@@ -15,7 +15,7 @@ const CaseStudiesCard = ({ caseStudy }: any) => {
         </figure>
       </Link>
       <div className="p-4 px-6">
-        <Link href={`/${caseStudy?.slug}`}>
+        <Link href={`/case/${caseStudy?.slug}`}>
           <h3 className="text-xl min-h-[56px] cursor-pointer text-white">
             {caseStudy.title}
           </h3>

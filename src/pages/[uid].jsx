@@ -1,51 +1,27 @@
-import Head from "next/head";
-import { createClient } from "@/prismicio";
-import { PrismicRichText } from "@prismicio/react";
-import PageBanner from "@/components/page-banner/pageBanner";
+import { DefaultSeo } from "next-seo";
+import { SliceZone } from "@prismicio/react";
 
-const CaseStudiesSlug = ({ page }) => {
-  const { title, image, content } = page;
+import { createClient } from "../prismicio";
+import { components } from "../slices";
+
+const Page = ({ page }) => {
   return (
     <>
-      <Head>
-        <title>Nsigma | Data Driven Intelligence</title>
-      </Head>
+      <DefaultSeo title={"meta_title"} description={"meta_description"} />
+
       <div className="bg-[#000200]">
-        <PageBanner title={title} />
-        <div className="p-3">
-          <figure className="overflow-hidden flex justify-center -mt-10 mb-4">
-            <img
-              src={image?.url}
-              width={500}
-              height={400}
-              alt={title || ""}
-              className="mx-auto"
-            />
-          </figure>
-        </div>
-        <div className="max-w-[1000px] mx-auto px-3 pb-20 md:px-0 _contnet">
-          <PrismicRichText field={content} />
-        </div>
+        <SliceZone slices={page.data.slices} components={components} />
       </div>
     </>
   );
 };
 
-export default CaseStudiesSlug;
+export default Page;
 
 export async function getStaticProps({ params, previewData }) {
   const client = createClient({ previewData });
 
-  const home = await client.getSingle("home");
-  const caseStudies = home.data.case_studies;
-
-  const page = caseStudies.find((caseStudy) => caseStudy.slug === params.uid);
-
-  if (!page) {
-    return {
-      notFound: true,
-    };
-  }
+  const page = await client.getByUID("page", params.uid);
 
   return {
     props: {
@@ -53,16 +29,16 @@ export async function getStaticProps({ params, previewData }) {
     },
   };
 }
+
 export async function getStaticPaths() {
   const client = createClient();
 
-  const home = await client.getSingle("home");
-  const caseStudies = home.data.case_studies;
+  const pages = await client.getAllByType("page");
 
   return {
-    paths: caseStudies.map((caseStudy) => {
+    paths: pages.map((page) => {
       return {
-        params: { uid: caseStudy.slug },
+        params: { uid: page.uid },
       };
     }),
     fallback: false,
