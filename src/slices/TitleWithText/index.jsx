@@ -12,7 +12,7 @@ const TitleWithText = ({ slice }) => {
         <div className="text-3xl md:text-5xl font-bold title">
           <PrismicRichText field={title} />
         </div>
-        <div className="text-xl whitespace-pre-line">
+        <div className="richtext">
           <PrismicRichText field={text} />
         </div>
       </div>
