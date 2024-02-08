@@ -1438,6 +1438,16 @@ export interface TitleWithTextSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   text: prismic.RichTextField;
+
+  /**
+   * textColor field in *TitleWithText → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: title_with_text.primary.textcolor
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  textcolor: prismic.ColorField;
 }
 
 /**

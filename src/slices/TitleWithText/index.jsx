@@ -1,7 +1,7 @@
 import { PrismicRichText } from "@prismicio/react";
 
 const TitleWithText = ({ slice }) => {
-  const { title, text } = slice.primary;
+  const { title, text, textcolor } = slice.primary;
 
   return (
     <section
@@ -12,7 +12,7 @@ const TitleWithText = ({ slice }) => {
         <div className="text-3xl md:text-5xl font-bold title">
           <PrismicRichText field={title} />
         </div>
-        <div className="richtext">
+        <div className="richtext" style={{ color: textcolor || "#ffffff" }}>
           <PrismicRichText field={text} />
         </div>
       </div>

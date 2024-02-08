@@ -24,6 +24,11 @@
 						}
 					}
 				]
+			},
+			"textcolor": {
+				"__TYPE__": "FieldContent",
+				"value": "#790a88",
+				"type": "Color"
 			}
 		},
 		"items": []
