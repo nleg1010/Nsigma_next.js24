@@ -1,8 +1,6 @@
 import Questions from "./Questions";
 import TypeWriter from "./TypeWriter";
 
-const TEXTS = ["Driven", "Informed", "Dependent", "Powered", "Enhanced"];
-
 export default function Banner({ data }: any) {
   return (
     <>
@@ -14,15 +12,7 @@ export default function Banner({ data }: any) {
                 <div className="flex gap-3 justify-center flex-wrap">
                   <h2 className="text-3xl md:text-6xl">Data</h2>
                   <div className="relative">
-                    <TypeWriter
-                      text={[
-                        {
-                          line: TEXTS,
-                          className: "text-[#b0cb48]",
-                        },
-                      ]}
-                      repeatDelay={3000}
-                    />
+                    <TypeWriter />
                   </div>
                 </div>
                 <h2 className="mt-2 text-3xl md:text-6xl">Intelligence</h2>

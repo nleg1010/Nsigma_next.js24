@@ -1,140 +1,43 @@
-import { useAnimation, useInView, motion, Variant } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
-import { twMerge } from "tailwind-merge";
+import React, { useState, useEffect } from "react";
 
-type AnimatedTextProps = {
-  text: { line: string | string[]; className?: string }[];
-  el?: keyof JSX.IntrinsicElements;
-  className?: string;
-  once?: boolean;
-  repeatDelay?: number;
-  delay?: number;
-  animation?: {
-    hidden: Variant;
-    visible: Variant;
-  };
-};
-
-const defaultAnimations = {
-  hidden: {
-    opacity: 0,
-    y: 20,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.1,
-    },
-  },
-};
-
-const AnimatedText = ({
-  text,
-  el: Wrapper = "div",
-  className,
-  once,
-  repeatDelay,
-  animation = defaultAnimations,
-}: AnimatedTextProps) => {
-  const controls = useAnimation();
-  const textArray = Array.isArray(text) ? text : [text];
-  const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.5, once });
-  const [iteration, setIteration] = useState(0);
+const WordDisplay = () => {
+  const [index, setIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+  const [currentWord, setCurrentWord] = useState("");
+  const [isPause, setIsPause] = useState(false);
+  const [animationClass, setAnimationClass] = useState("fade-in");
+  const words = ["Driven ", "Informed ", "Dependent ", "Powered ", "Enhanced "];
 
   useEffect(() => {
-    let interval: ReturnType<typeof setInterval>;
-    const show = async () => {
-      if (repeatDelay) {
-        interval = setInterval(async () => {
-          await controls.start("hidden");
-          setIteration((prev) => prev + 1);
-          await controls.start("visible");
-        }, repeatDelay);
+    const intervalId = setInterval(() => {
+      if (!isPause) {
+        setCurrentWord((prevWord) => {
+          if (charIndex < words[index].length) {
+            setCharIndex((prevCharIndex) => prevCharIndex + 1);
+            return prevWord + words[index][charIndex];
+          } else {
+            setCharIndex(0);
+            setIndex((prevIndex) => (prevIndex + 1) % words.length);
+            setIsPause(true);
+            setAnimationClass("fade-out");
+            return "";
+          }
+        });
       }
+    }, 330); // Adjust speed as needed
+
+    const pauseIntervalId = setInterval(() => {
+      setIsPause(false);
+      setAnimationClass("fade-in");
+    }, 1000); // Adjust pause duration as needed
+
+    return () => {
+      clearInterval(intervalId); // Clean up on unmount
+      clearInterval(pauseIntervalId); // Clean up on unmount
     };
+  }, [index, charIndex, isPause, words]);
 
-    if (isInView) {
-      controls.start("visible").then(show);
-    } else {
-      controls.start("hidden");
-    }
-
-    return () => clearInterval(interval);
-  }, [controls, isInView, repeatDelay]);
-
-  return (
-    <Wrapper className={className}>
-      <span className="sr-only">
-        {text.map(({ line }, lineIndex) => (
-          <span key={lineIndex}>{line}</span>
-        ))}
-      </span>
-      <motion.span
-        ref={ref}
-        initial="hidden"
-        animate={controls}
-        variants={{
-          visible: { transition: { staggerChildren: 0.1 } },
-          hidden: {},
-        }}
-        aria-hidden
-      >
-        {textArray.map(({ line, className }, lineIndex) =>
-          Array.isArray(line) ? (
-            <span
-              className={twMerge("block", className)}
-              key={`line-${lineIndex}`}
-            >
-              {line[iteration % line.length]
-                .split(" ")
-                .map((word, wordIndex) => (
-                  <span
-                    className="inline-block"
-                    key={`${line}-${lineIndex}-${wordIndex}`}
-                  >
-                    {word.split("").map((char, charIndex) => (
-                      <motion.span
-                        key={`${line}-${lineIndex}-${wordIndex}-${charIndex}`}
-                        className="inline-block"
-                        variants={animation}
-                      >
-                        {char}
-                      </motion.span>
-                    ))}
-                    <span className="inline-block">&nbsp;</span>
-                  </span>
-                ))}
-            </span>
-          ) : (
-            <span
-              className={twMerge("block", className)}
-              key={`line-${lineIndex}`}
-            >
-              {line.split(" ").map((word, wordIndex) => (
-                <span
-                  className="inline-block"
-                  key={`${line}-${lineIndex}-${wordIndex}`}
-                >
-                  {word.split("").map((char, charIndex) => (
-                    <motion.span
-                      key={`${line}-${lineIndex}-${wordIndex}-${charIndex}`}
-                      className="inline-block"
-                      variants={animation}
-                    >
-                      {char}
-                    </motion.span>
-                  ))}
-                  <span className="inline-block">&nbsp;</span>
-                </span>
-              ))}
-            </span>
-          )
-        )}
-      </motion.span>
-    </Wrapper>
-  );
+  return <p className="text-[#b0cb48] md:text-6xl text-3xl">{currentWord}</p>;
 };
 
-export default AnimatedText;
+export default WordDisplay;
