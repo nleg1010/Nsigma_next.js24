@@ -14,7 +14,6 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp;
-
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
 import Footer from "@/components/footer";
