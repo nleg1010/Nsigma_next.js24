@@ -13,7 +13,10 @@ const TitleWithButton = ({ slice }) => {
               <PrismicRichText field={title} />
             </div>
 
-            <CustomLink href={button?.url} className="max-w-xs font-normal">
+            <CustomLink
+              href={button?.url || "#"}
+              className="max-w-xs font-normal"
+            >
               Get started
             </CustomLink>
           </div>
