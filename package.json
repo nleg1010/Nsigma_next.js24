@@ -16,6 +16,7 @@
     "@types/react-icons": "^3.0.0",
     "embla-carousel-react": "^8.0.0-rc19",
     "framer-motion": "^10.17.9",
+    "gsap": "^3.12.5",
     "mailersend": "^2.2.0",
     "next": "14.0.4",
     "next-seo": "^6.4.0",
@@ -27,7 +28,8 @@
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.6",
-    "tailwind-merge": "^2.2.0"
+    "tailwind-merge": "^2.2.0",
+    "typed.js": "^2.1.0"
   },
   "devDependencies": {
     "@slicemachine/adapter-next": "^0.3.34",
