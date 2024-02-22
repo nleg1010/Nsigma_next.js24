@@ -14,7 +14,7 @@ const EngagementCard = ({ image, info, title }: EngagementCardProps) => {
     // Simulate data fetching delay
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 7000); // Adjust the delay time as needed
+    }, 10000); // Adjust the delay time as needed
 
     return () => clearTimeout(timer);
   }, []);
