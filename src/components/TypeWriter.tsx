@@ -3,7 +3,7 @@ import styles from "./TypeWriter.module.css";
 import Typed from 'typed.js';
 import { gsap, Linear, TimelineMax } from "gsap";
 
-const TYPED_STRINGS = ["Driven ", "Informed ", "Dependent ", "Powered ", "Enhanced "];
+const TYPED_STRINGS: string[] = ["Driven ", "Informed ", "Dependent ", "Powered ", "Enhanced "];
 
 const HERO_STYLES = {
   SECTION:
@@ -16,19 +16,19 @@ const HERO_STYLES = {
 };
 
 const WordDisplay = React.memo(() => {
-  const typedSpanElement: MutableRefObject<HTMLSpanElement> = useRef(null);
-  const targetSection: MutableRefObject<HTMLDivElement> = useRef(null);
-  const [index, setIndex] = useState(0);
-  const [charIndex, setCharIndex] = useState(0);
-  const [currentWord, setCurrentWord] = useState("");
-  const [isPause, setIsPause] = useState(false);
-  const [animationClass, setAnimationClass] = useState("fade-in");
-  const words = ["Driven ", "Informed ", "Dependent ", "Powered ", "Enhanced "];
+  const typedSpanElement = useRef<HTMLSpanElement>(null);
+  const targetSection = useRef<HTMLDivElement>(null);
+  const [index, setIndex] = useState<number>(0);
+  const [charIndex, setCharIndex] = useState<number>(0);
+  const [currentWord, setCurrentWord] = useState<string>("");
+  const [isPause, setIsPause] = useState<boolean>(false);
+  const [animationClass, setAnimationClass] = useState<string>("fade-in");
+  const words: string[] = ["Driven ", "Informed ", "Dependent ", "Powered ", "Enhanced "];
 
   const initTypeAnimation = (
-    typedSpanElement: MutableRefObject<HTMLSpanElement>
+    typedSpanElement: MutableRefObject<HTMLSpanElement | null>
   ): Typed => {
-    return new Typed(typedSpanElement.current, {
+    return new Typed(typedSpanElement.current!, {
       strings: TYPED_STRINGS,
       typeSpeed: 50,
       backSpeed: 50,
@@ -38,7 +38,7 @@ const WordDisplay = React.memo(() => {
   };
 
   const initRevealAnimation = (
-    targetSection: MutableRefObject<HTMLDivElement>
+    targetSection: MutableRefObject<HTMLDivElement | null>
   ): TimelineMax => {
     const revealTl = gsap.timeline({ defaults: { ease: Linear.easeNone } });
     if (targetSection.current) {
