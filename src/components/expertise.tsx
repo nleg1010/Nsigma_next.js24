@@ -47,7 +47,7 @@ export default function Expertise({ data }: ExpertiseProps) {
                 <h3 className="text-xl font-semibold text-white">
                   {item.title}
                 </h3>
-                <p className="text-base font-medium text-lightGray md:absolute md:opacity-0 group-hover:opacity-100 transition-opacity md:h-full md:w-full md:bg-black duration-300 md:top-0 md:left-0 md:p-4 md:grid md:place-items-center">
+                <p className="text-base font-medium text-lightGray md:absolute md:opacity-0 group-hover:opacity-100 transition-opacity md:h-full md:w-full md:bg-transparent duration-300 md:top-0 md:left-0 md:p-4 md:grid md:place-items-center backdrop-blur-lg">
                   {item.info}
                 </p>
               </Link>
