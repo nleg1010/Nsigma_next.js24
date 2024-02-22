@@ -9,7 +9,7 @@ const EngagementStrategies: FC<any> = ({ data }) => {
       id="engagement"
     >
       <div className="container relative ">
-        <h2 className=" text-2xl md:text-[42px]  font-extrabold text-white text-center pb-16">
+        <h2 className=" text-2xl md:text-[42px]  font-extrabold text-white text-center pb-16" style={{ fontFamily: 'Quicksand' }}>
           Engagement <span className="grad">Strategies</span>
         </h2>
         <div className="bg-[#1E2029] rounded-[20px] px-2 sm:px-6 relative 2xl:px-32 py-6 xl:py-16 z-10 flex flex-col lg:flex-row items-center justify-center gap-8 2xl:gap-12">

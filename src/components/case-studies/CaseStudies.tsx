@@ -13,7 +13,7 @@ const CaseStudies = ({ data }: any) => {
   return (
     <section className="pb-20">
       <div className="relative">
-        <h2 className=" text-2xl md:mt-5 md:text-[42px] font-extrabold text-white text-center pb-16">
+        <h2 className=" text-2xl md:mt-5 md:text-[42px] font-extrabold text-white text-center pb-16" style={{ fontFamily: 'Quicksand' }}>
           Case <span className="grad">Studies</span>
         </h2>
         {/* <Image src="/images/half-circle.svg" alt="img" width={140} height={140} className='z-[1] animate-pulse absolute md:-top-10 top-0 md:right-16 w-20 md:w-auto right-2'/> */}
