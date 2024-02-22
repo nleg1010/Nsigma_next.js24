@@ -8,7 +8,12 @@ const routes = [
   {
     name: "Our Expertise",
     link: "https://nsigma.io/#expertise",
-    sublinks: [{ name: "AI/ML", link: "/ai-ml" }],
+    sublinks: [
+    	{ name: "AI/ML", link: "/ai-ml" },
+	{ name: "Total Ops", link: "/totalops" },
+	{ name: "Data Engineering", link: "/data-engineering" },
+	{ name: "Software Development", link: "/software-development" },
+	],
   },
   {
     name: "Case Studies",
@@ -87,6 +92,7 @@ function Navbar() {
                   i === routes.length - 1 &&
                     "bg-custm_pink p-3 min-w-[156px] font-normal text-center rounded-xl hover:scale-105 transition-transform"
                 )}
+		style={{ fontFamily: 'Quicksand' }}
               >
                 {name}
               </Link>
@@ -103,8 +109,10 @@ function Navbar() {
                       href={link}
                       key={name}
                       className={twMerge(
-                        `p-2 md:text-lg text-base font-semibold text-white uppercase`
+                        `p-2 md:text-lg text-base font-semibold text-white uppercase`,
+              		'hover:bg-blue-100 hover:bg-opacity-20'
                       )}
+		      style={{ fontFamily: 'Quicksand', fontSize: '12px' }}
                     >
                       {name}
                     </Link>
