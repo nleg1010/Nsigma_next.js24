@@ -7,7 +7,7 @@ import MenuItemWithSubMenu from "./MenuItemWithSubMenu";
 const routes = [
   {
     name: "Our Expertise",
-    link: "https://nsigma.io/#expertise",
+    link: "/#expertise",
     sublinks: [
     	{ name: "AI/ML & Predictive Analytics", link: "/ai-ml" },
 	{ name: "Total Ops", link: "/totalops" },
@@ -17,11 +17,11 @@ const routes = [
   },
   {
     name: "Case Studies",
-    link: "https://nsigma.io/#casestudy",
+    link: "/#casestudy",
   },
   {
     name: "About Us",
-    link: "https://nsigma.io/#about",
+    link: "/#about",
   },
   {
     name: "Contact Us",

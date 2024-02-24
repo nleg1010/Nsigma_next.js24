@@ -130,7 +130,7 @@ export default function Footer() {
                   href="https://nsigma.io/#expertise"
                   className="text-xl font-medium text-lightGray hover:text-white transition-colors"
                 >
-                  DataOps Services
+                   TotalOps : Data, ML and Security
                 </Link>
               </li>
               <li>
