@@ -38,20 +38,21 @@ const MenuItemWithSubMenu = ({
         </div>
       </button>
 
-      {subMenuOpen && (
-        <div className="flex flex-col">
-          {item.subMenuItems?.map((subItem, i) => {
-            return (
-              <Link
-                key={i}
-                href={subItem.link}
-                onClick={() => toggleOpen(false)}
-              >
-                {subItem.name}
-              </Link>
-            );
-          })}
-        </div>
+      {subMenuOpen && ( 
+	<div className="flex flex-col" style={{ textAlign: 'right' }}>
+	  {item.subMenuItems?.map((subItem, i) => {
+	    return (
+	      <Link
+	        key={i}
+	        href={subItem.link}
+	        onClick={() => toggleOpen(false)}
+	      >
+	        {subItem.name}
+	      </Link>
+	    );
+	  })}
+	</div>
+
       )}
     </span>
   );

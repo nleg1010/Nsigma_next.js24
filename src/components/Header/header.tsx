@@ -162,6 +162,7 @@ function Navbar() {
                 <MenuItemWithSubMenu
                   key={i}
                   item={{ name, link, subMenuItems: sublinks }}
+
                   toggleOpen={setOpen}
                 />
               ) : (
