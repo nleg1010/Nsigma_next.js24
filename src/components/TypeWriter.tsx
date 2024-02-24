@@ -93,7 +93,7 @@ const WordDisplay = React.memo(() => {
 
   return (
     <>
-      <p className={styles.textGreen}>
+      <p className="inline-block grad">
         <span className={HERO_STYLES.TYPED_SPAN} ref={typedSpanElement}></span>
       </p>
     </>
