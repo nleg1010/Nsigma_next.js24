@@ -39,13 +39,14 @@ const MenuItemWithSubMenu = ({
       </button>
 
       {subMenuOpen && ( 
-	<div className="flex flex-col" style={{ textAlign: 'right' }}>
+	<div className="flex flex-col" style={{ marginTop: '-20px', textAlign: 'right', fontSize: '12px' }}>
 	  {item.subMenuItems?.map((subItem, i) => {
 	    return (
 	      <Link
 	        key={i}
 	        href={subItem.link}
 	        onClick={() => toggleOpen(false)}
+		style={{marginTop: '10px'}}
 	      >
 	        {subItem.name}
 	      </Link>

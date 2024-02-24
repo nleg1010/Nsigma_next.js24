@@ -9,7 +9,7 @@ const routes = [
     name: "Our Expertise",
     link: "https://nsigma.io/#expertise",
     sublinks: [
-    	{ name: "AI/ML", link: "/ai-ml" },
+    	{ name: "AI/ML & Predictive Analytics", link: "/ai-ml" },
 	{ name: "Total Ops", link: "/totalops" },
 	{ name: "Data Engineering", link: "/data-engineering" },
 	{ name: "Software Development", link: "/software-development" },
@@ -109,7 +109,7 @@ function Navbar() {
                       href={link}
                       key={name}
                       className={twMerge(
-                        `p-2 md:text-lg text-base font-semibold text-white uppercase`,
+                        `p-2 md:text-sm text-base font-semibold text-white uppercase`,
               		'hover:bg-blue-100 hover:bg-opacity-20'
                       )}
 		      
