@@ -6,7 +6,7 @@ const AboutUs = ({ about }: any) => {
       <h2
         id="about"
         className=" text-2xl md:text-[42px] font-extrabold text-white text-center pb-16"
-       style={{ fontFamily: 'Quicksand' }}>
+       >
         Why Choose <span className="grad">NSigma ?</span>
       </h2>
       <div className="container mx-auto px-3 text-lightGray text-center md:text-lg pb-20">

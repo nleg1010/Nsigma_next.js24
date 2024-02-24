@@ -17,10 +17,7 @@
 }
 
 .textXl {
-  font-size: 50px;
-  font-family: 'itim';
-  font-family: 'Rajdhani';
-  font-family: 'Roboto Mono';
+  font-size: 60px;
 }
 
 .textGreen {
@@ -39,3 +36,10 @@
   animation-duration: 0.5s; /* Adjust duration as needed */
 }
 
+@media (max-width: 768px) {
+	.textGreen {
+	}
+	.textXl {
+		font-size: 30px;
+	}
+}

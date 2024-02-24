@@ -43,7 +43,7 @@ export default function Expertise({ data }: ExpertiseProps) {
       ) : (
         <div className="container mx-auto px-4 relative z-10">
           <div>
-            <h2 className="md:text-[42px] text-2xl md:leading-[50px] font-bold text-white text-center mb-5" style={{ fontFamily: 'Quicksand' }}>
+            <h2 className="md:text-[42px] text-2xl md:leading-[50px] font-bold text-white text-center mb-5">
               Our <span className="grad"> Expertise</span>
             </h2>
           </div>

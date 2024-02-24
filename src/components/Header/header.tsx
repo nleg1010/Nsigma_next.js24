@@ -92,7 +92,7 @@ function Navbar() {
                   i === routes.length - 1 &&
                     "bg-custm_pink p-3 min-w-[156px] font-normal text-center rounded-xl hover:scale-105 transition-transform"
                 )}
-		style={{ fontFamily: 'Quicksand' }}
+		
               >
                 {name}
               </Link>
@@ -112,7 +112,7 @@ function Navbar() {
                         `p-2 md:text-lg text-base font-semibold text-white uppercase`,
               		'hover:bg-blue-100 hover:bg-opacity-20'
                       )}
-		      style={{ fontFamily: 'Quicksand', fontSize: '12px' }}
+		      
                     >
                       {name}
                     </Link>
