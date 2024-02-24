@@ -9,17 +9,23 @@ type EngagementCardProps = {
 const EngagementCard = ({ image, info, title }: EngagementCardProps) => {
   const [loading, setLoading] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(null);
 
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
 
-    window.addEventListener('resize', handleResize);
+    // Check if window is defined to avoid server-side rendering issues
+    if (typeof window !== 'undefined') {
+      setWindowWidth(window.innerWidth);
+      window.addEventListener('resize', handleResize);
+    }
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('resize', handleResize);
+      }
     };
   }, []);
 
