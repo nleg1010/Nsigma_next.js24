@@ -9,6 +9,19 @@ type EngagementCardProps = {
 const EngagementCard = ({ image, info, title }: EngagementCardProps) => {
   const [loading, setLoading] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     // Simulate data fetching delay
@@ -38,7 +51,7 @@ const EngagementCard = ({ image, info, title }: EngagementCardProps) => {
       ) : (
         <div
           className={`relative w-full h-full lg:preserve-3d duration-1000 ${
-            isHovered ? 'rotate-y-180' : ''
+            isHovered && (windowWidth > 1023) ? 'rotate-y-180' : ''
           }`}
         >
           <img
