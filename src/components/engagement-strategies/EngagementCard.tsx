@@ -9,7 +9,7 @@ type EngagementCardProps = {
 const EngagementCard = ({ image, info, title }: EngagementCardProps) => {
   const [loading, setLoading] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
-  const [windowWidth, setWindowWidth] = useState<number | undefined>(0);
+  const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
     const handleResize = () => {
