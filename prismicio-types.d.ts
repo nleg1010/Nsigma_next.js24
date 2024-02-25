@@ -151,24 +151,24 @@ export interface AiMlDocumentDataExamplesItem {
  */
 export interface AiMlDocumentDataWhyUsListItem {
   /**
-   * Title field in *AI/ML → Content*
+   * Topic field in *AI/ML → Content*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: ai_ml.why_us_list[].title
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **API ID Path**: ai_ml.why_us_list[].topic
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  title: prismic.KeyTextField;
+  topic: prismic.RichTextField;
 
   /**
-   * Description field in *AI/ML → Content*
+   * content field in *AI/ML → Content*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: ai_ml.why_us_list[].description
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **API ID Path**: ai_ml.why_us_list[].content
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  description: prismic.KeyTextField;
+  content: prismic.RichTextField;
 }
 
 /**
@@ -176,15 +176,15 @@ export interface AiMlDocumentDataWhyUsListItem {
  */
 interface AiMlDocumentData {
   /**
-   * Hero Video field in *AI/ML*
+   * AI video field in *AI/ML*
    *
    * - **Field Type**: Link to Media
    * - **Placeholder**: *None*
-   * - **API ID Path**: ai_ml.hero_video
+   * - **API ID Path**: ai_ml.ai_video
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  hero_video: prismic.LinkToMediaField;
+  ai_video: prismic.LinkToMediaField;
 
   /**
    * Slice Zone field in *AI/ML*
@@ -481,14 +481,14 @@ export interface HomeDocumentDataWhyCardsItem {
   icon: prismic.ImageField<never>;
 
   /**
-   * Content field in *Home → Why Cards*
+   * description field in *Home → Why Cards*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: home.why_cards[].content
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **API ID Path**: home.why_cards[].description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  content: prismic.KeyTextField;
+  description: prismic.RichTextField;
 }
 
 /**
@@ -779,6 +779,16 @@ export interface TextWithImageSliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   description: prismic.KeyTextField;
+
+  /**
+   * content field in *TextWithImage → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_with_image.items[].content
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  content: prismic.RichTextField;
 }
 
 /**

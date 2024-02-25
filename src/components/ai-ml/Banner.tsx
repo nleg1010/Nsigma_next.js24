@@ -1,6 +1,6 @@
 import CustomLink from "../CustomLink";
 
-export default function Banner() {
+export default function Banner({ content }: any) {
   return (
     <>
       <main className="relative flex items-center justify-center h-screen mb-12 overflow-hidden -mt-20">
@@ -25,9 +25,10 @@ export default function Banner() {
           autoPlay
           muted
           playsInline
+	  loop
           className="absolute z-10 w-auto min-w-full h-full max-w-none object-cover"
         >
-          <source src="/test2.mp4" type="video/mp4" />
+          <source src={content?.url} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </main>
