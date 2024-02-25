@@ -166,7 +166,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-2">
               <li>
                 <Link
-                  href="https://nsigma.io/"
+                  href="/nsigma-story"
                   className="text-xl font-medium text-lightGray hover:text-white transition-colors"
                 >
                   Our Story
