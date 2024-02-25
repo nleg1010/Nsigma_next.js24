@@ -8,6 +8,8 @@ type WhyUsSectionProps = {
     content: Array<{
       title: string;
       description: string;
+      topic: any;
+      content: any;
     }>;
   };
 };
