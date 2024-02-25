@@ -15,7 +15,7 @@ export default function Banner({ content }: any) {
                   </span>
                 </h1>
               </div>
-              <CustomLink href="#" className="max-w-xs font-normal">
+              <CustomLink href="/contact-us" className="max-w-xs font-normal">
                 Get started
               </CustomLink>
             </div>
