@@ -10,7 +10,7 @@ const routes = [
     link: "/#expertise",
     sublinks: [
     	{ name: "AI/ML & Predictive Analytics", link: "/ai-ml" },
-	{ name: "Total Ops", link: "/totalops" },
+	{ name: "TotalOps: Data, ML & Security", link: "/totalops" },
 	{ name: "Data Engineering", link: "/data-engineering" },
 	{ name: "Software Development", link: "/software-development" },
 	],
@@ -175,6 +175,7 @@ function Navbar() {
                       "bg-custm_pink p-3 min-w-[156px] font-normal text-center rounded-xl"
                   )}
                   onClick={handleOpen}
+		  style={{marginBottom: '-10px'}}
                 >
                   {name}
                 </Link>
