@@ -1,7 +1,7 @@
 {
   "id": "slice1",
   "type": "SharedSlice",
-  "name": "Slice1",
+  "name": "SliceWithImageOnly",
   "description": "Slice1",
   "variations": [
     {
