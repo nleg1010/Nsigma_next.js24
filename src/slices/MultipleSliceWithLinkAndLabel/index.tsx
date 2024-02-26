@@ -20,7 +20,7 @@ const MultipleSlice = ({ slice }: MultipleSliceProps): JSX.Element => {
   const { title } = slice.primary;
   const [activeTab, setActiveTab] = useState(0);
 
-  const handleTabClick = (index) => {
+  const handleTabClick = (index: any) => {
     setActiveTab(index);
   };
   return (

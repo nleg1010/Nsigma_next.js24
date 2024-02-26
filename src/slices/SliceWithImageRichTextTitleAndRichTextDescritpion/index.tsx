@@ -11,7 +11,7 @@ export type Slice3Props = SliceComponentProps<Content.Slice3Slice>;
  * Component for "Slice3" Slices.
  */
 const Slice3 = ({ slice }: Slice3Props): JSX.Element => {
-	const { title, image, rich_text, textcolor } = slice.primary;
+	const { title, image, rich_text } = slice.primary;
   return (
     <section className="w-full py-20">
       <div className="text-white gap-4 text-center flex-col w-full bg-customNeutral px-4 flex items-center justify-center py-20">
@@ -19,9 +19,9 @@ const Slice3 = ({ slice }: Slice3Props): JSX.Element => {
           <PrismicRichText field={title} />
         </div>
         <img
-              src={image.url}
+              src={(image as { url: string | undefined })?.url}
             />
-	<div className="richtext" style={{ color: textcolor || "#ffffff" }}>
+	<div className="richtext" style={{ color: "#ffffff" }}>
           <PrismicRichText field={rich_text} />
         </div>
       </div>

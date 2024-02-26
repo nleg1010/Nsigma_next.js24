@@ -20,7 +20,7 @@ const NavigationSlice = ({ slice }: NavigationSliceProps): JSX.Element => {
 	console.log(slice);
   const [activeTab, setActiveTab] = useState(0);
 
-  const handleTabClick = (index) => {
+  const handleTabClick = (index: any) => {
     setActiveTab(index);
   };
   return (
@@ -40,9 +40,9 @@ const NavigationSlice = ({ slice }: NavigationSliceProps): JSX.Element => {
                 className={`relative focus:outline-none group`}
                 onClick={() => handleTabClick(i)}
               >
-	      	<Link href={`#${link.url}`} key={link.url}>
+	      	<PrismicNextLink field={link}>
 	      		<PrismicRichText field={label} />
-		</Link>
+		</PrismicNextLink>
                 <span
                   className={twMerge(
                     "absolute top-[calc(100%_+_1.75rem)] w-full bg-customGreen h-1 duration-300 opacity-0 transition-opacity left-0 group-hover:opacity-100",

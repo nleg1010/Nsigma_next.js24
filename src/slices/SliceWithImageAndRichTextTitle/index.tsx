@@ -20,7 +20,7 @@ const Slice2 = ({ slice }: Slice2Props): JSX.Element => {
           <PrismicRichText field={title} />
         </div>
         <img
-              src={image.url}
+              src={(image as { url: string | undefined })?.url}
             />
 
       </div>

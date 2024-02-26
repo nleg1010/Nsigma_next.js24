@@ -11,7 +11,7 @@ export type Slice4Props = SliceComponentProps<Content.Slice4Slice>;
  * Component for "Slice4" Slices.
  */
 const Slice4 = ({ slice }: Slice4Props): JSX.Element => {
-	const { title, image, text, textcolor } = slice.primary;
+	const { title, image, text } = slice.primary;
   return (
     <section className="w-full py-20">
       <div className="text-white gap-4 text-center flex-col w-full bg-customNeutral px-4 flex items-center justify-center py-20">
@@ -19,9 +19,9 @@ const Slice4 = ({ slice }: Slice4Props): JSX.Element => {
           <PrismicRichText field={title} />
         </div>
         <img
-              src={image.url}
+              src={(image as { url: string | undefined })?.url}
             />
-	<div className="richtext" style={{ color: textcolor || "#ffffff" }}>
+	<div className="richtext" style={{ color: "#ffffff" }}>
           {text}
         </div>
       </div>

@@ -19,7 +19,7 @@ const Slice1 = ({ slice }: Slice1Props): JSX.Element => {
     <section className="w-full py-20">
       <div className="text-white gap-4 text-center flex-col w-full bg-customNeutral px-4 flex items-center justify-center py-20">
         <img
-              src={image.url}
+              src={(image as { url: string | undefined })?.url}
             />
 
       </div>
