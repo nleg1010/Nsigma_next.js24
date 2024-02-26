@@ -188,7 +188,7 @@ export default function Footer() {
               <ul className="flex flex-col gap-2">
                 <li>
                   <Link
-                    href="#"
+                    href="/frequent-questions"
                     className="text-xl font-medium text-lightGray hover:text-white transition-colors"
                   >
                     FAQs
