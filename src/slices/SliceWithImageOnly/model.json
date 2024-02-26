@@ -12,7 +12,7 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "slice_1_image": {
+        "image": {
           "type": "Image",
           "config": {
             "label": "slice 1 image",

@@ -738,6 +738,21 @@ type CtaSliceVariation = CtaSliceDefault;
 export type CtaSlice = prismic.SharedSlice<"cta", CtaSliceVariation>;
 
 /**
+ * Primary content in *MultipleSliceWithLinkAndLabel → Primary*
+ */
+export interface MultipleSliceSliceDefaultPrimary {
+  /**
+   * title field in *MultipleSliceWithLinkAndLabel → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: multiple_slice.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+}
+
+/**
  * Primary content in *MultipleSliceWithLinkAndLabel → Items*
  */
 export interface MultipleSliceSliceDefaultItem {
@@ -771,7 +786,7 @@ export interface MultipleSliceSliceDefaultItem {
  */
 export type MultipleSliceSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
+  Simplify<MultipleSliceSliceDefaultPrimary>,
   Simplify<MultipleSliceSliceDefaultItem>
 >;
 
@@ -856,10 +871,10 @@ export interface Slice1SliceDefaultPrimary {
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: slice1.primary.slice_1_image
+   * - **API ID Path**: slice1.primary.image
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  slice_1_image: prismic.ImageField<never>;
+  image: prismic.ImageField<never>;
 }
 
 /**
@@ -894,14 +909,14 @@ export type Slice1Slice = prismic.SharedSlice<"slice1", Slice1SliceVariation>;
  */
 export interface Slice2SliceDefaultPrimary {
   /**
-   * slice 2 image field in *SliceWithImageAndRichTextTitle → Primary*
+   * image field in *SliceWithImageAndRichTextTitle → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: slice2.primary.slice_2_image
+   * - **API ID Path**: slice2.primary.image
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  slice_2_image: prismic.ImageField<never>;
+  image: prismic.ImageField<never>;
 
   /**
    * Title field in *SliceWithImageAndRichTextTitle → Primary*
@@ -1859,6 +1874,7 @@ declare module "@prismicio/client" {
       CtaSliceVariation,
       CtaSliceDefault,
       MultipleSliceSlice,
+      MultipleSliceSliceDefaultPrimary,
       MultipleSliceSliceDefaultItem,
       MultipleSliceSliceVariation,
       MultipleSliceSliceDefault,
