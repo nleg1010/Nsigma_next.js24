@@ -39,7 +39,7 @@ const NavigationSlice = ({ slice }: NavigationSliceProps): JSX.Element => {
                 className={`relative focus:outline-none group`}
                 onClick={() => handleTabClick(i)}
               >
-	      	<Link href={`#${link.url}`}>
+	      	<Link href={`#${link as { url: string | undefined })?.url}`}>
 		    <PrismicRichText field={label} />
 		</Link>
                 <span
