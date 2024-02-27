@@ -34,12 +34,13 @@ const NavigationSlice = ({ slice }: NavigationSliceProps): JSX.Element => {
         <div className="text-xl bg-Gray p-4 sm:p-8 md:p-14 rounded-2xl flex flex-col">
           <div className="flex pb-8 gap-2 sm:gap-12">
             {slice.items.map(({ label, link }, i) => (
+	    <>
               <button
                 key={i}
                 className={`relative focus:outline-none group`}
                 onClick={() => handleTabClick(i)}
               >
-	      	<Link href={`#${link as { url: string | undefined })?.url}`}>
+	      	<Link href={`#${(link as { url: string | undefined })?.url}`}>
 		    <PrismicRichText field={label} />
 		</Link>
                 <span
@@ -49,6 +50,7 @@ const NavigationSlice = ({ slice }: NavigationSliceProps): JSX.Element => {
                   )}
                 ></span>
               </button>
+	      </>
             ))}
           </div>
           <div className="w-full bg-black h-[2px] mb-6"></div>
