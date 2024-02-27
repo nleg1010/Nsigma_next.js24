@@ -33,7 +33,11 @@ export default function Footer() {
           <h5 className="md:text-[34px] text-2xl font-bold text-white">
             Ready to get started?
           </h5>
-          <CustomLink href="/contact-us">Get Started</CustomLink>
+          <Link href="/contact-us"
+	      className="text-white bg-custm_pink min-w-[165px] text-center rounded-xl hover:scale-105 transition-transform duration-200 p-2 font-normal"
+	      style={{fontWeight: '999', padding: '20px', fontSize: '25px'}}>
+	      Get Started
+	</Link>
         </div>
       </div>
       <div className="container mx-auto px-4 flex md:flex-row flex-col justify-between gap-7 pt-10 pb-16 relative z-[1]">

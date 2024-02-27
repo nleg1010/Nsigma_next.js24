@@ -17,7 +17,7 @@ const TitleWithButton = ({ slice }) => {
             <Link
               href={button?.url || "#"}
               className="text-white bg-custm_pink min-w-[165px] text-center rounded-xl hover:scale-105 transition-transform duration-200 p-2 font-normal"
-	      style={{fontWeight: '999', padding: '10px'}}
+	      style={{fontWeight: '999', padding: '20px', fontSize: '25px'}}
             >
               Get started
             </Link>
