@@ -6,7 +6,7 @@ import { PrismicRichText } from "@prismicio/react";
  */
 const Cta = ({ slice }) => {
 	const { heading, text, button } = slice.primary;
-	const Id = heading[0].text;
+	const Id = heading[0]?.text;
 
   return (
     <section id={Id} className="w-full py-20">

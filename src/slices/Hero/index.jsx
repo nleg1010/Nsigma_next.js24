@@ -4,7 +4,7 @@ import Link from "next/link"
 
 const TitleWithButton = ({ slice }) => {
 	const { title, video, button } = slice.primary;
-	const Id = title[0].text;
+	const Id = title[0]?.text;
 
   return (
     <section id={Id} className="relative flex items-center justify-center h-screen mb-12 overflow-hidden -mt-20">
