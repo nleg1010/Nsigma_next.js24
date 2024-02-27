@@ -17,7 +17,6 @@ export type NavigationSliceProps =
  * Component for "NavigationSlice" Slices.
  */
 const NavigationSlice = ({ slice }: NavigationSliceProps): JSX.Element => {
-	console.log(slice);
   const [activeTab, setActiveTab] = useState(0);
 
   const handleTabClick = (index: any) => {
@@ -40,9 +39,9 @@ const NavigationSlice = ({ slice }: NavigationSliceProps): JSX.Element => {
                 className={`relative focus:outline-none group`}
                 onClick={() => handleTabClick(i)}
               >
-	      	<PrismicNextLink field={link}>
-	      		<PrismicRichText field={label} />
-		</PrismicNextLink>
+	      	<Link href={`#${link.url}`}>
+		    <PrismicRichText field={label} />
+		</Link>
                 <span
                   className={twMerge(
                     "absolute top-[calc(100%_+_1.75rem)] w-full bg-customGreen h-1 duration-300 opacity-0 transition-opacity left-0 group-hover:opacity-100",

@@ -12,8 +12,9 @@ export type Slice3Props = SliceComponentProps<Content.Slice3Slice>;
  */
 const Slice3 = ({ slice }: Slice3Props): JSX.Element => {
 	const { title, image, rich_text } = slice.primary;
+	const Id = title[0].text;
   return (
-    <section className="w-full py-20">
+    <section id={Id} className="w-full py-20">
       <div className="text-white gap-4 text-center flex-col w-full bg-customNeutral px-4 flex items-center justify-center py-20">
         <div className="text-4xl md:text-6xl pb-4 font-bold title">
           <PrismicRichText field={title} />
