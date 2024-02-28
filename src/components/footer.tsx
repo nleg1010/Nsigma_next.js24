@@ -82,7 +82,7 @@ export default function Footer() {
             </li>
             <li>
               <Link
-                href="htts://linkedin.com"
+                href="https://www.linkedin.com/company/nsigma-global"
                 className="text-lg text-white hover:bg-lightGray transition-colors bg-lightGray/20 h-[38px] w-[38px] inline-flex items-center justify-center rounded-full"
               >
                 <FaLinkedinIn />
