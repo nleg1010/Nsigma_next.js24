@@ -39,7 +39,7 @@ const AiMl: FC<any> = ({ page }) => {
 
       <div className="bg-[#000200]">
         <Banner content={ai_video}/>
-        <Navigation slices={ slices }/>
+        <Navigation />
         <DataScienceSection content={data_science} />
         <Divider />
         <WhatIsAiSection content={what_is_ai} />
