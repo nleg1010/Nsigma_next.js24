@@ -16,7 +16,16 @@ const SECTIONS = [
   { title: "Why Us", id: "why-us" },
 ];
 
-function Navigation( { slices }: any ) {
+interface SliceItem {
+  label: any;
+  link: any;
+}
+
+interface NavigationProps {
+  slices: SliceComponentProps<SliceItem>[];
+}
+
+function Navigation({ slices }: NavigationProps) {
 	const [activeTab, setActiveTab] = useState(0);
 
 	const handleTabClick = (index: any) => {
