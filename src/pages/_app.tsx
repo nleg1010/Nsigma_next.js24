@@ -6,6 +6,8 @@ import { Source_Sans_3 } from "next/font/google";
 import "@/styles/globals.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const source_sans = Source_Sans_3({
   subsets: ["latin"],
