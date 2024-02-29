@@ -19,7 +19,7 @@ const SECTIONS = [
 type NavigationSliceProps =
   SliceComponentProps<Content.NavigationSliceSlice>;
 
-function Navigation({ slices }: NavigationProps) {
+function Navigation({ slices }: NavigationSliceProps) {
 	const [activeTab, setActiveTab] = useState(0);
 
 	const handleTabClick = (index: any) => {
