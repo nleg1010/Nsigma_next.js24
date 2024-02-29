@@ -17,12 +17,12 @@ const SECTIONS = [
 ];
 
 interface SliceItem {
-	label: Content;
-	link: Content
+	label: any;
+	link: any;
 }
 
 interface NavigationProps {
-  slices: SliceComponentProps<SliceItem>[];
+  slices: <SliceItem>[];
 }
 
 function Navigation({ slices }: NavigationProps) {
