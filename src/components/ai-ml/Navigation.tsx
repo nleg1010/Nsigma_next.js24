@@ -18,7 +18,6 @@ const SECTIONS = [
 
 type NavigationSliceProps =
   SliceComponentProps<Content.NavigationSliceSlice>;
-}
 
 function Navigation({ slices }: NavigationProps) {
 	const [activeTab, setActiveTab] = useState(0);
