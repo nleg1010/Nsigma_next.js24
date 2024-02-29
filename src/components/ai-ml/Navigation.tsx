@@ -16,7 +16,7 @@ const SECTIONS = [
   { title: "Why Us", id: "why-us" },
 ];
 
-function Navigation( { slices } ) {
+function Navigation( { slices }: any ) {
 	const [activeTab, setActiveTab] = useState(0);
 
 	const handleTabClick = (index: any) => {
