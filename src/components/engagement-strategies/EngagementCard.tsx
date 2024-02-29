@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react';
+import { PrismicRichText } from "@prismicio/react";
+
 
 type EngagementCardProps = {
   image: { url: string };
-  info: string;
-  title: string;
+  detail: string;
+  topic: string;
 };
 
-const EngagementCard = ({ image, info, title }: EngagementCardProps) => {
+const EngagementCard = ({ image, detail, topic }: EngagementCardProps) => {
   const [loading, setLoading] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
   const [windowWidth, setWindowWidth] = useState(0);
@@ -50,7 +52,7 @@ const EngagementCard = ({ image, info, title }: EngagementCardProps) => {
         <div className="w-full h-full flex items-center justify-center text-neutral-300">
   	<img
             src={image?.url}
-            alt={title}
+            alt={topic}
             className="hidden lg:block p-1 rounded-2xl absolute w-full h-full top-0 left-0 right-0 bottom-0"
           />
         </div>
@@ -62,17 +64,17 @@ const EngagementCard = ({ image, info, title }: EngagementCardProps) => {
         >
           <img
             src={image?.url}
-            alt={title}
+            alt={topic}
             className="hidden lg:block p-1 rounded-2xl absolute w-full h-full top-0 left-0 right-0 bottom-0"
           />
           <div className="font-bold px-4 text-3xl bottom-4 hidden lg:block absolute text-neutral-300">
-            {title}
+            <PrismicRichText field={topic} />
           </div>
           <div className="sm:absolute rounded-2xl lg:rotate-y-180 w-full h-full flex flex-col items-center justify-center gap-4 py-4 bg-[#272932]  overflow-hidden p-4 xl:p-10 text-neutral-300 lg:backface-hidden">
             <div className="font-bold text-3xl block lg:hidden text-center">
-              {title}
+              <PrismicRichText field={topic} />
             </div>
-            <div className="flex flex-col space-y-5">{info}</div>
+            <div className="flex flex-col space-y-5"><PrismicRichText field={detail} /></div>
           </div>
         </div>
       )}

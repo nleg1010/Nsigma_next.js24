@@ -17,8 +17,8 @@ const EngagementStrategies: FC<any> = ({ data }) => {
             <EngagementCard
               key={i}
               image={item.image}
-              info={item.info}
-              title={item.title}
+              detail={item.detail}
+              topic={item.topic}
             />
           ))}
         </div>

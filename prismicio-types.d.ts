@@ -392,24 +392,24 @@ export interface HomeDocumentDataExpertiseItem {
  */
 export interface HomeDocumentDataEngagementItem {
   /**
-   * Title field in *Home → Engagement*
+   * Topic field in *Home → Engagement*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: home.engagement[].title
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **API ID Path**: home.engagement[].topic
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  title: prismic.KeyTextField;
+  topic: prismic.RichTextField;
 
   /**
-   * Info field in *Home → Engagement*
+   * Detail field in *Home → Engagement*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: home.engagement[].info
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **API ID Path**: home.engagement[].detail
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  info: prismic.KeyTextField;
+  detail: prismic.RichTextField;
 
   /**
    * Image field in *Home → Engagement*
