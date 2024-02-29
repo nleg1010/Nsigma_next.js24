@@ -6,7 +6,7 @@ import MenuItemWithSubMenu from "./MenuItemWithSubMenu";
 
 const routes = [
   {
-    name: "Our Expertise",
+    name: "OUR EXPERTISE",
     link: "/#expertise",
     sublinks: [
     	{ name: "AI/ML & Predictive Analytics", link: "/ai-ml" },
@@ -16,7 +16,7 @@ const routes = [
 	],
   },
   {
-    name: "Case Studies",
+    name: "CASE STUDIES",
     link: "/#casestudy",
   },
   {
@@ -24,7 +24,7 @@ const routes = [
     link: "/frequent-questions",
   },
   {
-    name: "Contact Us",
+    name: "CONTACT US",
     link: "/contact-us",
   },
 ];
@@ -88,7 +88,7 @@ function Navbar() {
                 href={link}
                 key={i}
                 className={twMerge(
-                  `hidden p-2 md:block md:text-lg text-base font-semibold text-white uppercase`,
+                  `hidden p-2 md:block md:text-lg text-base font-semibold text-white`,
                   i === routes.length - 1 &&
                     "bg-custm_pink p-3 min-w-[156px] font-normal text-center rounded-xl hover:scale-105 transition-transform"
                 )}
