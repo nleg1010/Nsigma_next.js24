@@ -17,12 +17,6 @@ const SECTIONS = [
 ];
 
 function Navigation() {
-	const [activeTab, setActiveTab] = useState(0);
-
-	const handleTabClick = (index: any) => {
-	    setActiveTab(index);
-	  };
-	const slice = slices[0];
   return (
   <>
     
