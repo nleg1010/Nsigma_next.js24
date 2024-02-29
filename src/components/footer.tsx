@@ -63,15 +63,7 @@ export default function Footer() {
               <FaChevronRight />
             </button>
           </form>
-          <ul className="flex items-center flex-wrap gap-3">
-            <li>
-              <Link
-                href="htts://facebook.com"
-                className="text-lg text-white hover:bg-lightGray transition-colors bg-lightGray/20 h-[38px] w-[38px] inline-flex items-center justify-center rounded-full"
-              >
-                <FaFacebookF />
-              </Link>
-            </li>
+          <ul className="flex items-center flex-wrap gap-3"> 
             <li>
               <Link
                 href="htts://x.com"
@@ -87,15 +79,7 @@ export default function Footer() {
               >
                 <FaLinkedinIn />
               </Link>
-            </li>
-            <li>
-              <Link
-                href="htts://instagram.com"
-                className="text-lg text-white hover:bg-lightGray transition-colors bg-lightGray/20 h-[38px] w-[38px] inline-flex items-center justify-center rounded-full"
-              >
-                <FaInstagram />
-              </Link>
-            </li>
+            </li> 
 
             <li>
               <Link

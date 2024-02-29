@@ -105,8 +105,7 @@ function Questions({ data }: QuestionsProps) {
           height={57}
           className="z-50 -mt-1 inline-block max-w-28 md:max-w-none"
         />
-        : Your New Friend To Help You Outperform Competitors with Custom AI and
-        Data Solutions
+        : Elevate Your Business With Custom Data and AI solutions
       </h2>
       <Link href="/contact-us" 
       	      className="text-white bg-custm_pink min-w-[165px] text-center rounded-xl hover:scale-105 transition-transform duration-200 p-2 font-normal"
