@@ -4,8 +4,8 @@ import { PrismicRichText } from "@prismicio/react";
 
 type EngagementCardProps = {
   image: { url: string };
-  detail: string;
-  topic: string;
+  detail: any;
+  topic: any;
 };
 
 const EngagementCard = ({ image, detail, topic }: EngagementCardProps) => {

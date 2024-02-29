@@ -1,4 +1,6 @@
 import { FC } from "react";
+import { PrismicRichText } from "@prismicio/react";
+
 
 interface EngagementCardProps {
   idx: number;
