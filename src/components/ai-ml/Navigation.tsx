@@ -17,8 +17,8 @@ const SECTIONS = [
 ];
 
 interface SliceItem {
-  label: any;
-  link: any;
+	label: Content;
+	link: Content
 }
 
 interface NavigationProps {
