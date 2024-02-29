@@ -16,13 +16,8 @@ const SECTIONS = [
   { title: "Why Us", id: "why-us" },
 ];
 
-interface SliceItem {
-	label: any;
-	link: any;
-}
-
-interface NavigationProps {
-  slices: <SliceItem>[];
+type NavigationSliceProps =
+  SliceComponentProps<Content.NavigationSliceSlice>;
 }
 
 function Navigation({ slices }: NavigationProps) {
