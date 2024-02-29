@@ -6,6 +6,8 @@ type EngagementCardProps = {
   image: { url: string };
   detail: any;
   topic: any;
+  info: any;
+  title: any;
 };
 
 const EngagementCard = ({ image, detail, topic, info, title }: EngagementCardProps) => {
