@@ -20,7 +20,7 @@ function ProcessSection({ tabs }: ProcessSectionProps) {
   return (
     <section
       className="w-full flex justify-center items-center py-12"
-      id="our-process"
+      id="Our Process"
     >
       <div className="container flex flex-col gap-12 text-white px-4">
         <h2 className="text-3xl md:text-5xl font-bold">

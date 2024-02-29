@@ -8,7 +8,7 @@ type EngagementCardProps = {
   topic: any;
 };
 
-const EngagementCard = ({ image, detail, topic }: EngagementCardProps) => {
+const EngagementCard = ({ image, detail, topic, info, title }: EngagementCardProps) => {
   const [loading, setLoading] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
   const [windowWidth, setWindowWidth] = useState(0);
@@ -68,13 +68,13 @@ const EngagementCard = ({ image, detail, topic }: EngagementCardProps) => {
             className="hidden lg:block p-1 rounded-2xl absolute w-full h-full top-0 left-0 right-0 bottom-0"
           />
           <div className="font-bold px-4 text-3xl bottom-4 hidden lg:block absolute text-neutral-300">
-            <PrismicRichText field={topic} />
+            <PrismicRichText field={topic} />{title}
           </div>
           <div className="sm:absolute rounded-2xl lg:rotate-y-180 w-full h-full flex flex-col items-center justify-center gap-4 py-4 bg-[#272932]  overflow-hidden p-4 xl:p-10 text-neutral-300 lg:backface-hidden">
             <div className="font-bold text-3xl block lg:hidden text-center">
-              <PrismicRichText field={topic} />
+              <PrismicRichText field={topic} />{title}
             </div>
-            <div className="flex flex-col space-y-5"><PrismicRichText field={detail} /></div>
+            <div className="flex flex-col space-y-5"><PrismicRichText field={detail} />{info}</div>
           </div>
         </div>
       )}

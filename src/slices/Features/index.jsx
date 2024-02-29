@@ -2,14 +2,15 @@ import { PrismicRichText } from "@prismicio/react";
 import { twMerge } from "tailwind-merge";
 
 const TitleWithAnalytics = ({ slice }) => {
-  const { title } = slice.primary;
+	const { title } = slice.primary;
+	const Id = title?.[0]?.type === "paragraph" ? title[0].text : " ";
 
   switch (slice.variation) {
     case "secondary":
       return (
         <section
           className="w-full flex justify-center items-center py-12"
-          id="benefits"
+          id={Id}
         >
           <div className="container flex flex-col gap-12 text-white px-4">
             <div className="text-3xl md:text-5xl font-bold title">

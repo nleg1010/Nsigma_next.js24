@@ -6,7 +6,7 @@ function WhatIsAiSection({ content }: WhatIsAiSectionProps) {
   return (
     <section
       className="w-full flex justify-center items-center py-12"
-      id="what-are-ai-ml"
+      id="What Are AI/ML"
     >
       <div className="container flex flex-col gap-12 text-white px-4">
         <h2 className="text-3xl md:text-5xl font-bold">

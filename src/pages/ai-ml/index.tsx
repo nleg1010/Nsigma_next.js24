@@ -28,7 +28,10 @@ const AiMl: FC<any> = ({ page }) => {
     why_us_list,
     meta_title,
     meta_description,
+    slices,
   } = page.data;
+
+
 
   return (
     <>
@@ -36,7 +39,7 @@ const AiMl: FC<any> = ({ page }) => {
 
       <div className="bg-[#000200]">
         <Banner content={ai_video}/>
-        <Navigation />
+        <Navigation slices={ slices }/>
         <DataScienceSection content={data_science} />
         <Divider />
         <WhatIsAiSection content={what_is_ai} />

@@ -19,7 +19,7 @@ function WhyUsSection({ data }: WhyUsSectionProps) {
   return (
     <section
       className="w-full flex justify-center items-center py-12"
-      id="why-us"
+      id="Why Us"
     >
       <div className="container text-white flex flex-col px-4 justify-center items-center w-full gap-12">
         <h2 className="text-3xl md:text-5xl font-bold">

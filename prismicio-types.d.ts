@@ -4,7 +4,7 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type AiMlDocumentDataSlicesSlice = never;
+type AiMlDocumentDataSlicesSlice = NavigationSliceSlice;
 
 /**
  * Item in *AI/ML → AI/Ml Steps*
@@ -171,8 +171,6 @@ export interface AiMlDocumentDataWhyUsListItem {
   content: prismic.RichTextField;
 }
 
-type AiMlDocumentDataSlices9Slice = NavigationSliceSlice;
-
 /**
  * Content for AI/ML documents
  */
@@ -291,16 +289,7 @@ interface AiMlDocumentData {
    * - **Tab**: Why Us
    * - **Documentation**: https://prismic.io/docs/field#group
    */
-  why_us_list: prismic.GroupField<Simplify<AiMlDocumentDataWhyUsListItem>> /**
-   * Slice Zone field in *AI/ML*
-   *
-   * - **Field Type**: Slice Zone
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ai_ml.slices9[]
-   * - **Tab**: Navigation
-   * - **Documentation**: https://prismic.io/docs/field#slices
-   */;
-  slices9: prismic.SliceZone<AiMlDocumentDataSlices9Slice>;
+  why_us_list: prismic.GroupField<Simplify<AiMlDocumentDataWhyUsListItem>>;
 }
 
 /**
@@ -1868,7 +1857,6 @@ declare module "@prismicio/client" {
       AiMlDocumentDataBenefitsItem,
       AiMlDocumentDataExamplesItem,
       AiMlDocumentDataWhyUsListItem,
-      AiMlDocumentDataSlices9Slice,
       HomeDocument,
       HomeDocumentData,
       HomeDocumentDataSlicesSlice,
