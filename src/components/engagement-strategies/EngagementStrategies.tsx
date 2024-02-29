@@ -19,6 +19,8 @@ const EngagementStrategies: FC<any> = ({ data }) => {
               image={item.image}
               detail={item.detail}
               topic={item.topic}
+	      info=null
+	      title=null
             />
           ))}
         </div>
