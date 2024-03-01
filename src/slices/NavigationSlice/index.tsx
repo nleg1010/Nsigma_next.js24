@@ -28,9 +28,9 @@ const NavigationSlice = ({ slice }: NavigationSliceProps): JSX.Element => {
       className="w-full flex justify-center items-center py-12"
       id="our-process"
     >
-      <div className="container flex flex-col gap-12 text-white px-4">
-        <div className="text-l bg-Gray p-4 sm:p-8 md:p-5 rounded-2xl flex flex-col" style={{ height: '0px' }}>
-          <div className="flex pb-8 gap-2 sm:gap-12" style={{ marginTop: '-15px'}}>
+      <div className="container flex flex-col gap-12 text-white px-4" style={{alignItems: 'center'}}>
+        <div className="text-l bg-Gray p-4 sm:p-7 md:p-5 rounded-2xl flex flex-col" style={{ height: '40px', width: '84%' , borderRadius: '25px 25px 25px 25px'}}>
+          <div className="flex pb-8 gap-2 sm:gap-12" style={{ marginTop: '-8px'}}>
             {slice.items.map(({ label, link }, i) => (
 	    <>
               <button
@@ -43,7 +43,7 @@ const NavigationSlice = ({ slice }: NavigationSliceProps): JSX.Element => {
 		</Link>
                 <span
                   className={twMerge(
-                    "absolute top-[calc(100%_+_1.75rem)] w-full bg-customGreen h-1 duration-300 opacity-0 transition-opacity left-0 group-hover:opacity-100",
+                    "absolute top-[calc(100%_+_1.75rem)] w-full bg-customGreen h-1 duration-300 opacity-0 transition-opacity left-0 group-hover:opacity-0",
                     i === activeTab && 0 > 1 &&"opacity-100"
                   )}
 		  style={{ marginTop: '-17px'}}
