@@ -8,12 +8,12 @@ import { PrismicNextLink } from '@prismicio/next'
 
 const SECTIONS = [
   { title: "AI/ML and Predictive Analytics", id: "AI/ML and Predictive Analytics" },
-  { title: "What Are AI/ML", id: "what-are-ai-ml" },
-  { title: "Our Process", id: "our-process" },
-  { title: "Signs you need AI/ML", id: "signs-you-need-ai" },
-  { title: "Benefits", id: "benefits" },
-  { title: "Examples", id: "examples" },
-  { title: "Why Us", id: "why-us" },
+  { title: "What Are AI/ML", id: "What Are AI/ML" },
+  { title: "Our Process", id: "Our Process" },
+  { title: "Signs you need AI/ML", id: "Signs you need AI/ML" },
+  { title: "Benefits", id: "Benefits" },
+  { title: "Examples", id: "Examples" },
+  { title: "Why Us", id: "Why Us" },
 ];
 
 function Navigation() {
