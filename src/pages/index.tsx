@@ -27,6 +27,7 @@ const Home: FC<any> = ({ page }) => {
 
   return (
     <>
+      <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
       <DefaultSeo title={meta_title} description={meta_description} />
       <div className="bg-[#000200]">
         <Banner data={questions} />
