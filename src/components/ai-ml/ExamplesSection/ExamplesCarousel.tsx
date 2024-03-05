@@ -56,6 +56,7 @@ const EmblaCarousel: React.FC<PropType> = ({ slides, options }) => {
 
   return (
     <>
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
       <div className="relative overflow-hidden">
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex gap-4">

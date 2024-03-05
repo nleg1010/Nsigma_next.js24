@@ -29,6 +29,7 @@ export default function Expertise({ data }: ExpertiseProps) {
     <section className={`py-16 relative ${loading ? 'blur' : ''}`} id="expertise">
       {loading ? (
         <div className="w-full h-full flex items-center justify-center text-white">
+	<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
 		{data?.map((item, idx: number) => {
               	return (
 	

@@ -28,6 +28,7 @@ var settings = {
 };
   return (
     <section className="py-16 -mt-28 relative z-40">
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
       <Slider
         {...settings}
         className="container mx-auto px-4 grid md:grid-cols-2 grid-cols-1 gap-7 md:-mt-[100px] mt-0"

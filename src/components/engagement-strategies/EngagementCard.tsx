@@ -50,6 +50,7 @@ const EngagementCard = ({ image, detail, topic, info, title }: EngagementCardPro
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
       {loading ? (
         <div className="w-full h-full flex items-center justify-center text-neutral-300">
   	<img

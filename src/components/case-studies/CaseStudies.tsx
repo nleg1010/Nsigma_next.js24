@@ -12,6 +12,7 @@ const CaseStudies = ({ data }: any) => {
 
   return (
     <section className="pb-20">
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
       <div className="relative">
         <h2 className=" text-2xl md:mt-5 md:text-[42px] font-extrabold text-white text-center pb-16">
           Case <span className="grad">Studies</span>

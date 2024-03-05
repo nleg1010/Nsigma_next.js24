@@ -28,6 +28,7 @@ const MultipleSlice = ({ slice }: MultipleSliceProps): JSX.Element => {
       className="w-full flex justify-center items-center py-12"
       id="our-process"
     >
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
       <div className="container flex flex-col gap-12 text-white px-4">
       
         <div className="text-3xl md:text-5xl font-bold title">

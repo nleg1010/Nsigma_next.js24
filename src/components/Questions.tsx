@@ -97,6 +97,7 @@ function Questions({ data }: QuestionsProps) {
 
   return (
     <div className="w-full gap-4 flex items-center justify-center flex-col">
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
       <h2 className="text-white mt-5 text-lg md:text-3xl font-normal">
         <img
           src="/images/logo.png"

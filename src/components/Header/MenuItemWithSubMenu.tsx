@@ -22,6 +22,7 @@ const MenuItemWithSubMenu = ({
 
   return (
     <span className="flex flex-col items-end gap-8">
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
       <button
         className="flex w-full uppercase"
         onClick={() => setSubMenuOpen(!subMenuOpen)}

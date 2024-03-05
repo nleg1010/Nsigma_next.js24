@@ -28,6 +28,7 @@ const NavigationSlice = ({ slice }: NavigationSliceProps): JSX.Element => {
       className="w-full flex justify-center items-center py-12"
       id="our-process"
     >
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
       <div className="container flex flex-col gap-12 text-white px-4" style={{alignItems: 'center'}}>
         <div className="text-l bg-Gray p-4 sm:p-7 md:p-5 rounded-2xl flex flex-col" style={{ height: '40px', width: '84%' , borderRadius: '25px 25px 25px 25px'}}>
           <div className="flex pb-8 gap-2 sm:gap-12" style={{ marginTop: '-8px'}}>

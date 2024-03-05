@@ -3,6 +3,7 @@ import { PrismicRichText } from "@prismicio/react";
 const AboutUs = ({ about }: any) => {
   return (
     <>
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
       <h2
         id="about"
         className=" text-2xl md:text-[42px] font-extrabold text-white text-center pb-16"

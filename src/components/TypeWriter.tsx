@@ -93,6 +93,7 @@ const WordDisplay = React.memo(() => {
 
   return (
     <>
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
       <p className="inline-block grad">
         <span className={HERO_STYLES.TYPED_SPAN} ref={typedSpanElement}></span>
       </p>

@@ -4,6 +4,7 @@ import Link from "next/link"
 export default function Banner({ content }: any) {
   return (
     <>
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
       <main className="relative flex items-center justify-center h-screen mb-12 overflow-hidden -mt-20">
         <div className="relative z-30 text-2xl bg-opacity-50 rounded-xl">
           <div className="flex items-center justify-center bg-black/30 w-screen h-screen">
