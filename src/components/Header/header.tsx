@@ -10,6 +10,7 @@ const routes = [
     link: "/#expertise",
     sublinks: [
     	{ name: "AI/ML & Predictive Analytics", link: "/ai-ml" },
+    	{ name: "BI Automation & Data Analytics ", link: "/automation-analytics " },
 	{ name: "TotalOps: Data, ML & Security", link: "/totalops" },
 	{ name: "Data Engineering", link: "/data-engineering" },
 	{ name: "Software Development", link: "/software-development" },
