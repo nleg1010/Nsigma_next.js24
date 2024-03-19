@@ -9,10 +9,12 @@ export default function Banner() {
 						<div className="container h-full w-full grid-rows-[1fr,1fr] gap-4 px-4 grid justify-center items-end">
 							<h1 className="md:text-6xl text-3xl md:leading-[70px] w-full font-black text-white text-center  mb-5">
 								Feel the Power of an{" "}
+								<br className="hidden lg:block 2xl:hidden" />
 								<span className="from-[#b0cb48] bg-gradient-to-r to-[#83E868] bg-clip-text text-transparent">
-									In-House Data Team,
+									<span className="whitespace-nowrap">In-House </span>
+									Data Team,
 								</span>{" "}
-								<br /> Without the Overhead
+								<br className="hidden sm:block" /> Without the Overhead
 							</h1>
 							<div className="md:text-2xl md:font-medium text-sm text-center text-white self-start">
 								<Subheader />
