@@ -3,18 +3,37 @@ import Link from "next/link";
 import { motion, Variants } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import MenuItemWithSubMenu from "./MenuItemWithSubMenu";
+import { link } from "fs";
 
 const routes = [
   {
     name: "OUR EXPERTISE",
     link: "/#expertise",
     sublinks: [
-    	{ name: "AI/ML & Predictive Analytics", link: "/ai-ml" },
-    	{ name: "BI Automation & Data Analytics ", link: "/automation-analytics " },
-	{ name: "TotalOps: Data, ML & Security", link: "/totalops" },
-	{ name: "Data Engineering", link: "/data-engineering" },
-	{ name: "Software Development", link: "/software-development" },
-	],
+      {
+        name: "Data Strategy & AI Consulting",
+        link: "/#datastrategy",
+      },
+      { name: "AI/ML & Predictive Analytics", link: "/ai-ml" },
+      {
+        name: "Data Visualization & Business Intelligence (BI)",
+        link: "/visualization-bi",
+      },
+      { name: "AI TotalOps:Data, ML & Security", link: "/aitotalops" },
+      { name: "Data Engineering", link: "/computer-vision-iot" },
+      {
+        name: "Computer Vision & IoT Solutions",
+        link: "/computer-vision-iot",
+      },
+    ],
+  },
+  {
+    name: "SOLUTIONS",
+    link: "/#solutions",
+    sublinks: [
+      { name: "Asset Management", link: "/#solutions" },
+      { name: "Real Estate ", link: "" },
+    ],
   },
   {
     name: "CASE STUDIES",
@@ -70,7 +89,13 @@ function Navbar() {
 
   return (
     <nav className="z-50 flex top-0 w-full justify-center sticky bg-Gray/75  text-white">
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
+      <script
+        type="text/javascript"
+        id="hs-script-loader"
+        async
+        defer
+        src="//js.hs-scripts.com/44973111.js"
+      ></script>
       <div className="container flex w-full items-center justify-between gap-2 font-bold px-4 xl:px-4 py-2">
         <div className="md:w-1/4 w-1/2 z-50">
           <Link href="/" className="inline-block">
@@ -94,7 +119,6 @@ function Navbar() {
                   i === routes.length - 1 &&
                     "bg-custm_pink p-3 min-w-[156px] font-normal text-center rounded-xl hover:scale-105 transition-transform"
                 )}
-		
               >
                 {name}
               </Link>
@@ -112,9 +136,8 @@ function Navbar() {
                       key={name}
                       className={twMerge(
                         `p-2 md:text-sm text-base font-semibold text-white uppercase`,
-              		'hover:bg-blue-100 hover:bg-opacity-20'
+                        "hover:bg-blue-100 hover:bg-opacity-20"
                       )}
-		      
                     >
                       {name}
                     </Link>
@@ -164,7 +187,6 @@ function Navbar() {
                 <MenuItemWithSubMenu
                   key={i}
                   item={{ name, link, subMenuItems: sublinks }}
-
                   toggleOpen={setOpen}
                 />
               ) : (
@@ -177,7 +199,7 @@ function Navbar() {
                       "bg-custm_pink p-3 min-w-[156px] font-normal text-center rounded-xl"
                   )}
                   onClick={handleOpen}
-		  style={{marginBottom: '-10px'}}
+                  style={{ marginBottom: "-10px" }}
                 >
                   {name}
                 </Link>
