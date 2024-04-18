@@ -21,9 +21,9 @@ const Home: FC<any> = ({ page }) => {
     why_cards,
     meta_title,
     meta_description,
-    solutions,
+    solutions_subheader,
+    solutions_content,
   } = page.data;
-
   return (
     <>
       <script
@@ -37,7 +37,7 @@ const Home: FC<any> = ({ page }) => {
       <div className="bg-[#000200]">
         <Banner />
         <Expertise data={expertise} />
-        <Solutions data={solutions} />
+        <Solutions data={{ solutions_subheader, solutions_content }} />
         <EngagementStrategies data={engagement} />
         <CaseStudies data={case_studies} />
         <AboutUs

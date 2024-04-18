@@ -593,7 +593,27 @@ interface HomeDocumentData {
    * - **Tab**: About Us
    * - **Documentation**: https://prismic.io/docs/field#group
    */
-  why_cards: prismic.GroupField<Simplify<HomeDocumentDataWhyCardsItem>>;
+  why_cards: prismic.GroupField<Simplify<HomeDocumentDataWhyCardsItem>> /**
+   * solutions_subheader field in *Home*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.solutions_subheader
+   * - **Tab**: Solutions
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  solutions_subheader: prismic.KeyTextField;
+
+  /**
+   * solutions_content field in *Home*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.solutions_content
+   * - **Tab**: Solutions
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  solutions_content: prismic.RichTextField;
 }
 
 /**
