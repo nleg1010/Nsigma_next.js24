@@ -3,7 +3,6 @@ import Link from "next/link";
 import { motion, Variants } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import MenuItemWithSubMenu from "./MenuItemWithSubMenu";
-import { link } from "fs";
 
 const routes = [
   {

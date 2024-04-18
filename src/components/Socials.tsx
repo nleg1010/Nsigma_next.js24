@@ -15,7 +15,7 @@ export default function Socials({ className }: SocialsProps) {
     <ul className={twMerge("flex flex-wrap gap-3", className)}>
       <li>
         <Link
-          href="htts://x.com"
+          href="https://x.com"
           className="text-lg text-white hover:bg-lightGray transition-colors bg-lightGray/20 h-[38px] w-[38px] inline-flex items-center justify-center rounded-full"
         >
           <FaTwitter />
