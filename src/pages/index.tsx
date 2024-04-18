@@ -24,8 +24,6 @@ const Home: FC<any> = ({ page }) => {
     solutions_subheader,
     solutions_content,
   } = page.data;
-
-  console.log(page.data);
   return (
     <>
       <script
