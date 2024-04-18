@@ -9,52 +9,55 @@ import Expertise from "@/components/expertise";
 import AboutUs from "@/components/about-us/AboutUs";
 import Banner from "@/components/banner";
 import { PrismicRichText } from "@prismicio/react";
+import Solutions from "@/components/Solutions";
 
 const Home: FC<any> = ({ page }) => {
-	const {
-		questions,
-		expertise,
-		engagement,
-		case_studies,
-		about_content,
-		why_cards,
-		meta_title,
-		meta_description,
-	} = page.data;
+  const {
+    questions,
+    expertise,
+    engagement,
+    case_studies,
+    about_content,
+    why_cards,
+    meta_title,
+    meta_description,
+    solutions,
+  } = page.data;
 
-	return (
-		<>
-			<script
-				type="text/javascript"
-				id="hs-script-loader"
-				async
-				defer
-				src="//js.hs-scripts.com/44973111.js"
-			></script>
-			<DefaultSeo title={meta_title} description={meta_description} />
-			<div className="bg-[#000200]">
-				<Banner />
-				<Expertise data={expertise} />
-				<EngagementStrategies data={engagement} />
-				<CaseStudies data={case_studies} />
-				<AboutUs
-					about={{
-						content: about_content,
-						whyCards: why_cards,
-					}}
-				/>
-			</div>
-		</>
-	);
+  return (
+    <>
+      <script
+        type="text/javascript"
+        id="hs-script-loader"
+        async
+        defer
+        src="//js.hs-scripts.com/44973111.js"
+      ></script>
+      <DefaultSeo title={meta_title} description={meta_description} />
+      <div className="bg-[#000200]">
+        <Banner />
+        <Expertise data={expertise} />
+        <Solutions data={solutions} />
+        <EngagementStrategies data={engagement} />
+        <CaseStudies data={case_studies} />
+        <AboutUs
+          about={{
+            content: about_content,
+            whyCards: why_cards,
+          }}
+        />
+      </div>
+    </>
+  );
 };
 
 export default Home;
 
 export async function getStaticProps({ previewData }: GetStaticPropsContext) {
-	const client = createClient({ previewData });
-	const page = await client.getSingle("home");
+  const client = createClient({ previewData });
+  const page = await client.getSingle("home");
 
-	return {
-		props: { page },
-	};
+  return {
+    props: { page },
+  };
 }

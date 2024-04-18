@@ -1,14 +1,6 @@
 import Link from "next/link";
-import {
-  FaChevronRight,
-  FaEnvelope,
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
-  FaTwitter,
-} from "react-icons/fa";
-import { FaMobileAlt } from "react-icons/fa";
-import CustomLink from "./CustomLink";
+import { FaChevronRight, FaEnvelope } from "react-icons/fa";
+import Socials from "./Socials";
 
 export default function Footer() {
   const handleMail = async (e: any) => {
@@ -18,7 +10,13 @@ export default function Footer() {
 
   return (
     <footer className="bg-Gray relative">
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
+      <script
+        type="text/javascript"
+        id="hs-script-loader"
+        async
+        defer
+        src="//js.hs-scripts.com/44973111.js"
+      ></script>
       <div className="container mx-auto px-4 flex md:flex-row flex-col justify-between items-center gap-7 pt-16 pb-10 border-b border-[#696B76]/40">
         <div className="md:w-1/2 flex justify-center sm:justify-start w-full">
           <Link href="/" className="inline-block">
@@ -34,11 +32,13 @@ export default function Footer() {
           <h5 className="md:text-[34px] text-2xl font-bold text-white">
             Ready to get started?
           </h5>
-          <Link href="/contact-us"
-	      className="text-white bg-custm_pink min-w-[165px] text-center rounded-xl hover:scale-105 transition-transform duration-200 p-2 font-normal"
-	      style={{fontWeight: '999', padding: '20px', fontSize: '25px'}}>
-	      Get Started
-	</Link>
+          <Link
+            href="/contact-us"
+            className="text-white bg-custm_pink min-w-[165px] text-center rounded-xl hover:scale-105 transition-transform duration-200 p-2 font-normal"
+            style={{ fontWeight: "999", padding: "20px", fontSize: "25px" }}
+          >
+            Get Started
+          </Link>
         </div>
       </div>
       <div className="container mx-auto px-4 flex md:flex-row flex-col justify-between gap-7 pt-10 pb-16 relative z-[1]">
@@ -64,52 +64,26 @@ export default function Footer() {
               <FaChevronRight />
             </button>
           </form>
-          <ul className="flex items-center flex-wrap gap-3"> 
-            <li>
-              <Link
-                href="htts://x.com"
-                className="text-lg text-white hover:bg-lightGray transition-colors bg-lightGray/20 h-[38px] w-[38px] inline-flex items-center justify-center rounded-full"
-              >
-                <FaTwitter />
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="https://www.linkedin.com/company/nsigma-global"
-                className="text-lg text-white hover:bg-lightGray transition-colors bg-lightGray/20 h-[38px] w-[38px] inline-flex items-center justify-center rounded-full"
-              >
-                <FaLinkedinIn />
-              </Link>
-            </li> 
-
-            <li>
-              <Link
-                href="mailto://info@nsigma.io"
-                className="text-lg text-white hover:bg-lightGray transition-colors bg-lightGray/20 h-[38px] w-[38px] inline-flex items-center justify-center rounded-full"
-              >
-                <FaEnvelope />
-              </Link>
-            </li>
-          </ul>
+          <Socials className="hidden md:flex" />
         </div>
-        <div className="md:w-[70%] w-full grid md:grid-cols-3 grid-cols-1 gap-7">
-          <div>
-            <h6 className="md:text-[22px] md:leading-8 text-lg font-bold text-white mb-6">
+        <div className="md:w-[70%] w-full grid md:grid-cols-3 grid-cols-2 gap-7">
+          <div className="flex flex-col">
+            <h6 className="md:text-[22px] md:leading-8 text-md font-bold text-white mb-6">
               Services
             </h6>
             <ul className="flex flex-col gap-2">
               <li>
                 <Link
                   href="/#"
-                  className="text-xl font-medium text-lightGray hover:text-white transition-colors"
+                  className="text-sm md:text-xl font-medium  text-lightGray hover:text-white transition-colors"
                 >
-                  Data Strategy & Consulting
+                  AI Data Strategy & Consulting
                 </Link>
               </li>
               <li>
                 <Link
                   href="/ai-ml"
-                  className="text-xl font-medium text-lightGray hover:text-white transition-colors"
+                  className="text-sm md:text-xl font-medium text-lightGray hover:text-white transition-colors"
                 >
                   AI/ML & Predictive Analytics
                 </Link>
@@ -117,15 +91,15 @@ export default function Footer() {
               <li>
                 <Link
                   href="/totalops"
-                  className="text-xl font-medium text-lightGray hover:text-white transition-colors"
+                  className="text-sm md:text-xl font-medium text-lightGray hover:text-white transition-colors"
                 >
-                   TotalOps : Data, ML and Security
+                  AI TotalOps : Data, ML and Security
                 </Link>
               </li>
               <li>
                 <Link
                   href="/data-engineering"
-                  className="text-xl font-medium text-lightGray hover:text-white transition-colors"
+                  className="text-sm md:text-xl font-medium text-lightGray hover:text-white transition-colors"
                 >
                   Data Engineering
                 </Link>
@@ -133,30 +107,30 @@ export default function Footer() {
               <li>
                 <Link
                   href="/software-development"
-                  className="text-xl font-medium text-lightGray hover:text-white transition-colors"
+                  className="text-sm md:text-xl font-medium text-lightGray hover:text-white transition-colors"
                 >
-                  Software Development
+                  Computer vision & IoT Solutions
                 </Link>
               </li>
               <li>
                 <Link
                   href="/Automation-analytics"
-                  className="text-xl font-medium text-lightGray hover:text-white transition-colors"
+                  className="text-sm md:text-xl font-medium text-lightGray hover:text-white transition-colors"
                 >
-                  BI Automation & Data Analytics
+                  Data Visualizations & Business Intelligence (BI)
                 </Link>
               </li>
             </ul>
           </div>
           <div>
-            <h6 className="md:text-[22px] md:leading-8 text-lg font-bold text-white mb-6">
+            <h6 className="md:text-[22px] md:leading-8 text-md font-bold text-white mb-6">
               About
             </h6>
             <ul className="flex flex-col gap-2">
               <li>
                 <Link
                   href="/nsigma-story"
-                  className="text-xl font-medium text-lightGray hover:text-white transition-colors"
+                  className="text-sm md:text-xl font-medium text-lightGray hover:text-white transition-colors"
                 >
                   Our Story
                 </Link>
@@ -164,21 +138,21 @@ export default function Footer() {
               <li>
                 <Link
                   href="#"
-                  className="text-xl font-medium text-lightGray hover:text-white transition-colors"
+                  className="text-sm md:text-xl font-medium text-lightGray hover:text-white transition-colors"
                 >
                   Careers
                 </Link>
               </li>
             </ul>
             <div className="mt-5">
-              <h6 className="md:text-[22px] md:leading-8 text-lg font-bold text-white mb-6">
+              <h6 className="md:text-[22px] md:leading-8 text-md font-bold text-white mb-6">
                 Help
               </h6>
               <ul className="flex flex-col gap-2">
                 <li>
                   <Link
                     href="/frequent-questions"
-                    className="text-xl font-medium text-lightGray hover:text-white transition-colors"
+                    className="text-sm md:text-xl font-medium text-lightGray hover:text-white transition-colors"
                   >
                     FAQs
                   </Link>
@@ -186,7 +160,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/privacy-policy"
-                    className="text-xl font-medium text-lightGray hover:text-white transition-colors"
+                    className="text-sm md:text-xl font-medium text-lightGray hover:text-white transition-colors"
                   >
                     Privacy Policy
                   </Link>
@@ -194,7 +168,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/cookies-policy"
-                    className="text-xl font-medium text-lightGray hover:text-white transition-colors"
+                    className="text-sm md:text-xl font-medium text-lightGray hover:text-white transition-colors"
                   >
                     Cookies Policy
                   </Link>
@@ -202,7 +176,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/contact-us"
-                    className="text-xl font-medium text-lightGray hover:text-white transition-colors"
+                    className="text-sm md:text-xl font-medium text-lightGray hover:text-white transition-colors"
                   >
                     Contact Us
                   </Link>
@@ -210,8 +184,9 @@ export default function Footer() {
               </ul>
             </div>
           </div>
-          <div className="text-lightGray text-xl">
-            <h6 className="md:text-[22px] md:leading-8 text-lg font-bold text-white mb-6">
+
+          <div className="text-lightGray text-md">
+            <h6 className="md:text-[22px] md:leading-8 text-md font-bold text-white mb-6">
               Contact
             </h6>
             <p>
@@ -220,21 +195,14 @@ export default function Footer() {
               <br />
               Miami, FL 33137
             </p>
-            <Link
-              className="flex items-center gap-2 mt-4"
-              href="mailto:info@nsigma.io"
-            >
-              <FaEnvelope />
-              <span>info@nsigma.io</span>
-            </Link>
-            <Link
-              className="flex items-center gap-2 mt-4"
-              href="tel:+19044694458"
-            >
-              <FaMobileAlt />
-              <span>+1-904-469-4458</span>
+            <Link className="flex items-center" href="mailto:info@nsigma.io">
+              <div className="flex flex-row gap-1 items-center">
+                <FaEnvelope />
+                info@nsigma.io
+              </div>
             </Link>
           </div>
+          <Socials className="md:hidden items-start gap-2" />
         </div>
       </div>
       {/* <Image src="/images/abstract.png" alt='abstract' width={94} height={250} className='absolute left-4 bottom-5 -z-0' /> */}
