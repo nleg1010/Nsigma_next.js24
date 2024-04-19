@@ -16,9 +16,9 @@ export default function Solutions({ data }: SolutionsProps) {
     >
       <div className="container mx-auto px-3 text-lightGray text-center md:text-lg pb-20">
         <h2 className=" text-2xl md:text-[42px]  font-extrabold text-white text-center pb-16">
-          Industrial <span className="grad">Solutions</span>
+          Industry <span className="grad">Solutions</span>
         </h2>
-        <h3>{data?.solutions_subheader}</h3>
+        <h3 className="pb-2">{data?.solutions_subheader}</h3>
         <PrismicRichText field={data?.solutions_content} />
       </div>
     </section>
