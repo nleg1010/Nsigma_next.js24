@@ -25,7 +25,6 @@ const Home: FC<any> = ({ page }) => {
     solutions_content,
     solutions_tabs,
   } = page.data;
-  console.log(page.data); // DO WYJEBANIA
   return (
     <>
       <script

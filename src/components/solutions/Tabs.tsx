@@ -15,7 +15,6 @@ export default function Tabs({ data }: tabsProps) {
   const handleTabClick = (name: string) => {
     setActiveTab(name);
   };
-  console.log(data);
   return (
     <div className="text-xl bg-Gray p-4 sm:p-8 md:p-14 rounded-2xl flex flex-col">
       <ul className="flex flex-col md:flex-row justify-around items-center">
