@@ -492,6 +492,41 @@ export interface HomeDocumentDataWhyCardsItem {
 }
 
 /**
+ * Item in *Home → solutions_tabs*
+ */
+export interface HomeDocumentDataSolutionsTabsItem {
+  /**
+   * name field in *Home → solutions_tabs*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.solutions_tabs[].name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * content field in *Home → solutions_tabs*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.solutions_tabs[].content
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  content: prismic.RichTextField;
+
+  /**
+   * image field in *Home → solutions_tabs*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.solutions_tabs[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
  * Content for Home documents
  */
 interface HomeDocumentData {
@@ -596,13 +631,13 @@ interface HomeDocumentData {
   why_cards: prismic.GroupField<Simplify<HomeDocumentDataWhyCardsItem>> /**
    * solutions_subheader field in *Home*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
    * - **API ID Path**: home.solutions_subheader
    * - **Tab**: Solutions
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */;
-  solutions_subheader: prismic.KeyTextField;
+  solutions_subheader: prismic.RichTextField;
 
   /**
    * solutions_content field in *Home*
@@ -614,6 +649,19 @@ interface HomeDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   solutions_content: prismic.RichTextField;
+
+  /**
+   * solutions_tabs field in *Home*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.solutions_tabs[]
+   * - **Tab**: Solutions
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  solutions_tabs: prismic.GroupField<
+    Simplify<HomeDocumentDataSolutionsTabsItem>
+  >;
 }
 
 /**
@@ -1885,6 +1933,7 @@ declare module "@prismicio/client" {
       HomeDocumentDataEngagementItem,
       HomeDocumentDataCaseStudiesItem,
       HomeDocumentDataWhyCardsItem,
+      HomeDocumentDataSolutionsTabsItem,
       PageDocument,
       PageDocumentData,
       PageDocumentDataSlicesSlice,

@@ -77,7 +77,7 @@ export default function Footer() {
                   href="/#"
                   className="text-sm md:text-xl font-medium  text-lightGray hover:text-white transition-colors"
                 >
-                  AI Data Strategy & Consulting
+                  Data Strategy & AI Consulting
                 </Link>
               </li>
               <li>

@@ -9,7 +9,7 @@ import Expertise from "@/components/expertise";
 import AboutUs from "@/components/about-us/AboutUs";
 import Banner from "@/components/banner";
 import { PrismicRichText } from "@prismicio/react";
-import Solutions from "@/components/Solutions";
+import Solutions from "@/components/solutions/Solutions";
 
 const Home: FC<any> = ({ page }) => {
   const {
@@ -23,6 +23,7 @@ const Home: FC<any> = ({ page }) => {
     meta_description,
     solutions_subheader,
     solutions_content,
+    solutions_tabs,
   } = page.data;
   return (
     <>
@@ -37,7 +38,9 @@ const Home: FC<any> = ({ page }) => {
       <div className="bg-[#000200]">
         <Banner />
         <Expertise data={expertise} />
-        <Solutions data={{ solutions_subheader, solutions_content }} />
+        <Solutions
+          data={{ solutions_subheader, solutions_content, solutions_tabs }}
+        />
         <EngagementStrategies data={engagement} />
         <CaseStudies data={case_studies} />
         <AboutUs
