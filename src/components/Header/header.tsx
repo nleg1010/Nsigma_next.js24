@@ -11,7 +11,7 @@ const routes = [
     sublinks: [
       {
         name: "Data Strategy & AI Consulting",
-        link: "/#datastrategy",
+        link: "/data-strategy",
       },
       { name: "AI/ML & Predictive Analytics", link: "/ai-ml" },
       {
@@ -19,7 +19,7 @@ const routes = [
         link: "/visualization-bi",
       },
       { name: "AI TotalOps:Data, ML & Security", link: "/aitotalops" },
-      { name: "Data Engineering", link: "/computer-vision-iot" },
+      { name: "Data Engineering", link: "/data-engineering" },
       {
         name: "Computer Vision & IoT Solutions",
         link: "/computer-vision-iot",
@@ -82,7 +82,7 @@ function Navbar() {
     },
     open: {
       opacity: 1,
-      height: 392,
+      height: 586,
     },
   };
 

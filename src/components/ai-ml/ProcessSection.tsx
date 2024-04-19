@@ -22,10 +22,16 @@ function ProcessSection({ tabs }: ProcessSectionProps) {
       className="w-full flex justify-center items-center py-12"
       id="Our Process"
     >
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
+      <script
+        type="text/javascript"
+        id="hs-script-loader"
+        async
+        defer
+        src="//js.hs-scripts.com/44973111.js"
+      ></script>
       <div className="container flex flex-col gap-12 text-white px-4">
         <h2 className="text-3xl md:text-5xl font-bold">
-          <span className="grad">AI/ML and Predictive Analytics</span> Step by
+          <span className="grad">AI/ML and Predictive Analytics</span> Step byeo
           Step:
         </h2>
         <div className="text-xl bg-Gray p-4 sm:p-8 md:p-14 rounded-2xl flex flex-col">
