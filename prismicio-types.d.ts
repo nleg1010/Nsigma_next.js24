@@ -1149,6 +1149,107 @@ type Slice4SliceVariation = Slice4SliceDefault;
 export type Slice4Slice = prismic.SharedSlice<"slice4", Slice4SliceVariation>;
 
 /**
+ * Primary content in *Text → Primary*
+ */
+export interface TextSliceDefaultPrimary {
+  /**
+   * Text field in *Text → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text.primary.text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+}
+
+/**
+ * Default variation for Text Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TextSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Primary content in *Text → Primary*
+ */
+export interface TextSliceBoldColoredPrimary {
+  /**
+   * Text field in *Text → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text.primary.text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+}
+
+/**
+ * Bold-colored variation for Text Slice
+ *
+ * - **API ID**: `boldColored`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextSliceBoldColored = prismic.SharedSliceVariation<
+  "boldColored",
+  Simplify<TextSliceBoldColoredPrimary>,
+  never
+>;
+
+/**
+ * Primary content in *Text → Primary*
+ */
+export interface TextSliceWithHrPrimary {
+  /**
+   * Text field in *Text → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text.primary.text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+}
+
+/**
+ * With Hr variation for Text Slice
+ *
+ * - **API ID**: `withHr`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextSliceWithHr = prismic.SharedSliceVariation<
+  "withHr",
+  Simplify<TextSliceWithHrPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Text*
+ */
+type TextSliceVariation =
+  | TextSliceDefault
+  | TextSliceBoldColored
+  | TextSliceWithHr;
+
+/**
+ * Text Shared Slice
+ *
+ * - **API ID**: `text`
+ * - **Description**: Text
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextSlice = prismic.SharedSlice<"text", TextSliceVariation>;
+
+/**
  * Primary content in *TextWithImage → Primary*
  */
 export interface TextWithImageSliceDefaultPrimary {
@@ -1445,6 +1546,81 @@ type TitleWithAnalyticsSliceVariation =
 export type TitleWithAnalyticsSlice = prismic.SharedSlice<
   "title_with_analytics",
   TitleWithAnalyticsSliceVariation
+>;
+
+/**
+ * Primary content in *TitleWithBadge → Primary*
+ */
+export interface TitleWithBadgeSliceDefaultPrimary {
+  /**
+   * Title field in *TitleWithBadge → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: title_with_badge.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * Badge field in *TitleWithBadge → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: title_with_badge.primary.badge
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  badge: prismic.KeyTextField;
+
+  /**
+   * BadgeBgColor field in *TitleWithBadge → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: title_with_badge.primary.badgebgcolor
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  badgebgcolor: prismic.ColorField;
+
+  /**
+   * BadgeTextColor field in *TitleWithBadge → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: title_with_badge.primary.badgetextcolor
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  badgetextcolor: prismic.ColorField;
+}
+
+/**
+ * Default variation for TitleWithBadge Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TitleWithBadgeSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TitleWithBadgeSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *TitleWithBadge*
+ */
+type TitleWithBadgeSliceVariation = TitleWithBadgeSliceDefault;
+
+/**
+ * TitleWithBadge Shared Slice
+ *
+ * - **API ID**: `title_with_badge`
+ * - **Description**: TitleWithBadge
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TitleWithBadgeSlice = prismic.SharedSlice<
+  "title_with_badge",
+  TitleWithBadgeSliceVariation
 >;
 
 /**
@@ -1967,6 +2143,14 @@ declare module "@prismicio/client" {
       Slice4SliceDefaultPrimary,
       Slice4SliceVariation,
       Slice4SliceDefault,
+      TextSlice,
+      TextSliceDefaultPrimary,
+      TextSliceBoldColoredPrimary,
+      TextSliceWithHrPrimary,
+      TextSliceVariation,
+      TextSliceDefault,
+      TextSliceBoldColored,
+      TextSliceWithHr,
       TextWithImageSlice,
       TextWithImageSliceDefaultPrimary,
       TextWithImageSliceDefaultItem,
@@ -1983,6 +2167,10 @@ declare module "@prismicio/client" {
       TitleWithAnalyticsSliceDefault,
       TitleWithAnalyticsSliceSecondary,
       TitleWithAnalyticsSliceThird,
+      TitleWithBadgeSlice,
+      TitleWithBadgeSliceDefaultPrimary,
+      TitleWithBadgeSliceVariation,
+      TitleWithBadgeSliceDefault,
       TitleWithButtonSlice,
       TitleWithButtonSliceDefaultPrimary,
       TitleWithButtonSliceVariation,

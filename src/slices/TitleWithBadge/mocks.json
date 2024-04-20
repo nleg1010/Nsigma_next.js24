@@ -1,0 +1,35 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Consequat veniam occaecat cillum commodo velit reprehenderit mollit. Ipsum do consequat minim. Deserunt proident irure Lorem eu mollit duis laboris laborum duis."
+						}
+					}
+				]
+			},
+			"badge": {
+				"__TYPE__": "FieldContent",
+				"value": "pen",
+				"type": "Text"
+			},
+			"badgebgcolor": {
+				"__TYPE__": "FieldContent",
+				"value": "#4b528a",
+				"type": "Color"
+			},
+			"badgetextcolor": {
+				"__TYPE__": "FieldContent",
+				"value": "#8278cb",
+				"type": "Color"
+			}
+		},
+		"items": []
+	}
+]
