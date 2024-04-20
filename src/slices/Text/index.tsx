@@ -3,14 +3,7 @@ import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { Space_Mono } from "next/font/google";
 import { twMerge } from "tailwind-merge";
 
-/**
- * Props for `Text`.
- */
 export type TextProps = SliceComponentProps<Content.TextSlice>;
-
-/**
- * Component for "Text" Slices.
- */
 const Text = ({ slice }: TextProps): JSX.Element => {
   return (
     <section

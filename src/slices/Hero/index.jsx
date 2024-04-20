@@ -5,7 +5,6 @@ import Link from "next/link";
 const TitleWithButton = ({ slice }) => {
   const { title, video, button } = slice.primary;
   const Id = title[0]?.text;
-  console.log(slice);
   return (
     <section
       id={Id}
