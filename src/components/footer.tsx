@@ -186,7 +186,30 @@ export default function Footer() {
           </div>
 
           <div className="text-lightGray text-md">
-            <h6 className="md:text-[22px] md:leading-8 text-md font-bold text-white mb-6">
+            <div className="mb-5">
+              <h6 className="md:text-[22px] md:leading-8 text-md font-bold text-white mb-6">
+                Solutions
+              </h6>
+              <ul className="flex flex-col gap-2">
+                <li>
+                  <Link
+                    href="/frequent-questions"
+                    className="text-sm md:text-xl font-medium text-lightGray hover:text-white transition-colors"
+                  >
+                    Asset Management
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/privacy-policy"
+                    className="text-sm md:text-xl font-medium text-lightGray hover:text-white transition-colors"
+                  >
+                    Real Estate
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <h6 className="md:text-[22px] md:leading-8 text-md font-bold text-white">
               Contact
             </h6>
             <p>
