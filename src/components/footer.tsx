@@ -1,6 +1,57 @@
 import Link from "next/link";
 import { FaChevronRight, FaEnvelope } from "react-icons/fa";
 import Socials from "./Socials";
+import { twMerge } from "tailwind-merge";
+
+const routes = [
+  {
+    name: "Services",
+    sublinks: [
+      {
+        name: "Data Strategy & AI Consulting",
+        link: "/#",
+      },
+      { name: "AI/ML & Predictive Analytics", link: "/ai-ml" },
+      {
+        name: "AI TotalOps : Data, ML and Security",
+        link: "/totalops",
+      },
+      { name: "Data Engineering", link: "/data-engineering" },
+      {
+        name: "Computer vision & IoT Solutions",
+        link: "/software-development",
+      },
+      {
+        name: "Data Visualizations & Business Intelligence (BI)",
+        link: "/automation-analytics",
+      },
+    ],
+  },
+  {
+    name: "About",
+    sublinks: [
+      { name: "Our Story", link: "/nsigma-story" },
+      { name: "Careers", link: "/#" },
+    ],
+  },
+  {
+    name: "Solutions",
+    link: "/#",
+    sublinks: [
+      { name: "Asset Management", link: "/asset-management" },
+      { name: "Real Estate ", link: "/#" },
+    ],
+  },
+  {
+    name: "Help",
+    sublinks: [
+      { name: "FAQs", link: "/frequent-questions" },
+      { name: "Privacy Policy", link: "/privacy-policy" },
+      { name: "Cookies Policy", link: "/cookies-policy" },
+      { name: "Contact Us", link: "/contact-us" },
+    ],
+  },
+];
 
 export default function Footer() {
   const handleMail = async (e: any) => {
@@ -67,149 +118,32 @@ export default function Footer() {
           <Socials className="hidden md:flex" />
         </div>
         <div className="md:w-[70%] w-full grid md:grid-cols-3 grid-cols-2 gap-7">
-          <div className="flex flex-col">
-            <h6 className="md:text-[22px] md:leading-8 text-md font-bold text-white mb-6">
-              Services
-            </h6>
-            <ul className="flex flex-col gap-2">
-              <li>
-                <Link
-                  href="/#"
-                  className="text-sm md:text-xl font-medium  text-lightGray hover:text-white transition-colors"
-                >
-                  Data Strategy & AI Consulting
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/ai-ml"
-                  className="text-sm md:text-xl font-medium text-lightGray hover:text-white transition-colors"
-                >
-                  AI/ML & Predictive Analytics
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/totalops"
-                  className="text-sm md:text-xl font-medium text-lightGray hover:text-white transition-colors"
-                >
-                  AI TotalOps : Data, ML and Security
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/data-engineering"
-                  className="text-sm md:text-xl font-medium text-lightGray hover:text-white transition-colors"
-                >
-                  Data Engineering
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/software-development"
-                  className="text-sm md:text-xl font-medium text-lightGray hover:text-white transition-colors"
-                >
-                  Computer vision & IoT Solutions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/Automation-analytics"
-                  className="text-sm md:text-xl font-medium text-lightGray hover:text-white transition-colors"
-                >
-                  Data Visualizations & Business Intelligence (BI)
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h6 className="md:text-[22px] md:leading-8 text-md font-bold text-white mb-6">
-              About
-            </h6>
-            <ul className="flex flex-col gap-2">
-              <li>
-                <Link
-                  href="/nsigma-story"
-                  className="text-sm md:text-xl font-medium text-lightGray hover:text-white transition-colors"
-                >
-                  Our Story
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-sm md:text-xl font-medium text-lightGray hover:text-white transition-colors"
-                >
-                  Careers
-                </Link>
-              </li>
-            </ul>
-            <div className="mt-5">
-              <h6 className="md:text-[22px] md:leading-8 text-md font-bold text-white mb-6">
-                Help
+          {routes.map(({ name, sublinks }, i) => (
+            <div
+              className={twMerge(
+                "flex flex-col gap-2",
+                i === 0 && "row-span-2"
+              )}
+            >
+              <h6 className="md:text-[22px] md:leading-8 text-md font-bold text-white pb-4">
+                {name}
               </h6>
-              <ul className="flex flex-col gap-2">
-                <li>
-                  <Link
-                    href="/frequent-questions"
-                    className="text-sm md:text-xl font-medium text-lightGray hover:text-white transition-colors"
-                  >
-                    FAQs
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/privacy-policy"
-                    className="text-sm md:text-xl font-medium text-lightGray hover:text-white transition-colors"
-                  >
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/cookies-policy"
-                    className="text-sm md:text-xl font-medium text-lightGray hover:text-white transition-colors"
-                  >
-                    Cookies Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/contact-us"
-                    className="text-sm md:text-xl font-medium text-lightGray hover:text-white transition-colors"
-                  >
-                    Contact Us
-                  </Link>
-                </li>
-              </ul>
+              {sublinks.map(({ name, link }) => (
+                <ul className="flex flex-col gap-2">
+                  <li className="pt-">
+                    <Link
+                      href={link}
+                      className="text-sm md:text-xl font-medium  text-lightGray hover:text-white transition-colors"
+                    >
+                      {name}
+                    </Link>
+                  </li>
+                </ul>
+              ))}
             </div>
-          </div>
-
+          ))}
           <div className="text-lightGray text-md">
-            <div className="mb-5">
-              <h6 className="md:text-[22px] md:leading-8 text-md font-bold text-white mb-6">
-                Solutions
-              </h6>
-              <ul className="flex flex-col gap-2">
-                <li>
-                  <Link
-                    href="/frequent-questions"
-                    className="text-sm md:text-xl font-medium text-lightGray hover:text-white transition-colors"
-                  >
-                    Asset Management
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/privacy-policy"
-                    className="text-sm md:text-xl font-medium text-lightGray hover:text-white transition-colors"
-                  >
-                    Real Estate
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <h6 className="md:text-[22px] md:leading-8 text-md font-bold text-white">
+            <h6 className="md:text-[22px] md:leading-8 pb-4 text-md font-bold text-white">
               Contact
             </h6>
             <p>
@@ -219,13 +153,13 @@ export default function Footer() {
               Miami, FL 33137
             </p>
             <Link className="flex items-center" href="mailto:info@nsigma.io">
-              <div className="flex flex-row gap-1 items-center">
+              <div className=" flex flex-row gap-1 items-center">
                 <FaEnvelope />
                 info@nsigma.io
               </div>
             </Link>
+            <Socials className="pt-2 md:hidden items-start gap-2" />
           </div>
-          <Socials className="md:hidden items-start gap-2" />
         </div>
       </div>
       {/* <Image src="/images/abstract.png" alt='abstract' width={94} height={250} className='absolute left-4 bottom-5 -z-0' /> */}
