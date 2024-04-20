@@ -82,12 +82,12 @@ function Navbar() {
     },
     open: {
       opacity: 1,
-      height: 586,
+      height: "auto",
     },
   };
 
   return (
-    <nav className="z-50 flex top-0 w-full justify-center sticky bg-Gray/75  text-white">
+    <nav className="z-50 flex top-0 w-full justify-center sticky bg-Gray  text-white">
       <script
         type="text/javascript"
         id="hs-script-loader"
@@ -134,7 +134,7 @@ function Navbar() {
                       href={link}
                       key={name}
                       className={twMerge(
-                        `p-2 md:text-sm text-base font-semibold text-white uppercase`,
+                        `p-2 md:text-sm text-base font-semibold text-white `,
                         "hover:bg-blue-100 hover:bg-opacity-20"
                       )}
                     >
@@ -170,7 +170,7 @@ function Navbar() {
           </motion.button>
 
           <motion.div
-            className="absolute left-0 bg-Gray/75 overflow-hidden top-[100%] z-20 flex w-full origin-top flex-col items-end gap-8 pr-4 uppercase md:!hidden md:flex-row"
+            className="absolute left-0 bg-Gray overflow-hidden top-[100%] z-20 flex w-full origin-top flex-col items-end gap-8 pr-4 md:!hidden md:flex-row"
             variants={linksVariants}
             initial="close"
             animate={open ? "open" : "close"}
@@ -193,7 +193,7 @@ function Navbar() {
                   href={link}
                   key={i}
                   className={twMerge(
-                    `p-2 md:text-lg text-base font-semibold text-white uppercase`,
+                    `p-2 md:text-lg text-base font-semibold text-white`,
                     i === routes.length - 1 &&
                       "bg-custm_pink p-3 min-w-[156px] font-normal text-center rounded-xl"
                   )}
