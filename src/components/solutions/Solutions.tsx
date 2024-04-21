@@ -28,7 +28,6 @@ export default function Solutions({ data }: SolutionsProps) {
           <div className="text-3xl md:text-5xl font-bold title pb-4">
             <PrismicRichText field={data?.solutions_subheader} />
           </div>
-          <div className="text-[1rem]"></div>
           <PrismicRichText
             field={data?.solutions_content}
             components={components}
