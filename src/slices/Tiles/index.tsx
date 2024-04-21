@@ -20,7 +20,7 @@ const Tiles = ({ slice }: TilesProps): JSX.Element => {
     >
       <div className="grid md:grid-cols-2 gap-4 justify-items-center text-white text-[1rem] title p-8">
         {slice.items.map(({ title, content }, i) => (
-          <div key={i} className="bg-[#242727] w-[50%-16px] p-6">
+          <div key={i} className="bg-[#242727] w-full p-6">
             <h2 className="pb-6" style={{ whiteSpace: "pre-line" }}>
               {title}
             </h2>
