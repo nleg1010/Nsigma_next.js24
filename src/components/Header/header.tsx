@@ -30,7 +30,7 @@ const routes = [
     name: "SOLUTIONS",
     link: "/#solutions",
     sublinks: [
-      { name: "Asset Management", link: "/#solutions" },
+      { name: "Asset Management", link: "/asset-management" },
       { name: "Real Estate ", link: "" },
     ],
   },

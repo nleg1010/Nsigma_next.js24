@@ -82,7 +82,8 @@
   src: url("../../public/fonts/Roboto/Roboto-LightItalic.ttf");
 }
 
-a {
+a,
+p {
   font-family: poppin;
 }
 
