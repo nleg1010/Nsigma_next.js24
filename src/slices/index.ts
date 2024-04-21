@@ -14,6 +14,7 @@ export const components = {
   slice4: dynamic(() => import("./SliceWithImageRichTextTitleAndNormalText")),
   text: dynamic(() => import("./Text")),
   text_with_image: dynamic(() => import("./TextWithImage")),
+  tiles: dynamic(() => import("./Tiles")),
   title_with_analytics: dynamic(() => import("./Features")),
   title_with_badge: dynamic(() => import("./TitleWithBadge")),
   title_with_button: dynamic(() => import("./Hero")),

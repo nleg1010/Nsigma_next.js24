@@ -9,21 +9,21 @@ const routes = [
     sublinks: [
       {
         name: "Data Strategy & AI Consulting",
-        link: "/#",
+        link: "/data-strategy",
       },
       { name: "AI/ML & Predictive Analytics", link: "/ai-ml" },
       {
         name: "AI TotalOps : Data, ML and Security",
-        link: "/totalops",
+        link: "/aitotalops",
       },
       { name: "Data Engineering", link: "/data-engineering" },
       {
         name: "Computer vision & IoT Solutions",
-        link: "/software-development",
+        link: "/computer-vision-iot",
       },
       {
         name: "Data Visualizations & Business Intelligence (BI)",
-        link: "/automation-analytics",
+        link: "/visualization-bi",
       },
     ],
   },
@@ -31,7 +31,7 @@ const routes = [
     name: "About",
     sublinks: [
       { name: "Our Story", link: "/nsigma-story" },
-      { name: "Careers", link: "/#" },
+      { name: "Careers", link: "/careers" },
     ],
   },
   {
@@ -39,7 +39,7 @@ const routes = [
     link: "/#",
     sublinks: [
       { name: "Asset Management", link: "/asset-management" },
-      { name: "Real Estate ", link: "/#" },
+      { name: "Real Estate ", link: "/real-estate" },
     ],
   },
   {

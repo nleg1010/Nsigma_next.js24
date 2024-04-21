@@ -1340,6 +1340,58 @@ export type TextWithImageSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *Tiles → Items*
+ */
+export interface TilesSliceDefaultItem {
+  /**
+   * Title field in *Tiles → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: tiles.items[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Content field in *Tiles → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: tiles.items[].content
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  content: prismic.RichTextField;
+}
+
+/**
+ * Default variation for Tiles Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TilesSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  Simplify<TilesSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *Tiles*
+ */
+type TilesSliceVariation = TilesSliceDefault;
+
+/**
+ * Tiles Shared Slice
+ *
+ * - **API ID**: `tiles`
+ * - **Description**: Tiles
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TilesSlice = prismic.SharedSlice<"tiles", TilesSliceVariation>;
+
+/**
  * Primary content in *Features → Primary*
  */
 export interface TitleWithAnalyticsSliceDefaultPrimary {
@@ -2156,6 +2208,10 @@ declare module "@prismicio/client" {
       TextWithImageSliceDefaultItem,
       TextWithImageSliceVariation,
       TextWithImageSliceDefault,
+      TilesSlice,
+      TilesSliceDefaultItem,
+      TilesSliceVariation,
+      TilesSliceDefault,
       TitleWithAnalyticsSlice,
       TitleWithAnalyticsSliceDefaultPrimary,
       TitleWithAnalyticsSliceDefaultItem,
