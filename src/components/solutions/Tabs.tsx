@@ -26,9 +26,9 @@ export default function Tabs({ data }: tabsProps) {
   };
   return (
     <div className="text-xl rounded-2xl flex flex-col">
-      <ul className="flex flex-col md:flex-row justify-between items-center">
+      <ul className="flex flex-col md:flex-row justify-between items-center group/ul">
         {data.map((tab, i) => (
-          <li className=" w-full group" key={i}>
+          <li className=" w-full group/li" key={i}>
             <button
               className={twMerge(
                 "relative flex gap-2 sm:gap-12 p-8 bg-Gray w-full text-center",
@@ -44,8 +44,8 @@ export default function Tabs({ data }: tabsProps) {
               </h4>
               <span
                 className={twMerge(
-                  "absolute top-[calc(95.5%)] w-full bg-customGreen h-1 duration-300 opacity-0 transition-opacity left-0 group-hover:opacity-100",
-                  activeTab === i && "opacity-100"
+                  "absolute top-[calc(95.5%)] w-full bg-customGreen h-1 duration-300 opacity-0 transition-opacity left-0 group-hover/li:opacity-100 ",
+                  activeTab === i && "group-[&:not(:hover)]/ul:opacity-100"
                 )}
               ></span>
             </button>
@@ -54,7 +54,7 @@ export default function Tabs({ data }: tabsProps) {
       </ul>
       <div
         className={twMerge(
-          "pt-6 rounded-b-2xl bg-Gray border-t-2 border-[#313131]",
+          "pt-6 rounded-b-2xl bg-Gray border-t-2 border-[#313131] md:h-[50vh]",
           activeTab % 2 === 1 && "bg-[#181a21]"
         )}
       >
@@ -63,18 +63,21 @@ export default function Tabs({ data }: tabsProps) {
             {activeTab === i && (
               <div
                 className={twMerge(
-                  "grid grid-cols-1 md:grid-cols-2 w-full",
+                  "grid grid-cols-1 content-center md:grid-cols-2 w-full gap-4 p-4",
                   tab.image?.url == null && "md:grid-cols-1"
                 )}
               >
-                <div className="px-4 text-justify pt-0 md:p-4">
+                <div className="px-4 text-justify">
                   <PrismicRichText
                     field={tab.content}
                     components={components}
                   />
                 </div>
-                <div className="max-w-[50vw] m-auto p-4">
-                  <PrismicImage field={tab.image} />
+                <div className="flex flex-row justify-center items-center h-[400px]">
+                  <PrismicImage
+                    field={tab.image}
+                    style={{ maxHeight: "100%", display: "block" }}
+                  />
                 </div>
               </div>
             )}
