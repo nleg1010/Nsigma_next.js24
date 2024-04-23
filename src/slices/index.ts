@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 
 export const components = {
   cta: dynamic(() => import("./CallToAction")),
+  image_tiles: dynamic(() => import("./ImageTiles")),
   multiple_slice: dynamic(() => import("./MultipleSliceWithLinkAndLabel")),
   navigation_slice: dynamic(() => import("./NavigationSlice")),
   slice1: dynamic(() => import("./SliceWithImageOnly")),

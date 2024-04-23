@@ -17,6 +17,15 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "tiles": {
+              "type": "SharedSlice"
+            },
+            "title_with_badge": {
+              "type": "SharedSlice"
+            },
+            "text": {
+              "type": "SharedSlice"
+            },
             "slice4": {
               "type": "SharedSlice"
             },

@@ -677,6 +677,9 @@ export type HomeDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<Simplify<HomeDocumentData>, "home", Lang>;
 
 type PageDocumentDataSlicesSlice =
+  | TilesSlice
+  | TitleWithBadgeSlice
+  | TextSlice
   | Slice4Slice
   | Slice3Slice
   | NavigationSliceSlice
@@ -804,6 +807,96 @@ type CtaSliceVariation = CtaSliceDefault;
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type CtaSlice = prismic.SharedSlice<"cta", CtaSliceVariation>;
+
+/**
+ * Primary content in *ImageTiles → Primary*
+ */
+export interface ImageTilesSliceDefaultPrimary {
+  /**
+   * Title field in *ImageTiles → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: image_tiles.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * TopText field in *ImageTiles → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: image_tiles.primary.toptext
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  toptext: prismic.RichTextField;
+
+  /**
+   * BottomText field in *ImageTiles → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: image_tiles.primary.bottomtext
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  bottomtext: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *ImageTiles → Items*
+ */
+export interface ImageTilesSliceDefaultItem {
+  /**
+   * Image field in *ImageTiles → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: image_tiles.items[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Text field in *ImageTiles → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: image_tiles.items[].text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  text: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for ImageTiles Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ImageTilesSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ImageTilesSliceDefaultPrimary>,
+  Simplify<ImageTilesSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *ImageTiles*
+ */
+type ImageTilesSliceVariation = ImageTilesSliceDefault;
+
+/**
+ * ImageTiles Shared Slice
+ *
+ * - **API ID**: `image_tiles`
+ * - **Description**: ImageTiles
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ImageTilesSlice = prismic.SharedSlice<
+  "image_tiles",
+  ImageTilesSliceVariation
+>;
 
 /**
  * Primary content in *MultipleSliceWithLinkAndLabel → Primary*
@@ -2170,6 +2263,11 @@ declare module "@prismicio/client" {
       CtaSliceDefaultPrimary,
       CtaSliceVariation,
       CtaSliceDefault,
+      ImageTilesSlice,
+      ImageTilesSliceDefaultPrimary,
+      ImageTilesSliceDefaultItem,
+      ImageTilesSliceVariation,
+      ImageTilesSliceDefault,
       MultipleSliceSlice,
       MultipleSliceSliceDefaultPrimary,
       MultipleSliceSliceDefaultItem,

@@ -67,7 +67,7 @@ export default function Tabs({ data }: tabsProps) {
                   tab.image?.url == null && "md:grid-cols-1"
                 )}
               >
-                <div className="px-4 text-justify pt-0 md:pt-16 md:p-4">
+                <div className="px-4 text-justify pt-0 md:p-4">
                   <PrismicRichText
                     field={tab.content}
                     components={components}
