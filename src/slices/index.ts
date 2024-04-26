@@ -5,14 +5,18 @@ import dynamic from "next/dynamic";
 export const components = {
   cta: dynamic(() => import("./CallToAction")),
   image_tiles: dynamic(() => import("./ImageTiles")),
+  key_principles: dynamic(() => import("./KeyPrinciples")),
   multiple_slice: dynamic(() => import("./MultipleSliceWithLinkAndLabel")),
   navigation_slice: dynamic(() => import("./NavigationSlice")),
+  services: dynamic(() => import("./Services")),
   slice1: dynamic(() => import("./SliceWithImageOnly")),
   slice2: dynamic(() => import("./SliceWithImageAndRichTextTitle")),
   slice3: dynamic(
     () => import("./SliceWithImageRichTextTitleAndRichTextDescritpion"),
   ),
   slice4: dynamic(() => import("./SliceWithImageRichTextTitleAndNormalText")),
+  solutions_card_title: dynamic(() => import("./SolutionsCardTitle")),
+  tech_stack: dynamic(() => import("./TechStack")),
   text: dynamic(() => import("./Text")),
   text_with_image: dynamic(() => import("./TextWithImage")),
   text_with_image_group: dynamic(() => import("./TextWithImageGroup")),
