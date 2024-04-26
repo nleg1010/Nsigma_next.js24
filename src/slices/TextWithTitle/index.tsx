@@ -29,7 +29,7 @@ const TextWithTitle = ({ slice }: TextWithTitleProps): JSX.Element => {
       <div
         className={twMerge(
           "w-full flex flex-col gap-8 px-8 max-w-7xl",
-          slice.variation === "default" && "items-center"
+          slice.variation === "default" && "items-center text-center"
         )}
       >
         <div className="title">
@@ -41,7 +41,7 @@ const TextWithTitle = ({ slice }: TextWithTitleProps): JSX.Element => {
               style={{ color: textcolor || "#FFF" }}
               className={twMerge(
                 "title text-[1em] text-center marker:text-orange-400 ",
-                slice.variation === "left" && "md:text-left"
+                slice.variation === "left" && "text-left"
               )}
             >
               <PrismicRichText field={paragraphs} components={components} />

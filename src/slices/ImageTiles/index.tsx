@@ -32,7 +32,7 @@ const ImageTiles = ({ slice }: ImageTilesProps): JSX.Element => {
           {slice.items.map(({ image, text }, i) => (
             <div
               key={i}
-              className="bg-[#242727] flex flex-col justify-center rounded-xl max-w-[298px]"
+              className="bg-[#242727] flex flex-col rounded-xl max-w-[298px]"
             >
               <div className="flex flex-col justify-center">
                 <PrismicNextImage field={image} width={80} className="m-auto" />
