@@ -677,6 +677,10 @@ export type HomeDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<Simplify<HomeDocumentData>, "home", Lang>;
 
 type PageDocumentDataSlicesSlice =
+  | ServicesSlice
+  | TechStackSlice
+  | KeyPrinciplesSlice
+  | SolutionsCardTitleSlice
   | TextWithTitleSlice
   | TextWithImageGroupSlice
   | ImageTilesSlice
@@ -902,6 +906,76 @@ export type ImageTilesSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *KeyPrinciples → Primary*
+ */
+export interface KeyPrinciplesSliceDefaultPrimary {
+  /**
+   * Title field in *KeyPrinciples → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: key_principles.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *KeyPrinciples → Items*
+ */
+export interface KeyPrinciplesSliceDefaultItem {
+  /**
+   * Image field in *KeyPrinciples → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: key_principles.items[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Text field in *KeyPrinciples → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: key_principles.items[].text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  text: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for KeyPrinciples Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type KeyPrinciplesSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<KeyPrinciplesSliceDefaultPrimary>,
+  Simplify<KeyPrinciplesSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *KeyPrinciples*
+ */
+type KeyPrinciplesSliceVariation = KeyPrinciplesSliceDefault;
+
+/**
+ * KeyPrinciples Shared Slice
+ *
+ * - **API ID**: `key_principles`
+ * - **Description**: KeyPrinciples
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type KeyPrinciplesSlice = prismic.SharedSlice<
+  "key_principles",
+  KeyPrinciplesSliceVariation
+>;
+
+/**
  * Primary content in *MultipleSliceWithLinkAndLabel → Primary*
  */
 export interface MultipleSliceSliceDefaultPrimary {
@@ -1024,6 +1098,81 @@ type NavigationSliceSliceVariation = NavigationSliceSliceDefault;
 export type NavigationSliceSlice = prismic.SharedSlice<
   "navigation_slice",
   NavigationSliceSliceVariation
+>;
+
+/**
+ * Primary content in *Services → Primary*
+ */
+export interface ServicesSliceDefaultPrimary {
+  /**
+   * Title field in *Services → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: services.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * Image field in *Services → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: services.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Content field in *Services → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: services.primary.content
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  content: prismic.RichTextField;
+
+  /**
+   * SubContent field in *Services → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: services.primary.subcontent
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  subcontent: prismic.RichTextField;
+}
+
+/**
+ * Default variation for Services Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ServicesSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ServicesSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Services*
+ */
+type ServicesSliceVariation = ServicesSliceDefault;
+
+/**
+ * Services Shared Slice
+ *
+ * - **API ID**: `services`
+ * - **Description**: Services
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ServicesSlice = prismic.SharedSlice<
+  "services",
+  ServicesSliceVariation
 >;
 
 /**
@@ -1243,6 +1392,113 @@ type Slice4SliceVariation = Slice4SliceDefault;
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type Slice4Slice = prismic.SharedSlice<"slice4", Slice4SliceVariation>;
+
+/**
+ * Primary content in *SolutionsCardTitle → Primary*
+ */
+export interface SolutionsCardTitleSliceDefaultPrimary {
+  /**
+   * Name field in *SolutionsCardTitle → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: solutions_card_title.primary.name
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  name: prismic.SelectField<
+    "INVEST-Ops" | "OPTIMA-Ops" | "VISION-Ops" | "ADVANCE-Ops"
+  >;
+}
+
+/**
+ * Default variation for SolutionsCardTitle Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SolutionsCardTitleSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<SolutionsCardTitleSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *SolutionsCardTitle*
+ */
+type SolutionsCardTitleSliceVariation = SolutionsCardTitleSliceDefault;
+
+/**
+ * SolutionsCardTitle Shared Slice
+ *
+ * - **API ID**: `solutions_card_title`
+ * - **Description**: SolutionsCardTitle
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SolutionsCardTitleSlice = prismic.SharedSlice<
+  "solutions_card_title",
+  SolutionsCardTitleSliceVariation
+>;
+
+/**
+ * Primary content in *TechStack → Primary*
+ */
+export interface TechStackSliceDefaultPrimary {
+  /**
+   * Title field in *TechStack → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: tech_stack.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *TechStack → Items*
+ */
+export interface TechStackSliceDefaultItem {
+  /**
+   * Text field in *TechStack → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: tech_stack.items[].text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+}
+
+/**
+ * Default variation for TechStack Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TechStackSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TechStackSliceDefaultPrimary>,
+  Simplify<TechStackSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *TechStack*
+ */
+type TechStackSliceVariation = TechStackSliceDefault;
+
+/**
+ * TechStack Shared Slice
+ *
+ * - **API ID**: `tech_stack`
+ * - **Description**: TechStack
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TechStackSlice = prismic.SharedSlice<
+  "tech_stack",
+  TechStackSliceVariation
+>;
 
 /**
  * Primary content in *Text → Primary*
@@ -2476,6 +2732,11 @@ declare module "@prismicio/client" {
       ImageTilesSliceDefaultItem,
       ImageTilesSliceVariation,
       ImageTilesSliceDefault,
+      KeyPrinciplesSlice,
+      KeyPrinciplesSliceDefaultPrimary,
+      KeyPrinciplesSliceDefaultItem,
+      KeyPrinciplesSliceVariation,
+      KeyPrinciplesSliceDefault,
       MultipleSliceSlice,
       MultipleSliceSliceDefaultPrimary,
       MultipleSliceSliceDefaultItem,
@@ -2485,6 +2746,10 @@ declare module "@prismicio/client" {
       NavigationSliceSliceDefaultItem,
       NavigationSliceSliceVariation,
       NavigationSliceSliceDefault,
+      ServicesSlice,
+      ServicesSliceDefaultPrimary,
+      ServicesSliceVariation,
+      ServicesSliceDefault,
       Slice1Slice,
       Slice1SliceDefaultPrimary,
       Slice1SliceVariation,
@@ -2501,6 +2766,15 @@ declare module "@prismicio/client" {
       Slice4SliceDefaultPrimary,
       Slice4SliceVariation,
       Slice4SliceDefault,
+      SolutionsCardTitleSlice,
+      SolutionsCardTitleSliceDefaultPrimary,
+      SolutionsCardTitleSliceVariation,
+      SolutionsCardTitleSliceDefault,
+      TechStackSlice,
+      TechStackSliceDefaultPrimary,
+      TechStackSliceDefaultItem,
+      TechStackSliceVariation,
+      TechStackSliceDefault,
       TextSlice,
       TextSliceDefaultPrimary,
       TextSliceBoldColoredPrimary,

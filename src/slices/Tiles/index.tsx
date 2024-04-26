@@ -14,7 +14,7 @@ const Tiles = ({ slice }: TilesProps): JSX.Element => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="flex justify-center py-16 px-4 "
+      className="flex justify-center py-16 px-4"
     >
       <div className="grid md:grid-cols-2 gap-4 justify-items-center text-white text-[1rem] title max-w-7xl">
         {slice.items.map(({ title, content }, i) => (

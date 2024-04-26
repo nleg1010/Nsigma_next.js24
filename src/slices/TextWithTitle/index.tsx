@@ -13,7 +13,7 @@ export type TextWithTitleProps =
 const components: JSXMapSerializer = {
   paragraph: ({ children }) => <p className="max-w-5xl">{children}</p>,
   list: ({ children }) => (
-    <ul className="list-disc pl-4 text-[1em]">{children}</ul>
+    <ul className="list-disc list-inside text-[1em]">{children}</ul>
   ),
   listItem: ({ children }) => <li className="">{children}</li>,
 };
@@ -23,11 +23,11 @@ const TextWithTitle = ({ slice }: TextWithTitleProps): JSX.Element => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="flex justify-center  py-16"
+      className="flex justify-center py-16"
     >
       <div
         className={twMerge(
-          "w-full flex flex-col gap-8 px-8 max-w-7xl",
+          "w-full flex flex-col gap-8 px-4 max-w-7xl",
           slice.variation === "default" && "items-center text-center"
         )}
       >
