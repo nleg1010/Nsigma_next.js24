@@ -64,9 +64,15 @@
 					[
 						"text",
 						{
-							"__TYPE__": "FieldContent",
-							"value": "some",
-							"type": "Text"
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Commodo occaecat sit sunt ullamco cillum non officia exercitation adipisicing dolore anim dolor. Labore enim in fugiat."
+									}
+								}
+							]
 						}
 					]
 				]

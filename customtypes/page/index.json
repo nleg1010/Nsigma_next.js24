@@ -17,6 +17,15 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "text_with_title": {
+              "type": "SharedSlice"
+            },
+            "text_with_image_group": {
+              "type": "SharedSlice"
+            },
+            "image_tiles": {
+              "type": "SharedSlice"
+            },
             "tiles": {
               "type": "SharedSlice"
             },
