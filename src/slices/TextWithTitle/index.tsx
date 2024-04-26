@@ -24,7 +24,6 @@ const TextWithTitle = ({ slice }: TextWithTitleProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
       className="flex justify-center  py-16"
-      // style={{ color: textcolor || "#ffffff" }}
     >
       <div
         className={twMerge(

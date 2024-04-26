@@ -15,8 +15,6 @@ const components: JSXMapSerializer = {
   paragraph: ({ children }) => <p className="text-[1em]">{children}</p>,
 };
 
-const imageProps = {};
-
 const TextWithImageGroup = ({
   slice,
 }: TextWithImageGroupProps): JSX.Element => {
@@ -38,7 +36,7 @@ const TextWithImageGroup = ({
             components={components}
           />
         </div>
-        <div className="">
+        <div>
           {slice.items.map(({ image, description }, i) => (
             <div className="grid md:grid-cols-3 pb-16">
               <PrismicImage
