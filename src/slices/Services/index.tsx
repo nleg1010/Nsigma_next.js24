@@ -42,7 +42,7 @@ const Services = ({ slice }: ServicesProps): JSX.Element => {
             components={contentComponents}
           />
         </div>
-        <div className="">
+        <div>
           <PrismicRichText
             field={slice.primary.subcontent}
             components={components}
