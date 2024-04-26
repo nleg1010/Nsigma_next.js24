@@ -20,7 +20,7 @@ export default function Solutions({ data }: SolutionsProps) {
       className="py-16 overflow-hidden px-3 md:px-0 grid place-items-center "
       id="solutions"
     >
-      <div className="container mx-auto px-3 text-lightGray text-center md:text-lg pb-20">
+      <div className="container mx-auto px-3 text-white text-center md:text-lg pb-20">
         <div className="pb-8">
           <h2 className=" text-2xl md:text-[42px]  font-extrabold text-white text-center pb-16">
             Industry <span className="grad">Solutions</span>

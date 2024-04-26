@@ -677,6 +677,9 @@ export type HomeDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<Simplify<HomeDocumentData>, "home", Lang>;
 
 type PageDocumentDataSlicesSlice =
+  | TextWithTitleSlice
+  | TextWithImageGroupSlice
+  | ImageTilesSlice
   | TilesSlice
   | TitleWithBadgeSlice
   | TextSlice
@@ -860,12 +863,12 @@ export interface ImageTilesSliceDefaultItem {
   /**
    * Text field in *ImageTiles → Items*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
    * - **API ID Path**: image_tiles.items[].text
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  text: prismic.KeyTextField;
+  text: prismic.RichTextField;
 }
 
 /**
@@ -1430,6 +1433,211 @@ type TextWithImageSliceVariation = TextWithImageSliceDefault;
 export type TextWithImageSlice = prismic.SharedSlice<
   "text_with_image",
   TextWithImageSliceVariation
+>;
+
+/**
+ * Primary content in *TextWithImageGroup → Primary*
+ */
+export interface TextWithImageGroupSliceDefaultPrimary {
+  /**
+   * Title field in *TextWithImageGroup → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_with_image_group.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * Description field in *TextWithImageGroup → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_with_image_group.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *TextWithImageGroup → Items*
+ */
+export interface TextWithImageGroupSliceDefaultItem {
+  /**
+   * Image field in *TextWithImageGroup → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_with_image_group.items[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Description field in *TextWithImageGroup → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_with_image_group.items[].description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+}
+
+/**
+ * Default variation for TextWithImageGroup Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextWithImageGroupSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TextWithImageGroupSliceDefaultPrimary>,
+  Simplify<TextWithImageGroupSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *TextWithImageGroup*
+ */
+type TextWithImageGroupSliceVariation = TextWithImageGroupSliceDefault;
+
+/**
+ * TextWithImageGroup Shared Slice
+ *
+ * - **API ID**: `text_with_image_group`
+ * - **Description**: TextWithImageGroup
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextWithImageGroupSlice = prismic.SharedSlice<
+  "text_with_image_group",
+  TextWithImageGroupSliceVariation
+>;
+
+/**
+ * Primary content in *TextWithTitle → Primary*
+ */
+export interface TextWithTitleSliceDefaultPrimary {
+  /**
+   * Title field in *TextWithTitle → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_with_title.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *TextWithTitle → Items*
+ */
+export interface TextWithTitleSliceDefaultItem {
+  /**
+   * Paragraphs field in *TextWithTitle → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_with_title.items[].paragraphs
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  paragraphs: prismic.RichTextField;
+
+  /**
+   * textColor field in *TextWithTitle → Items*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_with_title.items[].textcolor
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  textcolor: prismic.ColorField;
+}
+
+/**
+ * Middle variation for TextWithTitle Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextWithTitleSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TextWithTitleSliceDefaultPrimary>,
+  Simplify<TextWithTitleSliceDefaultItem>
+>;
+
+/**
+ * Primary content in *TextWithTitle → Primary*
+ */
+export interface TextWithTitleSliceLeftPrimary {
+  /**
+   * Title field in *TextWithTitle → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_with_title.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *TextWithTitle → Items*
+ */
+export interface TextWithTitleSliceLeftItem {
+  /**
+   * Paragraphs field in *TextWithTitle → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_with_title.items[].paragraphs
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  paragraphs: prismic.RichTextField;
+
+  /**
+   * textColor field in *TextWithTitle → Items*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_with_title.items[].textcolor
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  textcolor: prismic.ColorField;
+}
+
+/**
+ * Left variation for TextWithTitle Slice
+ *
+ * - **API ID**: `left`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextWithTitleSliceLeft = prismic.SharedSliceVariation<
+  "left",
+  Simplify<TextWithTitleSliceLeftPrimary>,
+  Simplify<TextWithTitleSliceLeftItem>
+>;
+
+/**
+ * Slice variation for *TextWithTitle*
+ */
+type TextWithTitleSliceVariation =
+  | TextWithTitleSliceDefault
+  | TextWithTitleSliceLeft;
+
+/**
+ * TextWithTitle Shared Slice
+ *
+ * - **API ID**: `text_with_title`
+ * - **Description**: TextWithTitle
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextWithTitleSlice = prismic.SharedSlice<
+  "text_with_title",
+  TextWithTitleSliceVariation
 >;
 
 /**
@@ -2306,6 +2514,19 @@ declare module "@prismicio/client" {
       TextWithImageSliceDefaultItem,
       TextWithImageSliceVariation,
       TextWithImageSliceDefault,
+      TextWithImageGroupSlice,
+      TextWithImageGroupSliceDefaultPrimary,
+      TextWithImageGroupSliceDefaultItem,
+      TextWithImageGroupSliceVariation,
+      TextWithImageGroupSliceDefault,
+      TextWithTitleSlice,
+      TextWithTitleSliceDefaultPrimary,
+      TextWithTitleSliceDefaultItem,
+      TextWithTitleSliceLeftPrimary,
+      TextWithTitleSliceLeftItem,
+      TextWithTitleSliceVariation,
+      TextWithTitleSliceDefault,
+      TextWithTitleSliceLeft,
       TilesSlice,
       TilesSliceDefaultItem,
       TilesSliceVariation,
