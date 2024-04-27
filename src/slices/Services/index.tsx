@@ -33,7 +33,7 @@ const Services = ({ slice }: ServicesProps): JSX.Element => {
       data-slice-variation={slice.variation}
       className="flex justify-center py-16"
     >
-      <div className="px-4 text-white w-full max-w-7xl flex flex-col gap-8">
+      <div className="px-4 text-white w-full max-w-7xl flex flex-col gap-4">
         <PrismicRichText field={slice.primary.title} components={components} />
         <div>
           <PrismicRichText
