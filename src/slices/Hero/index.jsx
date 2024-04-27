@@ -2,6 +2,10 @@ import { PrismicRichText } from "@prismicio/react";
 import CustomLink from "@/components/CustomLink";
 import Link from "next/link";
 
+const components = {
+  heading5: ({ children }) => <h5 className="pt-4">{children}</h5>,
+};
+
 const TitleWithButton = ({ slice }) => {
   const { title, video, button } = slice.primary;
   const Id = title[0]?.text;
@@ -21,7 +25,7 @@ const TitleWithButton = ({ slice }) => {
         <div className="flex items-center justify-center bg-black/30 w-screen h-screen">
           <div className="container h-full w-full flex gap-4 px-4 justify-center items-center flex-col">
             <div className="md:text-6xl text-3xl md:leading-[70px] w-full font-semibold text-white text-center mb-5 title">
-              <PrismicRichText field={title} />
+              <PrismicRichText field={title} components={components} />
             </div>
 
             <Link
