@@ -10,7 +10,7 @@ export type ServicesProps = SliceComponentProps<Content.ServicesSlice>;
 
 const contentComponents: JSXMapSerializer = {
   list: ({ children }) => (
-    <ul className="list-image-[url(/images/folders.png)] px-8 md:px-4">
+    <ul className="list-image-[url(/images/bullet-list.png)] list-inside">
       {children}
     </ul>
   ),
@@ -35,8 +35,7 @@ const Services = ({ slice }: ServicesProps): JSX.Element => {
     >
       <div className="px-4 text-white w-full max-w-7xl flex flex-col gap-8">
         <PrismicRichText field={slice.primary.title} components={components} />
-        <div className="grid md:grid-cols-3 gap-8">
-          <PrismicImage field={slice.primary.image} className="md:col-span-2" />
+        <div>
           <PrismicRichText
             field={slice.primary.content}
             components={contentComponents}
@@ -46,6 +45,16 @@ const Services = ({ slice }: ServicesProps): JSX.Element => {
           <PrismicRichText
             field={slice.primary.subcontent}
             components={components}
+          />
+        </div>
+        <div className="">
+          <PrismicRichText
+            field={slice.primary.imagesection}
+            components={components}
+          />
+          <PrismicImage
+            field={slice.primary.image}
+            className="pt-4 max-h-[60vh]"
           />
         </div>
       </div>

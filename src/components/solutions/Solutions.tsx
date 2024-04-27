@@ -11,7 +11,7 @@ type SolutionsProps = {
 };
 
 const components: JSXMapSerializer = {
-  paragraph: ({ children }) => <p className="text-[1rem]">{children}</p>,
+  paragraph: ({ children }) => <p className="text-[1rem] title">{children}</p>,
 };
 
 export default function Solutions({ data }: SolutionsProps) {

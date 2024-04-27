@@ -9,12 +9,12 @@ const SolutionsCardTitle = ({
 }: SolutionsCardTitleProps): JSX.Element => {
   return (
     <section
+      id={slice.primary.name || ""}
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
       className="flex justify-center py-16"
     >
       <div className="text-white w-full max-w-7xl flex flex-col items-center gap-16 px-4">
-        <span className="h-1 w-full bg-[#242727] rounded-full"></span>
         <div className="flex flex-col md:flex-row scale-75 md:scale-100 text-4xl gap-2">
           <h2 className="title text-5xl">
             <strong>{slice.primary.name}</strong>

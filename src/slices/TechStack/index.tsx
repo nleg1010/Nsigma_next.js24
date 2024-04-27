@@ -17,7 +17,7 @@ const TechStack = ({ slice }: TechStackProps): JSX.Element => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="flex justify-center py-16"
+      className="flex justify-center"
     >
       <div className="text-white w-full max-w-7xl px-4">
         <PrismicRichText field={slice.primary.title} components={components} />

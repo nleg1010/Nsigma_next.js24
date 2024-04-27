@@ -28,6 +28,14 @@
 								}
 							]
 						}
+					],
+					[
+						"link",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "disappear",
+							"type": "Text"
+						}
 					]
 				]
 			}
