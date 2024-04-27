@@ -10,9 +10,7 @@ export type KeyPrinciplesProps =
   SliceComponentProps<Content.KeyPrinciplesSlice>;
 
 const components: JSXMapSerializer = {
-  heading3: ({ children }) => (
-    <h3 className="title md:text-left text-center">{children}</h3>
-  ),
+  heading3: ({ children }) => <h3 className="title text-left">{children}</h3>,
 };
 
 const KeyPrinciples = ({ slice }: KeyPrinciplesProps): JSX.Element => {
@@ -24,9 +22,9 @@ const KeyPrinciples = ({ slice }: KeyPrinciplesProps): JSX.Element => {
     >
       <div className="text-white w-full max-w-7xl px-4">
         <PrismicRichText field={slice.primary.title} components={components} />
-        <div className="w-full flex flex-wrap gap-4 pt-4 justify-center md:justify-start">
+        <div className="flex flex-col gap-4 pt-4 justify-center min-[450px]:justify-start min-[450px]:flex-row flex-wrap">
           {slice.items.map(({ image, text }, i) => (
-            <div className="bg-[#242727] rounded-lg p-4 flex flex-col items-center text-[1rem] max-w-[200px]">
+            <div className="bg-[#242727] rounded-lg p-4 flex flex-col items-center text-[1rem] min-[450px]:max-w-[300px]">
               <PrismicImage field={image} width={48} />
               <p>{text}</p>
             </div>
