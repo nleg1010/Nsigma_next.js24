@@ -52,6 +52,20 @@
 							"value": "screen",
 							"type": "Text"
 						}
+					],
+					[
+						"content",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Nostrud non laborum adipisicing esse aute velit culpa aute et laborum id ex. Dolor ipsum dolor ad et. Ad excepteur nisi dolore exercitation do nostrud qui quis quis minim."
+									}
+								}
+							]
+						}
 					]
 				]
 			}

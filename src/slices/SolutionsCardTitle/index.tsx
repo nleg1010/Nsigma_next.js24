@@ -15,7 +15,7 @@ const SolutionsCardTitle = ({
       className="flex justify-center py-16"
     >
       <div className="text-white w-full max-w-7xl flex flex-col items-center gap-16 px-4">
-        <div className="flex flex-col md:flex-row scale-75 md:scale-100 text-4xl gap-2">
+        <div className="flex flex-col scale-75 md:scale-100 text-4xl gap-2">
           <h2 className="title text-5xl">
             <strong>{slice.primary.name}</strong>
           </h2>
