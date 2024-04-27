@@ -1115,16 +1115,6 @@ export interface ServicesSliceDefaultPrimary {
   title: prismic.RichTextField;
 
   /**
-   * Image field in *Services → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: services.primary.image
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  image: prismic.ImageField<never>;
-
-  /**
    * Content field in *Services → Primary*
    *
    * - **Field Type**: Rich Text
@@ -1143,6 +1133,26 @@ export interface ServicesSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   subcontent: prismic.RichTextField;
+
+  /**
+   * ImageSection field in *Services → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: services.primary.imagesection
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  imagesection: prismic.RichTextField;
+
+  /**
+   * Image field in *Services → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: services.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
 }
 
 /**
@@ -1919,6 +1929,16 @@ export interface TilesSliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   content: prismic.RichTextField;
+
+  /**
+   * Link field in *Tiles → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: tiles.items[].link
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link: prismic.KeyTextField;
 }
 
 /**

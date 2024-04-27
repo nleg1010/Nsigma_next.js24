@@ -58,6 +58,17 @@
 						}
 					}
 				]
+			},
+			"imagesection": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Dolore nisi commodo sunt esse labore enim nulla non."
+						}
+					}
+				]
 			}
 		},
 		"items": []
