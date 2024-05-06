@@ -4,6 +4,21 @@ import { SliceComponentProps } from "@prismicio/react";
 export type SolutionsCardTitleProps =
   SliceComponentProps<Content.SolutionsCardTitleSlice>;
 
+function primaryName(name: string | null) {
+  if (name === "INVEST-Ops") {
+    return "dataACQUIRE";
+  }
+  if (name === "OPTIMA-Ops") {
+    return "dataOPTIMA";
+  }
+  if (name === "VISION-Ops") {
+    return "dataVISION";
+  }
+  if (name === "ADVANCE-Ops") {
+    return "dataADVANCE";
+  }
+}
+
 const SolutionsCardTitle = ({
   slice,
 }: SolutionsCardTitleProps): JSX.Element => {
@@ -17,25 +32,28 @@ const SolutionsCardTitle = ({
       <div className="text-white w-full max-w-7xl flex flex-col items-center gap-16 px-4">
         <div className="flex flex-col scale-75 md:scale-100 text-4xl gap-2">
           <h2 className="title text-5xl">
-            <strong>{slice.primary.name}</strong>
+            <strong>{primaryName(slice.primary.name)}</strong>
           </h2>
           <div className="flex flex-col font-bold">
             {slice.primary.name === "INVEST-Ops" ? (
               <>
                 <span>
-                  <span className="text-[#c9b139]">IN</span>telligent &
+                  <span className="text-[#c9b139]">A</span>dvanced
                 </span>
                 <span>
-                  <span className="text-[#c9b139]">V</span>ersatile
+                  <span className="text-[#c9b139]">C</span>onstruction
                 </span>
                 <span>
-                  <span className="text-[#c9b139]">E</span>xtraction,
+                  <span className="text-[#c9b139]">Q</span>uality
                 </span>
                 <span>
-                  <span className="text-[#c9b139]">S</span>tandardization &
+                  <span className="text-[#c9b139]">U</span>nification &
                 </span>
                 <span>
-                  <span className="text-[#c9b139]">T</span>ransformation
+                  <span className="text-[#c9b139]">R</span>obust
+                </span>
+                <span>
+                  <span className="text-[#c9b139]">E</span>xtraction
                 </span>
               </>
             ) : null}
