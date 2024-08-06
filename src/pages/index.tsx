@@ -21,6 +21,7 @@ const Home: FC<any> = ({ page }) => {
     why_cards,
     meta_title,
     meta_description,
+    hero_video,
     solutions_subheader,
     solutions_content,
     solutions_tabs,
@@ -36,7 +37,7 @@ const Home: FC<any> = ({ page }) => {
       ></script>
       <DefaultSeo title={meta_title} description={meta_description} />
       <div className="bg-[#000200]">
-        <Banner />
+        <Banner video={hero_video?.url} />
         <Expertise data={expertise} />
         <Solutions
           data={{ solutions_subheader, solutions_content, solutions_tabs }}
