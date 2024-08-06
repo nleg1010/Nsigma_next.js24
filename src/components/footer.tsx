@@ -162,7 +162,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      {/* <Image src="/images/abstract.png" alt='abstract' width={94} height={250} className='absolute left-4 bottom-5 -z-0' /> */}
+      {/* <img src="/images/abstract.png" alt='abstract' width={94} height={250} className='absolute left-4 bottom-5 -z-0' /> */}
     </footer>
   );
 }

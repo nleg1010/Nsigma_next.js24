@@ -1,7 +1,6 @@
 import { FC } from "react";
 import { PrismicRichText } from "@prismicio/react";
 
-
 interface EngagementCardProps {
   idx: number;
   length: number;
@@ -17,7 +16,13 @@ const EngagementCardMobile: FC<EngagementCardProps> = ({
     <section
       className={`relative md:hidden gap-5 ${idx === length ? "pb-5" : "pb-10"}`}
     >
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
+      <script
+        type="text/javascript"
+        id="hs-script-loader"
+        async
+        defer
+        src="//js.hs-scripts.com/44973111.js"
+      ></script>
       <div
         className={`flex gap-4 ${idx % 2 === 0 ? "flex-row-reverse" : "flex-row"}`}
       >

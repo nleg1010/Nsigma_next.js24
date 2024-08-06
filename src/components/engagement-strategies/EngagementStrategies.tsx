@@ -8,7 +8,13 @@ const EngagementStrategies: FC<any> = ({ data }) => {
       className="py-16 overflow-hidden px-3 md:px-0 grid place-items-center"
       id="engagement"
     >
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
+      <script
+        type="text/javascript"
+        id="hs-script-loader"
+        async
+        defer
+        src="//js.hs-scripts.com/44973111.js"
+      ></script>
       <div className="container relative ">
         <h2 className=" text-2xl md:text-[42px]  font-extrabold text-white text-center pb-16">
           Engagement <span className="grad">Strategies</span>
@@ -20,8 +26,8 @@ const EngagementStrategies: FC<any> = ({ data }) => {
               image={item.image}
               detail={item.detail}
               topic={item.topic}
-	      info={""}
-	      title={""}
+              info={""}
+              title={""}
             />
           ))}
         </div>
