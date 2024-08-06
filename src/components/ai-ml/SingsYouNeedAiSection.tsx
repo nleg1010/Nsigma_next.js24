@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 
 type SignsYouNeedAiSectionProps = {
@@ -41,7 +40,7 @@ function SignsYouNeedAiSection({ cards }: SignsYouNeedAiSectionProps) {
                 {description}
               </div>
               {!!icon && (
-                <Image
+                <img
                   src={icon.url}
                   alt={title}
                   width={40}

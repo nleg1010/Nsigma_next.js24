@@ -1,5 +1,5 @@
 import { PrismicRichText } from "@prismicio/react";
-import Image from "next/image";
+
 import { twMerge } from "tailwind-merge";
 
 const TitleWithAnalytics = ({ slice }) => {
@@ -41,7 +41,7 @@ const TitleWithAnalytics = ({ slice }) => {
                     {description}
                   </div>
                   {!!icon && (
-                    <Image
+                    <img
                       src={icon.url}
                       alt={title}
                       width={40}
@@ -80,7 +80,7 @@ const TitleWithAnalytics = ({ slice }) => {
                     {description}
                   </div>
                   {!!icon && (
-                    <Image
+                    <img
                       src={icon.url}
                       alt={title}
                       width={40}
@@ -120,7 +120,7 @@ const TitleWithAnalytics = ({ slice }) => {
                     {description}
                   </div>
                   {!!icon && (
-                    <Image
+                    <img
                       src={icon.url}
                       alt={title}
                       width={40}

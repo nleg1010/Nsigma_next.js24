@@ -1,7 +1,6 @@
 import { FC } from "react";
 
 import EngagementCard from "./EngagementCard";
-import Image from "next/image";
 
 const EngagementStrategies: FC<any> = ({ data }) => {
   return (
@@ -32,7 +31,7 @@ const EngagementStrategies: FC<any> = ({ data }) => {
             />
           ))}
         </div>
-        <Image
+        <img
           src="/images/circle.svg"
           alt="img"
           width={140}

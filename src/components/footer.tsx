@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { FaChevronRight, FaEnvelope } from "react-icons/fa";
 import Socials from "./Socials";
 import { twMerge } from "tailwind-merge";
@@ -72,7 +71,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 flex md:flex-row flex-col justify-between items-center gap-7 pt-16 pb-10 border-b border-[#696B76]/40">
         <div className="md:w-1/2 flex justify-center sm:justify-start w-full">
           <Link href="/" className="inline-block">
-            <Image
+            <img
               src="/images/footer-logo.png"
               alt="logo"
               width={250}
@@ -163,7 +162,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      {/* <Image src="/images/abstract.png" alt='abstract' width={94} height={250} className='absolute left-4 bottom-5 -z-0' /> */}
+      {/* <img src="/images/abstract.png" alt='abstract' width={94} height={250} className='absolute left-4 bottom-5 -z-0' /> */}
     </footer>
   );
 }

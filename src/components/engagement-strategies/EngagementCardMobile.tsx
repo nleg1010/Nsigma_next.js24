@@ -1,6 +1,5 @@
 import { FC } from "react";
 import { PrismicRichText } from "@prismicio/react";
-import Image from "next/image";
 
 interface EngagementCardProps {
   idx: number;
@@ -28,12 +27,7 @@ const EngagementCardMobile: FC<EngagementCardProps> = ({
         className={`flex gap-4 ${idx % 2 === 0 ? "flex-row-reverse" : "flex-row"}`}
       >
         <figure className="bg-[#272932] rounded-xl p-6 w-full flex justify-center">
-          <Image
-            src={data.image.asset.url}
-            alt="img"
-            width={300}
-            height={200}
-          />
+          <img src={data.image.asset.url} alt="img" width={300} height={200} />
         </figure>
         <div>
           <button className="bg-[#272932] z-10 relative rounded-full border-[2px] border-gray-700 text-white w-12 h-12 md:w-16 md:h-16 md:text-xl stroke-black/5">

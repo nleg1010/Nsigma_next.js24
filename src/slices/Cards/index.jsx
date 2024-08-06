@@ -1,6 +1,5 @@
 import EngagementCard from "@/components/engagement-strategies/EngagementCard";
 import { PrismicRichText } from "@prismicio/react";
-import Image from "next/image";
 
 const TitleWithCards = ({ slice }) => {
   const { title } = slice.primary;
@@ -32,7 +31,7 @@ const TitleWithCards = ({ slice }) => {
             />
           ))}
         </div>
-        <Image
+        <img
           src="/images/circle.svg"
           alt="img"
           width={140}

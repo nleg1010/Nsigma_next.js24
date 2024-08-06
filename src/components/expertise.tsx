@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { useState, useEffect } from "react";
 import { twMerge } from "tailwind-merge";
 
@@ -42,12 +41,7 @@ export default function Expertise({ data }: ExpertiseProps) {
           ></script>
           {data?.map((item, idx: number) => {
             return (
-              <Image
-                src={item.icon.url}
-                alt="experty/1"
-                width={26}
-                height={26}
-              />
+              <img src={item.icon.url} alt="experty/1" width={26} height={26} />
             );
           })}
         </div>
@@ -71,7 +65,7 @@ export default function Expertise({ data }: ExpertiseProps) {
                 >
                   <div className="w-full flex items-center justify-start">
                     <div className="w-[61px] h-[61px] bg-black flex items-center justify-center rounded-full">
-                      <Image
+                      <img
                         src={item.icon.url}
                         alt="experty/1"
                         width={26}

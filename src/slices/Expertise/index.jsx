@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { PrismicRichText } from "@prismicio/react";
 import { twMerge } from "tailwind-merge";
-import Image from "next/image";
 
 const TitleWithExpertise = ({ slice }) => {
   const { title } = slice.primary;
@@ -32,7 +31,7 @@ const TitleWithExpertise = ({ slice }) => {
               >
                 <div className="w-full flex items-center justify-start">
                   <div className="w-[61px] h-[61px] bg-black flex items-center justify-center rounded-full">
-                    <Image
+                    <img
                       src={item.icon.url}
                       alt="experty/1"
                       width={26}

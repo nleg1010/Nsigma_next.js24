@@ -12,13 +12,19 @@ const CaseStudies = ({ data }: any) => {
 
   return (
     <section className="pb-20">
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
+      <script
+        type="text/javascript"
+        id="hs-script-loader"
+        async
+        defer
+        src="//js.hs-scripts.com/44973111.js"
+      ></script>
       <div className="relative">
         <h2 className=" text-2xl md:mt-5 md:text-[42px] font-extrabold text-white text-center pb-16">
           Case <span className="grad">Studies</span>
         </h2>
-        {/* <Image src="/images/half-circle.svg" alt="img" width={140} height={140} className='z-[1] animate-pulse absolute md:-top-10 top-0 md:right-16 w-20 md:w-auto right-2'/> */}
-        {/* <Image src="/images/arrow.svg" alt="img" width={120} height={120} className='z-[1] absolute animate-bounce -top-10 md:-left-24 left-0 w-20 md:w-auto'/> */}
+        {/* <img src="/images/half-circle.svg" alt="img" width={140} height={140} className='z-[1] animate-pulse absolute md:-top-10 top-0 md:right-16 w-20 md:w-auto right-2'/> */}
+        {/* <img src="/images/arrow.svg" alt="img" width={120} height={120} className='z-[1] absolute animate-bounce -top-10 md:-left-24 left-0 w-20 md:w-auto'/> */}
       </div>
 
       <section

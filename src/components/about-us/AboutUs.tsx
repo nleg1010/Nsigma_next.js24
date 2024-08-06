@@ -1,5 +1,4 @@
 import { PrismicRichText } from "@prismicio/react";
-import Image from "next/image";
 
 const AboutUs = ({ about }: any) => {
   return (
@@ -22,7 +21,7 @@ const AboutUs = ({ about }: any) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:grid-cols-3 mt-10">
           {about?.whyCards?.map((item: any, idx: number) => (
             <div key={idx} className="flex justify-start items-start gap-4">
-              <Image src={item.icon.url} width={40} height={40} alt={`icon`} />
+              <img src={item.icon.url} width={40} height={40} alt={`icon`} />
               <div className="text-left">
                 <PrismicRichText field={item.description} />
               </div>

@@ -3,7 +3,6 @@ import Link from "next/link";
 import { motion, Variants } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import MenuItemWithSubMenu from "./MenuItemWithSubMenu";
-import Image from "next/image";
 
 const routes = [
   {
@@ -99,7 +98,7 @@ function Navbar() {
       <div className="container flex w-full items-center justify-between gap-2 font-bold px-4 xl:px-4 py-2">
         <div className="md:w-1/4 w-1/2 z-50">
           <Link href="/" className="inline-block">
-            <Image
+            <img
               src="/images/logo.png"
               alt="logo"
               width={156}

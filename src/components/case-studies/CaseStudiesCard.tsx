@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 const CaseStudiesCard = ({ caseStudy }: any) => {
@@ -13,7 +12,7 @@ const CaseStudiesCard = ({ caseStudy }: any) => {
       ></script>
       <Link href={`/case/${caseStudy?.slug}`}>
         <figure className="rounded-[20px] cursor-pointer overflow-hidden">
-          <Image
+          <img
             src={caseStudy.image.url}
             alt={caseStudy.title}
             width={370}
