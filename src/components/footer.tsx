@@ -1,14 +1,57 @@
 import Link from "next/link";
-import {
-  FaChevronRight,
-  FaEnvelope,
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
-  FaTwitter,
-} from "react-icons/fa";
-import { FaMobileAlt } from "react-icons/fa";
-import CustomLink from "./CustomLink";
+import { FaChevronRight, FaEnvelope } from "react-icons/fa";
+import Socials from "./Socials";
+import { twMerge } from "tailwind-merge";
+
+const routes = [
+  {
+    name: "Services",
+    sublinks: [
+      {
+        name: "Data Strategy & AI Consulting",
+        link: "/data-strategy",
+      },
+      { name: "AI/ML & Predictive Analytics", link: "/ai-ml" },
+      {
+        name: "AI TotalOps : Data, ML and Security",
+        link: "/aitotalops",
+      },
+      { name: "Data Engineering", link: "/data-engineering" },
+      {
+        name: "Computer vision & IoT Solutions",
+        link: "/computer-vision-iot",
+      },
+      {
+        name: "Data Visualizations & Business Intelligence (BI)",
+        link: "/visualization-bi",
+      },
+    ],
+  },
+  {
+    name: "About",
+    sublinks: [
+      { name: "Our Story", link: "/nsigma-story" },
+      { name: "Careers", link: "/careers" },
+    ],
+  },
+  {
+    name: "Solutions",
+    link: "/#",
+    sublinks: [
+      { name: "Asset Management", link: "/asset-management" },
+      { name: "Real Estate ", link: "/real-estate" },
+    ],
+  },
+  {
+    name: "Help",
+    sublinks: [
+      { name: "FAQs", link: "/frequent-questions" },
+      { name: "Privacy Policy", link: "/privacy-policy" },
+      { name: "Cookies Policy", link: "/cookies-policy" },
+      { name: "Contact Us", link: "/contact-us" },
+    ],
+  },
+];
 
 export default function Footer() {
   const handleMail = async (e: any) => {
@@ -18,6 +61,13 @@ export default function Footer() {
 
   return (
     <footer className="bg-Gray relative">
+      <script
+        type="text/javascript"
+        id="hs-script-loader"
+        async
+        defer
+        src="//js.hs-scripts.com/44973111.js"
+      ></script>
       <div className="container mx-auto px-4 flex md:flex-row flex-col justify-between items-center gap-7 pt-16 pb-10 border-b border-[#696B76]/40">
         <div className="md:w-1/2 flex justify-center sm:justify-start w-full">
           <Link href="/" className="inline-block">
@@ -33,7 +83,13 @@ export default function Footer() {
           <h5 className="md:text-[34px] text-2xl font-bold text-white">
             Ready to get started?
           </h5>
-          <CustomLink href="/contact-us">Get Started</CustomLink>
+          <Link
+            href="/contact-us"
+            className="text-white bg-custm_pink min-w-[165px] text-center rounded-xl hover:scale-105 transition-transform duration-200 p-2 font-normal"
+            style={{ fontWeight: "999", padding: "20px", fontSize: "25px" }}
+          >
+            Get Started
+          </Link>
         </div>
       </div>
       <div className="container mx-auto px-4 flex md:flex-row flex-col justify-between gap-7 pt-10 pb-16 relative z-[1]">
@@ -59,170 +115,35 @@ export default function Footer() {
               <FaChevronRight />
             </button>
           </form>
-          <ul className="flex items-center flex-wrap gap-3">
-            <li>
-              <Link
-                href="htts://facebook.com"
-                className="text-lg text-white hover:bg-lightGray transition-colors bg-lightGray/20 h-[38px] w-[38px] inline-flex items-center justify-center rounded-full"
-              >
-                <FaFacebookF />
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="htts://x.com"
-                className="text-lg text-white hover:bg-lightGray transition-colors bg-lightGray/20 h-[38px] w-[38px] inline-flex items-center justify-center rounded-full"
-              >
-                <FaTwitter />
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="htts://linkedin.com"
-                className="text-lg text-white hover:bg-lightGray transition-colors bg-lightGray/20 h-[38px] w-[38px] inline-flex items-center justify-center rounded-full"
-              >
-                <FaLinkedinIn />
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="htts://instagram.com"
-                className="text-lg text-white hover:bg-lightGray transition-colors bg-lightGray/20 h-[38px] w-[38px] inline-flex items-center justify-center rounded-full"
-              >
-                <FaInstagram />
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                href="mailto://info@nsigma.io"
-                className="text-lg text-white hover:bg-lightGray transition-colors bg-lightGray/20 h-[38px] w-[38px] inline-flex items-center justify-center rounded-full"
-              >
-                <FaEnvelope />
-              </Link>
-            </li>
-          </ul>
+          <Socials className="hidden md:flex" />
         </div>
-        <div className="md:w-[70%] w-full grid md:grid-cols-3 grid-cols-1 gap-7">
-          <div>
-            <h6 className="md:text-[22px] md:leading-8 text-lg font-bold text-white mb-6">
-              Services
-            </h6>
-            <ul className="flex flex-col gap-2">
-              <li>
-                <Link
-                  href="https://nsigma.io/#expertise"
-                  className="text-xl font-medium text-lightGray hover:text-white transition-colors"
-                >
-                  Data Strategy & Consulting
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/ai-ml"
-                  className="text-xl font-medium text-lightGray hover:text-white transition-colors"
-                >
-                  AI/ML & Predictive Analytics
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://nsigma.io/#expertise"
-                  className="text-xl font-medium text-lightGray hover:text-white transition-colors"
-                >
-                  DataOps Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://nsigma.io/#expertise"
-                  className="text-xl font-medium text-lightGray hover:text-white transition-colors"
-                >
-                  Data Engineering
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://nsigma.io/#expertise"
-                  className="text-xl font-medium text-lightGray hover:text-white transition-colors"
-                >
-                  Software Development
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-xl font-medium text-lightGray hover:text-white transition-colors"
-                >
-                  BI Automation & Data Analytics
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h6 className="md:text-[22px] md:leading-8 text-lg font-bold text-white mb-6">
-              About
-            </h6>
-            <ul className="flex flex-col gap-2">
-              <li>
-                <Link
-                  href="https://nsigma.io/"
-                  className="text-xl font-medium text-lightGray hover:text-white transition-colors"
-                >
-                  Our Story
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-xl font-medium text-lightGray hover:text-white transition-colors"
-                >
-                  Careers
-                </Link>
-              </li>
-            </ul>
-            <div className="mt-5">
-              <h6 className="md:text-[22px] md:leading-8 text-lg font-bold text-white mb-6">
-                Help
+        <div className="md:w-[70%] w-full grid md:grid-cols-3 grid-cols-2 gap-7">
+          {routes.map(({ name, sublinks }, i) => (
+            <div
+              className={twMerge(
+                "flex flex-col gap-2",
+                i === 0 && "row-span-2"
+              )}
+            >
+              <h6 className="md:text-[22px] md:leading-8 text-md font-bold text-white pb-4">
+                {name}
               </h6>
-              <ul className="flex flex-col gap-2">
-                <li>
-                  <Link
-                    href="#"
-                    className="text-xl font-medium text-lightGray hover:text-white transition-colors"
-                  >
-                    FAQs
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/privacy-policy"
-                    className="text-xl font-medium text-lightGray hover:text-white transition-colors"
-                  >
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/cookies-policy"
-                    className="text-xl font-medium text-lightGray hover:text-white transition-colors"
-                  >
-                    Cookies Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/contact-us"
-                    className="text-xl font-medium text-lightGray hover:text-white transition-colors"
-                  >
-                    Contact Us
-                  </Link>
-                </li>
-              </ul>
+              {sublinks.map(({ name, link }) => (
+                <ul className="flex flex-col gap-2">
+                  <li className="pt-">
+                    <Link
+                      href={link}
+                      className="text-sm md:text-xl font-medium  text-lightGray hover:text-white transition-colors"
+                    >
+                      {name}
+                    </Link>
+                  </li>
+                </ul>
+              ))}
             </div>
-          </div>
-          <div className="text-lightGray text-xl">
-            <h6 className="md:text-[22px] md:leading-8 text-lg font-bold text-white mb-6">
+          ))}
+          <div className="text-lightGray text-md">
+            <h6 className="md:text-[22px] md:leading-8 pb-4 text-md font-bold text-white">
               Contact
             </h6>
             <p>
@@ -231,20 +152,13 @@ export default function Footer() {
               <br />
               Miami, FL 33137
             </p>
-            <Link
-              className="flex items-center gap-2 mt-4"
-              href="mailto:info@nsigma.io"
-            >
-              <FaEnvelope />
-              <span>info@nsigma.io</span>
+            <Link className="flex items-center" href="mailto:info@nsigma.io">
+              <div className=" flex flex-row gap-1 items-center">
+                <FaEnvelope />
+                info@nsigma.io
+              </div>
             </Link>
-            <Link
-              className="flex items-center gap-2 mt-4"
-              href="tel:+19044694458"
-            >
-              <FaMobileAlt />
-              <span>+1-904-469-4458</span>
-            </Link>
+            <Socials className="pt-2 md:hidden items-start gap-2" />
           </div>
         </div>
       </div>

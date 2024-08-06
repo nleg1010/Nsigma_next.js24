@@ -3,7 +3,8 @@ import Link from "next/link";
 const CaseStudiesCard = ({ caseStudy }: any) => {
   return (
     <article className="bg-[#1E2029] group rounded-[20px] overflow-hidden">
-      <Link href={`/${caseStudy?.slug}`}>
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
+      <Link href={`/case/${caseStudy?.slug}`}>
         <figure className="rounded-[20px] cursor-pointer overflow-hidden">
           <img
             src={caseStudy.image.url}

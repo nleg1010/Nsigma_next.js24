@@ -6,20 +6,44 @@ import MenuItemWithSubMenu from "./MenuItemWithSubMenu";
 
 const routes = [
   {
-    name: "Our Expertise",
-    link: "https://nsigma.io/#expertise",
-    sublinks: [{ name: "AI/ML", link: "/ai-ml" }],
+    name: "OUR EXPERTISE",
+    link: "/#expertise",
+    sublinks: [
+      {
+        name: "Data Strategy & AI Consulting",
+        link: "/data-strategy",
+      },
+      { name: "AI/ML & Predictive Analytics", link: "/ai-ml" },
+      {
+        name: "Data Visualization & Business Intelligence (BI)",
+        link: "/visualization-bi",
+      },
+      { name: "AI TotalOps:Data, ML & Security", link: "/aitotalops" },
+      { name: "Data Engineering", link: "/data-engineering" },
+      {
+        name: "Computer Vision & IoT Solutions",
+        link: "/computer-vision-iot",
+      },
+    ],
   },
   {
-    name: "Case Studies",
-    link: "https://nsigma.io/#casestudy",
+    name: "SOLUTIONS",
+    link: "/#solutions",
+    sublinks: [
+      { name: "Asset Management", link: "/asset-management" },
+      { name: "Real Estate ", link: "" },
+    ],
   },
   {
-    name: "About Us",
-    link: "https://nsigma.io/#about",
+    name: "CASE STUDIES",
+    link: "/#casestudy",
   },
   {
-    name: "Contact Us",
+    name: "FAQs",
+    link: "/frequent-questions",
+  },
+  {
+    name: "CONTACT US",
     link: "/contact-us",
   },
 ];
@@ -58,12 +82,19 @@ function Navbar() {
     },
     open: {
       opacity: 1,
-      height: 392,
+      height: "auto",
     },
   };
 
   return (
-    <nav className="z-50 flex top-0 w-full justify-center sticky bg-Gray/75  text-white">
+    <nav className="z-50 flex top-0 w-full justify-center sticky bg-Gray  text-white">
+      <script
+        type="text/javascript"
+        id="hs-script-loader"
+        async
+        defer
+        src="//js.hs-scripts.com/44973111.js"
+      ></script>
       <div className="container flex w-full items-center justify-between gap-2 font-bold px-4 xl:px-4 py-2">
         <div className="md:w-1/4 w-1/2 z-50">
           <Link href="/" className="inline-block">
@@ -83,7 +114,7 @@ function Navbar() {
                 href={link}
                 key={i}
                 className={twMerge(
-                  `hidden p-2 md:block md:text-lg text-base font-semibold text-white uppercase`,
+                  `hidden p-2 md:block md:text-lg text-base font-semibold text-white`,
                   i === routes.length - 1 &&
                     "bg-custm_pink p-3 min-w-[156px] font-normal text-center rounded-xl hover:scale-105 transition-transform"
                 )}
@@ -103,7 +134,8 @@ function Navbar() {
                       href={link}
                       key={name}
                       className={twMerge(
-                        `p-2 md:text-lg text-base font-semibold text-white uppercase`
+                        `p-2 md:text-sm text-base font-semibold text-white `,
+                        "hover:bg-blue-100 hover:bg-opacity-20"
                       )}
                     >
                       {name}
@@ -138,7 +170,7 @@ function Navbar() {
           </motion.button>
 
           <motion.div
-            className="absolute left-0 bg-Gray/75 overflow-hidden top-[100%] z-20 flex w-full origin-top flex-col items-end gap-8 pr-4 uppercase md:!hidden md:flex-row"
+            className="absolute left-0 bg-Gray overflow-hidden top-[100%] z-20 flex w-full origin-top flex-col items-end gap-8 pr-4 md:!hidden md:flex-row"
             variants={linksVariants}
             initial="close"
             animate={open ? "open" : "close"}
@@ -161,11 +193,12 @@ function Navbar() {
                   href={link}
                   key={i}
                   className={twMerge(
-                    `p-2 md:text-lg text-base font-semibold text-white uppercase`,
+                    `p-2 md:text-lg text-base font-semibold text-white`,
                     i === routes.length - 1 &&
                       "bg-custm_pink p-3 min-w-[156px] font-normal text-center rounded-xl"
                   )}
                   onClick={handleOpen}
+                  style={{ marginBottom: "-10px" }}
                 >
                   {name}
                 </Link>

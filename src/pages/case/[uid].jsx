@@ -7,6 +7,7 @@ const CaseStudiesSlug = ({ page }) => {
   const { title, image, content } = page;
   return (
     <>
+	  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
       <Head>
         <title>Nsigma | Data Driven Intelligence</title>
       </Head>

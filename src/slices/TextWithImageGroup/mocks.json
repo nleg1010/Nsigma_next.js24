@@ -1,0 +1,75 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Nostrud nostrud veniam deserunt est aliquip consequat occaecat laborum."
+						}
+					}
+				]
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Exercitation nulla occaecat ad ullamco excepteur. Do commodo qui velit occaecat proident tempor. Pariatur dolor excepteur consequat consectetur Lorem et eu do cillum quis deserunt exercitation veniam."
+						}
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"image",
+						{
+							"__TYPE__": "ImageContent",
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04",
+								"width": 4000,
+								"height": 4000
+							},
+							"url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04",
+							"width": 4000,
+							"height": 4000,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								},
+								"background": "transparent"
+							},
+							"thumbnails": {}
+						}
+					],
+					[
+						"description",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Deserunt esse non qui pariatur. Occaecat fugiat deserunt tempor nisi nisi veniam. Mollit dolore proident mollit consectetur elit dolore magna magna dolor reprehenderit ut ullamco esse minim."
+									}
+								}
+							]
+						}
+					]
+				]
+			}
+		]
+	}
+]

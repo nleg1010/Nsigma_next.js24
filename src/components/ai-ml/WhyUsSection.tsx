@@ -1,19 +1,27 @@
+import { PrismicRichText } from "@prismicio/react";
+
+
+
 type WhyUsSectionProps = {
   data: {
     image: { url: string };
     content: Array<{
       title: string;
       description: string;
+      topic: any;
+      content: any;
     }>;
   };
 };
 
 function WhyUsSection({ data }: WhyUsSectionProps) {
+
   return (
     <section
       className="w-full flex justify-center items-center py-12"
-      id="why-us"
+      id="Why Us"
     >
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
       <div className="container text-white flex flex-col px-4 justify-center items-center w-full gap-12">
         <h2 className="text-3xl md:text-5xl font-bold">
           Why to Choose NSigma for{" "}
@@ -28,10 +36,10 @@ function WhyUsSection({ data }: WhyUsSectionProps) {
             />
           </div>
           <div className="flex flex-col gap-4">
-            {data.content.map(({ title, description }, i) => (
+            {data?.content?.map(({ topic, content }, i) => (
               <div className="flex flex-col" key={i}>
-                <h3 className="grad text-2xl">{title}</h3>
-                <div className="text-white">{description}</div>
+                <h3 className="grad text-2xl"><PrismicRichText field={topic} /></h3>
+                <div className="text-white"><PrismicRichText field={content} /></div>
               </div>
             ))}
           </div>

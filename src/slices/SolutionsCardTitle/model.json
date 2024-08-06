@@ -1,0 +1,32 @@
+{
+  "id": "solutions_card_title",
+  "type": "SharedSlice",
+  "name": "SolutionsCardTitle",
+  "description": "SolutionsCardTitle",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "name": {
+          "type": "Select",
+          "config": {
+            "label": "Name",
+            "placeholder": "",
+            "options": [
+              "INVEST-Ops",
+              "OPTIMA-Ops",
+              "VISION-Ops",
+              "ADVANCE-Ops"
+            ]
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

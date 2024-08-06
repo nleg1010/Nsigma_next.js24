@@ -1,8 +1,10 @@
 import CustomLink from "../CustomLink";
+import Link from "next/link"
 
-export default function Banner() {
+export default function Banner({ content }: any) {
   return (
     <>
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
       <main className="relative flex items-center justify-center h-screen mb-12 overflow-hidden -mt-20">
         <div className="relative z-30 text-2xl bg-opacity-50 rounded-xl">
           <div className="flex items-center justify-center bg-black/30 w-screen h-screen">
@@ -15,9 +17,9 @@ export default function Banner() {
                   </span>
                 </h1>
               </div>
-              <CustomLink href="#" className="max-w-xs font-normal">
+              <Link href="/contact-us" className="text-white bg-custm_pink min-w-[165px] text-center rounded-xl hover:scale-105 transition-transform duration-200 p-2 font-normal" style={{fontWeight: '999', padding: '20px', fontSize: '25px'}}>
                 Get started
-              </CustomLink>
+              </Link>
             </div>
           </div>
         </div>
@@ -25,9 +27,10 @@ export default function Banner() {
           autoPlay
           muted
           playsInline
+	  loop
           className="absolute z-10 w-auto min-w-full h-full max-w-none object-cover"
         >
-          <source src="/test2.mp4" type="video/mp4" />
+          <source src={content?.url} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </main>

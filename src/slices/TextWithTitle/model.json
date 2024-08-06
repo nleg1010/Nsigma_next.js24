@@ -1,0 +1,82 @@
+{
+  "id": "text_with_title",
+  "type": "SharedSlice",
+  "name": "TextWithTitle",
+  "description": "TextWithTitle",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Middle",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        }
+      },
+      "items": {
+        "paragraphs": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Paragraphs",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "textcolor": {
+          "type": "Color",
+          "config": {
+            "label": "textColor",
+            "placeholder": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "left",
+      "name": "Left",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        }
+      },
+      "items": {
+        "paragraphs": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Paragraphs",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "textcolor": {
+          "type": "Color",
+          "config": {
+            "label": "textColor",
+            "placeholder": ""
+          }
+        }
+      }
+    }
+  ]
+}

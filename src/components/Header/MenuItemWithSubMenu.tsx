@@ -22,6 +22,13 @@ const MenuItemWithSubMenu = ({
 
   return (
     <span className="flex flex-col items-end gap-8">
+      <script
+        type="text/javascript"
+        id="hs-script-loader"
+        async
+        defer
+        src="//js.hs-scripts.com/44973111.js"
+      ></script>
       <button
         className="flex w-full uppercase"
         onClick={() => setSubMenuOpen(!subMenuOpen)}
@@ -39,13 +46,17 @@ const MenuItemWithSubMenu = ({
       </button>
 
       {subMenuOpen && (
-        <div className="flex flex-col">
+        <div
+          className="flex flex-col"
+          style={{ marginTop: "-20px", textAlign: "right", fontSize: "12px" }}
+        >
           {item.subMenuItems?.map((subItem, i) => {
             return (
               <Link
                 key={i}
                 href={subItem.link}
                 onClick={() => toggleOpen(false)}
+                style={{ marginTop: "10px" }}
               >
                 {subItem.name}
               </Link>

@@ -8,6 +8,8 @@ import EngagementStrategies from "@/components/engagement-strategies/EngagementS
 import Expertise from "@/components/expertise";
 import AboutUs from "@/components/about-us/AboutUs";
 import Banner from "@/components/banner";
+import { PrismicRichText } from "@prismicio/react";
+import Solutions from "@/components/solutions/Solutions";
 
 const Home: FC<any> = ({ page }) => {
   const {
@@ -20,14 +22,26 @@ const Home: FC<any> = ({ page }) => {
     meta_title,
     meta_description,
     hero_video,
+    solutions_subheader,
+    solutions_content,
+    solutions_tabs,
   } = page.data;
-
   return (
     <>
+      <script
+        type="text/javascript"
+        id="hs-script-loader"
+        async
+        defer
+        src="//js.hs-scripts.com/44973111.js"
+      ></script>
       <DefaultSeo title={meta_title} description={meta_description} />
       <div className="bg-[#000200]">
-        <Banner data={questions} video={hero_video?.url} />
+        <Banner video={hero_video?.url} />
         <Expertise data={expertise} />
+        <Solutions
+          data={{ solutions_subheader, solutions_content, solutions_tabs }}
+        />
         <EngagementStrategies data={engagement} />
         <CaseStudies data={case_studies} />
         <AboutUs

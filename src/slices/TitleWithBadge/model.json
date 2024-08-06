@@ -1,0 +1,49 @@
+{
+  "id": "title_with_badge",
+  "type": "SharedSlice",
+  "name": "TitleWithBadge",
+  "description": "TitleWithBadge",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "badge": {
+          "type": "Text",
+          "config": {
+            "label": "Badge",
+            "placeholder": ""
+          }
+        },
+        "badgebgcolor": {
+          "type": "Color",
+          "config": {
+            "label": "BadgeBgColor",
+            "placeholder": ""
+          }
+        },
+        "badgetextcolor": {
+          "type": "Color",
+          "config": {
+            "label": "BadgeTextColor",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
