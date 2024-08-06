@@ -1,16 +1,23 @@
 import EngagementCard from "@/components/engagement-strategies/EngagementCard";
 import { PrismicRichText } from "@prismicio/react";
+import Image from "next/image";
 
 const TitleWithCards = ({ slice }) => {
   const { title } = slice.primary;
   const Id = title?.[0]?.type === "paragraph" ? title[0].text : " ";
-	console.log(slice);
+  console.log(slice);
   return (
     <section
       className="py-16 overflow-hidden px-3 md:px-0 grid place-items-center"
       id={Id}
     >
-	  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
+      <script
+        type="text/javascript"
+        id="hs-script-loader"
+        async
+        defer
+        src="//js.hs-scripts.com/44973111.js"
+      ></script>
       <div className="container relative ">
         <div className="text-2xl md:text-[42px] font-extrabold text-white text-center pb-16 title">
           <PrismicRichText field={title} />
@@ -25,7 +32,7 @@ const TitleWithCards = ({ slice }) => {
             />
           ))}
         </div>
-        <img
+        <Image
           src="/images/circle.svg"
           alt="img"
           width={140}

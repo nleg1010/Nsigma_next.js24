@@ -2,12 +2,19 @@ import Head from "next/head";
 import { createClient } from "@/prismicio";
 import { PrismicRichText } from "@prismicio/react";
 import PageBanner from "@/components/page-banner/pageBanner";
+import Image from "next/image";
 
 const CaseStudiesSlug = ({ page }) => {
   const { title, image, content } = page;
   return (
     <>
-	  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
+      <script
+        type="text/javascript"
+        id="hs-script-loader"
+        async
+        defer
+        src="//js.hs-scripts.com/44973111.js"
+      ></script>
       <Head>
         <title>Nsigma | Data Driven Intelligence</title>
       </Head>
@@ -15,7 +22,7 @@ const CaseStudiesSlug = ({ page }) => {
         <PageBanner title={title} />
         <div className="p-3">
           <figure className="overflow-hidden flex justify-center -mt-10 mb-4">
-            <img
+            <Image
               src={image?.url}
               width={500}
               height={400}

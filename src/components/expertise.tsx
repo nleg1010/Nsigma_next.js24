@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { useState, useEffect } from 'react';
+import Image from "next/image";
+import { useState, useEffect } from "react";
 import { twMerge } from "tailwind-merge";
 
 type ExpertiseProps = {
@@ -26,20 +27,29 @@ export default function Expertise({ data }: ExpertiseProps) {
   }, []);
 
   return (
-    <section className={`py-16 relative ${loading ? 'blur' : ''}`} id="expertise">
+    <section
+      className={`py-16 relative ${loading ? "blur" : ""}`}
+      id="expertise"
+    >
       {loading ? (
         <div className="w-full h-full flex items-center justify-center text-white">
-	<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
-		{data?.map((item, idx: number) => {
-              	return (
-	
-          	<img
-                        src={item.icon.url}
-                        alt="experty/1"
-                        width={26}
-                        height={26}
-                      />
-		      )})}
+          <script
+            type="text/javascript"
+            id="hs-script-loader"
+            async
+            defer
+            src="//js.hs-scripts.com/44973111.js"
+          ></script>
+          {data?.map((item, idx: number) => {
+            return (
+              <Image
+                src={item.icon.url}
+                alt="experty/1"
+                width={26}
+                height={26}
+              />
+            );
+          })}
         </div>
       ) : (
         <div className="container mx-auto px-4 relative z-10">
@@ -61,7 +71,7 @@ export default function Expertise({ data }: ExpertiseProps) {
                 >
                   <div className="w-full flex items-center justify-start">
                     <div className="w-[61px] h-[61px] bg-black flex items-center justify-center rounded-full">
-                      <img
+                      <Image
                         src={item.icon.url}
                         alt="experty/1"
                         width={26}
@@ -84,4 +94,3 @@ export default function Expertise({ data }: ExpertiseProps) {
     </section>
   );
 }
-

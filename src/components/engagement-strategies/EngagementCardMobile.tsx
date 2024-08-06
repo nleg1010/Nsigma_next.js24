@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { PrismicRichText } from "@prismicio/react";
-
+import Image from "next/image";
 
 interface EngagementCardProps {
   idx: number;
@@ -17,12 +17,23 @@ const EngagementCardMobile: FC<EngagementCardProps> = ({
     <section
       className={`relative md:hidden gap-5 ${idx === length ? "pb-5" : "pb-10"}`}
     >
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
+      <script
+        type="text/javascript"
+        id="hs-script-loader"
+        async
+        defer
+        src="//js.hs-scripts.com/44973111.js"
+      ></script>
       <div
         className={`flex gap-4 ${idx % 2 === 0 ? "flex-row-reverse" : "flex-row"}`}
       >
         <figure className="bg-[#272932] rounded-xl p-6 w-full flex justify-center">
-          <img src={data.image.asset.url} alt="img" width={300} height={200} />
+          <Image
+            src={data.image.asset.url}
+            alt="img"
+            width={300}
+            height={200}
+          />
         </figure>
         <div>
           <button className="bg-[#272932] z-10 relative rounded-full border-[2px] border-gray-700 text-white w-12 h-12 md:w-16 md:h-16 md:text-xl stroke-black/5">

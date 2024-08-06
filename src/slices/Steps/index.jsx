@@ -1,21 +1,25 @@
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 import { PrismicRichText } from "@prismicio/react";
+import Image from "next/image";
 
 const TitleWithSteps = ({ slice }) => {
-	const { title } = slice.primary;
-	const Id = title?.[0]?.type === "paragraph" ? title[0].text : " ";
+  const { title } = slice.primary;
+  const Id = title?.[0]?.type === "paragraph" ? title[0].text : " ";
   const [activeTab, setActiveTab] = useState(0);
 
   const handleTabClick = (index) => {
     setActiveTab(index);
   };
   return (
-    <section
-      className="w-full flex justify-center items-center py-12"
-      id={Id}
-    >
-	  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
+    <section className="w-full flex justify-center items-center py-12" id={Id}>
+      <script
+        type="text/javascript"
+        id="hs-script-loader"
+        async
+        defer
+        src="//js.hs-scripts.com/44973111.js"
+      ></script>
       <div className="container flex flex-col gap-12 text-white px-4">
         <div className="text-3xl md:text-5xl font-bold title">
           <PrismicRichText field={title} />
@@ -28,7 +32,7 @@ const TitleWithSteps = ({ slice }) => {
                 className={`relative focus:outline-none group`}
                 onClick={() => handleTabClick(i)}
               >
-                <img src={icon.url} alt={title} width={54} height={54} />
+                <Image src={icon.url} alt={title} width={54} height={54} />
                 <span
                   className={twMerge(
                     "absolute top-[calc(100%_+_1.75rem)] w-full bg-customGreen h-1 duration-300 opacity-0 transition-opacity left-0 group-hover:opacity-100",

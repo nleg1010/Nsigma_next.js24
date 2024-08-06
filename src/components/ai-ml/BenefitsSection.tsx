@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 
 type BenefitsSectionProps = {
@@ -14,7 +15,13 @@ function BenefitsSection({ cards }: BenefitsSectionProps) {
       className="w-full flex justify-center items-center py-12"
       id="Benefits"
     >
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
+      <script
+        type="text/javascript"
+        id="hs-script-loader"
+        async
+        defer
+        src="//js.hs-scripts.com/44973111.js"
+      ></script>
       <div className="container flex flex-col gap-12 text-white px-4">
         <h2 className="text-3xl md:text-5xl font-bold">
           Benefits of{" "}
@@ -37,7 +44,7 @@ function BenefitsSection({ cards }: BenefitsSectionProps) {
                 {description}
               </div>
               {!!icon && (
-                <img
+                <Image
                   src={icon.url}
                   alt={title}
                   width={40}

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 
@@ -42,7 +43,7 @@ function ProcessSection({ tabs }: ProcessSectionProps) {
                 className={`relative focus:outline-none group`}
                 onClick={() => handleTabClick(i)}
               >
-                <img src={icon.url} alt={title} width={54} height={54} />
+                <Image src={icon.url} alt={title} width={54} height={54} />
                 <span
                   className={twMerge(
                     "absolute top-[calc(100%_+_1.75rem)] w-full bg-customGreen h-1 duration-300 opacity-0 transition-opacity left-0 group-hover:opacity-100",

@@ -1,9 +1,10 @@
 import { PrismicRichText } from "@prismicio/react";
+import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 
 const TitleWithAnalytics = ({ slice }) => {
-	const { title } = slice.primary;
-	const Id = title?.[0]?.type === "paragraph" ? title[0].text : " ";
+  const { title } = slice.primary;
+  const Id = title?.[0]?.type === "paragraph" ? title[0].text : " ";
 
   switch (slice.variation) {
     case "secondary":
@@ -12,7 +13,13 @@ const TitleWithAnalytics = ({ slice }) => {
           className="w-full flex justify-center items-center py-12"
           id={Id}
         >
-	      <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
+          <script
+            type="text/javascript"
+            id="hs-script-loader"
+            async
+            defer
+            src="//js.hs-scripts.com/44973111.js"
+          ></script>
           <div className="container flex flex-col gap-12 text-white px-4">
             <div className="text-3xl md:text-5xl font-bold title">
               <PrismicRichText field={title} />
@@ -34,7 +41,7 @@ const TitleWithAnalytics = ({ slice }) => {
                     {description}
                   </div>
                   {!!icon && (
-                    <img
+                    <Image
                       src={icon.url}
                       alt={title}
                       width={40}
@@ -73,7 +80,7 @@ const TitleWithAnalytics = ({ slice }) => {
                     {description}
                   </div>
                   {!!icon && (
-                    <img
+                    <Image
                       src={icon.url}
                       alt={title}
                       width={40}
@@ -113,7 +120,7 @@ const TitleWithAnalytics = ({ slice }) => {
                     {description}
                   </div>
                   {!!icon && (
-                    <img
+                    <Image
                       src={icon.url}
                       alt={title}
                       width={40}
