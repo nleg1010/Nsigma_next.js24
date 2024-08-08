@@ -1,34 +1,31 @@
 import FaqBox from "./faqBox";
 import Slider from "react-slick";
 
-
-
 const Questions = ({ data }: any) => {
-var settings = {
-  dots: false,
-  infinite: true,
-  arrows: false,
-  speed: 5500,
-  delay: 3000,
-  autoplay: true,
-  autoplaySpeed: 5000,
-  slidesToShow: 2,
-  slidesToScroll: 1,
-  initialSlide: 0,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        initialSlide: 0,
+  var settings = {
+    dots: false,
+    infinite: true,
+    arrows: false,
+    speed: 5500,
+    delay: 3000,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 0,
+        },
       },
-    },
-  ],
-};
+    ],
+  };
   return (
     <section className="py-16 -mt-28 relative z-40">
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
       <Slider
         {...settings}
         className="container mx-auto px-4 grid md:grid-cols-2 grid-cols-1 gap-7 md:-mt-[100px] mt-0"
@@ -42,5 +39,3 @@ var settings = {
 };
 
 export default Questions;
-
-

@@ -16,7 +16,6 @@ function CustomLink({ href, children, className }: CustomLinkProps) {
         className
       )}
     >
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
       {children}
     </Link>
   );

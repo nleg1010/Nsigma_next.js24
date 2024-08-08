@@ -3,8 +3,7 @@ import { SliceComponentProps } from "@prismicio/react";
 import { useState } from "react";
 import { PrismicRichText } from "@prismicio/react";
 import { twMerge } from "tailwind-merge";
-import Link from "next/link";
-import { PrismicNextLink } from '@prismicio/next'
+import { PrismicNextLink } from "@prismicio/next";
 
 /**
  * Props for `MultipleSlice`.
@@ -28,27 +27,26 @@ const MultipleSlice = ({ slice }: MultipleSliceProps): JSX.Element => {
       className="w-full flex justify-center items-center py-12"
       id="our-process"
     >
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
       <div className="container flex flex-col gap-12 text-white px-4">
-      
-        <div className="text-3xl md:text-5xl font-bold title">
-        </div>
+        <div className="text-3xl md:text-5xl font-bold title"></div>
         <div className="text-xl bg-Gray p-4 sm:p-8 md:p-14 rounded-2xl flex flex-col">
-	
           <div className="flex flex-col pb-8 gap-2 sm:gap-12">
-	  <div className="text-3xl md:text-5xl font-bold title" style={{marginBottom: '50px'}}>
-          <PrismicRichText field={title} />
-        </div>
+            <div
+              className="text-3xl md:text-5xl font-bold title"
+              style={{ marginBottom: "50px" }}
+            >
+              <PrismicRichText field={title} />
+            </div>
             {slice.items.map(({ link, title }, i) => (
               <button
                 key={i}
                 className={`relative focus:outline-none group`}
                 onClick={() => handleTabClick(i)}
-              	style={{marginBottom: '30px'}}
-	      >
-	      	<PrismicNextLink field={link}>
-	      		<PrismicRichText field={title} />
-		</PrismicNextLink>
+                style={{ marginBottom: "30px" }}
+              >
+                <PrismicNextLink field={link}>
+                  <PrismicRichText field={title} />
+                </PrismicNextLink>
                 <span
                   className={twMerge(
                     "absolute top-[calc(100%_+_1.75rem)] w-full bg-customGreen h-1 duration-300 opacity-0 transition-opacity left-0 group-hover:opacity-100",

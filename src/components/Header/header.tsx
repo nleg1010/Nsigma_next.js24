@@ -88,13 +88,6 @@ function Navbar() {
 
   return (
     <nav className="z-50 flex top-0 w-full justify-center sticky bg-Gray  text-white">
-      <script
-        type="text/javascript"
-        id="hs-script-loader"
-        async
-        defer
-        src="//js.hs-scripts.com/44973111.js"
-      ></script>
       <div className="container flex w-full items-center justify-between gap-2 font-bold px-4 xl:px-4 py-2">
         <div className="md:w-1/4 w-1/2 z-50">
           <Link href="/" className="inline-block">

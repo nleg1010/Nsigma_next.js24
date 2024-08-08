@@ -7,7 +7,6 @@ type HoverCardProps = {
 const HoverCard = ({ image, info, title }: HoverCardProps) => {
   return (
     <div className="w-full sm:h-[400px] xl:w-[400px] bg-transparent cursor-pointer group  lg:perspective-1000">
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
       <div className="relative w-full h-full lg:preserve-3d  lg:group-hover:rotate-y-180  duration-500">
         <img
           src={image?.asset?.url}
