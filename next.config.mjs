@@ -9,11 +9,16 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: "/:all*(svg|jpg|png)",
+        source:
+          "/:all*(svg|jpg|png|gif|ico|woff|woff2|ttf|otf|eot|mp4|webm|ogg|mp3|wav|flac|aac|m4a|m4v|pdf|doc|docx|xls|xlsx|ppt|pptx|zip|rar|7z)",
         headers: [
           {
             key: "Cache-Control",
             value: "public, max-age=31536000, immutable",
+          },
+          {
+            key: "Expires",
+            value: "Thu, 31 Dec 2037 23:55:55 GMT",
           },
         ],
       },
@@ -23,6 +28,10 @@ const nextConfig = {
           {
             key: "Cache-Control",
             value: "public, max-age=31536000, immutable",
+          },
+          {
+            key: "Expires",
+            value: "Thu, 31 Dec 2037 23:55:55 GMT",
           },
         ],
       },
