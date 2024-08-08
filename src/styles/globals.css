@@ -34,15 +34,6 @@
   src: url("../../public/fonts/poppin/Poppins-SemiBold.ttf");
   font-weight: 600;
 }
-@font-face {
-  font-family: roboto;
-  src: url("../../public/fonts/Roboto/Roboto-Light.ttf");
-  font-weight: 300;
-}
-@font-face {
-  font-family: roboto;
-  src: url("../../public/fonts/Roboto/Roboto-LightItalic.ttf");
-}
 
 * {
   font-family: poppin;
