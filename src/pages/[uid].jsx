@@ -8,7 +8,6 @@ const Page = ({ page }) => {
   const { meta_title, meta_description } = page.data;
   return (
     <>
-	<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
       <DefaultSeo
         title={meta_title || "NSigma"}
         description={meta_description || ""}

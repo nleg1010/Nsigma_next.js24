@@ -3,7 +3,6 @@ import Link from "next/link";
 const CookiesPolicy = () => {
   return (
     <section className="bg-[#242727] text-white">
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
       <div className="container mx-auto px-3 py-20 md:text-lg">
         <h2 className="font-medium text-2xl md:text-4xl mb-4">Cookie policy</h2>
         <p>

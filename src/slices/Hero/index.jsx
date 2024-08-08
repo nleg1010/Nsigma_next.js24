@@ -1,5 +1,4 @@
 import { PrismicRichText } from "@prismicio/react";
-import CustomLink from "@/components/CustomLink";
 import Link from "next/link";
 
 const components = {
@@ -14,13 +13,6 @@ const TitleWithButton = ({ slice }) => {
       id={Id}
       className="relative flex items-center justify-center h-screen mb-12 overflow-hidden -mt-20"
     >
-      <script
-        type="text/javascript"
-        id="hs-script-loader"
-        async
-        defer
-        src="//js.hs-scripts.com/44973111.js"
-      ></script>
       <div className="relative z-30 text-2xl bg-opacity-50 rounded-xl">
         <div className="flex items-center justify-center bg-black/30 w-screen h-screen">
           <div className="container h-full w-full flex gap-4 px-4 justify-center items-center flex-col">

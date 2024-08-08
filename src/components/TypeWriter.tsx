@@ -1,9 +1,15 @@
 import React, { MutableRefObject, useState, useEffect, useRef } from "react";
 import styles from "./TypeWriter.module.css";
-import Typed from 'typed.js';
+import Typed from "typed.js";
 import { gsap, Linear, TimelineMax } from "gsap";
 
-const TYPED_STRINGS: string[] = ["Driven ", "Informed ", "Dependent ", "Powered ", "Enhanced "];
+const TYPED_STRINGS: string[] = [
+  "Driven ",
+  "Informed ",
+  "Dependent ",
+  "Powered ",
+  "Enhanced ",
+];
 
 const HERO_STYLES = {
   SECTION:
@@ -23,7 +29,13 @@ const WordDisplay = React.memo(() => {
   const [currentWord, setCurrentWord] = useState<string>("");
   const [isPause, setIsPause] = useState<boolean>(false);
   const [animationClass, setAnimationClass] = useState<string>("fade-in");
-  const words: string[] = ["Driven ", "Informed ", "Dependent ", "Powered ", "Enhanced "];
+  const words: string[] = [
+    "Driven ",
+    "Informed ",
+    "Dependent ",
+    "Powered ",
+    "Enhanced ",
+  ];
 
   const initTypeAnimation = (
     typedSpanElement: MutableRefObject<HTMLSpanElement | null>
@@ -92,14 +104,10 @@ const WordDisplay = React.memo(() => {
   }, [index, charIndex, isPause, words]);
 
   return (
-    <>
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
-      <p className="inline-block grad">
-        <span className={HERO_STYLES.TYPED_SPAN} ref={typedSpanElement}></span>
-      </p>
-    </>
+    <p className="inline-block grad">
+      <span className={HERO_STYLES.TYPED_SPAN} ref={typedSpanElement}></span>
+    </p>
   );
 });
 
 export default WordDisplay;
-

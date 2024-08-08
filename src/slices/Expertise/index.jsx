@@ -7,13 +7,6 @@ const TitleWithExpertise = ({ slice }) => {
   const Id = title?.[0]?.type === "paragraph" ? title[0].text : " ";
   return (
     <section className="py-16 relative" id={Id}>
-      <script
-        type="text/javascript"
-        id="hs-script-loader"
-        async
-        defer
-        src="//js.hs-scripts.com/44973111.js"
-      ></script>
       <div className="container mx-auto px-4 relative z-10">
         <div className="md:text-[42px] text-2xl md:leading-[50px] font-bold text-white text-center mb-5 title">
           <PrismicRichText field={title} />

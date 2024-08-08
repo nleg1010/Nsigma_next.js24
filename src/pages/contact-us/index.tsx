@@ -34,7 +34,6 @@ const ContactUs = () => {
 
   return (
     <>
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44973111.js"></script>
       <Head>
         <title>Contact Us | NSigma </title>
       </Head>
