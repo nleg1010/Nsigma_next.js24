@@ -225,12 +225,7 @@ export default function Footer() {
             <h6 className="md:text-[22px] md:leading-8 text-lg font-bold text-white mb-6">
               Contact
             </h6>
-            <p>
-              NSigma Global <br />
-              2915 Biscayne Blvd
-              <br />
-              Miami, FL 33137
-            </p>
+
             <Link
               className="flex items-center gap-2 mt-4"
               href="mailto:info@nsigma.io"
@@ -238,13 +233,7 @@ export default function Footer() {
               <FaEnvelope />
               <span>info@nsigma.io</span>
             </Link>
-            <Link
-              className="flex items-center gap-2 mt-4"
-              href="tel:+19044694458"
-            >
-              <FaMobileAlt />
-              <span>+1-904-469-4458</span>
-            </Link>
+
           </div>
         </div>
       </div>
