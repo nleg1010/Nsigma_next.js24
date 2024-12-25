@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { PrismicRichText } from "@prismicio/react";
 
 interface EngagementCardProps {
   idx: number;
@@ -32,12 +33,12 @@ const EngagementCardMobile: FC<EngagementCardProps> = ({
         <h3
           className={`text-white text-xl md:text-[26px] font-bold capitalize ${idx % 2 === 0 && "text-right"}`}
         >
-          {data.title}
+          <PrismicRichText field={data.topic} />
         </h3>
         <p
           className={`mt-1.5 text-lightGray md:text-lg ${idx % 2 === 0 && "text-right"}`}
         >
-          {data?.info}
+          <PrismicRichText field={data.detail} />
         </p>
       </div>
     </section>

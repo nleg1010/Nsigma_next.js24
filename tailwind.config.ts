@@ -23,6 +23,7 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/slices/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -38,9 +39,6 @@ const config: Config = {
         lightGray: "#babbbb",
         customNeutral: "#242727",
         customGreen: "#82E868",
-      },
-      fontFamily: {
-        sans: ["var(--font-sans)"],
       },
     },
   },

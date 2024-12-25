@@ -17,6 +17,7 @@ import ExamplesSection from "@/components/ai-ml/ExamplesSection/ExamplesSection"
 
 const AiMl: FC<any> = ({ page }) => {
   const {
+    ai_video,
     data_science,
     what_is_ai,
     ai_steps,
@@ -27,6 +28,7 @@ const AiMl: FC<any> = ({ page }) => {
     why_us_list,
     meta_title,
     meta_description,
+    slices,
   } = page.data;
 
   return (
@@ -34,7 +36,7 @@ const AiMl: FC<any> = ({ page }) => {
       <DefaultSeo title={meta_title} description={meta_description} />
 
       <div className="bg-[#000200]">
-        <Banner />
+        <Banner content={ai_video} />
         <Navigation />
         <DataScienceSection content={data_science} />
         <Divider />

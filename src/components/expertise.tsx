@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useState, useEffect } from "react";
 import { twMerge } from "tailwind-merge";
 
 type ExpertiseProps = {
@@ -14,9 +15,23 @@ type ExpertiseProps = {
 
 export default function Expertise({ data }: ExpertiseProps) {
   return (
-    <section className="py-16 relative" id="expertise">
-      {/* <Image src="/images/circle.png" alt='circle' width={180} height={180} className='absolute animate-spin left-4 -z-0 opacity-40 w-20 md:w-[180px]' />
-            <Image src="/images/abstract1.png" alt='abstract1' width={121} height={321} className='absolute animate-pulse right-4 -z-0 w-20 md:w-[121px] top-0  hidden md:block' /> */}
+    <section className={`py-16 relative `} id="expertise">
+      {/* {loading ? (
+        <div className="w-full h-full flex items-center justify-center text-white">
+          <script
+            type="text/javascript"
+            id="hs-script-loader"
+            async
+            defer
+            src="//js.hs-scripts.com/44973111.js"
+          ></script>
+          {data?.map((item, idx: number) => {
+            return (
+              <img src={item.icon.url} alt="experty/1" width={26} height={26} />
+            );
+          })}
+        </div>
+      ) : ( */}
       <div className="container mx-auto px-4 relative z-10">
         <div>
           <h2 className="md:text-[42px] text-2xl md:leading-[50px] font-bold text-white text-center mb-5">
@@ -47,7 +62,7 @@ export default function Expertise({ data }: ExpertiseProps) {
                 <h3 className="text-xl font-semibold text-white">
                   {item.title}
                 </h3>
-                <p className="text-base font-medium text-lightGray md:absolute md:opacity-0 group-hover:opacity-100 transition-opacity md:h-full md:w-full md:bg-black duration-300 md:top-0 md:left-0 md:p-4 md:grid md:place-items-center">
+                <p className="text-base font-medium text-lightGray md:absolute md:opacity-0 group-hover:opacity-100 transition-opacity md:h-full md:w-full md:bg-transparent duration-300 md:top-0 md:left-0 md:p-4 md:grid md:place-items-center backdrop-blur-lg">
                   {item.info}
                 </p>
               </Link>
@@ -55,7 +70,7 @@ export default function Expertise({ data }: ExpertiseProps) {
           })}
         </div>
       </div>
-      {/* <Image src="/images/abstract2.png" alt='abstract2' width={121} height={321} className='absolute animate-pulse left-4 -bottom-20 -z-0 w-20 md:w-[121px] hidden md:block' /> */}
+      {/* )} */}
     </section>
   );
 }

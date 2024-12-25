@@ -1,0 +1,94 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Lorem officia dolor duis minim minim incididunt ullamco cillum occaecat et ex deserunt labore fugiat. Eiusmod aliqua commodo duis nostrud laborum sit tempor. Sunt laborum deserunt mollit do occaecat sint."
+						}
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"paragraphs",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Id incididunt velit non reprehenderit adipisicing velit quis mollit officia. Veniam fugiat Lorem culpa ea fugiat ipsum anim est adipisicing ipsum. Qui pariatur sit anim sint eiusmod aute irure pariatur enim ullamco in duis exercitation qui."
+									}
+								}
+							]
+						}
+					],
+					[
+						"textcolor",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "#1fb965",
+							"type": "Color"
+						}
+					]
+				]
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "left",
+		"primary": {
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Esse cillum Lorem ut magna esse ex ipsum reprehenderit in laborum sit adipisicing eu consectetur enim."
+						}
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"paragraphs",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Dolore commodo ut aliqua labore veniam magna ullamco Lorem dolor. Ut reprehenderit laborum dolore ullamco eiusmod duis in ad proident amet ea nisi duis. Labore eu aliqua mollit nostrud."
+									}
+								}
+							]
+						}
+					],
+					[
+						"textcolor",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "#f48c57",
+							"type": "Color"
+						}
+					]
+				]
+			}
+		]
+	}
+]

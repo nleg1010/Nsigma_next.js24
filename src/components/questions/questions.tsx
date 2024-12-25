@@ -2,6 +2,28 @@ import FaqBox from "./faqBox";
 import Slider from "react-slick";
 
 const Questions = ({ data }: any) => {
+  var settings = {
+    dots: false,
+    infinite: true,
+    arrows: false,
+    speed: 5500,
+    delay: 3000,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 0,
+        },
+      },
+    ],
+  };
   return (
     <section className="py-16 -mt-28 relative z-40">
       <Slider
@@ -17,26 +39,3 @@ const Questions = ({ data }: any) => {
 };
 
 export default Questions;
-
-var settings = {
-  dots: false,
-  infinite: true,
-  arrows: false,
-  speed: 5500,
-  delay: 3000,
-  autoplay: true,
-  autoplaySpeed: 5000,
-  slidesToShow: 2,
-  slidesToScroll: 1,
-  initialSlide: 0,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        initialSlide: 0,
-      },
-    },
-  ],
-};

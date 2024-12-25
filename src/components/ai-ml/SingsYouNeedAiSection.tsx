@@ -12,7 +12,7 @@ function SignsYouNeedAiSection({ cards }: SignsYouNeedAiSectionProps) {
   return (
     <section
       className="w-full flex justify-center items-center py-12"
-      id="signs-you-need-ai"
+      id="Signs you need AI/ML"
     >
       <div className="container flex flex-col gap-12 text-white px-4">
         <h2 className="text-3xl md:text-5xl font-bold">
