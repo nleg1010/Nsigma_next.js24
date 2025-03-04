@@ -11,7 +11,7 @@ const TitleWithButton = ({ slice }) => {
   return (
     <section
       id={Id}
-      className="relative flex items-center justify-center h-screen mb-12 overflow-hidden -mt-20"
+      className="relative flex items-center justify-center h-screen mb-12 overflow-hidden -mt-28"
     >
       <div className="relative z-30 text-2xl bg-opacity-50 rounded-xl">
         <div className="flex items-center justify-center bg-black/30 w-screen h-screen">

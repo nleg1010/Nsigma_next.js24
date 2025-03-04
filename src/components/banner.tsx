@@ -2,7 +2,7 @@ import Subheader from "./Subheader";
 
 export default function Banner({ video }: any) {
   return (
-    <main className="relative flex items-center justify-center h-screen mb-12 overflow-hidden -mt-20">
+    <main className="relative flex items-center justify-center h-screen mb-12 overflow-hidden -mt-28">
       <div className="relative z-30 text-2xl bg-opacity-50 rounded-xl">
         <div className="flex items-center justify-center bg-black/30 w-screen h-screen">
           <div className="container h-full w-full grid-rows-[1fr,1fr] gap-4 px-4 grid justify-center items-end">

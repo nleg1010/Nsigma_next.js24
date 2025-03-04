@@ -3,10 +3,11 @@ import Link from "next/link";
 import { motion, Variants } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import MenuItemWithSubMenu from "./MenuItemWithSubMenu";
+import { FaAngleDown, FaArrowRight } from "react-icons/fa";
 
 const routes = [
   {
-    name: "OUR EXPERTISE",
+    name: "Our Expertise",
     link: "/#expertise",
     sublinks: [
       {
@@ -27,7 +28,7 @@ const routes = [
     ],
   },
   {
-    name: "SOLUTIONS",
+    name: "Solutions",
     link: "/#solutions",
     sublinks: [
       { name: "Asset Management", link: "/asset-management" },
@@ -35,15 +36,15 @@ const routes = [
     ],
   },
   {
-    name: "CASE STUDIES",
+    name: "Case Studies",
     link: "/#casestudy",
   },
   {
-    name: "FAQs",
+    name: "Faqs",
     link: "/frequent-questions",
   },
   {
-    name: "CONTACT US",
+    name: "Talk to Our Experts",
     link: "/contact-us",
   },
 ];
@@ -87,8 +88,8 @@ function Navbar() {
   };
 
   return (
-    <nav className="z-50 flex top-0 w-full justify-center sticky bg-Gray  text-white">
-      <div className="container flex w-full items-center justify-between gap-2 font-bold px-4 xl:px-4 py-2">
+    <nav className="z-50 flex top-8 mx-96 py-4 px-8 justify-center sticky bg-black bg-opacity-15 backdrop-blur-sm text-white rounded-full">
+      <div className="container flex items-center justify-between font-bold px-4 xl:px-4 py-2">
         <div className="md:w-1/4 w-1/2 z-50">
           <Link href="/" className="inline-block">
             <img
@@ -100,19 +101,21 @@ function Navbar() {
             />
           </Link>
         </div>
-        <div className="flex items-center justify-between text-center gap-1 xl:gap-4">
+        <div className="flex items-center justify-between text-center gap-4">
           {routes.map(({ name, link, sublinks }, i) => (
             <div key={name} className="hidden md:block relative group">
               <Link
                 href={link}
                 key={i}
                 className={twMerge(
-                  `hidden p-2 md:block md:text-lg text-base font-semibold text-white`,
+                  `hidden p-2 md:flex md:items-center gap-2 md:text-lg text-base font-semibold text-white`,
                   i === routes.length - 1 &&
-                    "bg-custm_pink p-3 min-w-[156px] font-normal text-center rounded-xl hover:scale-105 transition-transform"
+                    "bg-[#FBC400] p-3 min-w-[156px] text-center text-black rounded-full hover:scale-105 transition-transform"
                 )}
               >
-                {name}
+                <span>{name}</span>
+                {sublinks && <FaAngleDown />}
+                {i === routes.length - 1 && <FaArrowRight />}
               </Link>
               <div className="flex w-full flex-col top-[calc(100%)] md:group-hover:flex group-hover:h-auto opacity-0 group-hover:opacity-100 overflow-hidden duration-300 transition-all h-0 absolute">
                 <span className="pt-3"></span>

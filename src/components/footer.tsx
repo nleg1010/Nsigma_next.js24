@@ -121,8 +121,8 @@ export default function Footer() {
               <h6 className="md:text-[22px] md:leading-8 text-md font-bold text-white pb-4">
                 {name}
               </h6>
-              {sublinks.map(({ name, link }) => (
-                <ul className="flex flex-col gap-2">
+              {sublinks.map(({ name, link }, idx) => (
+                <ul className="flex flex-col gap-2" key={idx}>
                   <li className="pt-">
                     <Link
                       href={link}

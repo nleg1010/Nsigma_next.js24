@@ -1,6 +1,6 @@
 function PrivacyPolicy() {
   return (
-    <div className="w-full flex items-center justify-center bg-customNeutral text-white -mt-20 pt-20">
+    <div className="w-full flex items-center justify-center bg-customNeutral text-white -mt-28 pt-20">
       <div className="container px-2 py-8">
         <h1 className="text-5xl py-4">Privacy Policy</h1>
         <p>Last updated: January 14, 2024</p>
