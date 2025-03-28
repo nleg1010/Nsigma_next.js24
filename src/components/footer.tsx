@@ -89,7 +89,7 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row justify-between items-center gap-7 min-w-[300px] w-[400px]">
           <div className="w-full">
             <h6 className="text-lg text-white">Subscribe to Our Newsletter</h6>
-            <form className="relative flex bg-slate-200 w-full lg:min-w-[500px] ">
+            <form className="relative flex bg-slate-200 w-full lg:min-w-[400px]">
               <label htmlFor="email" className="hidden">
                 Email
               </label>
