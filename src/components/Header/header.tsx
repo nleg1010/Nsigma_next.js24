@@ -1,9 +1,9 @@
-import { useState } from "react";
-import Link from "next/link";
 import { motion, Variants } from "framer-motion";
+import Link from "next/link";
+import { useState } from "react";
+import { FaAngleDown, FaArrowRight } from "react-icons/fa";
 import { twMerge } from "tailwind-merge";
 import MenuItemWithSubMenu from "./MenuItemWithSubMenu";
-import { FaAngleDown, FaArrowRight } from "react-icons/fa";
 
 const routes = [
   {
@@ -88,9 +88,9 @@ function Navbar() {
   };
 
   return (
-    <nav className="z-50 flex top-8 mx-96 py-4 px-8 justify-center sticky bg-black bg-opacity-15 backdrop-blur-sm text-white rounded-full">
-      <div className="container flex items-center justify-between font-bold px-4 xl:px-4 py-2">
-        <div className="md:w-1/4 w-1/2 z-50">
+    <nav className="z-50 flex top-0 w-full py-4 px-8 justify-center fixed rounded-full">
+      <div className="container flex items-center justify-between font-bold px-8 py-3 bg-black bg-opacity-15 backdrop-blur-sm rounded-full">
+        <div className="md:w-1/5 lg:w-1/4 w-1/2 z-50">
           <Link href="/" className="inline-block">
             <img
               src="/images/logo.png"
@@ -101,16 +101,17 @@ function Navbar() {
             />
           </Link>
         </div>
-        <div className="flex items-center justify-between text-center gap-4">
+        <div className="flex items-center lg:w-4/5 justify-between text-center">
           {routes.map(({ name, link, sublinks }, i) => (
-            <div key={name} className="hidden md:block relative group">
+            <div key={name} className="hidden lg:block relative group">
               <Link
                 href={link}
                 key={i}
                 className={twMerge(
-                  `hidden p-2 md:flex md:items-center gap-2 md:text-lg text-base font-semibold text-white`,
-                  i === routes.length - 1 &&
-                    "bg-[#FBC400] p-3 min-w-[156px] text-center text-black rounded-full hover:scale-105 transition-transform"
+                  `hidden p-2 md:flex md:items-center gap-2 md:text-lg text-base font-semibold text-white `,
+                  i === routes.length - 1
+                    ? "bg-[#FBC400] p-3 min-w-[156px] text-center text-black rounded-full hover:scale-105 transition-transform"
+                    : "hover:text-[#c8ccce]"
                 )}
               >
                 <span>{name}</span>
@@ -147,7 +148,7 @@ function Navbar() {
                      */}
 
           <motion.button
-            className="flex flex-col items-center gap-2 md:hidden"
+            className="flex flex-col items-center gap-2 lg:hidden"
             onClick={handleOpen}
             aria-label="Open navigation menu"
           >
@@ -166,7 +167,7 @@ function Navbar() {
           </motion.button>
 
           <motion.div
-            className="absolute left-0 bg-Gray overflow-hidden top-[100%] z-20 flex w-full origin-top flex-col items-end gap-8 pr-4 md:!hidden md:flex-row"
+            className="absolute left-0 bg-Gray overflow-hidden top-[100%] z-20 flex w-full origin-top flex-col items-end gap-8 pr-4 lg:!hidden lg:flex-row text-white"
             variants={linksVariants}
             initial="close"
             animate={open ? "open" : "close"}
@@ -190,8 +191,9 @@ function Navbar() {
                   key={i}
                   className={twMerge(
                     `p-2 md:text-lg text-base font-semibold text-white`,
-                    i === routes.length - 1 &&
-                      "bg-custm_pink p-3 min-w-[156px] font-normal text-center rounded-xl"
+                    i === routes.length - 1
+                      ? "bg-[#FBC400] p-3 min-w-[156px] text-center rounded-xl text-black"
+                      : "hover:text-[#c8ccce]"
                   )}
                   onClick={handleOpen}
                   style={{ marginBottom: "-10px" }}

@@ -1,93 +1,59 @@
-import { useState, useEffect } from "react";
-import { PrismicRichText } from "@prismicio/react";
+import {
+  ImageFieldImage,
+  KeyTextField,
+  RichTextField,
+} from "@prismicio/client";
+import { PrismicNextImage } from "@prismicio/next";
+import { JSXMapSerializer, PrismicRichText } from "@prismicio/react";
+import { FaCheck } from "react-icons/fa6";
 
-type EngagementCardProps = {
-  image: { url: string };
-  detail: any;
-  topic: any;
-  info: any;
-  title: any;
+export type EngagementCardProps = {
+  title: KeyTextField;
+  subtitle: KeyTextField;
+  info: RichTextField;
+  features: RichTextField;
+  icon: ImageFieldImage;
+};
+
+const components: JSXMapSerializer = {
+  heading4: ({ children }) => <h4 className="pb-8">{children}</h4>,
+  paragraph: ({ children }) => (
+    <p className="text-[1rem] lg:lext:lg xl:text-xl">{children}</p>
+  ),
+  list: ({ children }) => <ul className="list-inside list-">{children}</ul>,
+  listItem: ({ children }) => (
+    <li className="flex items-center mb-1 gap-2 text-[1rem] lg:text-lg xl:text-xl">
+      <FaCheck size={16} />
+      {children}
+    </li>
+  ),
 };
 
 const EngagementCard = ({
-  image,
-  detail,
-  topic,
-  info,
   title,
+  subtitle,
+  info,
+  features,
+  icon,
 }: EngagementCardProps) => {
-  // const [loading, setLoading] = useState(true);
-  const [isHovered, setIsHovered] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(0);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    // Check if window is defined to avoid server-side rendering issues
-    if (typeof window !== "undefined") {
-      setWindowWidth(window.innerWidth);
-      window.addEventListener("resize", handleResize);
-    }
-
-    return () => {
-      if (typeof window !== "undefined") {
-        window.removeEventListener("resize", handleResize);
-      }
-    };
-  }, []);
-
-  // useEffect(() => {
-  //   // Simulate data fetching delay
-  //   const timer = setTimeout(() => {
-  //     setLoading(false);
-  //   }, 10000); // Adjust the delay time as needed
-
-  //   return () => clearTimeout(timer);
-  // }, []);
-
   return (
     <div
-      className={`w-full sm:h-[400px] xl:w-[400px] bg-transparent cursor-pointer group  lg:perspective-1000`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      className={`w-full h-full rounded-lg tilted-grid-radient p-4 border-b border-r border-gray-800 hover:scale-[1.02] transition-transform`}
     >
-      {/* {loading ? (
-        <div className="w-full h-full flex items-center justify-center text-neutral-300">
-          <img
-            src={image?.url}
-            alt={topic}
-            className="hidden lg:block p-1 rounded-2xl absolute w-full h-full top-0 left-0 right-0 bottom-0"
-          />
-        </div>
-      ) : ( */}
-      <div
-        className={`relative w-full h-full lg:preserve-3d duration-1000 ${
-          isHovered && windowWidth > 1023 ? "rotate-y-180" : ""
-        }`}
-      >
-        <img
-          src={image?.url}
-          alt={topic}
-          className="hidden lg:block p-1 rounded-2xl absolute w-full h-full top-0 left-0 right-0 bottom-0"
-        />
-        <div className="font-bold px-4 text-3xl bottom-4 hidden lg:block absolute text-neutral-300">
-          <PrismicRichText field={topic} />
-          {title}
-        </div>
-        <div className="sm:absolute rounded-2xl lg:rotate-y-180 w-full h-full flex flex-col items-center justify-center gap-4 py-4 bg-[#272932]  overflow-hidden p-4 xl:p-10 text-neutral-300 lg:backface-hidden">
-          <div className="font-bold text-3xl block lg:hidden text-center">
-            <PrismicRichText field={topic} />
-            {title}
-          </div>
-          <div className="flex flex-col space-y-5">
-            <PrismicRichText field={detail} />
-            {info}
-          </div>
-        </div>
+      <div className="w-10 h-10 bg-white rounded-md flex justify-center items-center">
+        <PrismicNextImage field={icon} className="w-3/4" />
       </div>
-      {/* )} */}
+      <h6 className="mt-2">{title}</h6>
+      <h4 className="mt-7 font-semibold lg:text-2xl">{subtitle}</h4>
+      <div className="mt-2 text-sm">
+        <PrismicRichText field={info} components={components} />
+      </div>
+      <div className="mt-5">
+        <div className="text-[1rem] xl:text-xl border-b-[1px] border-white pb-1 mb-2">
+          Key Features
+        </div>
+        <PrismicRichText field={features} components={components} />
+      </div>
     </div>
   );
 };

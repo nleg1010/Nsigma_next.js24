@@ -1,82 +1,99 @@
 import {
-  PrismicRichText,
-  PrismicImage,
+  ImageFieldImage,
+  KeyTextField,
+  RichTextField,
+} from "@prismicio/client";
+import {
   JSXMapSerializer,
+  PrismicImage,
+  PrismicRichText,
 } from "@prismicio/react";
 import { useState } from "react";
+import { RiCheckDoubleFill } from "react-icons/ri";
 import { twMerge } from "tailwind-merge";
 
-type tabsProps = {
-  data: Array<{
-    name: any;
-    content: any;
-    image: any;
-  }>;
+export type TabsItemProps = {
+  name: KeyTextField;
+  heading: KeyTextField;
+  text: RichTextField;
+  features: RichTextField;
+  image: ImageFieldImage;
+};
+
+type TabsProps = {
+  data: TabsItemProps[];
 };
 
 const components: JSXMapSerializer = {
   heading4: ({ children }) => <h4 className="pb-8">{children}</h4>,
-  paragraph: ({ children }) => <p className="text-[1rem]">{children}</p>,
+  paragraph: ({ children }) => (
+    <p className="text-[1rem] lg:text-lg text-left">{children}</p>
+  ),
+  list: ({ children }) => <ul className="list-inside list-">{children}</ul>,
+  listItem: ({ children }) => (
+    <li className="flex items-start mb-1 gap-2 text-[1rem] lg:text-lg text-left">
+      <RiCheckDoubleFill size={23} />
+      {children}
+    </li>
+  ),
 };
 
-export default function Tabs({ data }: tabsProps) {
+export default function Tabs({ data }: TabsProps) {
   const [activeTab, setActiveTab] = useState(0);
   const handleTabClick = (i: number) => {
     setActiveTab(i);
   };
   return (
-    <div className="text-xl rounded-2xl flex flex-col">
-      <ul className="flex flex-col md:flex-row justify-between items-center group/ul">
+    <div className="p-6 text-xl rounded-3xl bg-[#1d2029]  flex flex-col">
+      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 justify-between items-center group/ul gap-4">
         {data.map((tab, i) => (
-          <li className=" w-full group/li" key={i}>
+          <li
+            className="w-full group/li hover:scale-[0.98] transition-transform"
+            key={i}
+          >
             <button
               className={twMerge(
-                "relative flex gap-2 sm:gap-12 p-8 bg-Gray w-full text-center",
-                i % 2 === 1 && "bg-[#181a21]",
-                i === 0 && "rounded-t-2xl md:rounded-r-none",
-                i === data.length - 1 && "md:rounded-tr-2xl"
+                "relative p-3 bg-[#4a4d54] rounded-full w-full text-[#bbbfc0] text-center min-w",
+                activeTab === i && "bg-white text-black font-semibold"
               )}
               disabled={activeTab === i}
               onClick={() => handleTabClick(i)}
             >
-              <h4 className="title group-hover:scale-125 transition-transform">
-                <strong>{tab.name}</strong>
-              </h4>
-              <span
-                className={twMerge(
-                  "absolute top-[calc(95.5%)] w-full bg-customGreen h-1 duration-300 opacity-0 transition-opacity left-0 group-hover/li:opacity-100 ",
-                  activeTab === i && "group-[&:not(:hover)]/ul:opacity-100"
-                )}
-              ></span>
+              <h4 className=" w-full">{tab.name}</h4>
             </button>
           </li>
         ))}
       </ul>
-      <div
-        className={twMerge(
-          "pt-6 rounded-b-2xl bg-Gray border-t-2 border-[#313131] md:h-[50vh]",
-          activeTab % 2 === 1 && "bg-[#181a21]"
-        )}
-      >
+      <div className="pt-6">
         {data.map((tab, i) => (
           <div key={i}>
             {activeTab === i && (
               <div
                 className={twMerge(
-                  "grid grid-cols-1 content-center md:grid-cols-2 w-full gap-4 p-4",
+                  "grid grid-cols-1 content-center md:grid-cols-2 w-full gap-4 py-4",
                   tab.image?.url == null && "md:grid-cols-1"
                 )}
               >
-                <div className="px-4 text-justify">
-                  <PrismicRichText
-                    field={tab.content}
-                    components={components}
-                  />
+                <div className="px-4 text-justify text-xl">
+                  <h2 className="text-3xl text-left font-bold py-4">
+                    {tab.heading}
+                  </h2>
+                  <PrismicRichText field={tab.text} components={components} />
+                  <div className="mt-4">
+                    <PrismicRichText
+                      field={tab.features}
+                      components={components}
+                    />
+                  </div>
                 </div>
-                <div className="flex flex-row justify-center items-center h-[400px]">
+                <div className="flex flex-row justify-center items-center max-h-96">
                   <PrismicImage
                     field={tab.image}
-                    style={{ maxHeight: "100%", display: "block" }}
+                    style={{
+                      maxHeight: "100%",
+                      display: "block",
+                      borderRadius: 20,
+                    }}
                   />
                 </div>
               </div>
