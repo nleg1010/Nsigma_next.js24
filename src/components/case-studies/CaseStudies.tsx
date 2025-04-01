@@ -25,9 +25,9 @@ const CaseStudies = ({ data }: CaseStudiesProps) => {
   return (
     <section className="container mx-auto px-4 pb-20 mt-64">
       <div className="relative">
-        <h2 className=" text-2xl mt-5 md:text-[42px] font-extrabold text-white text-left pb-16">
+        <h4 className=" text-[#8f9193] uppercase lg:text-2xl font-extrabold text-left pb-16">
           Our Case Studies
-        </h2>
+        </h4>
       </div>
       <section className="w-full h-full mx-auto pt-10 flex justify-center relative text-white">
         <Slider {...settings}>

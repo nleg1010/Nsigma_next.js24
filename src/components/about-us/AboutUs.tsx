@@ -29,21 +29,21 @@ const components: JSXMapSerializer = {
 };
 const AboutUs = ({ subtitle, reasons }: AboutUsProps) => {
   return (
-    <div className="container mx-auto px-3 text-white">
-      <h2
+    <div className="container mx-auto px-3 text-white pb-20">
+      <h4
         id="about"
-        className="text-3xl md:text-[42px] font-extrabold text-center uppercase"
+        className="text-[#8f9193] uppercase lg:text-2xl text-center font-semibold"
       >
         Why Choose NSigma?
-      </h2>
-      <h6 className="mt-8 mb-14 text-center lg:text-xl xl:text-2xl">
+      </h4>
+      <h2 className="font-bold text-white uppercase md:text-[42px] text-2xl md:leading-[50px]  mt-1 mb-14 text-center">
         {subtitle}
-      </h6>
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
+      </h2>
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8">
         {reasons.map(({ icon, info, title }, idx) => (
           <div
             key={idx}
-            className="w-full min-h-96 gray-linear-gradient hover:bg-none hover:bg-black hover:scale-[1.01] transition-all border border-gray-600 p-5"
+            className="w-full min-h-96 gray-linear-gradient border border-gray-600 p-5 hover:border-gradient"
           >
             <PrismicNextImage field={icon} />
             <h1 className="mt-2 lg:mt-5 text-2xl lg:text-3xl lg:mb-7  font-semibold">

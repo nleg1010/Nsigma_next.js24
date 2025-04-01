@@ -34,29 +34,31 @@ export default function Solutions({
     >
       <div className="container mx-auto px-3 text-white text-center md:text-lg pb-20">
         <div className="pb-8">
-          <h2 className="text-2xl uppercase md:text-[42px]  font-extrabold text-white text-center pb-7">
+          <h4 className="lg:text-2xl md:leading-[50px] font-semibold uppercase text-[#8f9193] text-center">
             Industry Solutions
-          </h2>
-          <div className="lg:text-xl pb-6">
+          </h4>
+          <h2 className="uppercase md:text-[42px] text-2xl md:leading-[50px] pb-6 font-semibold">
             <PrismicRichText field={is_subheadline} />
-          </div>
-          <div className="lg:text-2xl">
+          </h2>
+          <div className="text-xl xl:text-2xl leading-6 lg:px-6">
             <PrismicRichText field={is_intro} />
           </div>
         </div>
         <Tabs data={is_tabs} />
-        <div className="container mx-auto pl-10 pt-20  mt-5 gray-linear-gradient rounded-[40px] border-b-[1px] border-[#383a46] text-white text-center md:text-lg overflow-hidden">
+        <div className="container mx-auto pl-10  mt-5 gray-linear-gradient rounded-[40px] border-b-[1px] border-[#383a46] text-white text-center md:text-lg overflow-hidden">
           <div className="grid md:grid-cols-2 grid-cols-1">
-            <div className="flex flex-col justify-start items-start pb-5">
-              <h1 className="text-3xl md:text-5xl font-bold title mb-4 text-left">
+            <div className="flex flex-col justify-start items-start pb-5 pt-20">
+              <h2 className="md:text-[42px] text-2xl md:leading-[50px] font-bold title mb-4 text-left">
                 Featured Case Study
-              </h1>
-              <h4 className="text-left">{is_featured_case_study}</h4>
-              <button className="bg-[#fac400] text-black font-semibold mt-2 py-4 px-2 rounded-full flex justify-center items-center gap-1">
+              </h2>
+              <h4 className="text-left lg:text-2xl">
+                {is_featured_case_study}
+              </h4>
+              <button className="bg-[#fac400] text-black font-semibold mt-2 py-4 px-2 rounded-full flex justify-center items-center gap-1 hover:scale-95 transition-transform">
                 Download Case study <FaArrowRight />
               </button>
             </div>
-            <div className="w-full pl-10">
+            <div className="w-full p-10 rounded-lg">
               <PrismicNextImage
                 field={featured_case_study_image}
                 style={{
@@ -64,6 +66,7 @@ export default function Solutions({
                   height: "100%",
                   objectFit: "contain",
                   overflow: "hidden",
+                  borderRadius: "30px",
                 }}
               />
             </div>

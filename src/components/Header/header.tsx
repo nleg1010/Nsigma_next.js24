@@ -40,10 +40,6 @@ const routes = [
     link: "/#casestudy",
   },
   {
-    name: "Faqs",
-    link: "/frequent-questions",
-  },
-  {
     name: "Talk to Our Experts",
     link: "/contact-us",
   },
@@ -88,8 +84,8 @@ function Navbar() {
   };
 
   return (
-    <nav className="z-50 flex top-0 w-full py-4 px-8 justify-center fixed rounded-full">
-      <div className="container flex items-center justify-between font-bold px-8 py-3 bg-black bg-opacity-15 backdrop-blur-sm rounded-full">
+    <nav className="z-50 flex top-0 w-full my-4 justify-center fixed rounded-full bg-black bg-opacity-15 backdrop-blur-sm">
+      <div className="container flex items-center justify-between font-bold py-3 px-5 lg:px-0">
         <div className="md:w-1/5 lg:w-1/4 w-1/2 z-50">
           <Link href="/" className="inline-block">
             <img
@@ -119,7 +115,7 @@ function Navbar() {
                 {i === routes.length - 1 && <FaArrowRight />}
               </Link>
               <div className="flex w-full flex-col top-[calc(100%)] md:group-hover:flex group-hover:h-auto opacity-0 group-hover:opacity-100 overflow-hidden duration-300 transition-all h-0 absolute">
-                <span className="pt-3"></span>
+                <span className="pt-4"></span>
                 <div
                   className={twMerge(
                     "bg-Gray/75 rounded-b-xl gap-2 flex flex-col",

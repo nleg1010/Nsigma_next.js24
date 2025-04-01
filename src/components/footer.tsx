@@ -34,13 +34,13 @@ const routes = [
     ],
   },
   {
+    name: "Solutions",
+    link: "/#",
+    sublinks: [{ name: "Asset Management", link: "/asset-management" }],
+  },
+  {
     name: "Contact Us",
     sublinks: [
-      {
-        name: `NSigma Global 2915 Biscayne Blvd
-        Miami, FL 33137`,
-        link: "/#",
-      },
       {
         name: "info@nsigma.io",
         link: "mailto:info@nsigma.io",
@@ -54,14 +54,6 @@ const routes = [
       { name: "Privacy Policy", link: "/privacy-policy" },
       { name: "Cookies Policy", link: "/cookies-policy" },
       { name: "Contact Us", link: "/contact-us" },
-    ],
-  },
-  {
-    name: "Solutions",
-    link: "/#",
-    sublinks: [
-      { name: "Asset Management", link: "/asset-management" },
-      { name: "Real Estate ", link: "/real-estate" },
     ],
   },
 ];

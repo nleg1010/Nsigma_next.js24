@@ -239,11 +239,8 @@ html {
   }
 
   .cta-background {
-    background: linear-gradient(
-      160deg,
-      rgba(20, 162, 244, 1) 0%,
-      rgba(247, 71, 107, 1) 100%
-    );
+    background: url("/images/3d-grid.png"),
+      linear-gradient(153.68deg, #0daaef 0%, #7fe46c 100%);
     background-size: cover, cover;
     background-position: center, center;
     background-blend-mode: overlay;
@@ -271,5 +268,13 @@ html {
     background-position: center;
     background-size: contain;
     background-blend-mode: overlay;
+  }
+}
+
+@layer utilities {
+  .border-gradient {
+    border-image: linear-gradient(to bottom, #85e965 0%, #f3b11d 100%) 1 !important;
+    border-width: 1px !important;
+    border-style: solid !important;
   }
 }

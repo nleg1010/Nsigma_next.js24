@@ -1,4 +1,5 @@
 import { ImageFieldImage, KeyTextField, LinkField } from "@prismicio/client";
+import Link from "next/link";
 import { CgArrowTopRight } from "react-icons/cg";
 import {} from "tailwind-merge";
 
@@ -14,8 +15,9 @@ const CaseStudiesCard = ({
   title,
 }: CaseStudiesCardProps) => {
   return (
-    <div
-      className="bg-cover bg-center w-[500px] h-[300px] mt-0 rounded-md pt-12 pb-5 text-white "
+    <Link
+      href={`case/${link_to_page}`}
+      className="block bg-cover bg-center w-[500px] h-[300px] mt-0 rounded-md pt-12 pb-5 text-white "
       style={{
         backgroundImage: image.url ? `url(${image.url})` : undefined,
       }}
@@ -27,7 +29,7 @@ const CaseStudiesCard = ({
           <CgArrowTopRight className="text-3xl" />
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

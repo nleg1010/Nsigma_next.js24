@@ -28,12 +28,12 @@ const EngagementStrategies: FC<any> = ({
       id="engagement"
     >
       <div className="container relative px-4">
-        <h4 className="text-gray-500 uppercase xl:text-2xl">
+        <h4 className="text-[#8f9193] uppercase lg:text-2xl">
           Engagement Strategies
         </h4>
-        <h1 className="font-bold text-white mt-1 mb-4 uppercase lg:text-4xl">
+        <h2 className="font-bold text-white mt-1 mb-4 uppercase md:text-[42px] text-2xl md:leading-[50px] ">
           {title}
-        </h1>
+        </h2>
         <h6 className="text-white mb-3 lg:text-lg xl:text-xl">{subtitle}</h6>
         <div className="text-white text-xl xl:text-2xl leading-6 text-left w-2/3 mb-10">
           <PrismicRichText field={info} components={components} />

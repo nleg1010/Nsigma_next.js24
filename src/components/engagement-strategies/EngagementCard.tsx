@@ -43,10 +43,12 @@ const EngagementCard = ({
       <div className="w-10 h-10 bg-white rounded-md flex justify-center items-center">
         <PrismicNextImage field={icon} className="w-3/4" />
       </div>
-      <h6 className="mt-2">{title}</h6>
-      <h4 className="mt-7 font-semibold lg:text-2xl">{subtitle}</h4>
-      <div className="mt-2 text-sm">
-        <PrismicRichText field={info} components={components} />
+      <div className="lg:min-h-[260px] xl:min-h-[320px]">
+        <h6 className="mt-2">{title}</h6>
+        <h4 className="mt-7 font-semibold lg:text-2xl">{subtitle}</h4>
+        <div className="mt-2 text-sm">
+          <PrismicRichText field={info} components={components} />
+        </div>
       </div>
       <div className="mt-5">
         <div className="text-[1rem] xl:text-xl border-b-[1px] border-white pb-1 mb-2">
