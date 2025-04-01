@@ -83,7 +83,7 @@ export default function Expertise({ data, subtitle, info }: ExpertiseProps) {
     <section className="py-16 relative" id="expertise">
       <div className="container mx-auto px-4 relative z-10">
         <div>
-          <h4 className="text-[#8f9193] uppercase lg:text-2xl">
+          <h4 className="text-[#8f9193] uppercase lg:text-2xl font-semibold">
             Our Expertise
           </h4>
         </div>

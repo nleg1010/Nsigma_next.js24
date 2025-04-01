@@ -28,7 +28,7 @@ const EngagementStrategies: FC<any> = ({
       id="engagement"
     >
       <div className="container relative px-4">
-        <h4 className="text-[#8f9193] uppercase lg:text-2xl">
+        <h4 className="text-[#8f9193] uppercase lg:text-2xl font-semibold">
           Engagement Strategies
         </h4>
         <h2 className="font-bold text-white mt-1 mb-4 uppercase md:text-[42px] text-2xl md:leading-[50px] ">
