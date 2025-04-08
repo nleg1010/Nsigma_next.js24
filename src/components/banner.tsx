@@ -15,15 +15,15 @@ export default function Banner() {
               at Unmatched Value
             </h1>
             <h3>World-Class Data Teams That Scale With Your Ambitions</h3>
-            <div className="flex gap-4 pt-6">
+            <div className="flex flex-col md:flex-row gap-4 pt-6">
               <button
                 className="bg-yellow-400 hover:bg-yellow-500 text-black text-base font-semibold py-3 px-6 rounded-full shadow-md transition"
                 onClick={() => router.push("/contact-us")}
               >
-                🧠 Talk to Our Experts
+                Talk to Our Experts
               </button>
               <button className="bg-white hover:bg-gray-100 text-gray-900 text-base font-semibold py-3 px-6 rounded-full shadow-md border transition">
-                📊 Assess Your Data Maturity
+                Assess Your Data Maturity
               </button>
             </div>
           </div>
