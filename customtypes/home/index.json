@@ -427,6 +427,13 @@
       }
     },
     "Our Case Studies": {
+      "cs_subtitle": {
+        "type": "Text",
+        "config": {
+          "label": "subtitle",
+          "placeholder": ""
+        }
+      },
       "our_case_study": {
         "type": "Group",
         "config": {

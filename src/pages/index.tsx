@@ -5,8 +5,10 @@ import { FC } from "react";
 
 import AboutUs, { AboutUsProps } from "@/components/about-us/AboutUs";
 import Banner from "@/components/banner";
-import CaseStudies from "@/components/case-studies/CaseStudies";
-import CallToAction from "@/components/cta";
+import CallToAction from "@/components/CallToAction";
+import CaseStudies, {
+  CaseStudiesProps,
+} from "@/components/case-studies/CaseStudies";
 import EngagementStrategies, {
   EngagementStrategiesProps,
 } from "@/components/engagement-strategies/EngagementStrategies";
@@ -30,6 +32,7 @@ const Home: FC<any> = ({ page }) => {
     is_featured_case_study,
     featured_case_study_image,
     our_case_study,
+    cs_subtitle,
     es_title,
     es_subtitle,
     es_info,
@@ -66,6 +69,11 @@ const Home: FC<any> = ({ page }) => {
     reasons: cu_reasons,
   };
 
+  const ourCaseStudyData: CaseStudiesProps = {
+    subtitle: cs_subtitle,
+    data: our_case_study,
+  };
+
   return (
     <>
       <DefaultSeo
@@ -74,12 +82,11 @@ const Home: FC<any> = ({ page }) => {
       />
       <div className="bg-[#07080a]">
         <Banner />
-        <CallToAction title={cta_top} />
         <div className="black-radial-gradient">
           <Expertise {...expertiseData} />
           <Solutions {...industrySolutionsData} />
         </div>
-        <CaseStudies data={our_case_study} />
+        <CaseStudies {...ourCaseStudyData} />
         <EngagementStrategies {...engagementStrategiesData} />
         <AboutUs {...chooseUsData} />
         <CallToAction title={cta_bottom} />

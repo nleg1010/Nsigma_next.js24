@@ -1,12 +1,14 @@
+import { KeyTextField } from "@prismicio/client";
 import { useRef } from "react";
 import Slider, { Settings } from "react-slick";
 import CaseStudiesCard, { CaseStudiesCardProps } from "./CaseStudiesCard";
 
-type CaseStudiesProps = {
+export type CaseStudiesProps = {
+  subtitle: KeyTextField;
   data: CaseStudiesCardProps[];
 };
 
-const CaseStudies = ({ data }: CaseStudiesProps) => {
+const CaseStudies = ({ data, subtitle }: CaseStudiesProps) => {
   const slider = useRef<any>(null);
 
   const settings: Settings = {
@@ -25,9 +27,12 @@ const CaseStudies = ({ data }: CaseStudiesProps) => {
   return (
     <section className="container mx-auto px-4 pb-20 mt-64">
       <div className="relative">
-        <h4 className=" text-[#8f9193] uppercase lg:text-2xl font-extrabold text-left pb-16">
+        <h4 className=" lg:text-2xl md:leading-[50px] font-semibold uppercase text-[#8f9193] text-left ">
           Our Case Studies
         </h4>
+        <h2 className="uppercase md:text-[42px] text-2xl md:leading-[50px] font-semibold text-white pb-16">
+          {subtitle}
+        </h2>
       </div>
       <section className="w-full h-full mx-auto pt-10 flex justify-center relative text-white">
         <Slider {...settings}>
