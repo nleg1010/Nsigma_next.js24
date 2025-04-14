@@ -269,6 +269,18 @@ html {
     background-size: contain;
     background-blend-mode: overlay;
   }
+
+  .maaas-bg-image {
+    background: url("/images/maaas-hero.png"),
+      radial-gradient(
+        ellipse at left,
+        rgb(56, 58, 70, 0.7) 0%,
+        rgba(8, 9, 11, 0.6) 100%
+      );
+    background-size: cover, cover;
+    background-position: center, center;
+    background-blend-mode: overlay;
+  }
 }
 
 @layer utilities {

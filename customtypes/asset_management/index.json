@@ -27,6 +27,13 @@
           "placeholder": ""
         }
       },
+      "hero_second_button_text": {
+        "type": "Text",
+        "config": {
+          "label": "Hero Second Button Text",
+          "placeholder": ""
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
@@ -62,43 +69,34 @@
         "type": "Text"
       }
     },
-    "Upper CTA": {
-      "upper_cta_heading": {
-        "type": "Text",
-        "config": {
-          "label": "Upper CTA Heading",
-          "placeholder": ""
-        }
-      },
-      "upper_cta_button_text": {
-        "type": "Text",
-        "config": {
-          "label": "Upper CTA Button Text",
-          "placeholder": ""
-        }
-      }
-    },
     "Problem": {
-      "problem_title": {
+      "problem_heading_1": {
         "type": "Text",
         "config": {
-          "label": "Problem Title",
+          "label": "problem_heading 1",
           "placeholder": ""
         }
       },
-      "problem_info": {
+      "problem_text_1": {
         "type": "StructuredText",
         "config": {
-          "label": "Problem Info",
+          "label": "problem_text_1",
           "placeholder": "",
           "allowTargetBlank": true,
           "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
         }
       },
-      "problem_content": {
+      "problem_heading_2": {
+        "type": "Text",
+        "config": {
+          "label": "problem heading 2",
+          "placeholder": ""
+        }
+      },
+      "problem_text_2": {
         "type": "StructuredText",
         "config": {
-          "label": "Problem content",
+          "label": "problem text 2",
           "placeholder": "",
           "allowTargetBlank": true,
           "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
@@ -107,95 +105,9 @@
       "problem_image": {
         "type": "Image",
         "config": {
-          "label": "Problem image",
+          "label": "problem image",
           "constraint": {},
           "thumbnails": []
-        }
-      },
-      "problem_end_content": {
-        "type": "StructuredText",
-        "config": {
-          "label": "Problem end content",
-          "placeholder": "",
-          "allowTargetBlank": true,
-          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-        }
-      }
-    },
-    "Transcending Linear Thinking": {
-      "transcending_title": {
-        "type": "Text",
-        "config": {
-          "label": "Title",
-          "placeholder": ""
-        }
-      },
-      "transcending_paragraph_1": {
-        "type": "StructuredText",
-        "config": {
-          "label": "Paragraph 1",
-          "placeholder": "",
-          "allowTargetBlank": true,
-          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-        }
-      },
-      "transcending_paragraph_2": {
-        "type": "StructuredText",
-        "config": {
-          "label": "Paragraph 2",
-          "placeholder": "",
-          "allowTargetBlank": true,
-          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-        }
-      },
-      "transcending_paragraph_3": {
-        "type": "StructuredText",
-        "config": {
-          "label": "Paragraph 3",
-          "placeholder": "",
-          "allowTargetBlank": true,
-          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-        }
-      }
-    },
-    "Four Disciplines": {
-      "four_disciplines_title": {
-        "type": "Text",
-        "config": {
-          "label": "Title",
-          "placeholder": ""
-        }
-      },
-      "disciplines": {
-        "type": "Group",
-        "config": {
-          "label": "disciplines",
-          "repeat": true,
-          "fields": {
-            "title": {
-              "type": "Text",
-              "config": {
-                "label": "title",
-                "placeholder": ""
-              }
-            },
-            "subtitle": {
-              "type": "Text",
-              "config": {
-                "label": "subtitle",
-                "placeholder": ""
-              }
-            },
-            "content": {
-              "type": "StructuredText",
-              "config": {
-                "label": "content",
-                "placeholder": "",
-                "allowTargetBlank": true,
-                "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-              }
-            }
-          }
         }
       }
     },
@@ -278,24 +190,8 @@
                 "constraint": {},
                 "thumbnails": []
               }
-            },
-            "results": {
-              "type": "StructuredText",
-              "config": {
-                "label": "results",
-                "placeholder": "",
-                "allowTargetBlank": true,
-                "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-              }
             }
           }
-        }
-      },
-      "rwa_button_text": {
-        "type": "Text",
-        "config": {
-          "label": "Button Text",
-          "placeholder": ""
         }
       }
     },
@@ -307,18 +203,67 @@
           "placeholder": ""
         }
       },
-      "lower_cta_subtitle": {
-        "type": "Text",
-        "config": {
-          "label": "Lower CTA Subtitle",
-          "placeholder": ""
-        }
-      },
       "lower_cta_button_text": {
         "type": "Text",
         "config": {
           "label": "Lower CTA Button Text",
           "placeholder": ""
+        }
+      }
+    },
+    "Modular Framework": {
+      "mf_title": {
+        "type": "Text",
+        "config": {
+          "label": "mf_title",
+          "placeholder": ""
+        }
+      },
+      "mf_subtitle": {
+        "type": "Text",
+        "config": {
+          "label": "mf_subtitle",
+          "placeholder": ""
+        }
+      },
+      "modules": {
+        "type": "Group",
+        "config": {
+          "label": "modules",
+          "repeat": true,
+          "fields": {
+            "name": {
+              "type": "Text",
+              "config": {
+                "label": "name",
+                "placeholder": ""
+              }
+            },
+            "title": {
+              "type": "Text",
+              "config": {
+                "label": "title",
+                "placeholder": ""
+              }
+            },
+            "text": {
+              "type": "StructuredText",
+              "config": {
+                "label": "text",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "image": {
+              "type": "Image",
+              "config": {
+                "label": "image",
+                "constraint": {},
+                "thumbnails": []
+              }
+            }
+          }
         }
       }
     }

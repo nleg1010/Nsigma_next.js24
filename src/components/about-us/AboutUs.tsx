@@ -45,7 +45,10 @@ const AboutUs = ({ subtitle, reasons }: AboutUsProps) => {
             key={idx}
             className="w-full min-h-96 gray-linear-gradient border border-gray-600 p-5 hover:border-gradient"
           >
-            <PrismicNextImage field={icon} />
+            <PrismicNextImage
+              field={icon}
+              className="max-h-[40px] max-w-[40px]"
+            />
             <h1 className="mt-2 lg:mt-5 text-2xl lg:text-3xl lg:mb-7  font-semibold">
               {title}
             </h1>

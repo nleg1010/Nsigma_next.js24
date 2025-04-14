@@ -15,41 +15,35 @@ const components: JSXMapSerializer = {
 };
 
 export type ProblemSectionProps = {
-  title: KeyTextField;
-  info: RichTextField;
-  content: RichTextField;
+  heading1: KeyTextField;
+  text1: RichTextField;
+  heading2: KeyTextField;
+  text2: RichTextField;
   image: ImageFieldImage;
-  endContent: RichTextField;
 };
 const ProblemSection = ({
-  title,
-  info,
-  content,
+  heading1,
+  text1,
+  heading2,
+  text2,
   image,
-  endContent,
 }: ProblemSectionProps) => {
   return (
     <div className="container mx-auto py-16 mt-52 flex flex-col items-center justify-center text-white">
-      <h2 className="uppercase md:text-[42px] text-2xl md:leading-[50px] pb-6 font-semibold">
-        {title}
-      </h2>
-      <div className="text-center lg:w-3/4">
-        <PrismicRichText field={info} components={components} />
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-20 text-left">
-        <div className="text-left">
-          <PrismicRichText field={content} components={components} />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="p-4">
+          <h2 className="text-3xl md:text-5xl font-bold">{heading1}</h2>
+          <div className="pt-5">
+            <PrismicRichText field={text1} components={components} />
+          </div>
+          <h2 className="text-3xl md:text-5xl font-bold pt-10">{heading2}</h2>
+          <div className="pt-5">
+            <PrismicRichText field={text2} components={components} />
+          </div>
         </div>
         <div>
-          {image.id ? (
-            <PrismicNextImage field={image} />
-          ) : (
-            <div className="w-full h-full bg-[#d9d9d9]" />
-          )}
+          <PrismicNextImage field={image} />
         </div>
-      </div>
-      <div className="lg:w-3/4 text-center mt-20">
-        <PrismicRichText field={endContent} components={components} />
       </div>
     </div>
   );

@@ -307,41 +307,6 @@ export type AiMlDocument<Lang extends string = string> =
 type AssetManagementDocumentDataSlicesSlice = never;
 
 /**
- * Item in *Asset Management → disciplines*
- */
-export interface AssetManagementDocumentDataDisciplinesItem {
-  /**
-   * title field in *Asset Management → disciplines*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: asset_management.disciplines[].title
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  title: prismic.KeyTextField;
-
-  /**
-   * subtitle field in *Asset Management → disciplines*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: asset_management.disciplines[].subtitle
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  subtitle: prismic.KeyTextField;
-
-  /**
-   * content field in *Asset Management → disciplines*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: asset_management.disciplines[].content
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  content: prismic.RichTextField;
-}
-
-/**
  * Item in *Asset Management → Reasons*
  */
 export interface AssetManagementDocumentDataReasonsItem {
@@ -409,16 +374,51 @@ export interface AssetManagementDocumentDataApplicationsItem {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image: prismic.ImageField<never>;
+}
+
+/**
+ * Item in *Asset Management → modules*
+ */
+export interface AssetManagementDocumentDataModulesItem {
+  /**
+   * name field in *Asset Management → modules*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: asset_management.modules[].name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
 
   /**
-   * results field in *Asset Management → applications*
+   * title field in *Asset Management → modules*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: asset_management.modules[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * text field in *Asset Management → modules*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: asset_management.applications[].results
+   * - **API ID Path**: asset_management.modules[].text
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  results: prismic.RichTextField;
+  text: prismic.RichTextField;
+
+  /**
+   * image field in *Asset Management → modules*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: asset_management.modules[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
 }
 
 /**
@@ -457,6 +457,17 @@ interface AssetManagementDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   hero_button_text: prismic.KeyTextField;
+
+  /**
+   * Hero Second Button Text field in *Asset Management*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: asset_management.hero_second_button_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  hero_second_button_text: prismic.KeyTextField;
 
   /**
    * Slice Zone field in *Asset Management*
@@ -499,60 +510,51 @@ interface AssetManagementDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   meta_title: prismic.KeyTextField /**
-   * Upper CTA Heading field in *Asset Management*
+   * problem_heading 1 field in *Asset Management*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: asset_management.upper_cta_heading
-   * - **Tab**: Upper CTA
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */;
-  upper_cta_heading: prismic.KeyTextField;
-
-  /**
-   * Upper CTA Button Text field in *Asset Management*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: asset_management.upper_cta_button_text
-   * - **Tab**: Upper CTA
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  upper_cta_button_text: prismic.KeyTextField /**
-   * Problem Title field in *Asset Management*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: asset_management.problem_title
+   * - **API ID Path**: asset_management.problem_heading_1
    * - **Tab**: Problem
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */;
-  problem_title: prismic.KeyTextField;
+  problem_heading_1: prismic.KeyTextField;
 
   /**
-   * Problem Info field in *Asset Management*
+   * problem_text_1 field in *Asset Management*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: asset_management.problem_info
+   * - **API ID Path**: asset_management.problem_text_1
    * - **Tab**: Problem
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  problem_info: prismic.RichTextField;
+  problem_text_1: prismic.RichTextField;
 
   /**
-   * Problem content field in *Asset Management*
+   * problem heading 2 field in *Asset Management*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: asset_management.problem_heading_2
+   * - **Tab**: Problem
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  problem_heading_2: prismic.KeyTextField;
+
+  /**
+   * problem text 2 field in *Asset Management*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: asset_management.problem_content
+   * - **API ID Path**: asset_management.problem_text_2
    * - **Tab**: Problem
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  problem_content: prismic.RichTextField;
+  problem_text_2: prismic.RichTextField;
 
   /**
-   * Problem image field in *Asset Management*
+   * problem image field in *Asset Management*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -560,82 +562,7 @@ interface AssetManagementDocumentData {
    * - **Tab**: Problem
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  problem_image: prismic.ImageField<never>;
-
-  /**
-   * Problem end content field in *Asset Management*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: asset_management.problem_end_content
-   * - **Tab**: Problem
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  problem_end_content: prismic.RichTextField /**
-   * Title field in *Asset Management*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: asset_management.transcending_title
-   * - **Tab**: Transcending Linear Thinking
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */;
-  transcending_title: prismic.KeyTextField;
-
-  /**
-   * Paragraph 1 field in *Asset Management*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: asset_management.transcending_paragraph_1
-   * - **Tab**: Transcending Linear Thinking
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  transcending_paragraph_1: prismic.RichTextField;
-
-  /**
-   * Paragraph 2 field in *Asset Management*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: asset_management.transcending_paragraph_2
-   * - **Tab**: Transcending Linear Thinking
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  transcending_paragraph_2: prismic.RichTextField;
-
-  /**
-   * Paragraph 3 field in *Asset Management*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: asset_management.transcending_paragraph_3
-   * - **Tab**: Transcending Linear Thinking
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  transcending_paragraph_3: prismic.RichTextField /**
-   * Title field in *Asset Management*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: asset_management.four_disciplines_title
-   * - **Tab**: Four Disciplines
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */;
-  four_disciplines_title: prismic.KeyTextField;
-
-  /**
-   * disciplines field in *Asset Management*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: asset_management.disciplines[]
-   * - **Tab**: Four Disciplines
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  disciplines: prismic.GroupField<
-    Simplify<AssetManagementDocumentDataDisciplinesItem>
-  > /**
+  problem_image: prismic.ImageField<never> /**
    * Why Title field in *Asset Management*
    *
    * - **Field Type**: Text
@@ -679,18 +606,7 @@ interface AssetManagementDocumentData {
    */
   applications: prismic.GroupField<
     Simplify<AssetManagementDocumentDataApplicationsItem>
-  >;
-
-  /**
-   * Button Text field in *Asset Management*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: asset_management.rwa_button_text
-   * - **Tab**: Real-World Applications
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  rwa_button_text: prismic.KeyTextField /**
+  > /**
    * Lower CTA Title field in *Asset Management*
    *
    * - **Field Type**: Text
@@ -702,17 +618,6 @@ interface AssetManagementDocumentData {
   lower_cta_title: prismic.KeyTextField;
 
   /**
-   * Lower CTA Subtitle field in *Asset Management*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: asset_management.lower_cta_subtitle
-   * - **Tab**: Lower CTA
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  lower_cta_subtitle: prismic.KeyTextField;
-
-  /**
    * Lower CTA Button Text field in *Asset Management*
    *
    * - **Field Type**: Text
@@ -721,7 +626,38 @@ interface AssetManagementDocumentData {
    * - **Tab**: Lower CTA
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  lower_cta_button_text: prismic.KeyTextField;
+  lower_cta_button_text: prismic.KeyTextField /**
+   * mf_title field in *Asset Management*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: asset_management.mf_title
+   * - **Tab**: Modular Framework
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  mf_title: prismic.KeyTextField;
+
+  /**
+   * mf_subtitle field in *Asset Management*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: asset_management.mf_subtitle
+   * - **Tab**: Modular Framework
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  mf_subtitle: prismic.KeyTextField;
+
+  /**
+   * modules field in *Asset Management*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: asset_management.modules[]
+   * - **Tab**: Modular Framework
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  modules: prismic.GroupField<Simplify<AssetManagementDocumentDataModulesItem>>;
 }
 
 /**
@@ -3584,9 +3520,9 @@ declare module "@prismicio/client" {
       AssetManagementDocument,
       AssetManagementDocumentData,
       AssetManagementDocumentDataSlicesSlice,
-      AssetManagementDocumentDataDisciplinesItem,
       AssetManagementDocumentDataReasonsItem,
       AssetManagementDocumentDataApplicationsItem,
+      AssetManagementDocumentDataModulesItem,
       HomeDocument,
       HomeDocumentData,
       HomeDocumentDataSlicesSlice,
