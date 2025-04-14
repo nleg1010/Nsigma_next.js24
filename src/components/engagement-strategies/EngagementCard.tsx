@@ -40,7 +40,7 @@ const EngagementCard = ({
     <div
       className={`w-full h-full rounded-lg tilted-grid-radient p-4 border-b border-r border-gray-800 hover:scale-[1.02] transition-transform`}
     >
-      <div className="w-10 h-10 bg-white rounded-md flex justify-center items-center">
+      <div className="w-10 h-10 rounded-md flex justify-center items-center">
         <PrismicNextImage field={icon} className="w-3/4" />
       </div>
       <div className="lg:min-h-[260px] xl:min-h-[320px]">

@@ -54,7 +54,8 @@ export default function Tabs({ data }: TabsProps) {
             <button
               className={twMerge(
                 "relative p-3 bg-[#4a4d54] rounded-full w-full text-[#bbbfc0] text-center min-w",
-                activeTab === i && "bg-white text-black font-semibold"
+                activeTab === i &&
+                  "font-semibold relative before:border-gradient-radial-before"
               )}
               disabled={activeTab === i}
               onClick={() => handleTabClick(i)}
