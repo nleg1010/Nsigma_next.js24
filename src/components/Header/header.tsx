@@ -111,7 +111,7 @@ function Navbar() {
                 className={twMerge(
                   `hidden p-2 md:flex md:items-center gap-2 md:text-lg text-base font-semibold text-white `,
                   i === routes.length - 1
-                    ? "bg-[#FBC400] p-3 min-w-[156px] text-center text-black rounded-full hover:scale-105 transition-transform"
+                    ? "bg-[#F6AF23] p-3 min-w-[156px] text-center text-black rounded-full hover:scale-105 transition-transform"
                     : "hover:text-[#c8ccce]"
                 )}
               >

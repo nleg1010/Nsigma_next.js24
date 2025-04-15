@@ -38,7 +38,7 @@ const EngagementStrategies: FC<any> = ({
         <div className="text-white text-xl xl:text-2xl leading-6 text-left w-2/3 mb-10">
           <PrismicRichText field={info} components={components} />
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-5 xl:gap-7 text-white">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-5 xl:gap-7 text-white pb-2">
           {strategies?.map((item, i: number) => (
             <EngagementCard key={i} {...item} />
           ))}

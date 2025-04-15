@@ -1,4 +1,7 @@
 import { Banner, BannerProps } from "@/components/asset-management/banner";
+import ModularFramework, {
+  ModularFrameworkProps,
+} from "@/components/asset-management/modular-framework";
 import ProblemSection, {
   ProblemSectionProps,
 } from "@/components/asset-management/ProblemSection";
@@ -17,6 +20,9 @@ const AssetManagement = ({ page }: any) => {
     problem_heading_2,
     problem_text_2,
     problem_image,
+    mf_title,
+    mf_subtitle,
+    modules,
   } = page.data as AssetManagementDocumentData;
 
   const bannerData: BannerProps = {
@@ -34,10 +40,17 @@ const AssetManagement = ({ page }: any) => {
     image: problem_image,
   };
 
+  const modulesData: ModularFrameworkProps = {
+    title: mf_title,
+    subtitle: mf_subtitle,
+    modules,
+  };
+
   return (
     <div className="bg-[#07080a]">
       <Banner {...bannerData} />
       <ProblemSection {...problemData} />
+      <ModularFramework {...modulesData} />
     </div>
   );
 };

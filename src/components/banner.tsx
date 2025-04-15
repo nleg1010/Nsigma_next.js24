@@ -4,7 +4,7 @@ export default function Banner() {
   const router = useRouter();
 
   return (
-    <main className="relative flex items-center justify-center h-screen overflow-hidden bg-center bg-cover bg-[url(/images/banner.png)]">
+    <main className="relative flex items-center justify-center h-screen overflow-hidden bg-center bg-cover bg-[url(/images/banner-1.jpg)]">
       <div className="relative z-30 text-2xl bg-opacity-50 rounded-xl">
         <div className="flex items-center justify-center bg-black/30 w-screen h-screen p-4 px-8">
           <div className="container flex-col justify-items-start items-end text-white">
@@ -17,7 +17,7 @@ export default function Banner() {
             <h3>World-Class Data Teams That Scale With Your Ambitions</h3>
             <div className="flex flex-col md:flex-row gap-4 pt-6">
               <button
-                className="bg-yellow-400 hover:bg-yellow-500 text-black text-base font-semibold py-3 px-6 rounded-full shadow-md transition"
+                className="bg-[#F6AF23] hover:bg-yellow-500 text-black text-base font-semibold py-3 px-6 rounded-full shadow-md transition"
                 onClick={() => router.push("/contact-us")}
               >
                 Talk to Our Experts

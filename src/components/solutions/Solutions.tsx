@@ -54,7 +54,7 @@ export default function Solutions({
               <h4 className="text-left lg:text-2xl">
                 {is_featured_case_study}
               </h4>
-              <button className="bg-[#fac400] text-black font-semibold mt-2 py-4 px-2 rounded-full flex justify-center items-center gap-1 hover:scale-95 transition-transform">
+              <button className="bg-[#F6AF23] text-black font-semibold mt-2 py-4 px-2 rounded-full flex justify-center items-center gap-1 hover:scale-95 transition-transform">
                 Download Case study <FaArrowRight />
               </button>
             </div>

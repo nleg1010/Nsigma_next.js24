@@ -43,7 +43,7 @@ const AboutUs = ({ subtitle, reasons }: AboutUsProps) => {
         {reasons.map(({ icon, info, title }, idx) => (
           <div
             key={idx}
-            className="w-full min-h-96 gray-linear-gradient border border-gray-600 p-5 hover:border-gradient"
+            className="w-full min-h-96 gray-linear-gradient border border-gray-600 p-5 hover:border-[#F6AF23]"
           >
             <PrismicNextImage
               field={icon}

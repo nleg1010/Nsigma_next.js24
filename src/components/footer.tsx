@@ -94,7 +94,7 @@ export default function Footer() {
               />
               <button
                 onClick={(e) => handleMail(e)}
-                className=" min-w-28 h-full px-5 text-black bg-[#fac400] absolute right-0 top-0 flex items-center justify-center gap-2"
+                className=" min-w-28 h-full px-5 text-black bg-[#F6AF23] absolute right-0 top-0 flex items-center justify-center gap-2"
               >
                 Subscribe
                 <FaArrowRight />

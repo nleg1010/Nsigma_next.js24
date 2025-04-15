@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useState } from "react";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 
 const ContactUs = () => {
   const {
@@ -37,7 +37,7 @@ const ContactUs = () => {
       <Head>
         <title>Contact Us | NSigma </title>
       </Head>
-      <div className="container mx-auto px-3">
+      <div className="container mx-auto px-3 pt-20">
         <form
           className="my-20 max-w-[600px] mx-auto"
           onSubmit={handleSubmit(onSubmit)}

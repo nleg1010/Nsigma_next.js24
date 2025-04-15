@@ -35,7 +35,7 @@ const CallToAction = ({
             )}
           </h3>
         )}
-        <button className="bg-[#fac400] font-semibold rounded-full text-xl p-3 flex items-center gap-2 text-black hover:scale-[0.95] transition-all">
+        <button className="bg-[#F6AF23] font-semibold rounded-full text-xl p-3 flex items-center gap-2 text-black hover:scale-[0.95] transition-all">
           {buttonText} <FaArrowRight />
         </button>
       </div>
