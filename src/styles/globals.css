@@ -240,7 +240,7 @@ html {
 
   .cta-background {
     background: url("/images/3d-grid.png"),
-      linear-gradient(153.68deg, #0daaef 0%, #7fe46c 100%);
+      linear-gradient(153.68deg, #565b5e 0%, #171817 100%);
     background-size: cover, cover;
     background-position: center, center;
     background-blend-mode: overlay;

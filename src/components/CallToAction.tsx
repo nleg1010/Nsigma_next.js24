@@ -17,29 +17,25 @@ const CallToAction = ({
   buttonText = "Talk to our Experts",
 }: CallToActionProps) => {
   return (
-    <div className="w-full h-fit lg:h-screen text-white pb-64 pt-40 flex content-center items-center px-4 md:px-0 cta-background">
-      <div className="container min-h-[500px] text-center mx-auto flex flex-col items-center justify-center p-8 sm:p-24 gap-4 rounded-[40px]">
-        <h1 className="text-3xl sm:text-4xl lg:text-[46px] md:leading-[50px] w-full font-semibold lg:px-[10%]">
+    <section className="relative w-full h-[75vh] overflow-hidden flex items-center justify-center">
+      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+        <h2 className="font-bold text-white uppercase md:text-[42px] text-2xl md:leading-[50px]  mt-1 text-center mb-8">
+          {/* Ready to <span className="text-[#F6AF23]">get started?</span> */}
           {typeof title === "string" ? (
             title
           ) : (
             <PrismicRichText field={title} components={components} />
           )}
-        </h1>
-        {subtitle && (
-          <h3 className="text-xl">
-            {typeof subtitle === "string" ? (
-              subtitle
-            ) : (
-              <PrismicRichText field={subtitle} components={components} />
-            )}
-          </h3>
-        )}
-        <button className="bg-[#F6AF23] font-semibold rounded-full text-xl p-3 flex items-center gap-2 text-black hover:scale-[0.95] transition-all">
+        </h2>
+        <p className="text-xl xl:text-2xl leading-6 lg:px-6 text-gray-300 mb-12 max-w-2xl mx-auto">
+          Join the group of satisfied customers who trust our expertise to
+          deliver exceptional results.
+        </p>
+        <button className="bg-[#F6AF23] mx-auto font-semibold rounded-xl text-xl p-3 flex items-center gap-2 text-black hover:scale-[0.95] transition-all">
           {buttonText} <FaArrowRight />
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -29,7 +29,7 @@ const ProblemSection = ({
   image,
 }: ProblemSectionProps) => {
   return (
-    <div className="container mx-auto py-16 mt-52 flex flex-col items-center justify-center text-white">
+    <div className="container mx-auto py-16 px-3 mt-52 flex flex-col items-center justify-center text-white">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="p-4">
           <h2 className="text-2xl md:text-[42px] font-bold mb-6">{heading1}</h2>

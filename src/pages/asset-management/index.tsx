@@ -4,7 +4,8 @@ import ModularFramework, {
 } from "@/components/asset-management/modular-framework";
 import ProblemSection, {
   ProblemSectionProps,
-} from "@/components/asset-management/ProblemSection";
+} from "@/components/asset-management/problem-section";
+import WhyUs, { WhyUsProps } from "@/components/asset-management/why-us";
 import { createClient } from "@/prismicio";
 import { GetStaticPropsContext } from "next";
 import { AssetManagementDocumentData } from "../../../prismicio-types";
@@ -23,6 +24,8 @@ const AssetManagement = ({ page }: any) => {
     mf_title,
     mf_subtitle,
     modules,
+    why_title,
+    reasons,
   } = page.data as AssetManagementDocumentData;
 
   const bannerData: BannerProps = {
@@ -46,11 +49,17 @@ const AssetManagement = ({ page }: any) => {
     modules,
   };
 
+  const whyUsData: WhyUsProps = {
+    title: why_title,
+    reasons,
+  };
+
   return (
     <div className="bg-[#07080a]">
       <Banner {...bannerData} />
       <ProblemSection {...problemData} />
       <ModularFramework {...modulesData} />
+      <WhyUs {...whyUsData} />
     </div>
   );
 };

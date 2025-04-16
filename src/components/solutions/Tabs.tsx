@@ -87,14 +87,10 @@ export default function Tabs({ data }: TabsProps) {
                     />
                   </div>
                 </div>
-                <div className="flex flex-row justify-center items-center max-h-96">
+                <div className="flex flex-row justify-center items-center max-h-96 w-full">
                   <PrismicImage
                     field={tab.image}
-                    style={{
-                      maxHeight: "100%",
-                      display: "block",
-                      borderRadius: 20,
-                    }}
+                    className="max-h-full block rounded-[20px]"
                   />
                 </div>
               </div>

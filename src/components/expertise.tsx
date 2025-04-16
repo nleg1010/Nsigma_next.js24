@@ -5,6 +5,7 @@ import {
 } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
 import { PrismicRichText } from "@prismicio/react";
+import { motion, Variants } from "framer-motion";
 import { useState } from "react";
 import { CgArrowBottomRight, CgArrowTopRight } from "react-icons/cg";
 import { twMerge } from "tailwind-merge";
@@ -30,12 +31,23 @@ type ExpertiseProps = {
   data: ExpertiseItem[];
 };
 
+const linksVariants: Variants = {
+  close: {
+    opacity: 0.5,
+    height: 0,
+  },
+  open: {
+    opacity: 1,
+    height: "auto",
+  },
+};
+
 const ExpertiseItem = ({ item, idx }: ExpertiseItemProps) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div key={idx} className="border-y-[1px]">
-      <div
+    <motion.div key={idx} className="border-y-[1px]">
+      <motion.div
         className="w-full py-7  flex justify-between cursor-pointer"
         onClick={() => setOpen((prev) => !prev)}
       >
@@ -48,9 +60,11 @@ const ExpertiseItem = ({ item, idx }: ExpertiseItemProps) => {
         ) : (
           <CgArrowTopRight className="text-white text-3xl" />
         )}
-      </div>
-      <div className={twMerge("hidden w-full md:grid-cols-2", open && "grid")}>
-        <div className="flex flex-col lg:gap-10 gap-3 p-4 pb-10 text-white">
+      </motion.div>
+      <motion.div
+        className={twMerge("hidden w-full md:grid-cols-2", open && "grid")}
+      >
+        <motion.div className="flex flex-col lg:gap-10 gap-3 p-4 pb-10 text-white">
           <div className="border-l-[1px] p-4 ">
             <p className="text-sm lg:text-base">Challenge:</p>
             <p className="mt-2 lg:text-lg">{item.challenge}</p>
@@ -69,15 +83,15 @@ const ExpertiseItem = ({ item, idx }: ExpertiseItemProps) => {
               </ul>
             </div>
           </div>
-        </div>
-        <div className="p-24 w-full flex justify-center">
+        </motion.div>
+        <motion.div className="p-24 w-full flex justify-center">
           <PrismicNextImage
             field={item.image}
             className="max-h-[400px]"
           ></PrismicNextImage>
-        </div>
-      </div>
-    </div>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 };
 

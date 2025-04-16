@@ -5,7 +5,7 @@ import {
 } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
 import { JSXMapSerializer, PrismicRichText } from "@prismicio/react";
-import { FaArrowRight } from "react-icons/fa";
+import { GrDownload } from "react-icons/gr";
 import Tabs, { TabsItemProps } from "./Tabs";
 
 type SolutionsProps = {
@@ -45,23 +45,24 @@ export default function Solutions({
           </div>
         </div>
         <Tabs data={is_tabs} />
-        <div className="container mx-auto pl-10  mt-5 gray-linear-gradient rounded-[40px] border-b-[1px] border-[#383a46] text-white text-center md:text-lg overflow-hidden">
+        <div className="container mx-auto pl-10  mt-5 bg-[#1d2029] rounded-3xl border-b-[1px] border-[#383a46] text-white text-center md:text-lg overflow-hidden">
           <div className="grid md:grid-cols-2 grid-cols-1">
             <div className="flex flex-col justify-start items-start pb-5 pt-20">
-              <h2 className="md:text-[42px] text-2xl md:leading-[50px] font-bold title mb-4 text-left">
+              <h2 className="text-3xl font-bold py-4 text-left">
                 Featured Case Study
               </h2>
-              <h4 className="text-left lg:text-2xl">
+              <h4 className="text-[1rem] lg:text-lg text-left">
                 {is_featured_case_study}
               </h4>
-              <button className="bg-[#F6AF23] text-black font-semibold mt-2 py-4 px-2 rounded-full flex justify-center items-center gap-1 hover:scale-95 transition-transform">
-                Download Case study <FaArrowRight />
+              <button className="bg-[#F6AF23] text-black font-semibold mt-4 py-4 px-3 rounded-xl flex justify-center items-center gap-2 hover:scale-95 transition-transform">
+                Download Case study <GrDownload />
               </button>
             </div>
-            <div className="w-full p-10 rounded-lg">
+            <div className="w-full p-10 rounded-lg flex justify-center md:pr-20">
               <PrismicNextImage
                 field={featured_case_study_image}
                 style={{
+                  maxWidth: "545px",
                   width: "100%",
                   height: "100%",
                   objectFit: "contain",
