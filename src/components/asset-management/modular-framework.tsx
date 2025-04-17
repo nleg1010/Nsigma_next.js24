@@ -38,12 +38,12 @@ const ModularFramework = ({
   modules,
 }: ModularFrameworkProps) => {
   return (
-    <div className="container mx-auto w-3/4 text-white pt-32 px-3">
+    <div className="container mx-auto w-full md:w-3/4 px-8 md:px-3 pt-32 text-white ">
       <div className="w-full text-center pb-14 flex flex-col items-center">
         <h2 className="text-2xl md:text-[42px] font-bold uppercase pb-8">
           {title}
         </h2>
-        <h4 className="text-xl md:text-2xl w-1/2">{subtitle}</h4>
+        <h4 className="text-xl md:text-2xl w-full md:w-1/2">{subtitle}</h4>
       </div>
       <div>
         {modules.map(({ image, name, text, title }, i) => (
@@ -74,7 +74,7 @@ const ModularFramework = ({
             </div>
             <div
               className={twMerge(
-                "flex flex-col justify-start items-start md:pt-10",
+                "flex flex-col justify-start items-start pt-10",
                 i % 2 === 1 ? "md:pr-5" : "md:pl-5"
               )}
             >

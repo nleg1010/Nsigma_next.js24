@@ -8,6 +8,7 @@ import {
   PrismicImage,
   PrismicRichText,
 } from "@prismicio/react";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { RiCheckDoubleFill } from "react-icons/ri";
 import { twMerge } from "tailwind-merge";
@@ -67,9 +68,14 @@ export default function Tabs({ data }: TabsProps) {
       </ul>
       <div className="pt-6">
         {data.map((tab, i) => (
-          <div key={i}>
+          <AnimatePresence key={i}>
             {activeTab === i && (
-              <div
+              <motion.div
+                layout
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+                exit={{ animation: "fadeOut" }}
                 className={twMerge(
                   "grid grid-cols-1 content-center md:grid-cols-2 w-full gap-4 py-4",
                   tab.image?.url == null && "md:grid-cols-1"
@@ -93,9 +99,9 @@ export default function Tabs({ data }: TabsProps) {
                     className="max-h-full block rounded-[20px]"
                   />
                 </div>
-              </div>
+              </motion.div>
             )}
-          </div>
+          </AnimatePresence>
         ))}
       </div>
     </div>

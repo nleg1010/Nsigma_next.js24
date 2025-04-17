@@ -2,7 +2,7 @@ import { KeyTextField, RichTextField } from "@prismicio/client";
 import { JSXMapSerializer, PrismicRichText } from "@prismicio/react";
 import { FaArrowRight } from "react-icons/fa";
 
-type CallToActionProps = {
+export type CallToActionProps = {
   title: RichTextField | KeyTextField;
   subtitle?: RichTextField | KeyTextField;
   buttonText?: KeyTextField;
@@ -17,7 +17,7 @@ const CallToAction = ({
   buttonText = "Talk to our Experts",
 }: CallToActionProps) => {
   return (
-    <section className="relative w-full h-[75vh] overflow-hidden flex items-center justify-center">
+    <section className="relative w-full h-[75vh] overflow-hidden flex items-center justify-center px-8 md:px-0">
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <h2 className="font-bold text-white uppercase md:text-[42px] text-2xl md:leading-[50px]  mt-1 text-center mb-8">
           {/* Ready to <span className="text-[#F6AF23]">get started?</span> */}

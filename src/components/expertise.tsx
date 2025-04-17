@@ -5,10 +5,9 @@ import {
 } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
 import { PrismicRichText } from "@prismicio/react";
-import { motion, Variants } from "framer-motion";
+import { AnimatePresence, motion, Variants } from "framer-motion";
 import { useState } from "react";
 import { CgArrowBottomRight, CgArrowTopRight } from "react-icons/cg";
-import { twMerge } from "tailwind-merge";
 
 type ExpertiseItem = {
   icon: ImageFieldImage;
@@ -46,9 +45,9 @@ const ExpertiseItem = ({ item, idx }: ExpertiseItemProps) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <motion.div key={idx} className="border-y-[1px]">
-      <motion.div
-        className="w-full py-7  flex justify-between cursor-pointer"
+    <div key={idx} className="border-y-[1px]">
+      <div
+        className="w-full py-7 flex justify-between cursor-pointer"
         onClick={() => setOpen((prev) => !prev)}
       >
         <h2 className="text-xl lg:text-2xl font-semibold text-white">
@@ -60,38 +59,46 @@ const ExpertiseItem = ({ item, idx }: ExpertiseItemProps) => {
         ) : (
           <CgArrowTopRight className="text-white text-3xl" />
         )}
-      </motion.div>
-      <motion.div
-        className={twMerge("hidden w-full md:grid-cols-2", open && "grid")}
-      >
-        <motion.div className="flex flex-col lg:gap-10 gap-3 p-4 pb-10 text-white">
-          <div className="border-l-[1px] p-4 ">
-            <p className="text-sm lg:text-base">Challenge:</p>
-            <p className="mt-2 lg:text-lg">{item.challenge}</p>
-          </div>
-          <div className="border-l-[1px] p-4 lg:text-lg">
-            <p className="text-sm lg:text-base">Our Approach:</p>
-            <p className="mt-2">{item.our_approach}</p>
-          </div>
-          <div className="border-l-[1px] p-4 ">
-            <p className="text-sm lg:text-base">Measureable Outcomes:</p>
-            <div className="mt-2 pl-5 lg:text-lg">
-              <ul className="list-disc">
-                {item.measurable_outcomes
-                  ?.split("\n")
-                  .map((item, idx) => <li key={idx}>{item}</li>)}
-              </ul>
+      </div>
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            layout
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="grid md:grid-cols-2 w-full overflow-hidden"
+          >
+            <div className="flex flex-col lg:gap-10 gap-3 p-4 pb-10 text-white">
+              <div className="border-l-[1px] p-4 ">
+                <p className="text-sm lg:text-base">Challenge:</p>
+                <p className="mt-2 lg:text-lg">{item.challenge}</p>
+              </div>
+              <div className="border-l-[1px] p-4 lg:text-lg">
+                <p className="text-sm lg:text-base">Our Approach:</p>
+                <p className="mt-2">{item.our_approach}</p>
+              </div>
+              <div className="border-l-[1px] p-4 ">
+                <p className="text-sm lg:text-base">Measureable Outcomes:</p>
+                <div className="mt-2 pl-5 lg:text-lg">
+                  <ul className="list-disc">
+                    {item.measurable_outcomes
+                      ?.split("\n")
+                      .map((item, idx) => <li key={idx}>{item}</li>)}
+                  </ul>
+                </div>
+              </div>
             </div>
-          </div>
-        </motion.div>
-        <motion.div className="p-24 w-full flex justify-center">
-          <PrismicNextImage
-            field={item.image}
-            className="max-h-[400px]"
-          ></PrismicNextImage>
-        </motion.div>
-      </motion.div>
-    </motion.div>
+            <div className="p-24 w-full flex justify-center">
+              <PrismicNextImage
+                field={item.image}
+                className="max-h-[400px]"
+              ></PrismicNextImage>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   );
 };
 

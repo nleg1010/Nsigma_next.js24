@@ -29,7 +29,7 @@ const components: JSXMapSerializer = {
 };
 const AboutUs = ({ subtitle, reasons }: AboutUsProps) => {
   return (
-    <div className="container mx-auto px-3 text-white pb-20">
+    <div className="container mx-auto px-8 md:px-3 text-white pb-20">
       <h4
         id="about"
         className="text-[#8f9193] uppercase lg:text-2xl text-center font-semibold"
@@ -43,7 +43,7 @@ const AboutUs = ({ subtitle, reasons }: AboutUsProps) => {
         {reasons.map(({ icon, info, title }, idx) => (
           <div
             key={idx}
-            className="w-full min-h-96 rounded-xl gray-linear-gradient border border-gray-600 p-5 hover:border-[#F6AF23]"
+            className="w-full min-h-96 rounded-xl gray-linear-gradient border border-gray-600 p-5 hover:border-[#F6AF23] transition-all"
           >
             <PrismicNextImage
               field={icon}

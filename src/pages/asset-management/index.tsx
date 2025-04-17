@@ -1,3 +1,6 @@
+import Applications, {
+  ApplicationsProps,
+} from "@/components/asset-management/applications";
 import { Banner, BannerProps } from "@/components/asset-management/banner";
 import ModularFramework, {
   ModularFrameworkProps,
@@ -6,6 +9,7 @@ import ProblemSection, {
   ProblemSectionProps,
 } from "@/components/asset-management/problem-section";
 import WhyUs, { WhyUsProps } from "@/components/asset-management/why-us";
+import CallToAction, { CallToActionProps } from "@/components/CallToAction";
 import { createClient } from "@/prismicio";
 import { GetStaticPropsContext } from "next";
 import { AssetManagementDocumentData } from "../../../prismicio-types";
@@ -26,6 +30,10 @@ const AssetManagement = ({ page }: any) => {
     modules,
     why_title,
     reasons,
+    applications,
+    rwa_title,
+    lower_cta_button_text,
+    lower_cta_title,
   } = page.data as AssetManagementDocumentData;
 
   const bannerData: BannerProps = {
@@ -54,12 +62,24 @@ const AssetManagement = ({ page }: any) => {
     reasons,
   };
 
+  const applicationsData: ApplicationsProps = {
+    title: rwa_title,
+    applications,
+  };
+
+  const cta: CallToActionProps = {
+    title: lower_cta_title,
+    buttonText: lower_cta_button_text,
+  };
+
   return (
     <div className="bg-[#07080a]">
       <Banner {...bannerData} />
       <ProblemSection {...problemData} />
       <ModularFramework {...modulesData} />
       <WhyUs {...whyUsData} />
+      <Applications {...applicationsData} />
+      <CallToAction {...cta} />
     </div>
   );
 };

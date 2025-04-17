@@ -16,7 +16,7 @@ export const Banner = ({
 }: BannerProps) => {
   return (
     <div className="h-screen w-full flex justify-center text-white maaas-bg-image">
-      <div className="container h-full flex flex-col justify-center items-start text-left gap-10">
+      <div className="container px-8 md:px-0 h-full flex flex-col justify-center items-start text-left gap-10">
         <h1 className="text-left font-bold md:text-6xl text-3xl md:leading-[80px]">
           {title}
         </h1>
