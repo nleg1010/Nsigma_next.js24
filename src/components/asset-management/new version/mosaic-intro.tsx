@@ -1,6 +1,6 @@
 const MosaicIntro = () => {
   return (
-    <section id="mosaic-intro" className="bg-nsigma-darkAlt">
+    <section id="mosaic-intro" className="bg-nsigma-darkAlt md:py-32">
       <div className="section-container">
         <h2 className="section-heading">
           Introducing NSigma <span className="text-nsigma-gold">MOSAIC</span>

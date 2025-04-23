@@ -28,7 +28,11 @@ const Impact = () => {
   }, []);
 
   return (
-    <section id="impact" className="bg-nsigma-darkAlt" ref={sectionRef}>
+    <section
+      id="impact"
+      className="bg-nsigma-darkAlt md:py-32"
+      ref={sectionRef}
+    >
       <div className="section-container">
         <h2 className="section-heading">
           Driving Tangible <span className="text-nsigma-green">Results</span>{" "}

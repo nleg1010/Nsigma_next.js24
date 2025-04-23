@@ -18,13 +18,13 @@ export default function Banner() {
             <h3>World-Class Data Teams That Scale With Your Ambitions</h3>
             <div className="flex flex-col md:flex-row gap-4 pt-6">
               <button
-                className="bg-[#F6AF23] hover:bg-yellow-500 flex justify-center items-center gap-2 text-black text-base font-semibold py-3 px-6 rounded-xl shadow-md transition"
+                className="bg-[#F6AF23] hover:bg-yellow-500 cta-button flex justify-center items-center gap-2 text-black font-semibold rounded-xl shadow-md transition"
                 onClick={() => router.push("/contact-us")}
               >
                 Talk to Our Experts
                 <FaArrowRight />
               </button>
-              <button className="bg-white hover:bg-gray-100 text-gray-900 text-base font-semibold py-3 px-6 rounded-xl shadow-md border transition">
+              <button className="bg-white hover:bg-gray-100  text-gray-900 cta-button font-semibold rounded-xl shadow-md border transition">
                 Assess Your Data Maturity
               </button>
             </div>

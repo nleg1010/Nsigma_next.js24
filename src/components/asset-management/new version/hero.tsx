@@ -12,12 +12,12 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-fade-in">
+          <h1 className="md:text-6xl text-3xl md:leading-[80px] font-semibold mb-6 leading-tight animate-fade-in">
             NSigma <span className="text-nsigma-gold">MOSAIC</span>: Tailored
             Managed Analytics for Asset Management
           </h1>
 
-          <p
+          <h3
             className="text-xl md:text-2xl text-nsigma-textAlt mb-10 animate-fade-in"
             style={{ animationDelay: "0.2s" }}
           >
@@ -25,11 +25,11 @@ const Hero = () => {
             technology, deep domain knowledge, and data science expertise to
             transform your data into a strategic advantage – expertly managed
             for you.
-          </p>
+          </h3>
 
           <a
             href="#contact"
-            className="btn-primary text-lg animate-fade-in"
+            className="btn-primary cta-button animate-fade-in"
             style={{ animationDelay: "0.4s" }}
           >
             Request a Consultation

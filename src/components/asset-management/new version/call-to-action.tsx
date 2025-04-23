@@ -1,6 +1,6 @@
 const CallToAction = () => {
   return (
-    <section id="contact" className="bg-nsigma-navy">
+    <section id="contact" className="bg-nsigma-navy md:py-32">
       <div className="section-container">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -15,10 +15,10 @@ const CallToAction = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#" className="btn-primary">
+            <a href="#" className="btn-primary cta-button">
               Schedule a Personalized Demo
             </a>
-            <a href="#" className="btn-secondary">
+            <a href="#" className="btn-secondary cta-button">
               Request a Consultation
             </a>
           </div>

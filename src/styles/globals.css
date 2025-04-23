@@ -5,6 +5,8 @@
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
 
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Neue+Haas+Grotesk+Text:wght@400;700&display=swap");
+
 @font-face {
   font-family: poppin;
   src: url("../../public/fonts/poppin/Poppins-Black.ttf");
@@ -36,36 +38,40 @@
 }
 
 * {
-  font-family: poppin;
   box-sizing: border-box;
 }
+
+body {
+  @apply text-body font-haas leading-relaxed text-white m-0 p-0;
+}
+
 h1 {
-  @apply text-4xl;
+  @apply text-h1 font-inter tracking-wide1 text-white;
 }
+
 h2 {
-  @apply text-3xl;
+  @apply text-h2 font-haas font-bold tracking-normal text-white;
+  /* Use conditional class for text color (e.g., text-white or text-blue-600) via component */
 }
+
 h3 {
-  @apply text-2xl;
+  @apply text-2xl font-haas;
 }
+
 h4 {
-  @apply text-xl;
+  @apply text-xl font-haas;
 }
+
 h5 {
-  @apply text-lg;
+  @apply text-lg font-haas;
 }
+
 h6 {
-  @apply text-base;
+  @apply text-base font-haas;
 }
 
 html {
   scroll-behavior: smooth;
-}
-* body {
-  margin: 0;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 .slick-prev:before,
 .slick-next:before {
@@ -310,6 +316,10 @@ html {
       linear-gradient(#000 0 0) content-box,
       linear-gradient(#000 0 0);
     mask-composite: exclude;
+  }
+
+  .cta-button {
+    @apply text-base font-haas-black uppercase py-3 px-6 tracking-wider;
   }
 }
 

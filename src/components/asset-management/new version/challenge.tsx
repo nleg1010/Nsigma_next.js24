@@ -2,7 +2,7 @@ import { ClipboardCheck, Database, LineChart } from "lucide-react";
 
 const Challenge = () => {
   return (
-    <section id="challenge" className="bg-nsigma-dark">
+    <section id="challenge" className="bg-nsigma-dark md:py-40">
       <div className="section-container">
         <h2 className="section-heading">
           Navigating the Data{" "}

@@ -106,10 +106,10 @@ function Navbar() {
                 href={link}
                 key={i}
                 className={twMerge(
-                  `hidden p-2 md:flex md:items-center gap-2 md:text-lg text-base font-semibold text-white `,
+                  `hidden p-2 md:flex md:items-center gap-2  font-semibold text-white`,
                   i === routes.length - 1
-                    ? "bg-[#F6AF23] p-3 min-w-[156px] text-center text-black rounded-xl hover:scale-105 transition-transform"
-                    : "hover:text-[#c8ccce]"
+                    ? "bg-[#F6AF23] p-3 min-w-[156px] cta-button text-center text-black rounded-xl hover:scale-105 transition-transform"
+                    : "hover:text-[#c8ccce] md:text-lg text-base"
                 )}
               >
                 <span>{name}</span>

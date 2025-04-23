@@ -54,7 +54,7 @@ export default function Solutions({
               <h4 className="text-[1rem] lg:text-lg text-left">
                 {is_featured_case_study}
               </h4>
-              <button className="bg-[#F6AF23] text-black font-semibold mt-4 py-4 px-3 rounded-xl flex justify-center items-center gap-2 hover:scale-95 transition-transform">
+              <button className="bg-[#F6AF23] text-black cta-button font-semibold mt-4  rounded-xl flex justify-center items-center gap-2 hover:scale-95 transition-transform">
                 Download Case study <GrDownload />
               </button>
             </div>

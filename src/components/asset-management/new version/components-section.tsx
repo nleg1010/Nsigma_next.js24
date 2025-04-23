@@ -2,7 +2,7 @@ import { BarChartBig, Database, FileCog, FileHeart } from "lucide-react";
 
 const ComponentsSection = () => {
   return (
-    <section id="components" className="bg-nsigma-dark">
+    <section id="components" className="bg-nsigma-dark md:pt-40">
       <div className="section-container">
         <h2 className="section-heading">The MOSAIC Integrated Ecosystem</h2>
 

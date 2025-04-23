@@ -2,7 +2,7 @@ import { CheckCircle2 } from "lucide-react";
 
 const WhyNsigma = () => {
   return (
-    <section id="why-nsigma" className="bg-nsigma-dark">
+    <section id="why-nsigma" className="bg-nsigma-dark md:py-32">
       <div className="section-container">
         <h2 className="section-heading">
           The NSigma <span className="text-nsigma-gold">Managed Service</span>{" "}

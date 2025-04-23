@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 const plugin = require("tailwindcss/plugin");
+const animate = require("tailwindcss-animate");
 
 const CustomStyle = plugin(function ({ addUtilities }: any) {
   addUtilities({
@@ -27,6 +28,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+        haas: ['"Neue Haas Grotesk Text"', "sans-serif"],
+        "haas-black": ['"Neue Haas Grotesk Text Black"', "sans-serif"],
+      },
+      letterSpacing: {
+        wide1: "1px",
+      },
+      fontSize: {
+        h1: ["50px", { lineHeight: "64px" }],
+        h2: ["40px", { lineHeight: "52px" }],
+        body: ["18px", { lineHeight: "1.7" }],
+        button: ["16px", { lineHeight: "24px" }],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -99,6 +114,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [CustomStyle],
+  plugins: [CustomStyle, animate],
 };
 export default config;

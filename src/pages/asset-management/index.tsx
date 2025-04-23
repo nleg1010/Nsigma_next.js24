@@ -6,6 +6,7 @@ import Challenge from "@/components/asset-management/new version/challenge";
 import ComponentsSection from "@/components/asset-management/new version/components-section";
 import Hero from "@/components/asset-management/new version/hero";
 import Impact from "@/components/asset-management/new version/impact";
+import MosaicInfographic from "@/components/asset-management/new version/mosaic-infographics";
 import MosaicIntro from "@/components/asset-management/new version/mosaic-intro";
 import WhyNsigma from "@/components/asset-management/new version/why-nsigma";
 import { ProblemSectionProps } from "@/components/asset-management/problem-section";
@@ -86,6 +87,7 @@ const AssetManagement = ({ page }: any) => {
       <Challenge />
       <MosaicIntro />
       <ComponentsSection />
+      <MosaicInfographic />
       <Impact />
       <WhyNsigma />
       <CallToAction />

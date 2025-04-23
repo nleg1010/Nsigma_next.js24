@@ -34,7 +34,7 @@ const CallToAction = ({
           deliver exceptional results.
         </p>
         <button
-          className="bg-[#F6AF23] mx-auto font-semibold rounded-xl text-xl p-3 flex items-center gap-2 text-black hover:scale-[0.95] transition-all"
+          className="bg-[#F6AF23] mx-auto font-semibold rounded-xl cta-button p-3 flex items-center gap-2 text-black hover:scale-[0.95] transition-all"
           onClick={() => router.push("/contact-us")}
         >
           {buttonText} <FaArrowRight />
