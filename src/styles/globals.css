@@ -312,3 +312,25 @@ html {
     mask-composite: exclude;
   }
 }
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-nsigma-gold text-nsigma-navy font-semibold rounded-lg transition-all hover:bg-opacity-90 hover:shadow-md;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-transparent border border-nsigma-gold text-nsigma-gold font-semibold rounded-lg transition-all hover:bg-nsigma-gold/10;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:translate-y-[-5px] hover:shadow-lg;
+  }
+
+  .section-container {
+    @apply container mx-auto px-4 py-16 md:py-24;
+  }
+
+  .section-heading {
+    @apply text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-center;
+  }
+}

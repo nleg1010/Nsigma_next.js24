@@ -1,15 +1,15 @@
-import Applications, {
-  ApplicationsProps,
-} from "@/components/asset-management/applications";
-import { Banner, BannerProps } from "@/components/asset-management/banner";
-import ModularFramework, {
-  ModularFrameworkProps,
-} from "@/components/asset-management/modular-framework";
-import ProblemSection, {
-  ProblemSectionProps,
-} from "@/components/asset-management/problem-section";
-import WhyUs, { WhyUsProps } from "@/components/asset-management/why-us";
-import CallToAction, { CallToActionProps } from "@/components/CallToAction";
+import { ApplicationsProps } from "@/components/asset-management/applications";
+import { BannerProps } from "@/components/asset-management/banner";
+import { ModularFrameworkProps } from "@/components/asset-management/modular-framework";
+import CallToAction from "@/components/asset-management/new version/call-to-action";
+import Challenge from "@/components/asset-management/new version/challenge";
+import ComponentsSection from "@/components/asset-management/new version/components-section";
+import Hero from "@/components/asset-management/new version/hero";
+import Impact from "@/components/asset-management/new version/impact";
+import MosaicIntro from "@/components/asset-management/new version/mosaic-intro";
+import WhyNsigma from "@/components/asset-management/new version/why-nsigma";
+import { ProblemSectionProps } from "@/components/asset-management/problem-section";
+import { WhyUsProps } from "@/components/asset-management/why-us";
 import { createClient } from "@/prismicio";
 import { GetStaticPropsContext } from "next";
 import { AssetManagementDocumentData } from "../../../prismicio-types";
@@ -67,19 +67,28 @@ const AssetManagement = ({ page }: any) => {
     applications,
   };
 
-  const cta: CallToActionProps = {
-    title: lower_cta_title,
-    buttonText: lower_cta_button_text,
-  };
+  // const cta: CallToActionProps = {
+  //   title: lower_cta_title,
+  //   buttonText: lower_cta_button_text,
+  // };
 
   return (
-    <div className="bg-[#07080a]">
-      <Banner {...bannerData} />
-      <ProblemSection {...problemData} />
-      <ModularFramework {...modulesData} />
-      <WhyUs {...whyUsData} />
-      <Applications {...applicationsData} />
-      <CallToAction {...cta} />
+    // <div className="bg-[#07080a]">
+    //   <Banner {...bannerData} />
+    //   <ProblemSection {...problemData} />
+    //   <ModularFramework {...modulesData} />
+    //   <WhyUs {...whyUsData} />
+    //   <Applications {...applicationsData} />
+    //   <CallToAction {...cta} />
+    // </div>
+    <div className="min-h-screen bg-[#111827] text-[#E5E7EB]">
+      <Hero />
+      <Challenge />
+      <MosaicIntro />
+      <ComponentsSection />
+      <Impact />
+      <WhyNsigma />
+      <CallToAction />
     </div>
   );
 };

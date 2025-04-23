@@ -1,4 +1,5 @@
 import { KeyTextField } from "@prismicio/client";
+import { useRouter } from "next/router";
 import { BsDownload } from "react-icons/bs";
 import { FaArrowRight } from "react-icons/fa6";
 
@@ -14,6 +15,7 @@ export const Banner = ({
   buttonText,
   secondButtonText,
 }: BannerProps) => {
+  const router = useRouter();
   return (
     <div className="h-screen w-full flex justify-center text-white maaas-bg-image">
       <div className="container px-8 md:px-0 h-full flex flex-col justify-center items-start text-left gap-10">
@@ -22,7 +24,10 @@ export const Banner = ({
         </h1>
         <h2>{subtitle}</h2>
         <div className="flex flex-col md:flex-row gap-4">
-          <button className="bg-[#fac400] font-semibold rounded-full p-4 flex items-center gap-2 hover:scale-95 transition-transform text-black">
+          <button
+            className="bg-[#fac400] font-semibold rounded-full p-4 flex items-center gap-2 hover:scale-95 transition-transform text-black"
+            onClick={() => router.push("/contact-us")}
+          >
             {buttonText}
             <FaArrowRight />
           </button>
