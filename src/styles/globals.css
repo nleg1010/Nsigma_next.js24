@@ -42,16 +42,15 @@
 }
 
 body {
-  @apply text-body font-haas leading-relaxed text-white m-0 p-0;
+  @apply text-body font-haas leading-relaxed m-0 p-0;
 }
 
 h1 {
-  @apply text-h1 font-inter tracking-wide1 text-white;
+  @apply text-h1 font-inter tracking-wide1;
 }
 
 h2 {
-  @apply text-h2 font-haas font-bold tracking-normal text-white;
-  /* Use conditional class for text color (e.g., text-white or text-blue-600) via component */
+  @apply text-h2 font-haas font-bold tracking-normal;
 }
 
 h3 {
