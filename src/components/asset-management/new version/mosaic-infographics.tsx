@@ -205,41 +205,41 @@ const MosaicInfographic = () => {
       {/* MOSAIC Components - Bottom Section */}
       <div className="mb-6">
         {/* Component Titles Row */}
-        <div className="flex mb-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 ">
           {mosaicComponents.map((component, index) => (
-            <div key={index} className="flex-1 text-center">
-              <h3
-                className="font-bold text-xl"
-                style={{ color: component.color }}
-              >
-                {component.title}
-              </h3>
+            <div className="flex flex-col flex-1 items-center sm:items-stretch">
+              <div key={index} className="flex-1 text-center mb-6">
+                <h3
+                  className="font-bold text-xl"
+                  style={{ color: component.color }}
+                >
+                  {component.title}
+                </h3>
+              </div>
+              <div className="flex flex-1">
+                <div key={index} className="flex-1">
+                  <div className="flex flex-col space-y-5 ">
+                    {component.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-center">
+                        <div className="mr-3">
+                          <feature.icon
+                            style={{ color: component.color }}
+                            size={22}
+                          />
+                        </div>
+                        <span className="text-gray-300 text-sm">
+                          {feature.name}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           ))}
         </div>
 
         {/* Component Features */}
-        <div className="flex">
-          {mosaicComponents.map((component, index) => (
-            <div key={index} className="flex-1">
-              <div className="flex flex-col space-y-5">
-                {component.features.map((feature, idx) => (
-                  <div key={idx} className="flex items-center">
-                    <div className="mr-3">
-                      <feature.icon
-                        style={{ color: component.color }}
-                        size={22}
-                      />
-                    </div>
-                    <span className="text-gray-300 text-sm">
-                      {feature.name}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
     </div>
   );
