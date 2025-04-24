@@ -143,7 +143,7 @@ const MosaicInfographic = () => {
 
       {/* Process Flow - Top Section */}
       <div className="mb-12">
-        <div className="flex flex-wrap justify-center items-center relative">
+        <div className="flex flex-wrap justify-center relative">
           {/* Process Stages with Connecting Lines */}
           {processStages.map((stage, index) => (
             <React.Fragment key={index}>
@@ -207,7 +207,10 @@ const MosaicInfographic = () => {
         {/* Component Titles Row */}
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 ">
           {mosaicComponents.map((component, index) => (
-            <div className="flex flex-col flex-1 items-center sm:items-stretch">
+            <div
+              className="flex flex-col flex-1 items-center sm:items-stretch"
+              key={index}
+            >
               <div key={index} className="flex-1 text-center mb-6">
                 <h3
                   className="font-bold text-xl"

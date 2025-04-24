@@ -11,7 +11,7 @@ const WhyNsigma = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Graphic Column */}
-          <div className="flex justify-center scale-75 md:scale-100">
+          <div className="flex justify-center scale-75 md:scale-100 my-20">
             <div className="relative w-full max-w-md aspect-square">
               {/* Main circle */}
               <div className="absolute inset-0 border-4 border-nsigma-gold/30 rounded-full flex items-center justify-center">

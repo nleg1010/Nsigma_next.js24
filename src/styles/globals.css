@@ -7,36 +7,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Neue+Haas+Grotesk+Text:wght@400;700&display=swap");
 
-@font-face {
-  font-family: poppin;
-  src: url("../../public/fonts/poppin/Poppins-Black.ttf");
-}
-@font-face {
-  font-family: poppin;
-  src: url("../../public/fonts/poppin/Poppins-Bold.ttf");
-  font-weight: 800;
-}
-@font-face {
-  font-family: poppin;
-  src: url("../../public/fonts/poppin/Poppins-ExtraBold.ttf");
-  font-weight: 900;
-}
-@font-face {
-  font-family: poppin;
-  src: url("../../public/fonts/poppin/Poppins-Medium.ttf");
-  font-weight: 500;
-}
-@font-face {
-  font-family: poppin;
-  src: url("../../public/fonts/poppin/Poppins-Regular.ttf");
-  font-weight: 400;
-}
-@font-face {
-  font-family: poppin;
-  src: url("../../public/fonts/poppin/Poppins-SemiBold.ttf");
-  font-weight: 600;
-}
-
 * {
   box-sizing: border-box;
 }
