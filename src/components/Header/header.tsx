@@ -188,7 +188,7 @@ function Navbar() {
                   href={link}
                   key={i}
                   className={twMerge(
-                    `p-2 md:text-lg text-base font-semibold text-white`,
+                    `p-2 md:text-lg font-button uppercase font-semibold text-white`,
                     i === routes.length - 1
                       ? "bg-[#FBC400] p-3 min-w-[156px] text-center rounded-xl text-black"
                       : "hover:text-[#c8ccce]"

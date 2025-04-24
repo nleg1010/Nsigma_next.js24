@@ -29,7 +29,7 @@ export default function Solutions({
 }: SolutionsProps) {
   return (
     <section
-      className="py-16 mt-52 overflow-hidden px-3 md:px-0 grid place-items-center "
+      className="py-16 pt-32 mt-32 overflow-hidden px-3 md:px-0 grid place-items-center "
       id="solutions"
     >
       <div className="container mx-auto px-3 text-white text-center md:text-lg pb-20">

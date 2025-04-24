@@ -25,7 +25,10 @@ const CaseStudies = ({ data, subtitle }: CaseStudiesProps) => {
   };
 
   return (
-    <section className="container mx-auto px-4 pb-20 mt-64">
+    <section
+      className="container mx-auto px-4 pb-20 mt-32 pt-32"
+      id="casestudy"
+    >
       <div className="relative">
         <h4 className=" lg:text-2xl md:leading-[50px] font-semibold uppercase text-[#8f9193] text-left ">
           Our Case Studies
