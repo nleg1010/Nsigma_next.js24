@@ -4,7 +4,9 @@ const ComponentsSection = () => {
   return (
     <section id="components" className="bg-nsigma-dark md:pt-40">
       <div className="section-container">
-        <h2 className="section-heading">The MOSAIC Integrated Ecosystem</h2>
+        <h2 className="heading-2 text-center mb-8 md:mb-20">
+          The MOSAIC Integrated Ecosystem
+        </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* dataACQUIRE */}

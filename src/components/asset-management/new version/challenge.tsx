@@ -4,9 +4,8 @@ const Challenge = () => {
   return (
     <section id="challenge" className="bg-nsigma-dark md:py-40">
       <div className="section-container">
-        <h2 className="section-heading">
-          Navigating the Data{" "}
-          <span className="text-nsigma-blue">Complexity Challenge</span>
+        <h2 className="heading-2 text-center pb-16">
+          Navigating the Data Complexity Challenge
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">

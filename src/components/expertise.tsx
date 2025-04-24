@@ -107,16 +107,12 @@ export default function Expertise({ data, subtitle, info }: ExpertiseProps) {
     <section className="py-16 relative" id="expertise">
       <div className="container mx-auto px-4 relative z-10">
         <div>
-          <h4 className="text-[#8f9193] uppercase lg:text-2xl font-semibold">
-            Our Expertise
-          </h4>
+          <h4 className="heading-1">Our Expertise</h4>
         </div>
         <div>
-          <h2 className="font-bold text-white mt-1 mb-4 uppercase md:text-[42px] text-2xl md:leading-[50px]">
-            {subtitle}
-          </h2>
+          <h2 className="heading-2">{subtitle}</h2>
         </div>
-        <div className="lg:w-1/2 mt-4 text-xl xl:text-2xl leading-6 text-white">
+        <div className="lg:w-1/2 mt-4 info-text text-white">
           <PrismicRichText field={info} />
         </div>
         <div className="mt-10 p-2 flex flex-col overflow-hidden">

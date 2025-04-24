@@ -1,4 +1,8 @@
+import { useRouter } from "next/router";
+
 const Hero = () => {
+  const router = useRouter();
+
   return (
     <section
       id="mosaic-hero"
@@ -27,13 +31,15 @@ const Hero = () => {
             for you.
           </h3>
 
-          <a
-            href="#contact"
+          <button
             className="btn-primary cta-button animate-fade-in"
             style={{ animationDelay: "0.4s" }}
+            onClick={() => {
+              router.push("/contact-us");
+            }}
           >
             Request a Consultation
-          </a>
+          </button>
         </div>
       </div>
 

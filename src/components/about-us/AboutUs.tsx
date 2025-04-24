@@ -30,15 +30,10 @@ const components: JSXMapSerializer = {
 const AboutUs = ({ subtitle, reasons }: AboutUsProps) => {
   return (
     <div className="container mx-auto px-8 md:px-3 text-white pb-20">
-      <h4
-        id="about"
-        className="text-[#8f9193] uppercase lg:text-2xl text-center font-semibold"
-      >
+      <h4 id="about" className="heading-1 text-center">
         Why Choose NSigma?
       </h4>
-      <h2 className="font-bold text-white uppercase md:text-[42px] text-2xl md:leading-[50px]  mt-1 mb-14 text-center">
-        {subtitle}
-      </h2>
+      <h2 className="heading-2 mb-14 text-center">{subtitle}</h2>
       <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8">
         {reasons.map(({ icon, info, title }, idx) => (
           <div

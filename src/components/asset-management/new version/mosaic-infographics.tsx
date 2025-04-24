@@ -130,14 +130,14 @@ const MosaicInfographic = () => {
   ];
 
   return (
-    <div className="container mx-auto bg-gray-900 p-6 rounded-xl md:py-40">
+    <div className="container mx-auto bg-gray-900 p-6 rounded-xl md:py-40 md:pt-56">
       {/* Header */}
-      <div className="text-center mb-10">
-        <h1 className="text-white text-3xl font-bold mb-2">
-          MOSAIC: Your Data Science Journey, Expertly Managed
-        </h1>
-        <h2 className="text-gray-300 text-xl">
+      <div className="text-center mb-8 md:mb-20">
+        <h4 className="heading-1">
           Built Around Your Stack, Backed by Our Expertise.
+        </h4>
+        <h2 className="heading-2 mb-2">
+          MOSAIC: Your Data Science Journey, Expertly Managed
         </h2>
       </div>
 

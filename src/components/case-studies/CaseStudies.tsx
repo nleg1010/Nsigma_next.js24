@@ -30,12 +30,8 @@ const CaseStudies = ({ data, subtitle }: CaseStudiesProps) => {
       id="casestudy"
     >
       <div className="relative">
-        <h4 className=" lg:text-2xl md:leading-[50px] font-semibold uppercase text-[#8f9193] text-left ">
-          Our Case Studies
-        </h4>
-        <h2 className="uppercase md:text-[42px] text-2xl md:leading-[50px] font-semibold text-white pb-16">
-          {subtitle}
-        </h2>
+        <h4 className=" heading-1">Our Case Studies</h4>
+        <h2 className="heading-2 pb-12">{subtitle}</h2>
       </div>
       <section className="w-full h-full mx-auto pt-10 flex justify-center relative text-white">
         <Slider {...settings}>

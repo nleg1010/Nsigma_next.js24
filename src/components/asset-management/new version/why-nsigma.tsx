@@ -4,9 +4,8 @@ const WhyNsigma = () => {
   return (
     <section id="why-nsigma" className="bg-nsigma-dark md:py-32">
       <div className="section-container">
-        <h2 className="section-heading">
-          The NSigma <span className="text-nsigma-gold">Managed Service</span>{" "}
-          Difference
+        <h2 className="heading-2 mb-8 md:mb-20 text-center">
+          The NSigma Managed Service Difference
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

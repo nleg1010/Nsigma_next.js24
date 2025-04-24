@@ -34,13 +34,11 @@ export default function Solutions({
     >
       <div className="container mx-auto px-3 text-white text-center md:text-lg pb-20">
         <div className="pb-8">
-          <h4 className="lg:text-2xl md:leading-[50px] font-semibold uppercase text-[#8f9193] text-center">
-            Industry Solutions
-          </h4>
-          <h2 className="uppercase md:text-[42px] text-2xl md:leading-[50px] pb-6 font-semibold">
+          <h4 className="heading-1 text-center">Industry Solutions</h4>
+          <h2 className="heading-2 pb-2">
             <PrismicRichText field={is_subheadline} />
           </h2>
-          <div className="text-xl xl:text-2xl leading-6 lg:px-6">
+          <div className="info-text lg:px-6">
             <PrismicRichText field={is_intro} />
           </div>
         </div>

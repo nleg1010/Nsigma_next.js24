@@ -294,7 +294,7 @@ html {
 
 @layer components {
   .btn-primary {
-    @apply px-6 py-3 bg-nsigma-gold text-nsigma-navy font-semibold rounded-lg transition-all hover:bg-opacity-90 hover:shadow-md;
+    @apply px-6 py-3 bg-nsigma-gold text-nsigma-navy font-semibold rounded-xl transition-all hover:bg-opacity-90 hover:shadow-md;
   }
 
   .btn-secondary {
@@ -311,5 +311,21 @@ html {
 
   .section-heading {
     @apply text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-center;
+  }
+
+  .heading-1 {
+    @apply text-[#8f9193] uppercase lg:text-2xl md:leading-[50px] font-semibold;
+  }
+
+  .heading-2 {
+    @apply font-bold text-white mt-1 mb-4 uppercase md:text-[42px] text-2xl md:leading-[50px];
+  }
+
+  .subheading-1 {
+    @apply text-white mb-3 lg:text-lg xl:text-xl;
+  }
+
+  .info-text {
+    @apply text-xl xl:text-2xl leading-6;
   }
 }
