@@ -1,30 +1,35 @@
+import { ImageFieldImage, KeyTextField, LinkField } from "@prismicio/client";
 import Link from "next/link";
+import { CgArrowTopRight } from "react-icons/cg";
+import {} from "tailwind-merge";
 
-const CaseStudiesCard = ({ caseStudy }: any) => {
+export type CaseStudiesCardProps = {
+  title: KeyTextField;
+  image: ImageFieldImage;
+  link_to_page: LinkField;
+};
+
+const CaseStudiesCard = ({
+  image,
+  link_to_page,
+  title,
+}: CaseStudiesCardProps) => {
   return (
-    <article className="bg-[#1E2029] group rounded-[20px] overflow-hidden">
-      <Link href={`/case/${caseStudy?.slug}`}>
-        <figure className="rounded-[20px] cursor-pointer overflow-hidden">
-          <img
-            src={caseStudy.image.url}
-            alt={caseStudy.title}
-            width={370}
-            height={250}
-            className="w-full transition-all duration-200 ease-linear group-hover:scale-105 "
-          />
-        </figure>
-      </Link>
-      <div className="p-4 px-6">
-        <Link href={`/case/${caseStudy?.slug}`}>
-          <h3 className="text-xl min-h-[56px] cursor-pointer text-white">
-            {caseStudy.title}
-          </h3>
-        </Link>
-        <p className="text-lightGray italic mt-2 pb-2 2xl:min-h-[105px] lg:min-h-[128px]">
-          {caseStudy.info}
-        </p>
+    <Link
+      href={`case/${link_to_page}`}
+      className="block bg-cover bg-center w-[500px] h-[300px] mt-0 rounded-md pt-12 pb-5 text-white "
+      style={{
+        backgroundImage: image.url ? `url(${image.url})` : undefined,
+      }}
+    >
+      <div className="w-full h-full flex flex-col justify-between">
+        <h2 className="px-10">{title}</h2>
+        <div className="border-t-[1px] px-10 pt-4 border-[rgba(255,255,255,0.2)] flex justify-between items-center pr-3 text-white">
+          <h5>View Case Study</h5>
+          <CgArrowTopRight className="text-3xl" />
+        </div>
       </div>
-    </article>
+    </Link>
   );
 };
 

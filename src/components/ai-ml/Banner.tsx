@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Banner({ content }: any) {
   return (
-    <section className="relative flex items-center justify-center h-screen mb-12 overflow-hidden -mt-20">
+    <section className="relative flex items-center justify-center h-screen mb-12 overflow-hidden -mt-28">
       <div className="relative z-30 text-2xl bg-opacity-50 rounded-xl">
         <div className="flex items-center justify-center bg-black/30 w-screen h-screen">
           <div className="container h-full w-full flex gap-4 px-4 justify-center items-center flex-col">

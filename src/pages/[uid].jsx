@@ -1,5 +1,5 @@
-import { DefaultSeo } from "next-seo";
 import { SliceZone } from "@prismicio/react";
+import { DefaultSeo } from "next-seo";
 
 import { createClient } from "../prismicio";
 import { components } from "../slices";
@@ -40,11 +40,13 @@ export async function getStaticPaths() {
   const pages = await client.getAllByType("page");
 
   return {
-    paths: pages.map((page) => {
-      return {
-        params: { uid: page.uid },
-      };
-    }),
+    paths: pages
+      .map((page) => {
+        return {
+          params: { uid: page.uid },
+        };
+      })
+      .filter((path) => path.params.uid !== "asset-management"),
     fallback: false,
   };
 }

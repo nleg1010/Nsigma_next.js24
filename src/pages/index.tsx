@@ -1,48 +1,95 @@
-import { FC } from "react";
-import { DefaultSeo } from "next-seo";
 import { createClient } from "@/prismicio";
 import type { GetStaticPropsContext } from "next";
+import { DefaultSeo } from "next-seo";
+import { FC } from "react";
 
-import CaseStudies from "@/components/case-studies/CaseStudies";
-import EngagementStrategies from "@/components/engagement-strategies/EngagementStrategies";
-import Expertise from "@/components/expertise";
-import AboutUs from "@/components/about-us/AboutUs";
+import AboutUs, { AboutUsProps } from "@/components/about-us/AboutUs";
 import Banner from "@/components/banner";
-import { PrismicRichText } from "@prismicio/react";
+import CallToAction from "@/components/CallToAction";
+import CaseStudies, {
+  CaseStudiesProps,
+} from "@/components/case-studies/CaseStudies";
+import EngagementStrategies, {
+  EngagementStrategiesProps,
+} from "@/components/engagement-strategies/EngagementStrategies";
+import Expertise from "@/components/expertise";
 import Solutions from "@/components/solutions/Solutions";
+import { HomeDocumentData } from "../../prismicio-types";
 
 const Home: FC<any> = ({ page }) => {
   const {
-    questions,
+    ex_subtitle,
+    ex_info,
     expertise,
-    engagement,
-    case_studies,
     about_content,
     why_cards,
     meta_title,
     meta_description,
     hero_video,
-    solutions_subheader,
-    solutions_content,
-    solutions_tabs,
-  } = page.data;
+    is_subheadline,
+    is_intro,
+    is_tabs,
+    is_featured_case_study,
+    featured_case_study_image,
+    our_case_study,
+    cs_subtitle,
+    es_title,
+    es_subtitle,
+    es_info,
+    strategies,
+    cu_subtitle,
+    cu_reasons,
+    cta_top,
+    cta_bottom,
+  } = page.data as HomeDocumentData;
+
+  const expertiseData = {
+    subtitle: ex_subtitle,
+    info: ex_info,
+    data: expertise,
+  };
+
+  const industrySolutionsData = {
+    is_subheadline,
+    is_intro,
+    is_tabs,
+    is_featured_case_study,
+    featured_case_study_image,
+  };
+
+  const engagementStrategiesData: EngagementStrategiesProps = {
+    title: es_title,
+    subtitle: es_subtitle,
+    info: es_info,
+    strategies,
+  };
+
+  const chooseUsData: AboutUsProps = {
+    subtitle: cu_subtitle,
+    reasons: cu_reasons,
+  };
+
+  const ourCaseStudyData: CaseStudiesProps = {
+    subtitle: cs_subtitle,
+    data: our_case_study,
+  };
+
   return (
     <>
-      <DefaultSeo title={meta_title} description={meta_description} />
-      <div className="bg-[#000200]">
-        <Banner video={hero_video?.url} />
-        <Expertise data={expertise} />
-        <Solutions
-          data={{ solutions_subheader, solutions_content, solutions_tabs }}
-        />
-        <EngagementStrategies data={engagement} />
-        <CaseStudies data={case_studies} />
-        <AboutUs
-          about={{
-            content: about_content,
-            whyCards: why_cards,
-          }}
-        />
+      <DefaultSeo
+        title={meta_title as string}
+        description={meta_description as string}
+      />
+      <div className="bg-[#07080a]">
+        <Banner />
+        <div className="black-radial-gradient">
+          <Expertise {...expertiseData} />
+          <Solutions {...industrySolutionsData} />
+        </div>
+        <CaseStudies {...ourCaseStudyData} />
+        <EngagementStrategies {...engagementStrategiesData} />
+        <AboutUs {...chooseUsData} />
+        <CallToAction title={cta_bottom} />
       </div>
     </>
   );

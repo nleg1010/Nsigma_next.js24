@@ -1,28 +1,57 @@
-import { PrismicRichText } from "@prismicio/react";
+import {
+  ImageFieldImage,
+  KeyTextField,
+  RichTextField,
+} from "@prismicio/client";
+import { PrismicNextImage } from "@prismicio/next";
+import { JSXMapSerializer, PrismicRichText } from "@prismicio/react";
 
-const AboutUs = ({ about }: any) => {
+type Reason = {
+  icon: ImageFieldImage;
+  title: KeyTextField;
+  info: RichTextField;
+};
+
+export type AboutUsProps = {
+  subtitle: KeyTextField;
+  reasons: Reason[];
+};
+
+const components: JSXMapSerializer = {
+  heading4: ({ children }) => <h4 className="pb-8">{children}</h4>,
+  paragraph: ({ children }) => <p>{children}</p>,
+  image: ({ node }) => (
+    <div className="flex items-center my-5 gap-2 lg:gap-5 text-[1rem]">
+      <img src={node.url} className="lg:size-7" />
+      <p className="md:text-lg">{node.alt}</p>
+    </div>
+  ),
+};
+const AboutUs = ({ subtitle, reasons }: AboutUsProps) => {
   return (
-    <>
-      <h2
-        id="about"
-        className=" text-2xl md:text-[42px] font-extrabold text-white text-center pb-16"
-      >
-        Why Choose <span className="grad">NSigma ?</span>
-      </h2>
-      <div className="container mx-auto px-3 text-white text-center md:text-lg pb-20">
-        <PrismicRichText field={about.content} />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:grid-cols-3 mt-10">
-          {about?.whyCards?.map((item: any, idx: number) => (
-            <div key={idx} className="flex justify-start items-start gap-4">
-              <img src={item.icon.url} width={40} height={40} alt={`icon`} />
-              <div className="text-left">
-                <PrismicRichText field={item.description} />
-              </div>
-            </div>
-          ))}
-        </div>
+    <div className="container mx-auto px-8 md:px-3 text-white pb-20">
+      <h4 id="about" className="heading-1 text-center">
+        Why Choose NSigma?
+      </h4>
+      <h2 className="heading-2 mb-14 text-center">{subtitle}</h2>
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8">
+        {reasons.map(({ icon, info, title }, idx) => (
+          <div
+            key={idx}
+            className="w-full min-h-96 rounded-xl gray-linear-gradient border border-gray-600 p-5 hover:border-[#F6AF23] transition-all"
+          >
+            <PrismicNextImage
+              field={icon}
+              className="max-h-[40px] max-w-[40px]"
+            />
+            <h1 className="mt-2 lg:mt-5 text-2xl lg:text-3xl lg:mb-7  font-semibold">
+              {title}
+            </h1>
+            <PrismicRichText field={info} components={components} />
+          </div>
+        ))}
       </div>
-    </>
+    </div>
   );
 };
 

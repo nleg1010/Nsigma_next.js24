@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 const plugin = require("tailwindcss/plugin");
+const animate = require("tailwindcss-animate");
 
 const CustomStyle = plugin(function ({ addUtilities }: any) {
   addUtilities({
@@ -27,6 +28,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+        haas: ['"Neue Haas Grotesk Text"', "sans-serif"],
+        "haas-black": ['"Neue Haas Grotesk Text Black"', "sans-serif"],
+      },
+      letterSpacing: {
+        wide1: "1px",
+      },
+      fontSize: {
+        h1: ["50px", { lineHeight: "64px" }],
+        h2: ["40px", { lineHeight: "52px" }],
+        body: ["18px", { lineHeight: "1.7" }],
+        button: ["16px", { lineHeight: "24px" }],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -39,9 +54,66 @@ const config: Config = {
         lightGray: "#babbbb",
         customNeutral: "#242727",
         customGreen: "#82E868",
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+        sidebar: {
+          DEFAULT: "hsl(var(--sidebar-background))",
+          foreground: "hsl(var(--sidebar-foreground))",
+          primary: "hsl(var(--sidebar-primary))",
+          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
+          accent: "hsl(var(--sidebar-accent))",
+          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
+          border: "hsl(var(--sidebar-border))",
+          ring: "hsl(var(--sidebar-ring))",
+        },
+        // NSigma brand colors
+        nsigma: {
+          gold: "#F6AF23",
+          blue: "#03A9FD",
+          red: "#F7476B",
+          green: "#B0CB48",
+          navy: "#1F274B",
+          dark: "#111827",
+          darkAlt: "#1F2D3D",
+          text: "#E5E7EB",
+          textAlt: "#BEC4D2",
+          darkGray: "#222222",
+          border: "#374151",
+        },
       },
     },
   },
-  plugins: [CustomStyle],
+  plugins: [CustomStyle, animate],
 };
 export default config;

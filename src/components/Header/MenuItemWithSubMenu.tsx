@@ -23,7 +23,7 @@ const MenuItemWithSubMenu = ({
   return (
     <span className="flex flex-col items-end gap-8">
       <button
-        className="flex w-full uppercase"
+        className="flex w-full uppercase hover:text-[#c8ccce]"
         onClick={() => setSubMenuOpen(!subMenuOpen)}
       >
         <div className="flex flex-row justify-end gap-2 w-full items-center">
@@ -50,6 +50,7 @@ const MenuItemWithSubMenu = ({
                 href={subItem.link}
                 onClick={() => toggleOpen(false)}
                 style={{ marginTop: "10px" }}
+                className="hover:text-[#c8ccce]"
               >
                 {subItem.name}
               </Link>

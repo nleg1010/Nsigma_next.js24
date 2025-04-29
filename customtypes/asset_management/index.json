@@ -1,0 +1,271 @@
+{
+  "format": "page",
+  "id": "asset_management",
+  "label": "Asset Management",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "hero_title": {
+        "type": "Text",
+        "config": {
+          "label": "Hero Title",
+          "placeholder": ""
+        }
+      },
+      "hero_subtitle": {
+        "type": "Text",
+        "config": {
+          "label": "Hero Subtitle",
+          "placeholder": ""
+        }
+      },
+      "hero_button_text": {
+        "type": "Text",
+        "config": {
+          "label": "Hero Button Text",
+          "placeholder": ""
+        }
+      },
+      "hero_second_button_text": {
+        "type": "Text",
+        "config": {
+          "label": "Hero Second Button Text",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "Text"
+      },
+      "meta_image": {
+        "config": {
+          "constraint": {
+            "height": 1260,
+            "width": 2400
+          },
+          "label": "Meta Image",
+          "thumbnails": []
+        },
+        "type": "Image"
+      },
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      }
+    },
+    "Problem": {
+      "problem_heading_1": {
+        "type": "Text",
+        "config": {
+          "label": "problem_heading 1",
+          "placeholder": ""
+        }
+      },
+      "problem_text_1": {
+        "type": "StructuredText",
+        "config": {
+          "label": "problem_text_1",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "problem_heading_2": {
+        "type": "Text",
+        "config": {
+          "label": "problem heading 2",
+          "placeholder": ""
+        }
+      },
+      "problem_text_2": {
+        "type": "StructuredText",
+        "config": {
+          "label": "problem text 2",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "problem_image": {
+        "type": "Image",
+        "config": {
+          "label": "problem image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      }
+    },
+    "Why NSigma MAaaS": {
+      "why_title": {
+        "type": "Text",
+        "config": {
+          "label": "Why Title",
+          "placeholder": ""
+        }
+      },
+      "reasons": {
+        "type": "Group",
+        "config": {
+          "label": "Reasons",
+          "repeat": true,
+          "fields": {
+            "icon": {
+              "type": "Image",
+              "config": {
+                "label": "icon",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "title": {
+              "type": "Text",
+              "config": {
+                "label": "title",
+                "placeholder": ""
+              }
+            },
+            "info": {
+              "type": "StructuredText",
+              "config": {
+                "label": "info",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Real-World Applications": {
+      "rwa_title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        }
+      },
+      "applications": {
+        "type": "Group",
+        "config": {
+          "label": "applications",
+          "repeat": true,
+          "fields": {
+            "title": {
+              "type": "Text",
+              "config": {
+                "label": "title",
+                "placeholder": ""
+              }
+            },
+            "content": {
+              "type": "StructuredText",
+              "config": {
+                "label": "content",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "image": {
+              "type": "Image",
+              "config": {
+                "label": "image",
+                "constraint": {},
+                "thumbnails": []
+              }
+            }
+          }
+        }
+      }
+    },
+    "Lower CTA": {
+      "lower_cta_title": {
+        "type": "Text",
+        "config": {
+          "label": "Lower CTA Title",
+          "placeholder": ""
+        }
+      },
+      "lower_cta_button_text": {
+        "type": "Text",
+        "config": {
+          "label": "Lower CTA Button Text",
+          "placeholder": ""
+        }
+      }
+    },
+    "Modular Framework": {
+      "mf_title": {
+        "type": "Text",
+        "config": {
+          "label": "mf_title",
+          "placeholder": ""
+        }
+      },
+      "mf_subtitle": {
+        "type": "Text",
+        "config": {
+          "label": "mf_subtitle",
+          "placeholder": ""
+        }
+      },
+      "modules": {
+        "type": "Group",
+        "config": {
+          "label": "modules",
+          "repeat": true,
+          "fields": {
+            "name": {
+              "type": "Text",
+              "config": {
+                "label": "name",
+                "placeholder": ""
+              }
+            },
+            "title": {
+              "type": "Text",
+              "config": {
+                "label": "title",
+                "placeholder": ""
+              }
+            },
+            "text": {
+              "type": "StructuredText",
+              "config": {
+                "label": "text",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "image": {
+              "type": "Image",
+              "config": {
+                "label": "image",
+                "constraint": {},
+                "thumbnails": []
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
