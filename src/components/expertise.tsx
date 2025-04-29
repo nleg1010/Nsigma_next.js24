@@ -89,7 +89,7 @@ const ExpertiseItem = ({ item, idx }: ExpertiseItemProps) => {
                 </div>
               </div>
             </div>
-            <div className="p-24 w-full flex justify-center">
+            <div className="p-10 md:p-24 w-full flex justify-center">
               <PrismicNextImage
                 field={item.image}
                 className="max-h-[400px]"

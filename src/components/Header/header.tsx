@@ -165,7 +165,7 @@ function Navbar() {
           </motion.button>
 
           <motion.div
-            className="absolute left-0 bg-black bg-opacity-15 backdrop-blur-sm overflow-hidden top-[100%] z-20 flex w-full origin-top flex-col items-end gap-8 pr-4 lg:!hidden lg:flex-row text-white"
+            className="absolute left-0 bg-black/80 overflow-hidden top-[100%] z-20 flex w-full origin-top flex-col items-end gap-8 pr-4 lg:!hidden lg:flex-row text-white"
             variants={linksVariants}
             initial="close"
             animate={open ? "open" : "close"}
