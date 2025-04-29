@@ -3,9 +3,7 @@ import {
   KeyTextField,
   RichTextField,
 } from "@prismicio/client";
-import { PrismicNextImage } from "@prismicio/next";
 import { JSXMapSerializer, PrismicRichText } from "@prismicio/react";
-import { GrDownload } from "react-icons/gr";
 import Tabs, { TabsItemProps } from "./Tabs";
 
 type SolutionsProps = {
@@ -43,7 +41,7 @@ export default function Solutions({
           </div>
         </div>
         <Tabs data={is_tabs} />
-        <div className="container mx-auto p-5 md:pl-10  mt-5 bg-[#1d2029] rounded-3xl border-b-[1px] border-[#383a46] text-white text-center md:text-lg overflow-hidden">
+        {/* <div className="container mx-auto p-5 md:pl-10  mt-5 bg-[#1d2029] rounded-3xl border-b-[1px] border-[#383a46] text-white text-center md:text-lg overflow-hidden">
           <div className="grid md:grid-cols-2 grid-cols-1">
             <div className="flex flex-col justify-start items-start pb-5 md:pt-20">
               <h2 className="text-3xl font-bold py-4 text-left">
@@ -70,7 +68,7 @@ export default function Solutions({
               />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
