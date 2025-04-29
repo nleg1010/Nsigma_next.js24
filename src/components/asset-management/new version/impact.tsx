@@ -117,15 +117,16 @@ const Impact = () => {
                 )}
                 style={{ animationDelay: "0.4s" }}
               >
-                <span className="sr-only">100</span>% Adherence
+                <span className="sr-only">100</span>%
               </h3>
             </div>
             <h4 className="text-xl font-semibold mb-3 text-center">
-              To Data Governance Policies
+              Compliance Coverage
             </h4>
             <p className="text-nsigma-textAlt text-center">
-              Use dataADVANCE to automate data control, audit trails, and
-              lineage tracking, ensuring seamless compliance.
+              With dataADVANCE, every dataset is governed by automated policies,
+              audit logging, and lineage tracking — ensuring airtight regulatory
+              adherence.
             </p>
           </div>
         </div>
