@@ -1,5 +1,5 @@
-import { Code } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { twMerge } from "tailwind-merge";
 
 const testimonials = [
   {
@@ -61,9 +61,15 @@ const Impact = () => {
           <div className="bg-nsigma-dark rounded-lg p-6 border border-nsigma-border card-hover">
             <div className="flex justify-center">
               <h3
-                className={`text-4xl md:text-5xl font-bold text-nsigma-gold mb-4 ${isVisible ? "animate-count-up" : "opacity-0"}`}
+                className={twMerge(
+                  `text-4xl md:text-5xl font-bold text-nsigma-gold mb-4`,
+                  isVisible
+                    ? "animate-[counter_3s_ease-out_forwards] tabular-nums [counter-set:_num_var(--num-bps)] before:content-[counter(num)]"
+                    : "opacity-0"
+                )}
               >
-                30-40 bps
+                <span className="sr-only">35</span>
+                &nbsp;bps
               </h3>
             </div>
             <h4 className="text-xl font-semibold mb-3 text-center">
@@ -79,10 +85,15 @@ const Impact = () => {
           <div className="bg-nsigma-dark rounded-lg p-6 border border-nsigma-border card-hover">
             <div className="flex justify-center">
               <h3
-                className={`text-4xl md:text-5xl font-bold text-nsigma-blue mb-4 ${isVisible ? "animate-count-up" : "opacity-0"}`}
+                className={twMerge(
+                  `text-4xl md:text-5xl font-bold text-nsigma-blue mb-4`,
+                  isVisible
+                    ? "animate-[counter_3s_ease-out_forwards] tabular-nums [counter-set:_num_var(--num-reduction)] before:content-[counter(num)]"
+                    : "opacity-0"
+                )}
                 style={{ animationDelay: "0.2s" }}
               >
-                60-70%
+                <span className="sr-only">65</span>%
               </h3>
             </div>
             <h4 className="text-xl font-semibold mb-3 text-center">
@@ -96,15 +107,26 @@ const Impact = () => {
 
           {/* Result 3 */}
           <div className="bg-nsigma-dark rounded-lg p-6 border border-nsigma-border card-hover">
-            <div className="flex justify-center mb-4">
-              <Code size={64} className="text-nsigma-red" />
+            <div className="flex justify-center text-nsigma-red">
+              <h3
+                className={twMerge(
+                  `text-4xl md:text-5xl text-center font-bold text-nsigma-red mb-4`,
+                  isVisible
+                    ? "animate-[counter_3s_ease-out_forwards] tabular-nums [counter-set:_num_var(--num-adherence)] before:content-[counter(num)]"
+                    : "opacity-0"
+                )}
+                style={{ animationDelay: "0.4s" }}
+              >
+                <span className="sr-only">100</span>%
+              </h3>
             </div>
             <h4 className="text-xl font-semibold mb-3 text-center">
-              Mastering Complexity
+              Compliance Coverage
             </h4>
             <p className="text-nsigma-textAlt text-center">
-              Consolidate disparate systems into a single source of truth,
-              enabling unified reporting and cross-portfolio insights.
+              With dataADVANCE, every dataset is governed by automated policies,
+              audit logging, and lineage tracking — ensuring airtight regulatory
+              adherence.
             </p>
           </div>
         </div>
@@ -114,7 +136,7 @@ const Impact = () => {
           {testimonials.map(({ comment, author }, index) => (
             <div
               key={index}
-              className="mx-auto border-l-4 border-nsigma-gold pl-6 py-2"
+              className="mx-auto border-l-4 flex flex-col justify-between border-nsigma-gold pl-6 py-2"
             >
               <p className="text-lg italic text-nsigma-textAlt mb-4">
                 {`"${comment}"`}

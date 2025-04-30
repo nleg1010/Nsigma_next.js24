@@ -14,7 +14,7 @@ const CallToAction = () => {
             competitive edge.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 px-7 sm:px-0 justify-center">
             <a href="#" className="btn-primary cta-button">
               Schedule a Personalized Demo
             </a>

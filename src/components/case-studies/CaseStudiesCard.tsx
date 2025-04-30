@@ -16,7 +16,7 @@ const CaseStudiesCard = ({
 }: CaseStudiesCardProps) => {
   return (
     <Link
-      href={`case/${link_to_page}`}
+      href={`case/${(link_to_page as any).url}`}
       className="block bg-cover bg-center w-[500px] h-[300px] mt-0 rounded-md pt-12 pb-5 text-white "
       style={{
         backgroundImage: image.url ? `url(${image.url})` : undefined,
