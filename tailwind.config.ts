@@ -28,6 +28,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in-up": "fade-in-up 0.4s ease-out",
+        "bounce-scale": "bounce-scale 0.25s ease-out",
+        "count-up": "count-up 1s forwards",
+      },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
         haas: ['"Neue Haas Grotesk Text"', "sans-serif"],
@@ -41,6 +48,10 @@ const config: Config = {
         h2: ["40px", { lineHeight: "52px" }],
         body: ["18px", { lineHeight: "1.7" }],
         button: ["16px", { lineHeight: "24px" }],
+        "body-l-desktop": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+        "body-l-mobile": ["16px", { lineHeight: "26px", fontWeight: "400" }],
+        "body-s-desktop": ["16px", { lineHeight: "26px", fontWeight: "400" }],
+        "body-s-mobile": ["14px", { lineHeight: "24px", fontWeight: "400" }],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -49,7 +60,6 @@ const config: Config = {
       },
       colors: {
         custm_pink: "#03A9FD",
-        // custm_pink: "#F7476B",
         Gray: "#1E2029",
         lightGray: "#babbbb",
         customNeutral: "#242727",
@@ -97,7 +107,6 @@ const config: Config = {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        // NSigma brand colors
         nsigma: {
           gold: "#F6AF23",
           blue: "#03A9FD",
@@ -110,7 +119,13 @@ const config: Config = {
           textAlt: "#BEC4D2",
           darkGray: "#222222",
           border: "#374151",
+          black: "#07080a",
+          gray: "#22252c",
+          grayAlt: "#1d2029",
         },
+      },
+      minHeight: {
+        hero: "88vh",
       },
     },
   },

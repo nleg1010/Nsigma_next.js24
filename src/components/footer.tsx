@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useState } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import Socials from "./Socials";
 
@@ -59,9 +60,21 @@ const routes = [
 ];
 
 export default function Footer() {
+  const [email, setEmail] = useState("");
   const handleMail = async (e: any) => {
     e.preventDefault();
-    const response = await fetch("/api/mailsend");
+    if (!email) return;
+
+    await fetch("/api/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        subject: "Subscription Request",
+        body: "Email: " + email,
+      }),
+    });
   };
 
   return (
@@ -91,6 +104,7 @@ export default function Footer() {
                 type="email"
                 placeholder="Input your email"
                 className="text-sm font-normal min-w-[100px] mr-12 bg-[#232728] text-[#858B93] placeholder:text-[#858B93] appearance-none p-4 outline-none border border-[#b6b5b7] w-full"
+                onChange={(e) => setEmail(e.target.value)}
               />
               <button
                 onClick={(e) => handleMail(e)}

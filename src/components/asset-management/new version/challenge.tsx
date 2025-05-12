@@ -2,7 +2,10 @@ import { ClipboardCheck, Database, LineChart } from "lucide-react";
 
 const Challenge = () => {
   return (
-    <section id="challenge" className="bg-nsigma-dark md:py-40">
+    <section
+      id="challenge"
+      className="bg-gradient-to-b from-nsigma-gray via-nsigma-gray/95 to-nsigma-black md:py-40"
+    >
       <div className="section-container">
         <h2 className="heading-2 text-center pb-16">
           Navigating the Data Complexity Challenge
@@ -10,7 +13,7 @@ const Challenge = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {/* Pain Point 1 */}
-          <div className="bg-nsigma-darkAlt rounded-lg p-6 border border-nsigma-border card-hover">
+          <div className="bg-nsigma-black rounded-xl p-6 border border-nsigma-border card-hover">
             <div className="flex justify-center mb-6">
               <Database size={48} className="text-nsigma-red" />
             </div>
@@ -24,7 +27,7 @@ const Challenge = () => {
           </div>
 
           {/* Pain Point 2 */}
-          <div className="bg-nsigma-darkAlt rounded-lg p-6 border border-nsigma-border card-hover">
+          <div className="bg-nsigma-black rounded-xl p-6 border border-nsigma-border card-hover">
             <div className="flex justify-center mb-6">
               <ClipboardCheck size={48} className="text-nsigma-green" />
             </div>
@@ -38,7 +41,7 @@ const Challenge = () => {
           </div>
 
           {/* Pain Point 3 */}
-          <div className="bg-nsigma-darkAlt rounded-lg p-6 border border-nsigma-border card-hover">
+          <div className="bg-nsigma-black rounded-xl p-6 border border-nsigma-border card-hover">
             <div className="flex justify-center mb-6">
               <LineChart size={48} className="text-nsigma-blue" />
             </div>

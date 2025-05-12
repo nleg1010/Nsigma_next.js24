@@ -18,11 +18,13 @@ export default function Banner() {
             <h3>World-Class Data Teams That Scale With Your Ambitions</h3>
             <div className="flex flex-col md:flex-row gap-4 pt-6">
               <button
-                className="btn-primary cta-button flex justify-center items-center gap-2 text-black shadow-md transition"
+                className="btn-primary cta-button flex justify-center items-center gap-2 text-black shadow-md group transition"
                 onClick={() => router.push("/contact-us")}
               >
                 Talk to Our Experts
-                <FaArrowRight />
+                <span className="opacity-0 group-hover:opacity-100 transform group-hover:translate-x-1 transition-all">
+                  <FaArrowRight />
+                </span>
               </button>
               <button className="bg-white hover:bg-gray-100  text-gray-900 btn-primary cta-button font-semibold shadow-md border transition">
                 Assess Your Data Maturity

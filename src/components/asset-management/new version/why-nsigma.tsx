@@ -2,7 +2,7 @@ import { CheckCircle2 } from "lucide-react";
 
 const WhyNsigma = () => {
   return (
-    <section id="why-nsigma" className="bg-nsigma-dark md:py-32">
+    <section id="why-nsigma" className="bg-nsigma-black md:py-32">
       <div className="section-container">
         <h2 className="heading-2 mb-8 md:mb-20 text-center">
           The NSigma Managed Service Difference

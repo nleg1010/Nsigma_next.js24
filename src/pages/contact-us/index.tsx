@@ -13,23 +13,22 @@ const ContactUs = () => {
   const [sending, setSending] = useState(false);
   const [emailSend, setEmailSend] = useState(false);
 
-  const onSubmit: SubmitHandler<any> = (data: any) => {
+  const onSubmit: SubmitHandler<any> = async (data: any) => {
+    console.log(data);
     setSending(true);
-    fetch("/api/contact-email", {
+    await fetch("/api/send-email", {
       method: "POST",
       headers: {
-        Accept: "application/json, text/plain, */*",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(data),
-    }).then((res) => {
-      console.log("Response received");
-      if (res.status === 200) {
-        reset();
-        setEmailSend(true);
-        setSending(false);
-      }
+      body: JSON.stringify({
+        subject: "Contact Request",
+        body: data,
+      }),
     });
+    reset();
+    setEmailSend(true);
+    setSending(false);
   };
 
   return (

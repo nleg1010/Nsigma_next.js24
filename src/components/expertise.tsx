@@ -104,7 +104,7 @@ const ExpertiseItem = ({ item, idx }: ExpertiseItemProps) => {
 
 export default function Expertise({ data, subtitle, info }: ExpertiseProps) {
   return (
-    <section className="py-16 relative" id="expertise">
+    <section className="py-16 relative scroll-mt-16" id="expertise">
       <div className="container mx-auto px-4 relative z-10">
         <div>
           <h4 className="heading-1">Our Expertise</h4>
