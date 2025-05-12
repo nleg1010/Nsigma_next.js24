@@ -86,8 +86,10 @@ const AssetManagement = ({ page }: any) => {
       <Hero />
       <Challenge />
       <MosaicIntro />
-      <ComponentsSection />
-      <MosaicInfographic />
+      <div className="black-radial-gradient">
+        <ComponentsSection />
+        <MosaicInfographic />
+      </div>
       <Impact />
       <WhyNsigma />
       <CallToAction />

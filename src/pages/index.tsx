@@ -80,7 +80,7 @@ const Home: FC<any> = ({ page }) => {
         title={meta_title as string}
         description={meta_description as string}
       />
-      <div className="bg-[#07080a]">
+      <div className="bg-nsigma-black">
         <Banner />
         <div className="black-radial-gradient">
           <Expertise {...expertiseData} />

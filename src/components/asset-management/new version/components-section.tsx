@@ -2,7 +2,7 @@ import { BarChartBig, Database, FileCog, FileHeart } from "lucide-react";
 
 const ComponentsSection = () => {
   return (
-    <section id="components" className="bg-nsigma-dark md:pt-40">
+    <section id="components" className="md:pt-40">
       <div className="section-container">
         <h2 className="heading-2 text-center mb-8 md:mb-20">
           The MOSAIC Integrated Ecosystem
@@ -10,7 +10,7 @@ const ComponentsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* dataACQUIRE */}
-          <div className="bg-nsigma-darkAlt rounded-lg p-6 border border-nsigma-border card-hover">
+          <div className="bg-nsigma-grayAlt rounded-xl p-6 border border-nsigma-border card-hover">
             <div className="flex justify-center mb-6">
               <Database size={48} className="text-nsigma-blue" />
             </div>
@@ -33,7 +33,7 @@ const ComponentsSection = () => {
           </div>
 
           {/* dataPREDICT */}
-          <div className="bg-nsigma-darkAlt rounded-lg p-6 border border-nsigma-border card-hover">
+          <div className="bg-nsigma-grayAlt rounded-xl p-6 border border-nsigma-border card-hover">
             <div className="flex justify-center mb-6">
               <FileHeart size={48} className="text-nsigma-gold" />
             </div>
@@ -57,7 +57,7 @@ const ComponentsSection = () => {
           </div>
 
           {/* dataVISION */}
-          <div className="bg-nsigma-darkAlt rounded-lg p-6 border border-nsigma-border card-hover">
+          <div className="bg-nsigma-grayAlt rounded-xl p-6 border border-nsigma-border card-hover">
             <div className="flex justify-center mb-6">
               <BarChartBig size={48} className="text-nsigma-green" />
             </div>
@@ -80,7 +80,7 @@ const ComponentsSection = () => {
           </div>
 
           {/* dataADVANCE */}
-          <div className="bg-nsigma-darkAlt rounded-lg p-6 border border-nsigma-border card-hover">
+          <div className="bg-nsigma-grayAlt rounded-xl p-6 border border-nsigma-border card-hover">
             <div className="flex justify-center mb-6">
               <FileCog size={48} className="text-nsigma-red" />
             </div>

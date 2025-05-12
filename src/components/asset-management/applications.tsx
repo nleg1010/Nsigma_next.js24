@@ -10,6 +10,7 @@ const useIsMobile = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    const { window } = global;
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
     checkMobile(); // Initial check
     window.addEventListener("resize", checkMobile);

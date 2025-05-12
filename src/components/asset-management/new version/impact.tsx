@@ -46,11 +46,7 @@ const Impact = () => {
   }, []);
 
   return (
-    <section
-      id="impact"
-      className="bg-nsigma-darkAlt md:py-32"
-      ref={sectionRef}
-    >
+    <section id="impact" className="bg-nsigma-black md:py-32" ref={sectionRef}>
       <div className="section-container">
         <h2 className="heading-2 mb-8 md:mb-20 text-center">
           Driving Tangible Results for Asset Managers
@@ -58,7 +54,7 @@ const Impact = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {/* Result 1 */}
-          <div className="bg-nsigma-dark rounded-lg p-6 border border-nsigma-border card-hover">
+          <div className="gray-linear-gradient rounded-xl p-6 border border-nsigma-border  card-hover">
             <div className="flex justify-center">
               <h3
                 className={twMerge(
@@ -82,7 +78,7 @@ const Impact = () => {
           </div>
 
           {/* Result 2 */}
-          <div className="bg-nsigma-dark rounded-lg p-6 border border-nsigma-border card-hover">
+          <div className="gray-linear-gradient rounded-xl p-6 border border-nsigma-border card-hover">
             <div className="flex justify-center">
               <h3
                 className={twMerge(
@@ -106,7 +102,7 @@ const Impact = () => {
           </div>
 
           {/* Result 3 */}
-          <div className="bg-nsigma-dark rounded-lg p-6 border border-nsigma-border card-hover">
+          <div className="gray-linear-gradient rounded-xl p-6 border border-nsigma-border card-hover">
             <div className="flex justify-center text-nsigma-red">
               <h3
                 className={twMerge(

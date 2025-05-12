@@ -130,7 +130,7 @@ const MosaicInfographic = () => {
   ];
 
   return (
-    <div className="container mx-auto bg-gray-900 p-6 rounded-xl md:py-40 md:pt-56">
+    <div className="container mx-auto p-6 rounded-xl md:py-40 md:pt-56">
       {/* Header */}
       <div className="text-center mb-8 md:mb-20">
         <h4 className="heading-1">

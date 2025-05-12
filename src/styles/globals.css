@@ -245,7 +245,8 @@ html {
   }
 
   .cta-background {
-    background: url("/images/3d-grid.png"),
+    background:
+      url("/images/3d-grid.png"),
       linear-gradient(153.68deg, #565b5e 0%, #171817 100%);
     background-size: cover, cover;
     background-position: center, center;
@@ -269,7 +270,8 @@ html {
   }
 
   .tilted-grid-radient {
-    background-image: url("/images/grid-tilted.png"),
+    background-image:
+      url("/images/grid-tilted.png"),
       linear-gradient(150deg, rgb(56, 58, 70) 0%, rgba(8, 9, 11, 0.9) 60%);
     background-position: center;
     background-size: contain;
@@ -277,7 +279,8 @@ html {
   }
 
   .maaas-bg-image {
-    background: url("/images/maaas-hero.png"),
+    background:
+      url("/images/maaas-hero.png"),
       radial-gradient(
         ellipse at left,
         rgb(56, 58, 70, 0.7) 0%,
@@ -333,7 +336,7 @@ html {
   }
 
   .card-hover {
-    @apply transition-all duration-300 hover:translate-y-[-5px] hover:shadow-lg;
+    @apply transition-all duration-300 hover:translate-y-[-5px] hover:shadow-lg hover:border-[#F6AF23];
   }
 
   .section-container {
@@ -342,6 +345,10 @@ html {
 
   .section-heading {
     @apply text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-center;
+  }
+
+  .section-padding {
+    @apply py-40 px-8;
   }
 
   .heading-1 {
@@ -358,5 +365,9 @@ html {
 
   .info-text {
     @apply text-xl xl:text-2xl leading-6;
+  }
+
+  .body-l {
+    @apply text-body-l-mobile md:text-body-l-desktop;
   }
 }

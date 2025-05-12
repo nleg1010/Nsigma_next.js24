@@ -30,7 +30,8 @@
     "src/slices/Cards/index.jsx",
     "src/slices/TitleWithText/index.jsx",
     "src/slices/TextWithImage/index.jsx",
-    "src/slices/Steps/index.jsx"
+    "src/slices/Steps/index.jsx",
+    "tailwind.config.js"
   ],
   "exclude": ["node_modules"]
 }
