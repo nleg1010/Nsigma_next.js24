@@ -8,10 +8,11 @@ import {
   PrismicImage,
   PrismicRichText,
 } from "@prismicio/react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { RiCheckDoubleFill } from "react-icons/ri";
 import { twMerge } from "tailwind-merge";
+import AnimatedSection from "../expertise/animated-section";
 
 export type TabsItemProps = {
   name: KeyTextField;
@@ -45,30 +46,32 @@ export default function Tabs({ data }: TabsProps) {
     setActiveTab(i);
   };
   return (
-    <div className="p-6 text-xl rounded-3xl bg-[#1d2029]  flex flex-col">
+    <div className="p-6 text-xl rounded-3xl bg-nsigma-gray flex flex-col">
       <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 justify-between items-center group/ul gap-4">
         {data.map((tab, i) => (
           <li
             className="w-full group/li hover:scale-[0.98] transition-transform"
             key={i}
           >
-            <button
-              className={twMerge(
-                "relative p-3 bg-[#4a4d54] rounded-full w-full text-[#bbbfc0] text-center min-w",
-                activeTab === i &&
-                  "font-semibold relative border-2 border-[#F6AF23]"
-              )}
-              disabled={activeTab === i}
-              onClick={() => handleTabClick(i)}
-            >
-              <h4 className=" w-full">{tab.name}</h4>
-            </button>
+            <AnimatedSection animation="slide-in" delay={i * 100}>
+              <button
+                className={twMerge(
+                  "relative p-3 bg-nsigma-black rounded-full w-full text-nsigma-textAlt text-center min-w",
+                  activeTab === i &&
+                    "font-semibold text-nsigma-text relative border-2 border-[#F6AF23]"
+                )}
+                disabled={activeTab === i}
+                onClick={() => handleTabClick(i)}
+              >
+                <h4 className=" w-full">{tab.name}</h4>
+              </button>
+            </AnimatedSection>
           </li>
         ))}
       </ul>
       <div className="pt-6">
         {data.map((tab, i) => (
-          <AnimatePresence key={i}>
+          <AnimatedSection animation="slide-up" key={i}>
             {activeTab === i && (
               <motion.div
                 layout
@@ -101,7 +104,7 @@ export default function Tabs({ data }: TabsProps) {
                 </div>
               </motion.div>
             )}
-          </AnimatePresence>
+          </AnimatedSection>
         ))}
       </div>
     </div>

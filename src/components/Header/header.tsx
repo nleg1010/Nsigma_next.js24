@@ -8,22 +8,22 @@ import MenuItemWithSubMenu from "./MenuItemWithSubMenu";
 const routes = [
   {
     name: "Our Expertise",
-    link: "/#expertise",
+    link: "/expertise",
     sublinks: [
       {
         name: "Data Strategy & AI Consulting",
-        link: "/data-strategy",
+        link: "/expertise#data-strategy",
       },
-      { name: "AI/ML & Predictive Analytics", link: "/ai-ml" },
+      { name: "AI/ML & Predictive Analytics", link: "/expertise#ai-ml" },
       {
         name: "Data Visualization & Business Intelligence (BI)",
-        link: "/visualization-bi",
+        link: "/expertise#visualization",
       },
-      { name: "AI TotalOps:Data, ML & Security", link: "/aitotalops" },
-      { name: "Data Engineering", link: "/data-engineering" },
+      { name: "Data Engineering", link: "/expertise#data-engineering" },
+      { name: "AI TotalOps:Data, ML & Security", link: "/expertise#totalops" },
       {
         name: "Computer Vision & IoT Solutions",
-        link: "/computer-vision-iot",
+        link: "/expertise#cv-iot",
       },
     ],
   },

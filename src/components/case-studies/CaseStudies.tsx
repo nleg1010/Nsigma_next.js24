@@ -1,6 +1,7 @@
 import { KeyTextField } from "@prismicio/client";
 import { useRef } from "react";
 import Slider, { Settings } from "react-slick";
+import AnimatedSection from "../expertise/animated-section";
 import CaseStudiesCard, { CaseStudiesCardProps } from "./CaseStudiesCard";
 
 export type CaseStudiesProps = {
@@ -30,13 +31,19 @@ const CaseStudies = ({ data, subtitle }: CaseStudiesProps) => {
       id="casestudy"
     >
       <div className="relative">
-        <h4 className=" heading-1">Our Case Studies</h4>
-        <h2 className="heading-2 pb-12">{subtitle}</h2>
+        <AnimatedSection animation="slide-up">
+          <h4 className=" heading-1">Our Case Studies</h4>
+        </AnimatedSection>
+        <AnimatedSection animation="slide-up">
+          <h2 className="heading-2 pb-12">{subtitle}</h2>
+        </AnimatedSection>
       </div>
       <section className="w-full h-full mx-auto pt-10 flex justify-center relative text-white">
         <Slider {...settings}>
           {data?.map((item, idx: number) => (
-            <CaseStudiesCard {...item} key={idx} />
+            <AnimatedSection animation="slide-in" delay={idx * 100} key={idx}>
+              <CaseStudiesCard {...item} />
+            </AnimatedSection>
           ))}
         </Slider>
       </section>
