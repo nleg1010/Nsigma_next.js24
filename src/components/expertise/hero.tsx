@@ -1,4 +1,5 @@
 "use client";
+import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import AnimatedSection from "./animated-section";
@@ -7,6 +8,8 @@ const Hero: React.FC = () => {
   useEffect(() => {
     // Logic for animating elements would go here
   }, []);
+
+  const router = useRouter();
 
   return (
     <div
@@ -38,7 +41,12 @@ const Hero: React.FC = () => {
 
           <AnimatedSection animation="slide-up" duration={1000} delay={600}>
             <div className="flex flex-wrap gap-4">
-              <button className="btn-primary cta-button flex items-center group transition-all">
+              <button
+                className="btn-primary cta-button flex items-center group transition-all"
+                onClick={() => {
+                  router.push("/contact-us");
+                }}
+              >
                 <span>Start Your Assessment</span>
                 <span className="ml-1 opacity-0 group-hover:opacity-100 transform group-hover:translate-x-1 transition-all">
                   <FaArrowRight />
