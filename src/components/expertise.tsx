@@ -8,6 +8,7 @@ import { PrismicRichText } from "@prismicio/react";
 import { AnimatePresence, motion, Variants } from "framer-motion";
 import { useState } from "react";
 import { CgArrowBottomRight, CgArrowTopRight } from "react-icons/cg";
+import AnimatedSection from "./expertise/animated-section";
 
 type ExpertiseItem = {
   icon: ImageFieldImage;
@@ -106,18 +107,26 @@ export default function Expertise({ data, subtitle, info }: ExpertiseProps) {
   return (
     <section className="py-16 relative scroll-mt-16" id="expertise">
       <div className="container mx-auto px-4 relative z-10">
-        <div>
-          <h4 className="heading-1">Our Expertise</h4>
-        </div>
-        <div>
-          <h2 className="heading-2">{subtitle}</h2>
-        </div>
-        <div className="lg:w-1/2 mt-4 info-text text-white">
-          <PrismicRichText field={info} />
-        </div>
+        <AnimatedSection animation="slide-up" delay={200} duration={1000}>
+          <div>
+            <h4 className="heading-1">Our Expertise</h4>
+          </div>
+        </AnimatedSection>
+        <AnimatedSection animation="slide-up" delay={400} duration={1000}>
+          <div>
+            <h2 className="heading-2">{subtitle}</h2>
+          </div>
+        </AnimatedSection>
+        <AnimatedSection animation="slide-up" delay={600} duration={1000}>
+          <div className="lg:w-1/2 mt-4 info-text text-white">
+            <PrismicRichText field={info} />
+          </div>
+        </AnimatedSection>
         <div className="mt-10 p-2 flex flex-col overflow-hidden">
           {data?.map((item, idx: number) => (
-            <ExpertiseItem item={item} idx={idx} key={idx} />
+            <AnimatedSection animation="slide-in" delay={idx * 100} key={idx}>
+              <ExpertiseItem item={item} idx={idx} />
+            </AnimatedSection>
           ))}
         </div>
       </div>

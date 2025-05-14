@@ -1,3 +1,4 @@
+import AnimatedSection from "@/components/expertise/animated-section";
 import { useRouter } from "next/router";
 import { FaArrowRight } from "react-icons/fa6";
 
@@ -15,33 +16,39 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-nsigma-black via-nsigma-black/95 to-nsigma-gray"></div>
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="md:text-6xl text-3xl md:leading-[80px] font-semibold mb-6 leading-tight animate-fade-in">
-            NSigma <span className="text-nsigma-gold">MOSAIC</span>: Tailored
-            Managed Analytics for Asset Management
-          </h1>
+          <AnimatedSection animation="slide-up">
+            <h1 className="md:text-6xl text-3xl md:leading-[80px] font-semibold mb-6 leading-tight animate-fade-in">
+              NSigma <span className="text-nsigma-gold">MOSAIC</span>: Tailored
+              Managed Analytics for Asset Management
+            </h1>
+          </AnimatedSection>
 
-          <h3
-            className="text-xl md:text-2xl text-nsigma-textAlt mb-10 animate-fade-in"
-            style={{ animationDelay: "0.2s" }}
-          >
-            Go beyond standard platforms. Leverage our unique fusion of
-            technology, deep domain knowledge, and data science expertise to
-            transform your data into a strategic advantage – expertly managed
-            for you.
-          </h3>
+          <AnimatedSection animation="slide-up" delay={200}>
+            <h3
+              className="text-xl md:text-2xl text-nsigma-textAlt mb-10 animate-fade-in"
+              style={{ animationDelay: "0.2s" }}
+            >
+              Go beyond standard platforms. Leverage our unique fusion of
+              technology, deep domain knowledge, and data science expertise to
+              transform your data into a strategic advantage – expertly managed
+              for you.
+            </h3>
+          </AnimatedSection>
 
-          <button
-            className="btn-primary cta-button animate-fade-in flex justify-center items-center mx-auto group transition-all"
-            style={{ animationDelay: "0.4s" }}
-            onClick={() => {
-              router.push("/contact-us");
-            }}
-          >
-            Request a Consultation
-            <span className="ml-1 opacity-0 group-hover:opacity-100 transform group-hover:translate-x-1 transition-all">
-              <FaArrowRight />
-            </span>
-          </button>
+          <AnimatedSection animation="slide-up" delay={400}>
+            <button
+              className="btn-primary cta-button animate-fade-in flex justify-center items-center mx-auto group transition-all"
+              style={{ animationDelay: "0.4s" }}
+              onClick={() => {
+                router.push("/contact-us");
+              }}
+            >
+              Request a Consultation
+              <span className="ml-1 opacity-0 group-hover:opacity-100 transform group-hover:translate-x-1 transition-all">
+                <FaArrowRight />
+              </span>
+            </button>
+          </AnimatedSection>
         </div>
       </div>
       {/* Scrolldown Indicator */}

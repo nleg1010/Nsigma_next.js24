@@ -5,6 +5,7 @@ import {
 } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
 import { JSXMapSerializer, PrismicRichText } from "@prismicio/react";
+import AnimatedSection from "../expertise/animated-section";
 
 type Reason = {
   icon: ImageFieldImage;
@@ -30,15 +31,21 @@ const components: JSXMapSerializer = {
 const AboutUs = ({ subtitle, reasons }: AboutUsProps) => {
   return (
     <div className="container mx-auto px-8 md:px-3 text-white pb-20">
-      <h4 id="about" className="heading-1 text-center">
-        Why Choose NSigma?
-      </h4>
-      <h2 className="heading-2 mb-14 text-center">{subtitle}</h2>
+      <AnimatedSection animation="slide-up">
+        <h4 id="about" className="heading-1 text-center">
+          Why Choose NSigma?
+        </h4>
+      </AnimatedSection>
+      <AnimatedSection animation="slide-up">
+        <h2 className="heading-2 mb-14 text-center">{subtitle}</h2>
+      </AnimatedSection>
       <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8">
         {reasons.map(({ icon, info, title }, idx) => (
-          <div
+          <AnimatedSection
             key={idx}
-            className="w-full min-h-96 rounded-xl gray-linear-gradient border border-gray-600 p-5 hover:border-[#F6AF23] transition-all"
+            animation="slide-in"
+            delay={idx * 100}
+            className="w-full min-h-96 rounded-xl gray-linear-gradient border border-gray-600 p-5  hover:border-[#F6AF23]"
           >
             <PrismicNextImage
               field={icon}
@@ -48,7 +55,7 @@ const AboutUs = ({ subtitle, reasons }: AboutUsProps) => {
               {title}
             </h1>
             <PrismicRichText field={info} components={components} />
-          </div>
+          </AnimatedSection>
         ))}
       </div>
     </div>

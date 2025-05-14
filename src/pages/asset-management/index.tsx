@@ -68,20 +68,7 @@ const AssetManagement = ({ page }: any) => {
     applications,
   };
 
-  // const cta: CallToActionProps = {
-  //   title: lower_cta_title,
-  //   buttonText: lower_cta_button_text,
-  // };
-
   return (
-    // <div className="bg-[#07080a]">
-    //   <Banner {...bannerData} />
-    //   <ProblemSection {...problemData} />
-    //   <ModularFramework {...modulesData} />
-    //   <WhyUs {...whyUsData} />
-    //   <Applications {...applicationsData} />
-    //   <CallToAction {...cta} />
-    // </div>
     <div className="min-h-screen bg-[#111827] text-[#E5E7EB]">
       <Hero />
       <Challenge />

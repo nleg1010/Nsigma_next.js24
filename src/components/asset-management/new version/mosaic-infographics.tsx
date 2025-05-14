@@ -1,3 +1,4 @@
+import AnimatedSection from "@/components/expertise/animated-section";
 import {
   Activity,
   AlertTriangle,
@@ -29,7 +30,6 @@ import {
   Sliders,
   Zap,
 } from "lucide-react";
-import React from "react";
 
 const MosaicInfographic = () => {
   // Process stages data
@@ -133,12 +133,16 @@ const MosaicInfographic = () => {
     <div className="container mx-auto p-6 rounded-xl md:py-40 md:pt-56">
       {/* Header */}
       <div className="text-center mb-8 md:mb-20">
-        <h4 className="heading-1">
-          Built Around Your Stack, Backed by Our Expertise.
-        </h4>
-        <h2 className="heading-2 mb-2">
-          MOSAIC: Your Data Science Journey, Expertly Managed
-        </h2>
+        <AnimatedSection animation="slide-up">
+          <h4 className="heading-1">
+            Built Around Your Stack, Backed by Our Expertise.
+          </h4>
+        </AnimatedSection>
+        <AnimatedSection animation="slide-up" delay={100}>
+          <h2 className="heading-2 mb-2">
+            MOSAIC: Your Data Science Journey, Expertly Managed
+          </h2>
+        </AnimatedSection>
       </div>
 
       {/* Process Flow - Top Section */}
@@ -146,7 +150,11 @@ const MosaicInfographic = () => {
         <div className="flex flex-wrap justify-center relative">
           {/* Process Stages with Connecting Lines */}
           {processStages.map((stage, index) => (
-            <React.Fragment key={index}>
+            <AnimatedSection
+              animation="slide-up"
+              delay={index * 100}
+              key={index}
+            >
               {/* Process Stage */}
               <div
                 className="flex flex-col items-center mx-3 mb-4"
@@ -185,7 +193,7 @@ const MosaicInfographic = () => {
                   <div className="w-8 h-px bg-gray-600"></div>
                 </div>
               )}
-            </React.Fragment>
+            </AnimatedSection>
           ))}
         </div>
       </div>
@@ -207,7 +215,9 @@ const MosaicInfographic = () => {
         {/* Component Titles Row */}
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 ">
           {mosaicComponents.map((component, index) => (
-            <div
+            <AnimatedSection
+              animation="slide-up"
+              delay={index * 100}
               className="flex flex-col flex-1 items-center sm:items-stretch"
               key={index}
             >
@@ -238,7 +248,7 @@ const MosaicInfographic = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
 

@@ -4,6 +4,7 @@ import {
   RichTextField,
 } from "@prismicio/client";
 import { JSXMapSerializer, PrismicRichText } from "@prismicio/react";
+import AnimatedSection from "../expertise/animated-section";
 import Tabs, { TabsItemProps } from "./Tabs";
 
 type SolutionsProps = {
@@ -32,13 +33,19 @@ export default function Solutions({
     >
       <div className="container mx-auto px-3 text-white text-center md:text-lg pb-20">
         <div className="pb-8">
-          <h4 className="heading-1 text-center">Industry Solutions</h4>
-          <h2 className="heading-2 pb-2">
-            <PrismicRichText field={is_subheadline} />
-          </h2>
-          <div className="info-text lg:px-6">
-            <PrismicRichText field={is_intro} />
-          </div>
+          <AnimatedSection animation="fade-in">
+            <h4 className="heading-1 text-center">Industry Solutions</h4>
+          </AnimatedSection>
+          <AnimatedSection animation="fade-in">
+            <h2 className="heading-2 pb-2">
+              <PrismicRichText field={is_subheadline} />
+            </h2>
+          </AnimatedSection>
+          <AnimatedSection animation="fade-in">
+            <div className="info-text lg:px-6">
+              <PrismicRichText field={is_intro} />
+            </div>
+          </AnimatedSection>
         </div>
         <Tabs data={is_tabs} />
         {/* <div className="container mx-auto p-5 md:pl-10  mt-5 bg-[#1d2029] rounded-3xl border-b-[1px] border-[#383a46] text-white text-center md:text-lg overflow-hidden">
