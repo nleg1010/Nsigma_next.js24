@@ -69,7 +69,7 @@ const AssetManagement = ({ page }: any) => {
   };
 
   return (
-    <div className="min-h-screen bg-[#111827] text-[#E5E7EB]">
+    <div className="min-h-screen bg-[#111827] text-[#E5E7EB] overflow-hidden">
       <Hero />
       <Challenge />
       <MosaicIntro />

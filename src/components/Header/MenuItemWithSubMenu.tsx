@@ -11,7 +11,7 @@ type MenuItemWithSubMenuProps = {
       link: string;
     }>;
   };
-  toggleOpen: (value: boolean) => void;
+  toggleOpen: () => void;
 };
 
 const MenuItemWithSubMenu = ({
@@ -48,7 +48,7 @@ const MenuItemWithSubMenu = ({
               <Link
                 key={i}
                 href={subItem.link}
-                onClick={() => toggleOpen(false)}
+                onClick={() => toggleOpen()}
                 style={{ marginTop: "10px" }}
                 className="hover:text-[#c8ccce]"
               >

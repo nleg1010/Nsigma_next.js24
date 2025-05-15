@@ -89,36 +89,56 @@ const Impact = () => {
         </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {results.map((item, idx) => (
-            <AnimatedSection
-              animation="slide-in"
-              delay={idx * 100}
-              key={idx}
-              className="gray-linear-gradient rounded-xl p-6 border border-nsigma-border card-hover"
-            >
-              <div className="flex justify-center">
-                <h3
-                  className={twMerge(
-                    "text-4xl md:text-5xl font-bold mb-4",
-                    item.color,
-                    isVisible
-                      ? `animate-[counter_3s_ease-out_forwards] tabular-nums [counter-set:_num_var(${item.counterVar})] before:content-[counter(num)]`
-                      : "opacity-0"
-                  )}
-                  style={{ animationDelay: item.delay }}
-                >
-                  <span className="sr-only">{item.srValue}</span>
-                  &nbsp;{item.suffix}
-                </h3>
-              </div>
-              <h4 className="text-xl font-semibold mb-3 text-center">
-                {item.title}
-              </h4>
-              <p className="text-nsigma-textAlt text-center">
-                {item.description}
-              </p>
-            </AnimatedSection>
-          ))}
+          {results.map((item, idx) => {
+            const [count, setCount] = useState(0);
+
+            useEffect(() => {
+              if (!isVisible) return;
+
+              const start = performance.now();
+              const duration = 2000;
+              const endValue = parseFloat(item.srValue);
+
+              const step = (timestamp: number) => {
+                const progress = Math.min((timestamp - start) / duration, 1);
+                const current = Math.floor(progress * endValue);
+                setCount(current);
+
+                if (progress < 1) {
+                  requestAnimationFrame(step);
+                }
+              };
+
+              requestAnimationFrame(step);
+            }, [isVisible]);
+
+            return (
+              <AnimatedSection
+                animation="slide-in"
+                delay={idx * 100}
+                key={idx}
+                className="gray-linear-gradient rounded-xl p-6 border border-nsigma-border card-hover"
+              >
+                <div className="flex justify-center">
+                  <h3
+                    className={twMerge(
+                      "text-4xl md:text-5xl font-bold mb-4 tabular-nums",
+                      item.color
+                    )}
+                  >
+                    {count}
+                    {item.suffix}
+                  </h3>
+                </div>
+                <h4 className="text-xl font-semibold mb-3 text-center">
+                  {item.title}
+                </h4>
+                <p className="text-nsigma-textAlt text-center">
+                  {item.description}
+                </p>
+              </AnimatedSection>
+            );
+          })}
         </div>
 
         {/* Testimonial */}
