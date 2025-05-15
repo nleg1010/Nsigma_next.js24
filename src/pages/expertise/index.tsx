@@ -72,10 +72,10 @@ const Expertise = () => {
   );
 
   return (
-    <div className="min-h-screen bg-nsigma-black text-white">
+    <div className="min-h-screen bg-nsigma-black text-white overflow-hidden">
       <Hero />
 
-      <div className="py-20 black-radial-gradient section-padding">
+      <div className="py-20 black-radial-gradient section-padding overflow-hidden">
         <DomainSection
           id="data-strategy"
           title="Data Strategy & AI Consulting"
