@@ -17,27 +17,27 @@ const routes = [
     sublinks: [
       {
         name: "Data Strategy & AI Consulting",
-        link: "/data-strategy",
+        link: "/expertise#data-strategy",
       },
-      { name: "AI/ML & Predictive Analytics", link: "/ai-ml" },
+      { name: "AI/ML & Predictive Analytics", link: "/expertise#ai-ml" },
       {
         name: "AI TotalOps : Data, ML and Security",
-        link: "/aitotalops",
+        link: "/expertise#totalops",
       },
-      { name: "Data Engineering", link: "/data-engineering" },
+      { name: "Data Engineering", link: "/expertise#data-engineering" },
       {
         name: "Computer vision & IoT Solutions",
-        link: "/computer-vision-iot",
+        link: "/expertise#cv-iot",
       },
       {
         name: "Data Visualizations & Business Intelligence (BI)",
-        link: "/visualization-bi",
+        link: "/expertise#visualization",
       },
     ],
   },
   {
     name: "Solutions",
-    link: "/#",
+    link: "/#solutions",
     sublinks: [{ name: "Asset Management", link: "/asset-management" }],
   },
   {
