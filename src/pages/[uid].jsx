@@ -5,12 +5,36 @@ import { createClient } from "../prismicio";
 import { components } from "../slices";
 
 const Page = ({ page }) => {
-  const { meta_title, meta_description } = page.data;
+  const { meta_title, meta_description, meta_image, meta_url } = page.data;
+  console.log(meta_image);
+  const imageUrl = meta_image?.url;
+  const pageUrl = meta_url;
   return (
     <>
       <DefaultSeo
         title={meta_title || "NSigma"}
         description={meta_description || ""}
+        openGraph={{
+          type: "website",
+          locale: "en_US",
+          url: pageUrl,
+          title: meta_title || "NSigma",
+          description: meta_description || "Default description",
+          images: [
+            {
+              url: imageUrl,
+              width: 1200,
+              height: 630,
+              alt: meta_title || "NSigma",
+            },
+          ],
+          site_name: "NSigma",
+        }}
+        twitter={{
+          handle: "@yourhandle",
+          site: "@yourhandle",
+          cardType: "summary_large_image",
+        }}
       />
 
       <div className="bg-[#000200]">

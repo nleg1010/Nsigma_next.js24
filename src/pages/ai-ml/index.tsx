@@ -1,19 +1,19 @@
-import { FC } from "react";
-import { DefaultSeo } from "next-seo";
 import { createClient } from "@/prismicio";
 import type { GetStaticPropsContext } from "next";
+import { DefaultSeo } from "next-seo";
+import { FC } from "react";
 
 import Banner from "@/components/ai-ml/Banner";
-import Navigation from "@/components/ai-ml/Navigation";
-import DataScienceSection from "@/components/ai-ml/DataScienceSection";
-import WhatIsAiSection from "@/components/ai-ml/WhatIsAiSection";
-import ProcessSection from "@/components/ai-ml/ProcessSection";
-import Divider from "@/components/ai-ml/Divider";
-import SignsYouNeedAiSection from "@/components/ai-ml/SingsYouNeedAiSection";
-import ReadySection from "@/components/ai-ml/ReadySection";
-import WhyUsSection from "@/components/ai-ml/WhyUsSection";
 import BenefitsSection from "@/components/ai-ml/BenefitsSection";
+import DataScienceSection from "@/components/ai-ml/DataScienceSection";
+import Divider from "@/components/ai-ml/Divider";
 import ExamplesSection from "@/components/ai-ml/ExamplesSection/ExamplesSection";
+import Navigation from "@/components/ai-ml/Navigation";
+import ProcessSection from "@/components/ai-ml/ProcessSection";
+import ReadySection from "@/components/ai-ml/ReadySection";
+import SignsYouNeedAiSection from "@/components/ai-ml/SingsYouNeedAiSection";
+import WhatIsAiSection from "@/components/ai-ml/WhatIsAiSection";
+import WhyUsSection from "@/components/ai-ml/WhyUsSection";
 
 const AiMl: FC<any> = ({ page }) => {
   const {
@@ -28,12 +28,41 @@ const AiMl: FC<any> = ({ page }) => {
     why_us_list,
     meta_title,
     meta_description,
+    meta_image,
+    meta_url,
     slices,
   } = page.data;
 
+  const imageUrl = meta_image?.url || "";
+  const pageUrl = meta_url || "";
+
   return (
     <>
-      <DefaultSeo title={meta_title} description={meta_description} />
+      <DefaultSeo
+        title={meta_title}
+        description={meta_description}
+        openGraph={{
+          type: "website",
+          locale: "en_US",
+          url: pageUrl,
+          title: meta_title || "NSigma",
+          description: meta_description || "Default description",
+          images: [
+            {
+              url: imageUrl,
+              width: 1200,
+              height: 630,
+              alt: meta_title || "NSigma",
+            },
+          ],
+          site_name: "NSigma",
+        }}
+        twitter={{
+          handle: "@yourhandle",
+          site: "@yourhandle",
+          cardType: "summary_large_image",
+        }}
+      />
 
       <div className="bg-[#000200]">
         <Banner content={ai_video} />

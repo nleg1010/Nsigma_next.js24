@@ -54,6 +54,21 @@
           "placeholder": "A brief summary of the page"
         },
         "type": "Text"
+      },
+      "meta_url": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Url",
+          "placeholder": ""
+        }
+      },
+      "meta_image": {
+        "type": "Image",
+        "config": {
+          "label": "Meta Image",
+          "constraint": {},
+          "thumbnails": []
+        }
       }
     },
     "Banner": {

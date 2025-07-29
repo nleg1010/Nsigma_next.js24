@@ -25,6 +25,8 @@ const Home: FC<any> = ({ page }) => {
     why_cards,
     meta_title,
     meta_description,
+    meta_image,
+    meta_url,
     hero_video,
     is_subheadline,
     is_intro,
@@ -74,11 +76,35 @@ const Home: FC<any> = ({ page }) => {
     data: our_case_study,
   };
 
+  const imageUrl = meta_image?.url || "";
+  const pageUrl = meta_url || "";
+
   return (
     <>
       <DefaultSeo
         title={meta_title as string}
         description={meta_description as string}
+        openGraph={{
+          type: "website",
+          locale: "en_US",
+          url: pageUrl,
+          title: meta_title || "NSigma",
+          description: meta_description || "Default description",
+          images: [
+            {
+              url: imageUrl,
+              width: 1200,
+              height: 630,
+              alt: meta_title || "NSigma",
+            },
+          ],
+          site_name: "NSigma",
+        }}
+        twitter={{
+          handle: "@yourhandle",
+          site: "@yourhandle",
+          cardType: "summary_large_image",
+        }}
       />
       <div className="bg-nsigma-black">
         <Banner />
