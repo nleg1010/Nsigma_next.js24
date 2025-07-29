@@ -30,7 +30,6 @@ const AiMl: FC<any> = ({ page }) => {
     meta_description,
     meta_image,
     meta_url,
-    slices,
   } = page.data;
 
   const imageUrl = meta_image?.url || "";
