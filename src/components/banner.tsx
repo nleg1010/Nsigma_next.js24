@@ -32,7 +32,10 @@ export default function Banner() {
                     <FaArrowRight />
                   </span>
                 </button>
-                <button className="bg-white hover:bg-gray-100  text-gray-900 btn-primary cta-button font-semibold shadow-md border transition">
+                <button
+                  className="bg-white hover:bg-gray-100  text-gray-900 btn-primary cta-button font-semibold shadow-md border transition"
+                  onClick={() => router.push("/assess-data-maturity")}
+                >
                   Assess Your Data Maturity
                 </button>
               </div>
