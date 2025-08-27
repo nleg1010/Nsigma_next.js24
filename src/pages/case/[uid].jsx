@@ -1,17 +1,17 @@
-import Head from "next/head";
+import PageBanner from "@/components/page-banner/pageBanner";
 import { createClient } from "@/prismicio";
 import { PrismicRichText } from "@prismicio/react";
-import PageBanner from "@/components/page-banner/pageBanner";
+import Head from "next/head";
 
 const CaseStudiesSlug = ({ page }) => {
-  const { title, image, content } = page;
+  const { title, image, content, subtitle } = page;
   return (
     <>
       <Head>
         <title>Nsigma | Data Driven Intelligence</title>
       </Head>
       <div className="bg-[#000200]">
-        <PageBanner title={title} />
+        <PageBanner title={title} subtitle={subtitle} />
         <div className="p-3">
           <figure className="overflow-hidden flex justify-center -mt-10 mb-4">
             <img

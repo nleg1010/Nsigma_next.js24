@@ -1,5 +1,5 @@
 import { PrismicRichText } from "@prismicio/react";
-import Link from "next/link";
+import { useRouter } from "next/router";
 
 const components = {
   heading5: ({ children }) => <h5 className="pt-4">{children}</h5>,
@@ -8,6 +8,8 @@ const components = {
 const TitleWithButton = ({ slice }) => {
   const { title, video, button } = slice.primary;
   const Id = title[0]?.text;
+  const router = useRouter();
+
   return (
     <section
       id={Id}
@@ -20,13 +22,12 @@ const TitleWithButton = ({ slice }) => {
               <PrismicRichText field={title} components={components} />
             </div>
 
-            <Link
-              href={button?.url || "#"}
-              className="text-white bg-custm_pink min-w-[165px] text-center rounded-xl hover:scale-105 transition-transform duration-200 p-2 font-normal"
-              style={{ fontWeight: "999", padding: "20px", fontSize: "25px" }}
+            <button
+              className="btn-primary cta-button flex justify-center items-center gap-2 text-black shadow-md group transition"
+              onClick={() => router.push(button?.url || "#")}
             >
               Get started
-            </Link>
+            </button>
           </div>
         </div>
       </div>

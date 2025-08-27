@@ -838,6 +838,16 @@ export interface HomeDocumentDataCaseStudiesItem {
   title: prismic.KeyTextField;
 
   /**
+   * Subtitle field in *Home → Case Studies*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.case_studies[].subtitle
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subtitle: prismic.KeyTextField;
+
+  /**
    * Slug field in *Home → Case Studies*
    *
    * - **Field Type**: Text

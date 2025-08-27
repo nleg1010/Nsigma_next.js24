@@ -108,10 +108,9 @@ html {
   opacity: 0;
 }
 .title strong {
-  background: -webkit-linear-gradient(45deg, #eb9204, #83e868, #83e868);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  @apply text-[#8f9193] uppercase lg:text-2xl md:leading-[50px] font-semibold;
 }
+
 .richtext > * {
   @apply mb-2;
 }
